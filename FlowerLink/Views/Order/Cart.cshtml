@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page-title">
+                    <h2>cart</h2>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+                        <li class="breadcrumb-item active">cart</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb End -->
+<!--section start-->
+<section class="cart-section section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="cart_counter">
+                    <div class="countdownholder">
+                        Your cart will be expired in<span id="timer">10</span> minutes!
+                    </div>
+                    <a href="@Url.Action("Checkout", "Order")" class="cart_checkout btn btn-solid btn-xs">check out</a>
+                </div>
+            </div>
+            <div class="col-sm-12 table-responsive-xs">
+                <table id="cart-table" class="table cart-table">
+                    <thead>
+                        <tr class="table-head">
+                            <th scope="col">image</th>
+                            <th scope="col">product name</th>
+                            <th scope="col">price</th>
+                            <th scope="col">quantity</th>
+                            <th scope="col">subtotal</th>
+                            <th scope="col">total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cart-items">
+                    </tbody>
+                </table>
+                <div class="table-responsive-md">
+                    <table class="table cart-table ">
+                        <tfoot>
+                            <tr>
+                                <td>total price :</td>
+                                <td>
+                                    <span class="totalamount">$ 00.00</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row cart-buttons">
+            <div class="col-6"><a href="@Url.Action("Index","Home")" class="btn btn-solid">continue shopping</a></div>
+            <div class="col-6"><a href="@Url.Action("Checkout", "Order")" id="check-btn" class="btn btn-solid">check out</a></div>
+        </div>
+    </div>
+</section>
+<!--section end-->
