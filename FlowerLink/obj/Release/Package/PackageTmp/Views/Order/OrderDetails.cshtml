@@ -4,26 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (ViewBag.Banner.Count > 0)
-{
-<div class="breadcrumb-area section-ptb" style="background: url(@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@ViewBag.Banner[0].Image) repeat scroll 0 0;background-size: cover;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="breadcrumb-title">@ViewBag.Banner[0].MainHeading </h2>
-                <!-- breadcrumb-list start -->
-                <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                    <li class="breadcrumb-item active">Details</li>
-                </ul>
-                <!-- breadcrumb-list end -->
-            </div>
-        </div>
-    </div>
-</div>
-}
-else
-{
+
     <!-- breadcrumb-area start -->
     <div class="breadcrumb-area section-ptb">
         <div class="container">
@@ -41,7 +22,7 @@ else
         </div>
     </div>
     <!-- breadcrumb-area end -->
-}
+
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb compaer-page contact-bg">
@@ -59,7 +40,7 @@ else
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Order Date
-                                <span class="font-weight-bold">@Html.DisplayFor(modelItem => Model.OrderDate)</span>
+                                <span class="font-weight-bold">@Html.DisplayFor(modelItem => Model.LastUpdatedDate)</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Total Items
@@ -67,7 +48,7 @@ else
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Status
-                                @if (Model.StatusID == 101)
+                                @if (Model.StatusID == null)
                                 {
                                     <span class="font-weight-bold text-primary">In Progress</span>
                                 }
@@ -97,7 +78,7 @@ else
                     <div class="card-header font-weight-bold">Delivery Information</div>
                     <div class="card-body">
                         <ul class="list-group scroll-order">
-                            <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
+                            @*<li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Sender Name
                                 <span class="font-weight-bold">@Model.SenderName</span>
                             </li>
@@ -108,7 +89,7 @@ else
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Sender Contact
                                 <span class="font-weight-bold">@Model.SenderContact</span>
-                            </li>
+                            </li>*@
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Recipient Name
                                 <span class="font-weight-bold">@Model.CustomerName</span>
@@ -129,10 +110,10 @@ else
                                 Country
                                 <span class="font-weight-bold">@Model.Country</span>
                             </li>
-                            <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
+                            @*<li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 City
                                 <span class="font-weight-bold">@Model.City</span>
-                            </li>
+                            </li>*@
                         </ul>
                     </div>
                 </div>
@@ -144,7 +125,7 @@ else
                         <ul class="list-group scroll-order">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <span class="font-weight-bold">Item</span>
-                                <span class="font-weight-bold">Item Desc</span>
+                                <span class="font-weight-bold">Item Qty</span>
                                 <span class="font-weight-bold">Price</span>
                             </li>
 
@@ -154,18 +135,18 @@ else
                                     <span class="">
                                         @if (item.ItemImage == "" || item.ItemImage == null)
                                         {
-                                            <img class="order-detail-img" src="~/Content/assets/images/NA.png" alt="">
+                                            <img class="order-detail-img" src="~/Content/assets/images/NA.png" alt="" style="width:80px;">
                                         }
                                         else
                                         {
-                                            <img class="order-detail-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ItemImage" alt="">
+                                            <img class="order-detail-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ItemImage" alt="" style="width:80px;">
                                         }
 
                                     </span>
                                     <span class=" font-weight-bold mobile-text px-2  text-center">@item.ItemTitle x @item.Quantity</span>
                                     <span class=" font-weight-bold mobile-text px-2 ">Rs. @item.Price</span>
                                 </li>
-                                if (Model.GiftDetail.Count > 0)
+                                @*if (Model.GiftDetail.Count > 0)
                                 {
 
                                     foreach (var gifts in Model.GiftDetail.Where(x => x.OrderDetailID == item.OrderDetailID))
@@ -192,7 +173,7 @@ else
                                         </li>
                                     }
 
-                                }
+                                }*@
 
                             }
 
@@ -207,17 +188,17 @@ else
                         <ul class="list-group scroll-order">
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Payment Method
-                                @if (Model.PaymentMethodTitle != "Cash on Delivery")
-                                {
-                                    <span class="font-weight-bold">Online Payment</span>
-                                }
-                                else
-                                {
-                                    <span class="font-weight-bold">Cash On Delivery</span>
-                                }
-
+                                @*@if (Model.PaymentMethodTitle != "Cash on Delivery")
+        {
+            <span class="font-weight-bold">Online Payment</span>
+        }
+        else
+        {
+            <span class="font-weight-bold">Cash On Delivery</span>
+        }*@
+                                <span class="font-weight-bold">Cash On Delivery</span>
                             </li>
-                            <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
+                            @*<li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Coupon
                                 @if (Model.CouponID != 0)
                                 {
@@ -228,27 +209,30 @@ else
                                     <span class="font-weight-bold text-danger">Not Applied</span>
                                 }
 
-                            </li>
+                            </li>*@
+                            @foreach (var item in ViewBag.BillingInfo)
+                            {                           
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Total Amount
-                                <span class="font-weight-bold">Rs. @Model.AmountTotal</span>
+                                <span class="font-weight-bold">Rs. @item.AmountTotal</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Delivery Amount
-                                <span class="font-weight-bold">Rs. @Model.DeliveryAmount</span>
+                                <span class="font-weight-bold">Rs. @item.DeliveryAmount</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Tax Amount
-                                <span class="font-weight-bold">Rs. @Model.Tax</span>
+                                <span class="font-weight-bold">Rs. @item.Tax</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Discount Amount
-                                <span class="font-weight-bold">Rs. @Model.DiscountAmount</span>
+                                <span class="font-weight-bold">Rs. @item.DiscountAmount</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item bg-light">
                                 Grand Total
-                                <span class="font-weight-bold">Rs. @Model.GrandTotal</span>
+                                <span class="font-weight-bold">Rs. @item.GrandTotal</span>
                             </li>
+                            }
                         </ul>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ namespace Vitamito.Controllers
         [HttpPost]
         public ActionResult Login_Register(loginBLL service)
         {
-            if (service.ContactNo != null)
+            if (service.Mobile != null)
             {
                 service.Register();
                 Session["LoginNote"] = "Login Now";
@@ -32,15 +32,15 @@ namespace Vitamito.Controllers
                 Session["LoginNote"] = null;
                 Session["ID"] = service.ID;
                 Session["CustomerEmail"] = service.Email;
-                Session["CustomerContactNo"] = service.ContactNo;
-                Session["CustomerName"] = string.Concat(service.FullName, " ", service.FullName);
+                Session["CustomerContactNo"] = service.Mobile;
+                Session["CustomerName"] = string.Concat(service.FullName);
                 Session["StatusID"] = service.StatusID;
                 if (Convert.ToInt32(Session["StatusID"]) != 0)
                 {
                     if (Session["CustomerEmail"].ToString() != null)
                     {
                         Session["LoginNote"] = "Successfully Login";
-                        if (Convert.ToInt32(Session["LoginRoute"]) == 0)
+                        if (Convert.ToInt32(Session["LoginRoute"]) != 0)
                         {
                             return RedirectToAction("Index", "Home");
                         }

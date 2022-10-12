@@ -27,6 +27,8 @@ namespace Vitamito.Models.BLL
         public int? StatusID { get; set; }
         [DisplayFormat(DataFormatString = "{0: dd, MMM, yyyy}")]
         public DateTime OrderDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0: dd, MMM, yyyy}")]
+        public DateTime? CheckoutDate { get; set; }
         public DateTime LastUpdatedDate { get; set; }
         public int? LastUpdatedBy { get; set; }
         /*Cust Order Info*/
@@ -74,12 +76,13 @@ namespace Vitamito.Models.BLL
                 var lst = new List<myorderBLL>();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@CustomerID", CustomerID);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetMyOrders",p);
-                if (_dt != null)
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetMyOrders_Vitamito", p);
+                if (_ds != null)
                 {
-                    if (_dt.Rows.Count > 0)
+                    if (_ds.Tables.Count > 0)
                     {
-                        lst = _dt.DataTableToList<myorderBLL>();
+                        //lst = _dt.DataTableToList<myorderBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<myorderBLL>>().ToList();
                     }
                 }
                 return lst;

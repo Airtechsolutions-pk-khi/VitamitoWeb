@@ -211,7 +211,7 @@
         var Order = new Object();
 
 
-            Order.CustomerID = @Convert.ToInt32(Session["CustomerID"]);
+            Order.CustomerID = @Convert.ToInt32(Session["ID"]);
         Order.AmountTotal = totalPrice;
 
         total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
@@ -233,7 +233,7 @@
             Order.Country = $('#Country').val();
             Order.ContactNo = $('#ContactNo').val();
             Order.DeliveryTime = $('#DeliveryTime').val();
-            Order.CustomerID = @Convert.ToInt32(Session["CustomerID"]);
+            Order.CustomerID = @Convert.ToInt32(Session["ID"]);
             Order.CustomerName = $('#CustomerName').val();
             Order.Latitude = 'Not Defined';
             Order.Longitude = 'Not Defined';

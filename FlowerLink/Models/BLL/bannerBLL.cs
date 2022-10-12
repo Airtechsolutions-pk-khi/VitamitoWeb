@@ -37,9 +37,9 @@ namespace Vitamito.Models.BLL
             try
             {
                 var lst = new List<bannerBLL>();
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@FormName", FormName);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetBanners", p);
+                SqlParameter[] p = new SqlParameter[0];
+                
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetBanners_Vitamito", p);
                 //_dt = (new DBHelper().GetTableFromSP)("sp_TestBanner",p);
                 if (_dt != null)
                 {

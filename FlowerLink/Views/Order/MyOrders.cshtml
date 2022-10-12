@@ -5,26 +5,7 @@
 }
 
 
-@if (ViewBag.Banner.Count > 0)
-{
-<div class="breadcrumb-area section-ptb" style="background: url(@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@ViewBag.Banner[0].Image) repeat scroll 0 0;background-size: cover;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="breadcrumb-title">@ViewBag.Banner[0].MainHeading </h2>
-                <!-- breadcrumb-list start -->
-                <ul class="breadcrumb-list">
-                    <li class="breadcrumb-item"><a href="~/home/index">Home</a></li>
-                    <li class="breadcrumb-item active">Orders</li>
-                </ul>
-                <!-- breadcrumb-list end -->
-            </div>
-        </div>
-    </div>
-</div>
-}
-else
-{
+ 
     <!-- breadcrumb-area start -->
     <div class="breadcrumb-area section-ptb">
         <div class="container">
@@ -42,7 +23,7 @@ else
         </div>
     </div>
     <!-- breadcrumb-area end -->
-}
+
 
 <!-- main-content-wrap start -->
 <div class="main-content-wrap section-ptb compaer-page contact-bg">
@@ -72,11 +53,11 @@ else
                                     <td>@Html.DisplayFor(modelItem => item.OrderNo)</td>
                                     <td>@Html.DisplayFor(modelItem => item.CustomerName)</td>
                                     <td>@Html.DisplayFor(modelItem => item.GrandTotal)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.OrderDate)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.CheckoutDate)</td>
                                     <td>
-                                        @if (item.StatusID == 101)
+                                        @if (item.StatusID == null)
                                         {
-                                            <span class="badge badge-primary py-2 px-2" style=" font-size: 12px;">In Progress</span>
+                                            <span class="badge badge-primary py-2 px-2" style=" font-size: 12px; color:black;">In Progress</span>
                                         }
                                         else if (item.StatusID == 102)
                                         {

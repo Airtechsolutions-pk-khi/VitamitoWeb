@@ -55,11 +55,12 @@ namespace Vitamito.Models.BLL
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[4];
+                SqlParameter[] p = new SqlParameter[5];
                 p[0] = new SqlParameter("@FullName", FullName);
                 p[1] = new SqlParameter("@Mobile", Mobile);
                 p[2] = new SqlParameter("@Email", Email);
                 p[3] = new SqlParameter("@Password", Password);
+                p[4] = new SqlParameter("@StatusID", 1);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_register_Vitamito", p);
 
                 return rtn;

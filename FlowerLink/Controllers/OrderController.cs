@@ -234,9 +234,23 @@ namespace Vitamito.Controllers
                 return Json(new { data = 0 }, JsonRequestBehavior.AllowGet);
             }
         }
+        public ActionResult MyOrders()
+       {
+            ViewBag.Banner = new bannerBLL().GetBanner("Other");
+            var a = Session["ID"];
+            if (Session["ID"] != null && Convert.ToInt32(Session["ID"]) != 0)
+            {
+                return View(new myorderBLL().GetAll(Convert.ToInt32(Session["ID"])));
+            }
+            else
+            {
+                return RedirectToAction("Login_Register", "Account");
+            }
+        }
         public ActionResult OrderDetails(int OrderID)
         {
             ViewBag.Banner = new bannerBLL().GetBanner("Other");
+            ViewBag.BillingInfo = new myorderBLL().GetAll(Convert.ToInt32(Session["ID"]));
             return View(new myorderBLL().GetDetails(OrderID));
         }
     }

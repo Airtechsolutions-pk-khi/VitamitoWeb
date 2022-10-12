@@ -159,6 +159,7 @@ function toast(res, condition) {
 
 //header
 function topheadcart() {
+    debugger
     var currency = localStorage.getItem("currency");
     var cart = "[]";
     var chkLScart = localStorage.getItem("_cartitems");
@@ -178,12 +179,14 @@ function topheadcart() {
     if (chkLSgift == null) {
         localStorage.setItem("_giftitems", gift);
     }
-    debugger
+   
     var gifts = getgiftLS();
     var data = getCartLS();
+     
     var html = '';
     var totalPrice = 0;
     var totalQty = data.length;
+    
     
     html += '<div class="cart-height scrollbar" id="style2" >'
     for (var i = 0; i < data.length; i++) {
@@ -232,6 +235,7 @@ function topheadcart() {
     }
     $(".head-cart").html(html);
     $("#cart-total").html(totalQty);
+    //$("#wish-total").html(totalQtywish);
 };
 
 
@@ -264,14 +268,17 @@ function cartitem() {
         html += '<td class="plantmore-product-name">'
             + '<p><a href="/Product/ProductDetails?ID=' + data[i].ID + '">' + data[i].Name + '</a></p>'
         html += '</td>'
-            + '<td class="plantmore-product-price"><span class="amount"><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
             + '<td class="plantmore-product-quantity">'
             + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
             + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td>'
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
                 + '</tr>'
-        
+
+
+       
+
     }
 
     if (data.length > 0) {
@@ -347,7 +354,7 @@ function removeCartGift(ele) {
 
 }
 function addtocart(ID, Name, Image, Price, Qty, CurrentStock) {
-    
+    debugger
     //ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
@@ -377,10 +384,12 @@ function getCartLS() {
 
 //Wishlist
 function addtoWishlist(ID, Name, Image, Price, StatusID, Qty) {
+    
     var arrTemp = [];
     arrTemp = getWishlistLS();
     arrTemp.push({ ID: ID, Name: Name, Image: Image, Price: Price, StatusID: StatusID, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
-    setWishlistLS(arrTemp);
+    setWishlistLS(arrTemp);  
+    topheadcart();
 }
 function setWishlistLS(arr) {
     var getWishlistItem = localStorage.getItem("_Wishlistitems");
@@ -411,6 +420,7 @@ function GetWishListItems() {
     var html = '';
     var totalPrice = 0;
     var totalQty = 0;
+   
 
     for (var i = 0; i < data.length; i++) {
         totalQty += Number(data[i].Qty);
@@ -438,7 +448,7 @@ function GetWishListItems() {
         $("#ytdTable").html("You donot have any item in favourites ");
     }
 
-
+    
 };
 
 function StockActiveColor() {

@@ -47,7 +47,44 @@
     <link rel="stylesheet" href="~/Content/assets/css/plugins/animation.css">
     <link rel="stylesheet" href="~/Content/assets/css/plugins/jqueryui.min.css">
     <link href="~/Content/assets/css/plugins/flag-icon.min.css" rel="stylesheet" />
+    <style>
+       /* .login-icon {
+            padding-left: 99px;
+            position: relative;
+            top: -55px;
+        }*/
 
+            .login-icon i {
+                font-size: 27px;
+            }
+        .alignment {
+            top: 5px;
+            left: -85px;
+        }
+        .dropdown-item {
+            font-size: 12px;
+        }
+        .about-bg {
+            background: url('../../assets/images/banner/about.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .wish_qty_cls {
+            position: absolute;
+            background: var(--theme-color);
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            top: 31%;
+            right: 31px;
+            padding: 3px;
+        }
+    </style>
 </head>
 <body class="theme-color-30 mulish-font">
     <!-- header start -->
@@ -64,12 +101,23 @@
                         </div>
                     </div>
                     <div class="col-lg-6 text-end">
-                        @*<ul class="header-dropdown">
-                            <li class="mobile-wishlist pe-0">
-                                <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                            </li>
-                           
-                        </ul>*@
+                        <div class="login-icon ">
+
+                            @if (Session["CustomerName"] != null)
+                            {
+                                <a href="" id="dropdownMenuButton1" class=" dropdown-toggle" data-bs-toggle="dropdown"><i class="ion-ios-contact" style="color:white !important;"></i></a>
+                                <div class="dropdown-menu alignment p-0 mt-0" aria-labelledby="dropdownMenuButton1" style=" position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(9px, 27px, 0px);">
+                                    <a class="dropdown-item border-bottom text-center" style="font-size:12px;" href="#"><span class="font-weight-bold">Hi!</span> @Session["CustomerName"]</a>
+                                    <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a>
+                                    <a class="dropdown-item text-center " style="font-size:12px;" href="~/account/logout">Logout</a>
+                                </div>
+                            }
+                            else
+                            {
+                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white !important;"></i></a>
+                            }
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,26 +168,34 @@
                                             </div>
                                         </li>
                                         @*<li class="onhover-div mobile-setting">
-            <div><img src="../Content/assets/images/icon/setting.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-settings"></i></div>
-            <div class="show-div setting">
-                <h6>language</h6>
-                <ul>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
-        </li>*@
+                <div><img src="../Content/assets/images/icon/setting.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-settings"></i></div>
+                <div class="show-div setting">
+                    <h6>language</h6>
+                    <ul>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+            </li>*@
 
-                                        <li class="mobile-wishlist pe-0">
-                                            <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="true" style="color:var(--theme-color) !important;"></i></a>
-                                        </li>
+                                    <li class="mobile-wishlist pe-0">
+
+                                        <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="true" style="color:var(--theme-color) !important;"></i></a>
+                                        <span class="wish_qty_cls" id="wish-total">0</span>
+                                    </li>
+
                                         <li class="onhover-div mobile-cart">
-
                                             <div><img src="~/Content/assets/images/icon/cart.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-shopping-cart"></i></div>
                                             <span class="cart_qty_cls" id="cart-total">0</span>
                                             <ul class="show-div shopping-cart head-cart">
                                             </ul>
                                         </li>
+
+
+
+
                                     </ul>
+
+                                  
                                 </div>
                             </div>
                         </div>
@@ -356,6 +412,12 @@
             window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '&Searchtext=' + Searchtxt + '&SortID=' + 0 + '';
         }
 
+
+        $('.dropdown').click(function () {
+
+            $('.dropdown-menu').toggleClass('show');
+
+        });
     </script>
 </body>
 </html>
