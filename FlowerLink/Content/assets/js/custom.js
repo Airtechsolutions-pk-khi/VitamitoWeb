@@ -159,7 +159,7 @@ function toast(res, condition) {
 
 //header
 function topheadcart() {
-    debugger
+    
     var currency = localStorage.getItem("currency");
     var cart = "[]";
     var chkLScart = localStorage.getItem("_cartitems");
@@ -258,6 +258,7 @@ function cartitem() {
 
       
         html += '<tr>'
+            + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
         if (data[i].Image == "" || data[i].Image == null) {
             html += '<td class="plantmore-product-thumbnail"><a href="/Product/ProductDetails?ID=' + data[i].ID + '"><img class="cart-img" src="/Content/assets/images/NA.png" alt=""></a></td>'
         }
@@ -273,7 +274,7 @@ function cartitem() {
             + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
             + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td>'
-            + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
+            
                 + '</tr>'
 
 
@@ -354,7 +355,7 @@ function removeCartGift(ele) {
 
 }
 function addtocart(ID, Name, Image, Price, Qty, CurrentStock) {
-    debugger
+    
     //ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
@@ -524,3 +525,14 @@ function getmail() {
         }
     });
 };
+
+
+
+
+
+
+
+
+
+
+ 

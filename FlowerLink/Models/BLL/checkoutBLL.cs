@@ -49,9 +49,9 @@ namespace Vitamito.Models.BLL
         public class OrderDetails
         {
             public int OrderDetailID { get; set; }
-            public int? OrderID { get; set; }
+            public int? OrderID { get; set; }            
             public int ID { get; set; }
-            public string Title { get; set; }
+            public string Name { get; set; }
             public string ProNote { get; set; }
             public string Image { get; set; }
             public int GiftID { get; set; }
@@ -151,16 +151,22 @@ namespace Vitamito.Models.BLL
                 }
                 try
                 {
-                    SqlParameter[] dst = new SqlParameter[6];
-                    dst[0] = new SqlParameter("@ItemID", data);
-                    dst[1] = new SqlParameter("@LocationID", 2182);
-                    dst[2] = new SqlParameter("@Quantity", 0);
-                    dst[3] = new SqlParameter("@LastUpdatedDate", 0);
+                    
+                    foreach (var item in data.OrderDetail)
+                    {                       
+                        SqlParameter[] dst = new SqlParameter[4];
+                        dst[0] = new SqlParameter("@ItemID", item.ID);
+                        dst[1] = new SqlParameter("@LocationID", 2182);
+                        dst[2] = new SqlParameter("@Quantity", item.Qty);
+                        dst[3] = new SqlParameter("@LastUpdatedDate", item.LastUpdatedDate);
 
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_DeductStockAdmin", dst);
+                        (new DBHelper().GetTableFromSP)("sp_DeductStockAdmin", dst);
+                    }                    
 
                 }
-                catch { }
+                catch(Exception ex) { 
+                
+                }
                 try
                 {
                     int OrderDetailID = 0;

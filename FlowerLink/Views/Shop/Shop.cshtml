@@ -7,6 +7,32 @@
     #dis {
         background-color: #9dc3c2;
     }
+
+    .scroll-style::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .scroll-style::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    .scroll-style::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #cccccc;
+    }
+
+    .scroll-style {
+        height: 186px;
+        overflow: auto;
+    }
+
+        .scroll-style li {
+            margin-bottom: 0 !important;
+        }
 </style>
 <!-- loader start -->
 <div class="loader_skeleton">
@@ -321,14 +347,16 @@
                                     @foreach (var item in ViewBag.Category)
                                     {
                                         <div class="form-check collection-filter-checkbox">
-                                            <input type="checkbox" class="form-check-input" id="a">
+                                            <input type="checkbox" name="Category" value="@item.ID" class="form-check-input" id="a">
                                             <label class="form-check-label" for="a">@item.Name</label>
                                         </div>
                                     }
                                 </div>
                             </div>
+
                         </div>
                         <!-- price filter start here -->
+
                         <div class="collection-collapse-block border-0 open">
                             <h3 class="collapse-block-title">price</h3>
                             <div class="collection-collapse-block-content" style="padding-bottom:40px">
@@ -348,30 +376,30 @@
                             <div>
                                 @foreach (var item in ViewBag.BestProduct)
                                 {
-                                <div class="media">
-                                   
-                                    @if (item.Image == null || item.Image == "")
-                                    {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
-                                    }
-                                    else
-                                    {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                            <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
-                                        </a>
-                                    }
-                                    <div class="media-body align-self-center">
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                            <h6>@item.Name</h6>
-                                        </a>
-                                        <h4>BHD @(Math.Round((item.Price),2))</h4>
-                                        <br />
-                                        @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                    <div class="media">
+
+                                        @if (item.Image == null || item.Image == "")
                                         {
-                                            <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
                                         }
+                                        else
+                                        {
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
+                                            </a>
+                                        }
+                                        <div class="media-body align-self-center">
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <h6>@item.Name</h6>
+                                            </a>
+                                            <h4>BHD @(Math.Round((item.Price),2))</h4>
+                                            <br />
+                                            @*@if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                                {
+                                                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
+                                                }*@
+                                        </div>
                                     </div>
-                                </div>
                                 }
                             </div>
                         </div>
@@ -400,9 +428,9 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="product-filter-content">
-                                                    <div class="search-count">
-                                                        <h5>Showing Products 1-12 of 10 Result</h5>
-                                                    </div>
+                                                    @*<div class="search-count">
+                                                            <h5>Showing Products 1-12 of 10 Result</h5>
+                                                        </div>*@
                                                     <div class="collection-view">
                                                         <ul>
                                                             <li><i class="fa fa-th grid-layout-view"></i></li>
@@ -417,31 +445,40 @@
                                                             <li><img src="../assets/images/icon/6.png" alt="" class="product-6-layout-view"></li>
                                                         </ul>
                                                     </div>
-                                                    <div class="product-page-per-view">
-                                                        <select>
-                                                            <option value="High to low">
-                                                                12 Products Par Page
-                                                            </option>
-                                                            <option value="Low to High">
-                                                                50 Products Par Page
-                                                            </option>
-                                                            <option value="Low to High">
-                                                                100 Products Par Page
-                                                            </option>
-                                                        </select>
-                                                    </div>
+                                                    @*<div class="product-page-per-view">
+                                                            <select>
+                                                                <option value="High to low">
+                                                                    12 Products Par Page
+                                                                </option>
+                                                                <option value="Low to High">
+                                                                    50 Products Par Page
+                                                                </option>
+                                                                <option value="Low to High">
+                                                                    100 Products Par Page
+                                                                </option>
+                                                            </select>
+                                                        </div>*@
                                                     <div class="product-page-filter">
-                                                        <select>
-                                                            <option value="High to low">Sorting items</option>
-                                                            <option value="Low to High">50 Products</option>
-                                                            <option value="Low to High">100 Products</option>
+                                                        <select class="SelectSort" name="sortby">
+                                                            <option value="1">Name(A - Z)</option>
+                                                            <option value="2">Name(Z - A)</option>
+                                                            <option value="3">Price(Low > High)</option>
+                                                            <option value="4">Price(High > Low)</option>
+                                                            @*<option value="High to low">Sorting items</option>
+                                                                <option value="Low to High">50 Products</option>
+                                                                <option value="Low to High">100 Products</option>*@
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-wrapper-grid">
+
+                                    <div id="divLoader" class="mx-auto w-100 text-center p-5" style="display:none;">
+                                        <img class="mr-3" src="~/Content/assets/images/gifloader.gif" style="width: 33px;" /> <span class="text-success">Loading ...</span>
+                                    </div>
+
+                                    <div class="product-wrapper-grid LoadProduct">
                                         <div class="row margin-res">
                                             @foreach (var item in ViewBag.itemList)
                                             {
@@ -462,7 +499,7 @@
                                                             @if ((Math.Round((item.CurrentStock), 2)) == 0)
                                                             {
                                                                 <div class="cart-info cart-wrap">
-                                                                    <button data-bs-toggle="modal" id="dis" ><i class="ti-shopping-cart"></i></button>
+                                                                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
                                                                     <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
                                                                 </div>
                                                             }
@@ -484,39 +521,18 @@
                                                                     @item.Description
                                                                 </p>
                                                                 <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
-                                                                <br />
+                                                                @*<br />
                                                                 @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
                                                                 {
                                                                     <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                                                }
+                                                                }*@
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             }
                                         </div>
-                                    </div>
-                                    <div class="product-pagination">
-                                        <div class="theme-paggination-block">
-                                            <div class="row">
-                                                <div class="col-xl-6 col-md-6 col-sm-12">
-                                                    <nav aria-label="Page navigation">
-                                                        <ul class="pagination">
-                                                            <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> <span class="sr-only">Previous</span></a></li>
-                                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                           
-                                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true"><i class="fa fa-chevron-right" aria-hidden="true"></i></span> <span class="sr-only">Next</span></a></li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                                <div class="col-xl-6 col-md-6 col-sm-12">
-                                                    <div class="product-search-count-bottom">
-                                                        <h5>Showing Products 1-24 of 10 Result</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>                                 
                                 </div>
                             </div>
                         </div>
@@ -533,29 +549,29 @@
 </div>
 <!-- tap to top end -->
 <!-- latest jquery-->
-<script src="../Content/assets/js/jquery-3.3.1.min.js"></script>
+<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
 
 <!-- menu js-->
-<script src="../Content/assets/js/menu.js"></script>
+<script src="~/Content/assets/js/menu.js"></script>
 
 <!-- lazyload js-->
-<script src="../Content/assets/js/lazysizes.min.js"></script>
+<script src="~/Content/assets/js/lazysizes.min.js"></script>
 
 <!-- price range js -->
-<script src="../Content/assets/js/price-range.js"></script>
+<script src="~/Content/assets/js/price-range.js"></script>
 
 <!-- slick js-->
-<script src="../Content/assets/js/slick.js"></script>
+<script src="~/Content/assets/js/slick.js"></script>
 
 <!-- Bootstrap js-->
-<script src="../Content/assets/js/bootstrap.bundle.min.js"></script>
+<script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
 
 <!-- Bootstrap Notification js-->
-<script src="../Content/assets/js/bootstrap-notify.min.js"></script>
+<script src="~/Content/assets/js/bootstrap-notify.min.js"></script>
 
 <!-- Theme js-->
-<script src="../Content/assets/js/theme-setting.js"></script>
-<script src="../Content/assets/js/script.js"></script>
+<script src="~/Content/assets/js/theme-setting.js"></script>
+<script src="~/Content/assets/js/script.js"></script>
 
 <script>
     function openSearch() {
@@ -593,4 +609,167 @@
 
 
         });
+ 
+         $(document).ready(function () {
+    
+            var Category = [];
+            var SubCategory = [];
+            var Color = [];
+
+            $('input[name="Category"]').click(function () {
+
+                if ($(this).prop("checked") == true) {
+                    Category.push($(this).val());
+                    debugger
+                    var SortID = $(".SelectSort").val();
+                    ProductFilter(Category.join(), "", "", "BHD0", "RS50000", SortID);
+                }
+                else {
+                    var index = Category.indexOf($(this).val());
+                    Category.splice(index, 1);
+                    var SortID = $(".SelectSort").val();
+                    ProductFilter(Category.join(), "", "", "BHD0", "RS50000", SortID);
+                }
+            });
+
+            $('input[name="SubCategory"]').click(function () {
+                if ($(this).prop("checked") == true) {
+                    SubCategory.push($(this).val());
+                    ProductFilter("", SubCategory.join(), "", "BHD0", "RS50000",0);
+                }
+                else {
+                    var index = SubCategory.indexOf($(this).val());
+                    SubCategory.splice(index, 1);
+                    ProductFilter("", SubCategory.join(), "", "BHD0", "RS50000",0);
+                }
+            });
+            $('#Sort').on('change', function () {
+                ProductFilter(Category.join(), "", "", "BHD0", "BHD50000", this.value);
+            });
+            $("#price-slider").mouseup(function () {
+                var MinPrice = $(".min-price").val();
+                var MaxPrice = $(".max-price").val();
+                var SortID = $(".SelectSort").val();
+                ProductFilter(Category.join(), "", "", MinPrice, MaxPrice, SortID);
+            });
+            $("#price-slider1").mouseup(function () {
+                var MinPrice = $(".min-price").val();
+                var MaxPrice = $(".max-price").val();
+                var SortID = $(".SelectSort").val();
+                ProductFilter(Category.join(), "", "", MinPrice, MaxPrice, SortID);
+            });
+
+            $(".filterOn").click(function () {
+
+                $("#divLoader").show();
+                $(".LoadProduct").hide();
+
+                var Searchtxt = "";
+
+                if ($("#txt-desktop").val() != null && $("#txt-desktop").val() != '') {
+                    Searchtxt = $("#txt-desktop").val();
+
+                }
+                else {
+                    Searchtxt = $("#txt-mobile").val();
+
+                }
+
+                var MinPrice = $(".min-price").val();
+                var MaxPrice = $(".max-price").val();
+                var SortID = $(".SelectSort").val();
+                var filter = new Object();
+                filter.Category = Category.join();
+                filter.SubCategory = SubCategory.join();                 
+                filter.Searchtxt = Searchtxt;
+                filter.MinPrice = MinPrice;
+                filter.MaxPrice = MaxPrice;
+                filter.SortID = SortID;
+
+                var FilterData = JSON.stringify(filter);
+
+                $.ajax({
+                    type: "POST",
+                    url: '../Shop/Filter',
+                    data: FilterData,
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (obj) {
+                        $.ajax({
+                            type: "POST",
+                            url: '../Shop/Products',
+                            data: JSON.stringify(obj.data),
+                            contentType: 'application/json; charset=utf-8',
+                            dataType: 'html',
+                            success: function (data) {
+
+                                $("#divLoader").hide();
+                                $(".LoadProduct").show();
+                                $(".LoadProduct").html(data);
+
+                            },
+                            error: function (xhr, textStatus, errorThrown) {
+
+                            }
+                        });
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        //
+                    }
+                });
+            });
+            //===============================================
+
+        });
+        function ProductFilter(Category, SubCategory, Color, MinPrice, MaxPrice, SortID) {
+            debugger
+            $("#divLoader").show();
+            $(".LoadProduct").hide();
+
+            var MinPrice = $(".min-price").val();
+            var MaxPrice = $(".max-price").val();
+            var SortID = $(".SelectSort").val();
+            var filter = new Object();
+            filter.Category = Category;
+            filter.SubCategory = SubCategory;
+            
+            filter.Searchtxt = "";
+            filter.MinPrice = MinPrice;
+            filter.MaxPrice = MaxPrice;
+            filter.SortID = SortID;
+
+            var FilterData = JSON.stringify(filter);
+
+            $.ajax({
+                type: "POST",
+                url: '../Shop/Filter',
+                data: FilterData,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (obj) {
+                    $.ajax({
+                        type: "POST",
+                        url: '../Shop/Products',
+                        data: JSON.stringify(obj.data),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'html',
+                        success: function (data) {
+
+                            $("#divLoader").hide();
+                            $(".LoadProduct").show();
+                            $(".LoadProduct").html(data);
+
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+
+                        }
+                    });
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    //
+                }
+            });
+        }
 </script>
+
+ 

@@ -84,6 +84,40 @@
             right: 31px;
             padding: 3px;
         }
+        @@media (max-width: 480px) {
+            .mobile-wishlist {
+                padding-right:60px !important;
+                padding-top:10px;
+            }
+        }
+        @@media (max-width: 480px) {
+            .ion-ios-contact {
+                color: var(--theme-color) !important;
+            }
+        }
+        @@media (max-width: 480px) {
+            .wish_qty_cls {
+                right: 44px !important;
+            }
+        }
+        @@media (max-width: 577px) {
+            .top-header {
+                height: 42px;
+            }
+            .ion-ios-contact {
+                color: white !important;
+            }
+        }
+        @@media (max-width: 577px) {
+            .header-compact .main-nav-center .toggle-nav {
+                top: -78px !important;
+            }
+        }
+        @@media (max-width: 480px) {
+            .brand-logo img {
+                height: 50px !important;
+            }
+        }
     </style>
 </head>
 <body class="theme-color-30 mulish-font">
@@ -101,7 +135,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 text-end">
-                        <div class="login-icon ">
+                        <div class="login-icon " >
 
                             @if (Session["CustomerName"] != null)
                             {
@@ -114,7 +148,7 @@
                             }
                             else
                             {
-                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white !important;"></i></a>
+                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white;"></i></a>
                             }
 
                         </div>
@@ -168,35 +202,31 @@
                                             </div>
                                         </li>
                                         @*<li class="onhover-div mobile-setting">
-                <div><img src="../Content/assets/images/icon/setting.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-settings"></i></div>
-                <div class="show-div setting">
-                    <h6>language</h6>
-                    <ul>
-                        <li><a href="#">English</a></li>
-                    </ul>
-                </div>
-            </li>*@
+                    <div><img src="../Content/assets/images/icon/setting.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-settings"></i></div>
+                    <div class="show-div setting">
+                        <h6>language</h6>
+                        <ul>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                </li>*@
 
-                                    <li class="mobile-wishlist pe-0">
+                                        <li class="mobile-wishlist pe-0">
 
-                                        <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="true" style="color:var(--theme-color) !important;"></i></a>
-                                        <span class="wish_qty_cls" id="wish-total">0</span>
-                                    </li>
-
+                                            <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="true" style="color:var(--theme-color) !important;"></i></a>
+                                            <span class="wish_qty_cls" id="wish-total">0</span>
+                                        </li>
                                         <li class="onhover-div mobile-cart">
                                             <div><img src="~/Content/assets/images/icon/cart.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-shopping-cart"></i></div>
                                             <span class="cart_qty_cls" id="cart-total">0</span>
                                             <ul class="show-div shopping-cart head-cart">
                                             </ul>
                                         </li>
-
-
-
-
                                     </ul>
 
-                                  
+
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -266,11 +296,11 @@
                         <div class="footer-contant">
                             <div class="footer-logo"> <img src="~/Content/assets/images/footerlogo.png" /></div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids.
+                                Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics.
                             </p>
                             <ul class="store-details">
-                                <li><a href="#"><img src="../Content/assets/images/store/google.png" class="img-fluid" alt=""></a></li>
+                                <li><a href="https://play.google.com/store/apps/details?id=com.vitamito" target="_blank"><img src="../Content/assets/images/store/google.png" class="img-fluid" alt=""></a></li>
                                 <li>
                                     <a href="#"><img src="../Content/assets/images/store/app.png" class="img-fluid" alt=""></a>
                                 </li>
@@ -303,8 +333,18 @@
                                         <i class="fa fa-map-marker"></i>Vitamito Store
                                     </li>
                                     <li><i class="fa fa-phone"></i>Call Us: +973 373 773 53</li>
-                                    <li><i class="fa fa-envelope"></i>Email Us: <a href="#">VITAMITO.BH.O2022@GMAIL.COM</a></li>
+
+                                    <li><i class="fa fa-whatsapp"></i>Whatsapp: +973 3737553</li>
+                                    <li><i class="fa fa-envelope"></i>Email Us: <a href="#">vitamitobh@gmail.com</a></li>
+                                    <li><i class="fa fa-address-book"></i>Address: <a href="#">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
                                 </ul>
+                                <br />
+                                <a href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>
+                                <a href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
+                                <a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
+                                <a onclick="onclicktiktok()" ><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
+                                <a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
+
                             </div>
                         </div>
                     </div>
@@ -366,13 +406,15 @@
     <script src="~/Content/assets/js/script.js"></script>
     <script src="~/Content/assets/js/custom-slick-animated.js"></script>
     @RenderSection("scripts", false)
-    <script>
+<script>
         //$(window).on('load', function () {
         //    setTimeout(function () {
         //        $('#exampleModal').modal('show');
         //    }, 2500);
         //});
-
+        function onclicktiktok() {
+            window.location.href = "https://www.tiktok.com/@@vitamito.bh?lang=en";
+        }
         function openSearch() {
             document.getElementById("search-overlay").style.display = "block";
         }
@@ -381,7 +423,7 @@
             document.getElementById("search-overlay").style.display = "none";
         }
         feather.replace();
-    </script>
+</script>
 
 
     <script>

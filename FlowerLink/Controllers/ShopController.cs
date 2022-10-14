@@ -55,7 +55,7 @@ namespace Vitamito.Controllers
                 {
                     ViewBag.Message = "No Product Found";
                 }
-                return PartialView("_Products");
+                return PartialView("AllProducts");
             }
             else
             {
@@ -87,7 +87,7 @@ namespace Vitamito.Controllers
 
                 }
 
-                return PartialView("_Products");
+                return PartialView("AllProducts");
             }
         }
     }

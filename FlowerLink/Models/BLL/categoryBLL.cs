@@ -13,15 +13,15 @@ namespace Vitamito.Models.BLL
     public class categoryBLL
     {
         public int ID { get; set; }
-        public int LocationID { get; set; }
+        public int? LocationID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public int DisplayOrder { get; set; }
-        public bool SortByAlpha { get; set; }
+        public int? DisplayOrder { get; set; }
+        //public bool SortByAlpha { get; set; }
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-        public int StatusID { get; set; }
+        public int? StatusID { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
         public string CreatedBy { get; set; }
 
@@ -34,12 +34,13 @@ namespace Vitamito.Models.BLL
                 var lst = new List<categoryBLL>();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@LocationID", LocationID);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCategory_menu", p);
-                if (_dt != null)
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetCategory_menu", p);
+                if (_ds != null)
                 {
-                    if (_dt.Rows.Count > 0)
+                    if (_ds.Tables.Count > 0)
                     {
-                        lst = _dt.DataTableToList<categoryBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<categoryBLL>>().ToList();
+                        //lst = _dt.DataTableToList<categoryBLL>();
                     }
                 }
                 return lst;

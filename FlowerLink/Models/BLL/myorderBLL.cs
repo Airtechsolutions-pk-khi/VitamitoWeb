@@ -52,11 +52,11 @@ namespace Vitamito.Models.BLL
         public class OrderDetails
         {
             public int OrderDetailID { get; set; }
-            public string ItemTitle { get; set; }
-            public string ItemImage { get; set; }
+            public string Name { get; set; }
+            public string Image { get; set; }
             public int Quantity { get; set; }
             public int OrderNo { get; set; }
-            public double Price { get; set; }
+            public double Price { get; set; }           
         }
         public class GiftDetails
         {

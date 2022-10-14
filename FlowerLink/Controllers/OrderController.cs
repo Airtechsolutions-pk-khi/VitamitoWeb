@@ -82,7 +82,7 @@ namespace Vitamito.Controllers
                         + "<tbody>"
                         + "<tr>"
                         + "<td style = 'font-size:6px; line-height:10px; padding:0px 0px 0px 0px;' valign='top' align='left'>"
-                        + "<img src = '" + System.Configuration.ConfigurationManager.AppSettings["Image"].ToString() + item.ItemImage + "' class='max-width' border='0' style='display:block;width: 108px;height: 108px;object-fit: contain;' alt='' >"
+                        + "<img src = '" + System.Configuration.ConfigurationManager.AppSettings["Image"].ToString() + item.Image + "' class='max-width' border='0' style='display:block;width: 108px;height: 108px;object-fit: contain;' alt='' >"
                         + "</td>"
                         + "</tr>"
                         + "</tbody>"
@@ -97,7 +97,7 @@ namespace Vitamito.Controllers
                         + "<tbody>"
                         + "<tr>"
                         + "<td style = 'padding:18px 0px 18px 0px; line-height:22px; text-align:inherit;' height='100%' valign='top' bgcolor='' role='module-content'><div>"
-                        + "<div style = 'font-family: inherit; text-align: inherit'> " + item.ItemTitle + "</div>"
+                        + "<div style = 'font-family: inherit; text-align: inherit'> " + item.Name + "</div>"
                         + "<div style = 'font-family: inherit; text-align: inherit'> Qty : " + item.Quantity + "</div>"
                         + "<div style = 'font-family: inherit; text-align: inherit'><span style='color: #006782'>RS " + item.Price + "</span></div>"
                         + "<div></div></div></td>"
@@ -118,13 +118,14 @@ namespace Vitamito.Controllers
                     {
                     }
                 }
-                BodyEmail = BodyEmail.Replace("#ReceiverName#", data.CustomerName.ToString());
+                BodyEmail = BodyEmail.Replace("#Customer#", data.CustomerName.ToString());
                 BodyEmail = BodyEmail.Replace("#ReceiverContact#", data.ContactNo.ToString());
                 BodyEmail = BodyEmail.Replace("#OrderNo#", data.OrderNo.ToString());
                 BodyEmail = BodyEmail.Replace("#items#", items.ToString());
 
-                BodyEmailadmin = BodyEmailadmin.Replace("#ReceiverName#", data.CustomerName.ToString());
+                BodyEmailadmin = BodyEmailadmin.Replace("#Customer#", data.CustomerName.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#ReceiverContact#", data.ContactNo.ToString());
+                BodyEmailadmin = BodyEmailadmin.Replace("#CustomerAddress#", data.Address.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#OrderNo#", data.OrderNo.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#items#", items.ToString());
                 DateTime dateTime = DateTime.UtcNow.AddMinutes(180);
@@ -142,19 +143,19 @@ namespace Vitamito.Controllers
                  
                 BodyEmail = BodyEmail.Replace("#Description#", data.CardNotes.ToString());
                 //BodyEmail = BodyEmail.Replace("#PaymentMethod#", data.PaymentMethodTitle.ToString());
-                BodyEmail = BodyEmail.Replace("#TotalItems#", data.TotalItems.ToString());
+                //BodyEmail = BodyEmail.Replace("#TotalItems#", data.TotalItems.ToString());
                 BodyEmail = BodyEmail.Replace("#SubTotal#", data.AmountTotal.ToString());
                 BodyEmail = BodyEmail.Replace("#Tax#", data.Tax.ToString());
                 BodyEmail = BodyEmail.Replace("#DeliveryAmount#", data.DeliveryAmount.ToString());
                 BodyEmail = BodyEmail.Replace("#GrandTotal#", data.GrandTotal.ToString());
 
                 //BodyEmailadmin = BodyEmailadmin.Replace("#PaymentType#", PaymentType.ToString());
-                BodyEmailadmin = BodyEmailadmin.Replace("#Description#", data.CardNotes.ToString());
+                //BodyEmailadmin = BodyEmailadmin.Replace("#Description#", data.CardNotes.ToString());
                 //BodyEmailadmin = BodyEmailadmin.Replace("#PaymentMethod#", data.PaymentMethodTitle.ToString());
-                BodyEmailadmin = BodyEmailadmin.Replace("#TotalItems#", data.TotalItems.ToString());
+                //BodyEmailadmin = BodyEmailadmin.Replace("#TotalItems#", data.TotalItems.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#SubTotal#", data.AmountTotal.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#Tax#", data.Tax.ToString());
-                BodyEmailadmin = BodyEmailadmin.Replace("#DeliveryAmount#", data.DeliveryAmount.ToString());
+                //BodyEmailadmin = BodyEmailadmin.Replace("#DeliveryAmount#", data.DeliveryAmount.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#GrandTotal#", data.GrandTotal.ToString());
                 cc = "";
                 Bcc = ConfigurationManager.AppSettings["From"].ToString();
@@ -176,7 +177,7 @@ namespace Vitamito.Controllers
                     smtp.Credentials = new System.Net.NetworkCredential
                          (ConfigurationManager.AppSettings["From"].ToString(), ConfigurationManager.AppSettings["Password"].ToString());
                     //Or your Smtp Email ID and Password
-                    smtp.EnableSsl = true;
+                    smtp.EnableSsl = false;
 
                     smtp.Send(mail);
 
@@ -204,7 +205,7 @@ namespace Vitamito.Controllers
                     smtp.Credentials = new System.Net.NetworkCredential
                          (ConfigurationManager.AppSettings["From"].ToString(), ConfigurationManager.AppSettings["Password"].ToString());
                     //Or your Smtp Email ID and Password
-                    smtp.EnableSsl = true;
+                    smtp.EnableSsl = false;
 
                     smtp.Send(mail);
                 }

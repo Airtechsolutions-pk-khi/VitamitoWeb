@@ -4,7 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-   
+    @@media (max-width: 480px) {
+        .mob {
+            width: 367px !important;
+        }
+    }
 </style>
 <div class="breadcrumb-section">
     <div class="container">
@@ -110,11 +114,11 @@
                                             <div class="front">
                                                 @if (item.Image == null || item.Image == "")
                                                 {
-                                                    <img src="~/Content/assets/images/NA.png" style="width:500px;">
+                                                    <img src="~/Content/assets/images/NA.png" class="mob" style="width:500px;">
                                                 }
                                                 else
                                                 {
-                                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="width:500px;" />
+                                                    <img class="mob" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="width:500px;" />
                                                 }
                                             </div>
                                         </div>
@@ -125,10 +129,10 @@
                                         <h2>@item.Name</h2>
                                         <input type="hidden" value="@item.CurrentStock" id="stk" />
                                         <h3 class="price-detail">BHD @item.Price</h3>
-                                        @if ((Math.Round((item.CurrentStock), 2)) < 11)
+                                        @*@if ((Math.Round((item.CurrentStock), 2)) < 11)
                                         {
                                             <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                        }
+                                        }*@
                                        
                                         <div id="selectSize" class="addeffect-section product-description border-product">
                                             <h6 class="product-title">quantity</h6>

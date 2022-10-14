@@ -75,7 +75,7 @@ namespace Vitamito.Controllers
                 smtp.Credentials = new System.Net.NetworkCredential
                      (ConfigurationManager.AppSettings["From"].ToString(), ConfigurationManager.AppSettings["Password"].ToString());
                 //Or your Smtp Email ID and Password
-                smtp.EnableSsl = true;
+                smtp.EnableSsl = false;
 
                 smtp.Send(mail);
                 ViewBag.Contact = "Your Query is received. Our support department contact you soon.";

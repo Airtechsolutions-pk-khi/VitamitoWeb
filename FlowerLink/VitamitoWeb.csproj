@@ -320,6 +320,7 @@
     <Content Include="Content\assets\images\fire.gif" />
     <Content Include="Content\assets\images\FLogo.jpg" />
     <Content Include="Content\assets\images\footerlogo.png" />
+    <Content Include="Content\assets\images\gifloader.gif" />
     <Content Include="Content\assets\images\icon\2.png" />
     <Content Include="Content\assets\images\icon\3.png" />
     <Content Include="Content\assets\images\icon\4.png" />
@@ -340,9 +341,11 @@
     <Content Include="Content\assets\images\icon\dashboard\sale.png" />
     <Content Include="Content\assets\images\icon\discover.png" />
     <Content Include="Content\assets\images\icon\email.png" />
+    <Content Include="Content\assets\images\icon\facebook.png" />
     <Content Include="Content\assets\images\icon\footerlogo.png" />
     <Content Include="Content\assets\images\icon\global.png" />
     <Content Include="Content\assets\images\icon\heart-1.png" />
+    <Content Include="Content\assets\images\icon\instagram.png" />
     <Content Include="Content\assets\images\icon\layout3\footerlogo.png" />
     <Content Include="Content\assets\images\icon\layout3\logo.png" />
     <Content Include="Content\assets\images\icon\layout4\cart.png" />
@@ -410,10 +413,12 @@
     <Content Include="Content\assets\images\icon\slider-btn-01.png" />
     <Content Include="Content\assets\images\icon\slider-btn-active.png" />
     <Content Include="Content\assets\images\icon\small-quote-icon.png" />
+    <Content Include="Content\assets\images\icon\snapchat.png" />
     <Content Include="Content\assets\images\icon\supplement\1.png" />
     <Content Include="Content\assets\images\icon\supplement\2.png" />
     <Content Include="Content\assets\images\icon\supplement\3.png" />
     <Content Include="Content\assets\images\icon\supplement\4.png" />
+    <Content Include="Content\assets\images\icon\ticktok.png" />
     <Content Include="Content\assets\images\icon\trolley.png" />
     <Content Include="Content\assets\images\icon\truck.png" />
     <Content Include="Content\assets\images\icon\uk.png" />
@@ -437,6 +442,7 @@
     <Content Include="Content\assets\images\icon\vegetables\tea.png" />
     <Content Include="Content\assets\images\icon\vegetables\veg.png" />
     <Content Include="Content\assets\images\icon\visa.png" />
+    <Content Include="Content\assets\images\icon\whatsapp.png" />
     <Content Include="Content\assets\images\icon\white-icon\cart.png" />
     <Content Include="Content\assets\images\icon\white-icon\heart.png" />
     <Content Include="Content\assets\images\icon\white-icon\loupe.png" />
@@ -744,6 +750,15 @@
     <Content Include="Content\assets\images\main-banner-bg.jpg" />
     <Content Include="Content\assets\images\NA.png" />
     <Content Include="Content\assets\images\person.gif" />
+    <Content Include="Content\assets\images\pro3\1.jpg" />
+    <Content Include="Content\assets\images\pro3\2.jpg" />
+    <Content Include="Content\assets\images\pro3\27.jpg" />
+    <Content Include="Content\assets\images\pro3\28.jpg" />
+    <Content Include="Content\assets\images\pro3\33.jpg" />
+    <Content Include="Content\assets\images\pro3\34.jpg" />
+    <Content Include="Content\assets\images\pro3\35.jpg" />
+    <Content Include="Content\assets\images\pro3\36.jpg" />
+    <Content Include="Content\assets\images\pro3\sm.jpg" />
     <Content Include="Content\assets\images\shopping-cart.png" />
     <Content Include="Content\assets\images\stop.png" />
     <Content Include="Content\assets\images\store\app.png" />
@@ -861,6 +876,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
     <Content Include="language\translations.js" />
     <Content Include="Scripts\js-cookie\js.cookie-2.2.1.min.js" />
     <Content Include="Scripts\js-cookie\js.cookie.js" />

@@ -4,7 +4,26 @@
 }
 <style>
     #dis {
-        background-color:#9dc3c2;
+        background-color: #9dc3c2;
+    }
+    .product-style-4.product-box .addtocart_btn .add_cart, .product-style-4.product-wrap .addtocart_btn .add_cart {
+        right:10px !important;
+        bottom:10px !important;
+    }
+    @@media (max-width: 480px) {
+        .home-slider .home {
+            height: 15vh !important;
+        }
+    }
+    @@media (max-width: 480px) {
+        .brand-logo img {
+            height: 50px !important;
+        }
+    }
+    @@media (max-width: 480px) {
+        .ion-ios-contact {
+            color: var(--theme-color);
+        }
     }
 </style>
 <!-- Home slider -->
@@ -30,11 +49,12 @@
                         <div class="blog-image">
                             @if (item.Image == null || item.Image == "")
                             {
-                                <a><img src="~/Content/assets/images/NA.png" style="height: 80px; width: 80px;"></a>
+                                <a href="@Url.Action("shop", "shop", new { LocationID = 2182, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})"><img src="~/Content/assets/images/NA.png" style="height: 80px; width: 80px;"></a>
                             }
                             else
                             {
-                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 80px; width: 80px;" /></a>
+                                @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 80px; width: 80px;" /></a>*@
+                                <a href="@Url.Action("shop", "shop", new { LocationID = 2182, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})"><img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 80px; width: 80px;" /></a>
                             }
                         </div>
                         <div class="blog-content">
@@ -96,70 +116,54 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="slide-7-demo slick-sm-margin no-arrow">
+                <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
                     @foreach (var item in ViewBag.NewArrivals)
                     {
-
-                        <div class="product-box product-style-4">
+                        <div class="product-box product-box product-style-4">
                             <div class="img-wrapper">
                                 <div class="front">
                                     @if (item.Image == null || item.Image == "")
                                     {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
                                     }
                                     else
                                     {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" /></a>
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+
+                                            <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px !important; width: 160px !important;" />
+                                        </a>
                                     }
+
                                 </div>
+
                                 <div class="cart-detail">
                                     <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
                                         <i class="ti-heart" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="product-info">
-                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                    <h6>
-                                        @item.Name
-                                    </h6>
-                                </a>
-                                <h6>
-                                    <strong>BHD @(Math.Round((item.Price),2))</strong><br />
-                                    @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                    {
-                                        <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                    }
-                                </h6>
-                                @if ((Math.Round((item.CurrentStock), 2)) == 0)
-                                {
-                                    <strong style="font-size:13px;color:red;">Out of Stock</strong>
-                                    <div class="addtocart_btn">
-                                        <button id="dis" class="add-button add_cart" title="Add to cart">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
+                            <div class="product-detail">
 
-                                }
-                                else
-                                {
-                                    <div class="addtocart_btn">
-                                        <a class="add-button addItemLS add_cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;" data-bs-toggle="modal" data-bs-target="#addtocart" title="Add to cart">
-                                            <i class="fa fa-plus"></i>
-                                        </a>
-                                    </div>
-                                }
+                                <a href="product-page(no-sidebar).html">
+                                    <h6> @item.Name</h6>
+                                </a>
+                                <strong>BHD @(Math.Round((item.Price),2))</strong>
+                                <div class="addtocart_btn">
+                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
                                 </div>
-                               
+                            </div>
                         </div>
                     }
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- product slider end -->
-<!-- product slider start -->
+
 <section class="bag-product ratio_square">
     <div class="container">
         <div class="row">
@@ -168,69 +172,49 @@
                     <h2>Featured Products</h2>
                 </div>
             </div>
-            <div class="slide-7-demo slick-sm-margin no-arrow">
+            <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
                 @foreach (var item in ViewBag.TenItems)
                 {
-
-                    <div class="product-box product-style-4">
+                    <div class="product-box product-box product-style-4">
                         <div class="img-wrapper">
                             <div class="front">
+                                @if (item.Image == null || item.Image == "")
+                                {
+                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
 
-                                <div class="zoom">
-                                    @if (item.Image == null || item.Image == "")
-                                    {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
-                                    }
-                                    else
-                                    {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-
-                                            <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
-                                        </a>
-                                    }
-                                </div>
+                                        <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px !important; width: 160px !important;" />
+                                    </a>
+                                }
 
                             </div>
+
                             <div class="cart-detail">
                                 <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
                                     <i class="ti-heart" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                <h6>
-                                    @item.Name
-                                </h6>
-                            </a>
-                            <h6>
-                                <strong>BHD @(Math.Round((item.Price),2))</strong><br />
-                                @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                {
-                                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                }
+                        <div class="product-detail">
 
-                            </h6>
-                            @if ((Math.Round((item.CurrentStock), 2)) == 0)
-                            {
-                                <strong style="font-size:13px;color:red;">Out of Stock</strong>
-                                <div class="addtocart_btn">
-                                    <button id="dis" class="add-button add_cart" title="Add to cart">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                                
-                            }
-                            else { 
+                            <a href="product-page(no-sidebar).html">
+                                <h6> @item.Name</h6>
+                            </a>
+                            <strong>BHD @(Math.Round((item.Price),2))</strong>
                             <div class="addtocart_btn">
                                 <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
                                     <i class="fa fa-plus"></i>
                                 </button>
                             </div>
-                            }
+
                         </div>
+
                     </div>
                 }
+
             </div>
         </div>
     </div>
@@ -283,23 +267,24 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="slide-7-demo slick-sm-margin no-arrow">
+                <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
                     @foreach (var item in ViewBag.LowestPrice)
                     {
-
-                        <div class="product-box product-style-4">
+                        <div class="product-box product-box product-style-4">
                             <div class="img-wrapper">
                                 <div class="front">
                                     @if (item.Image == null || item.Image == "")
                                     {
-                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
                                     }
                                     else
                                     {
-                                        <a href="/Product/ProductDetails?ID=' + item[i].ID + '">
-                                            <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+
+                                            <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px !important; width: 160px !important;" />
                                         </a>
                                     }
+
                                 </div>
 
                                 <div class="cart-detail">
@@ -308,41 +293,23 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="product-info">
-                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                    <h6>
-                                        @item.Name
-                                    </h6>
+                            <div class="product-detail">
+
+                                <a href="product-page(no-sidebar).html">
+                                    <h6> @item.Name</h6>
                                 </a>
-                                <h6>
-                                    <strong>BHD @(Math.Round((item.Price),2))</strong><br />
-                                    @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                    {
-                                        <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                    }
-
-                                </h6>
-                                @if ((Math.Round((item.CurrentStock), 2)) == 0)
-                                {
-                                    <strong style="font-size:13px;color:red;">Out of Stock</strong>
-                                    <div class="addtocart_btn">
-                                        <button id="dis" class="add-button add_cart" title="Add to cart">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-
-                                }
-                                else
-                                {
-                                    <div class="addtocart_btn">
-                                        <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                }
+                                <strong>BHD @(Math.Round((item.Price),2))</strong>
+                                <div class="addtocart_btn">
+                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
                                 </div>
+
+                            </div>
+
                         </div>
                     }
+
                 </div>
             </div>
         </div>
@@ -428,106 +395,4 @@
         </div>
     </div>
 </section>
-<!-- service section end -->
-<!-- product slider start
-<section class="bag-product ratio_square">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title8">
-                    <h2>Other Products</h2>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="slide-7-demo slick-sm-margin no-arrow">
-                    foreach (var item in ViewBag.NewArrivals)
-                    {
 
-                        <div class="product-box product-style-4">
-                            <div class="img-wrapper">
-                                <div class="front">
-                                    <a href="">
-                                        <div class="zoom">
-                                            <img src="~/Content/assets/images/a.png" />
-                                            <img src="System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()item.Image" alt="" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="cart-detail">
-                                    <a class="wishlist" onclick="addtoWishlist(item.ID, 'item.Name', 'item.Image',item.Price,item.StatusID,1);toast('Item Added to wishlist', 1); return false; " >
-                                        <i class="ti-heart" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#quick-view" title="Quick View">
-                                        <i class="ti-search" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <a href="">
-                                    <h6>
-                                        item.Name
-                                    </h6>
-                                </a>
-                                <div class="addtocart_btn">
-                                    <button class="add-button add_cart" title="Add to cart">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                    <div class="qty-box cart_qty">
-                                        <div class="input-group">
-                                            <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
-                                                <i class="fa fa-minus" aria-hidden="true"></i>
-                                            </button>
-                                            <input type="text" name="quantity" class="form-control input-number qty-input" value="1">
-                                            <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
-                                                <i class="fa fa-plus" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- product slider end -->
-<!-- blog section
-<section class="blog gym-blog ratio3_2 slick-default-margin section-b-space">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="title-basic">
-                    <h2 class="title">shop by category</h2>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="slide-4 no-arrow">
-                    foreach (var item in ViewBag.TenItems)
-                    {
-                        <div>
-                            <a href="#">
-                                <div class="basic-effect">
-                                    <div class="zoom">
-                                        <img src="System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()item.Image" alt="" />
-                                        <!--<img src="~/Content/assets/images/a.png" class="img-fluid blur-up lazyload bg-img" alt="">
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="blog-details">
-                                <h4>item.Name</h4>
-                                <a href="#">
-                                    <p>item.Description </p>
-                                </a>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- blog section end -->
- 

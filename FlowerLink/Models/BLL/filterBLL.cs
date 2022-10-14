@@ -16,8 +16,8 @@ namespace Vitamito.Models.BLL
         public string SubCategory { get; set; }
         public string Searchtxt { get; set; }
         public int SortID { get; set; }
-        public int ItemID { get; set; }
-        public string Title { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
         public string ArabicTitle { get; set; }
         public string SKU { get; set; }
         public string Description { get; set; }
@@ -29,7 +29,7 @@ namespace Vitamito.Models.BLL
         public string Image { get; set; }
         public string HoveredImage { get; set; }
         public int StatusID { get; set; }
-        public int DisplayOrder { get; set; }
+        public int? DisplayOrder { get; set; }
         public bool IsFeatured { get; set; }
         public int StockQty { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
@@ -46,7 +46,7 @@ namespace Vitamito.Models.BLL
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
                 p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
-                //_ds = (new DBHelper().GetDatasetFromSP)("sp_filterCategory_Web",p);
+                
                 _ds = (new DBHelper().GetDatasetFromSP)("sp_filterProduct_Vitamito", p);
 
                 if (_ds != null)
