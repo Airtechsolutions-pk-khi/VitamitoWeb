@@ -2,7 +2,13 @@
     ViewBag.Title = "Cart";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<style>
+    @@media (max-width: 480px) {
+        .cart-section tbody tr td {
+            min-width: 135px !important;
+        }
+    }
+</style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
     <div class="container">
@@ -28,14 +34,7 @@
 <section class="cart-section section-b-space">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="cart_counter">
-                    <div class="countdownholder">
-                        Your cart will be expired in<span id="timer">10</span> minutes!
-                    </div>
-                    <a href="@Url.Action("Checkout", "Order")" class="cart_checkout btn btn-solid btn-xs">check out</a>
-                </div>
-            </div>
+
             <div class="col-sm-12 table-responsive-xs">
                 <table id="cart-table" class="table cart-table">
                     <thead>
@@ -46,7 +45,7 @@
                             <th scope="col">price</th>
                             <th scope="col">quantity</th>
                             <th scope="col">subtotal</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody class="cart-items">
@@ -65,6 +64,7 @@
                     </table>
                 </div>
             </div>
+
         </div>
         <div class="row cart-buttons">
             <div class="col-6"><a href="@Url.Action("Index","Home")" class="btn btn-solid">continue shopping</a></div>

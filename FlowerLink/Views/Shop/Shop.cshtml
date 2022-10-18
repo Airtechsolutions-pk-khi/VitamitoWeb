@@ -33,6 +33,73 @@
         .scroll-style li {
             margin-bottom: 0 !important;
         }
+
+
+
+
+
+
+    .filter-price-cont {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .filter-price-cont {
+        font-size: 14px;
+    }
+
+        .filter-price-cont .input-type input {
+            border: medium none;
+            padding: 0 8px 0 0;
+            text-align: center;
+            width: 46px;
+        }
+
+        .filter-price-cont .input-type:last-child {
+            padding-left: 8px;
+        }
+
+        .filter-price-cont .add-to-cart-button {
+            background: #006782;
+            display: inline-block;
+            font-weight: 500;
+            padding: 1px 13px;
+            right: 0;
+            color: #ffffff !important;
+        }
+
+            .filter-price-cont .add-to-cart-button:hover {
+                background: #ffcc00;
+                color: #000000 !important;
+            }
+
+    .bg-transparent {
+        background-color: transparent !important
+    }
+
+    .mx-1 {
+        margin-right: .25rem !important
+    }
+
+    .ml-1,
+    .mx-1 {
+        margin-left: .25rem !important
+    }
+
+    .pr-0,
+    .px-0 {
+        padding-right: 0 !important
+    }
 </style>
 <!-- loader start -->
 <div class="loader_skeleton">
@@ -359,14 +426,27 @@
 
                         <div class="collection-collapse-block border-0 open">
                             <h3 class="collapse-block-title">price</h3>
-                            <div class="collection-collapse-block-content" style="padding-bottom:40px">
+                            <div class="collection-collapse-block-content">
                                 <div class="wrapper mt-3">
                                     <div class="range-slider">
-                                        <input type="range" class="irs-slider" value="" style="width:100%">
+                                        <input type="text" class="js-range-slider" value="">
                                     </div>
                                 </div>
+                                <a href="javascript:;" class="btn filterOn btn btn-default btn-small" style="background-color:var(--theme-color);color:white;">Search</a>
                             </div>
                         </div>
+
+                        @*<div class="collection-collapse-block border-0 open">
+                                <h3 class="collapse-block-title">price</h3>
+                                <div class="collection-collapse-block-content" style="padding-bottom:40px">
+                                    <div class="wrapper mt-3">
+                                        <div class="range-slider" id="price-slider">
+                                            <input type="range" class="irs-slider" value="" style="width:100%">
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="btn filterOn btn btn-default btn-small" style="background-color:var(--theme-color);color:white;">Search</a>
+                                </div>
+                            </div>*@
                     </div>
                     <!-- silde-bar colleps block end here -->
                     <!-- side-bar single product slider start -->
@@ -459,7 +539,7 @@
                                                             </select>
                                                         </div>*@
                                                     <div class="product-page-filter">
-                                                        <select class="SelectSort" name="sortby">
+                                                        <select class="SelectSort" id="Sort" name="sortby">
                                                             <option value="1">Name(A - Z)</option>
                                                             <option value="2">Name(Z - A)</option>
                                                             <option value="3">Price(Low > High)</option>
@@ -496,24 +576,24 @@
                                                                 </a>
                                                             }
 
-                                                            @if ((Math.Round((item.CurrentStock), 2)) == 0)
-                                                            {
-                                                                <div class="cart-info cart-wrap">
-                                                                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
-                                                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                                                                </div>
-                                                            }
-                                                            else
-                                                            {
-                                                                <div class="cart-info cart-wrap">
-                                                                    <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
-                                                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                                                                </div>
-                                                            }
+                                                            @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
+                                                                {
+                                                                    <div class="cart-info cart-wrap">
+                                                                        <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
+                                                                        <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                                                    </div>
+                                                                }
+                                                                else
+                                                                {*@
+                                                            <div class="cart-info cart-wrap">
+                                                                <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
+                                                                <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                                            </div>
+                                                            @*}*@
                                                         </div>
                                                         <div class="product-detail">
                                                             <div>
-                                                                <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                                                                @*<div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>*@
                                                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                                                     <h6>@item.Name</h6>
                                                                 </a>
@@ -522,17 +602,17 @@
                                                                 </p>
                                                                 <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
                                                                 @*<br />
-                                                                @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                                                {
-                                                                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                                                }*@
+                                                                    @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                                                    {
+                                                                        <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
+                                                                    }*@
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             }
                                         </div>
-                                    </div>                                 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -581,159 +661,82 @@
     function closeSearch() {
         document.getElementById("search-overlay").style.display = "none";
     }
-    $(function () {
-
-        var $range = $(".js-range-slider"),
-            $inputFrom = $(".js-input-from"),
-            $inputTo = $(".js-input-to"),
-            instance,
-            min = 0,
-            max = 1500,
-            from = 0,
-            to = 0;
-
-        $range.ionRangeSlider({
-            type: "double",
-            min: min,
-            max: max,
-            from: 0,
-            to: 3000,
-            prefix: '$',
-            onStart: updateInputs,
-            onChange: updateInputs,
-            step: 100,
-            prettify_enabled: true,
-            prettify_separator: ".",
-            values_separator: " - ",
-            force_edges: true
 
 
+    $(document).ready(function () {
+        debugger
+        var Category = [];
+        var SubCategory = [];
+
+
+        $('input[name="Category"]').click(function () {
+
+            if ($(this).prop("checked") == true) {
+                Category.push($(this).val());
+                debugger
+                var SortID = $(".SelectSort").val();
+                ProductFilter(Category.join(), "", "BHD0", "RS50000", SortID);
+            }
+            else {
+                var index = Category.indexOf($(this).val());
+                Category.splice(index, 1);
+                var SortID = $(".SelectSort").val();
+                ProductFilter(Category.join(), "", "BHD0", "RS50000", SortID);
+            }
         });
- 
-         $(document).ready(function () {
-    
-            var Category = [];
-            var SubCategory = [];
-            var Color = [];
 
-            $('input[name="Category"]').click(function () {
+        $('input[name="SubCategory"]').click(function () {
 
-                if ($(this).prop("checked") == true) {
-                    Category.push($(this).val());
-                    debugger
-                    var SortID = $(".SelectSort").val();
-                    ProductFilter(Category.join(), "", "", "BHD0", "RS50000", SortID);
-                }
-                else {
-                    var index = Category.indexOf($(this).val());
-                    Category.splice(index, 1);
-                    var SortID = $(".SelectSort").val();
-                    ProductFilter(Category.join(), "", "", "BHD0", "RS50000", SortID);
-                }
-            });
-
-            $('input[name="SubCategory"]').click(function () {
-                if ($(this).prop("checked") == true) {
-                    SubCategory.push($(this).val());
-                    ProductFilter("", SubCategory.join(), "", "BHD0", "RS50000",0);
-                }
-                else {
-                    var index = SubCategory.indexOf($(this).val());
-                    SubCategory.splice(index, 1);
-                    ProductFilter("", SubCategory.join(), "", "BHD0", "RS50000",0);
-                }
-            });
-            $('#Sort').on('change', function () {
-                ProductFilter(Category.join(), "", "", "BHD0", "BHD50000", this.value);
-            });
-            $("#price-slider").mouseup(function () {
-                var MinPrice = $(".min-price").val();
-                var MaxPrice = $(".max-price").val();
-                var SortID = $(".SelectSort").val();
-                ProductFilter(Category.join(), "", "", MinPrice, MaxPrice, SortID);
-            });
-            $("#price-slider1").mouseup(function () {
-                var MinPrice = $(".min-price").val();
-                var MaxPrice = $(".max-price").val();
-                var SortID = $(".SelectSort").val();
-                ProductFilter(Category.join(), "", "", MinPrice, MaxPrice, SortID);
-            });
-
-            $(".filterOn").click(function () {
-
-                $("#divLoader").show();
-                $(".LoadProduct").hide();
-
-                var Searchtxt = "";
-
-                if ($("#txt-desktop").val() != null && $("#txt-desktop").val() != '') {
-                    Searchtxt = $("#txt-desktop").val();
-
-                }
-                else {
-                    Searchtxt = $("#txt-mobile").val();
-
-                }
-
-                var MinPrice = $(".min-price").val();
-                var MaxPrice = $(".max-price").val();
-                var SortID = $(".SelectSort").val();
-                var filter = new Object();
-                filter.Category = Category.join();
-                filter.SubCategory = SubCategory.join();                 
-                filter.Searchtxt = Searchtxt;
-                filter.MinPrice = MinPrice;
-                filter.MaxPrice = MaxPrice;
-                filter.SortID = SortID;
-
-                var FilterData = JSON.stringify(filter);
-
-                $.ajax({
-                    type: "POST",
-                    url: '../Shop/Filter',
-                    data: FilterData,
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success: function (obj) {
-                        $.ajax({
-                            type: "POST",
-                            url: '../Shop/Products',
-                            data: JSON.stringify(obj.data),
-                            contentType: 'application/json; charset=utf-8',
-                            dataType: 'html',
-                            success: function (data) {
-
-                                $("#divLoader").hide();
-                                $(".LoadProduct").show();
-                                $(".LoadProduct").html(data);
-
-                            },
-                            error: function (xhr, textStatus, errorThrown) {
-
-                            }
-                        });
-                    },
-                    error: function (xhr, textStatus, errorThrown) {
-                        //
-                    }
-                });
-            });
-            //===============================================
-
+            if ($(this).prop("checked") == true) {
+                SubCategory.push($(this).val());
+                ProductFilter("", SubCategory.join(), "BHD0", "RS50000", 0);
+            }
+            else {
+                var index = SubCategory.indexOf($(this).val());
+                SubCategory.splice(index, 1);
+                ProductFilter("", SubCategory.join(), "", "BHD0", "RS50000", 0);
+            }
         });
-        function ProductFilter(Category, SubCategory, Color, MinPrice, MaxPrice, SortID) {
+        $('#Sort').on('change', function () {
+            debugger
+            ProductFilter(Category.join(), "", "BHD0", "BHD500", this.value);
+        });
+        $(".js-range-slider").mouseup(function () {
+            var MinPrice = $(".js-input-from").val();
+            var MaxPrice = $(".js-input-to").val();
+            var SortID = $(".SelectSort").val();
+            ProductFilter(Category.join(), "", MinPrice, MaxPrice, SortID);
+        });
+        $(".js-range-slider1").mouseup(function () {
+            var MinPrice = $(".js-input-from").val();
+            var MaxPrice = $("js-input-to").val();
+            var SortID = $(".SelectSort").val();
+            ProductFilter(Category.join(), "", MinPrice, MaxPrice, SortID);
+        });
+
+        $(".filterOn").click(function () {
             debugger
             $("#divLoader").show();
             $(".LoadProduct").hide();
 
-            var MinPrice = $(".min-price").val();
-            var MaxPrice = $(".max-price").val();
+            //var Searchtxt = "";
+
+            //if ($("#txt-desktop").val() != null && $("#txt-desktop").val() != '') {
+            //    Searchtxt = $("#txt-desktop").val();
+
+            //}
+            //else {
+            //    Searchtxt = $("#txt-mobile").val();
+
+            //}
+
+            var MinPrice = $(".js-input-from").val();
+            var MaxPrice = $(".js-input-to").val();
             var SortID = $(".SelectSort").val();
             var filter = new Object();
-            filter.Category = Category;
-            filter.SubCategory = SubCategory;
-            
-            filter.Searchtxt = "";
+            filter.Category = Category.join();
+            filter.SubCategory = SubCategory.join();
+            //filter.Searchtxt = Searchtxt;
             filter.MinPrice = MinPrice;
             filter.MaxPrice = MaxPrice;
             filter.SortID = SortID;
@@ -769,7 +772,61 @@
                     //
                 }
             });
-        }
+        });
+        //===============================================
+
+    });
+    function ProductFilter(Category, SubCategory, MinPrice, MaxPrice, SortID) {
+        debugger
+        $("#divLoader").show();
+        $(".LoadProduct").hide();
+
+        //var MinPrice = $(".js-input-from").val();
+        //var MaxPrice = $(".js-input-to").val();
+        var MinPrice = 0;
+        var MaxPrice = 100;
+        var SortID = $(".SelectSort").val();
+        var filter = new Object();
+        filter.Category = Category;
+        filter.SubCategory = SubCategory;
+
+        //filter.Searchtxt = "";
+        filter.MinPrice = MinPrice;
+        filter.MaxPrice = MaxPrice;
+        filter.SortID = SortID;
+
+        var FilterData = JSON.stringify(filter);
+
+        $.ajax({
+            type: "POST",
+            url: '../Shop/Filter',
+            data: FilterData,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (obj) {
+                $.ajax({
+                    type: "POST",
+                    url: '../Shop/Products',
+                    data: JSON.stringify(obj.data),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'html',
+                    success: function (data) {
+
+                        $("#divLoader").hide();
+                        $(".LoadProduct").show();
+                        $(".LoadProduct").html(data);
+
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+
+                    }
+                });
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //
+            }
+        });
+    }
 </script>
 
- 
+

@@ -208,6 +208,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cart.html" />
+    <Content Include="category-page.html" />
+    <Content Include="Content\assets\css\jqueryui.min.css" />
     <Content Include="Content\assets\css\sweetalert\sweetalert.css" />
     <Content Include="Content\assets\images\a.png" />
     <Content Include="Content\assets\css\animate.css" />
@@ -345,6 +348,8 @@
     <Content Include="Content\assets\images\icon\footerlogo.png" />
     <Content Include="Content\assets\images\icon\global.png" />
     <Content Include="Content\assets\images\icon\heart-1.png" />
+    <Content Include="Content\assets\images\icon\heart-icon.png" />
+    <Content Include="Content\assets\images\icon\imagetiktok.png" />
     <Content Include="Content\assets\images\icon\instagram.png" />
     <Content Include="Content\assets\images\icon\layout3\footerlogo.png" />
     <Content Include="Content\assets\images\icon\layout3\logo.png" />
@@ -419,6 +424,7 @@
     <Content Include="Content\assets\images\icon\supplement\3.png" />
     <Content Include="Content\assets\images\icon\supplement\4.png" />
     <Content Include="Content\assets\images\icon\ticktok.png" />
+    <Content Include="Content\assets\images\icon\tiktokhead.png" />
     <Content Include="Content\assets\images\icon\trolley.png" />
     <Content Include="Content\assets\images\icon\truck.png" />
     <Content Include="Content\assets\images\icon\uk.png" />
@@ -797,6 +803,7 @@
     <Content Include="Content\assets\js\jquery.exitintent.js" />
     <Content Include="Content\assets\js\jquery.magnific-popup.js" />
     <Content Include="Content\assets\js\jquery.vide.min.js" />
+    <Content Include="Content\assets\js\jqueryui.min.js" />
     <Content Include="Content\assets\js\landing-script.js" />
     <Content Include="Content\assets\js\lazysizes.min.js" />
     <Content Include="Content\assets\js\main.js" />
@@ -886,6 +893,7 @@
     <Content Include="Template\emailpattern.txt" />
     <Content Include="Template\HtmlPage1.html" />
     <Content Include="Template\newsletter.txt" />
+    <Content Include="vegetables-4.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1018,6 +1026,7 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Product\ProductDetails.cshtml" />
+    <Content Include="Views\Shop\_HeaderCategory.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

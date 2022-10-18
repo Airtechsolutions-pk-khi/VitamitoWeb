@@ -144,7 +144,7 @@
                             </div>
                             <div class="product-detail">
 
-                                <a href="product-page(no-sidebar).html">
+                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
                                 </a>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
@@ -200,7 +200,7 @@
                         </div>
                         <div class="product-detail">
 
-                            <a href="product-page(no-sidebar).html">
+                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                 <h6> @item.Name</h6>
                             </a>
                             <strong>BHD @(Math.Round((item.Price),2))</strong>
@@ -295,7 +295,7 @@
                             </div>
                             <div class="product-detail">
 
-                                <a href="product-page(no-sidebar).html">
+                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
                                 </a>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>

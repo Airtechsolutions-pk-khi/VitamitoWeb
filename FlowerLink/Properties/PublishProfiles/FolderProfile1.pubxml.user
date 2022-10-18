@@ -253,13 +253,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/12/2022 15:31:34</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.dll">
-      <publishTime>10/14/2022 21:23:51</publishTime>
+      <publishTime>10/18/2022 13:11:36</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.pdb">
-      <publishTime>10/14/2022 21:23:51</publishTime>
+      <publishTime>10/18/2022 13:11:36</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>09/12/2022 15:31:35</publishTime>
+    </File>
+    <File Include="cart.html">
+      <publishTime>10/18/2022 11:35:51</publishTime>
+    </File>
+    <File Include="category-page.html">
+      <publishTime>10/17/2022 18:13:21</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/style.scssc">
       <publishTime>09/12/2022 15:31:32</publishTime>
@@ -401,6 +407,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/assets/css/fontawesome.css">
       <publishTime>09/21/2022 15:20:26</publishTime>
+    </File>
+    <File Include="Content/assets/css/jqueryui.min.css">
+      <publishTime>10/17/2022 17:48:43</publishTime>
     </File>
     <File Include="Content/assets/css/landing_page.css">
       <publishTime>09/21/2022 15:20:26</publishTime>
@@ -855,6 +864,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/assets/images/icon/heart-1.png">
       <publishTime>09/12/2022 16:40:46</publishTime>
     </File>
+    <File Include="Content/assets/images/icon/heart-icon.png">
+      <publishTime>10/18/2022 12:00:24</publishTime>
+    </File>
+    <File Include="Content/assets/images/icon/imagetiktok.png">
+      <publishTime>10/17/2022 15:04:28</publishTime>
+    </File>
     <File Include="Content/assets/images/icon/instagram.png">
       <publishTime>10/14/2022 13:50:09</publishTime>
     </File>
@@ -1076,6 +1091,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/assets/images/icon/ticktok.png">
       <publishTime>10/14/2022 20:52:07</publishTime>
+    </File>
+    <File Include="Content/assets/images/icon/tiktokhead.png">
+      <publishTime>10/17/2022 15:24:55</publishTime>
     </File>
     <File Include="Content/assets/images/icon/trolley.png">
       <publishTime>09/12/2022 16:40:46</publishTime>
@@ -2334,6 +2352,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/assets/js/jquery.vide.min.js">
       <publishTime>09/21/2022 15:20:26</publishTime>
     </File>
+    <File Include="Content/assets/js/jqueryui.min.js">
+      <publishTime>10/17/2022 17:53:06</publishTime>
+    </File>
     <File Include="Content/assets/js/landing-script.js">
       <publishTime>09/21/2022 15:20:26</publishTime>
     </File>
@@ -2392,7 +2413,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2022 15:20:26</publishTime>
     </File>
     <File Include="Content/assets/js/price-range.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/17/2022 20:19:31</publishTime>
     </File>
     <File Include="Content/assets/js/prism/prism.min.js">
       <publishTime>09/21/2022 15:20:26</publishTime>
@@ -2748,6 +2769,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Template/newsletter.txt">
       <publishTime>09/13/2022 20:18:15</publishTime>
     </File>
+    <File Include="vegetables-4.html">
+      <publishTime>10/17/2022 16:27:44</publishTime>
+    </File>
     <File Include="Views/Account/Login_Register.cshtml">
       <publishTime>10/12/2022 12:30:17</publishTime>
     </File>
@@ -2764,7 +2788,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/14/2022 20:48:11</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/14/2022 21:20:24</publishTime>
+      <publishTime>10/17/2022 13:48:59</publishTime>
     </File>
     <File Include="Views/Home/Policy.cshtml">
       <publishTime>09/12/2022 15:31:33</publishTime>
@@ -2782,10 +2806,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2021 22:37:06</publishTime>
     </File>
     <File Include="Views/Order/Cart.cshtml">
-      <publishTime>10/14/2022 20:21:37</publishTime>
+      <publishTime>10/17/2022 12:14:19</publishTime>
     </File>
     <File Include="Views/Order/Checkout.cshtml">
-      <publishTime>10/12/2022 15:09:42</publishTime>
+      <publishTime>10/18/2022 13:04:17</publishTime>
     </File>
     <File Include="Views/Order/Credimax.cshtml">
       <publishTime>01/11/2021 17:00:07</publishTime>
@@ -2821,10 +2845,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/13/2022 20:18:15</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/14/2022 21:22:20</publishTime>
+      <publishTime>10/18/2022 12:20:55</publishTime>
     </File>
     <File Include="Views/Shop/Shop.cshtml">
-      <publishTime>10/14/2022 21:20:50</publishTime>
+      <publishTime>10/17/2022 20:29:29</publishTime>
+    </File>
+    <File Include="Views/Shop/_HeaderCategory.cshtml">
+      <publishTime>10/17/2022 17:08:10</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/13/2022 20:18:15</publishTime>

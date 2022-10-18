@@ -207,7 +207,6 @@ D:\Project\VitamitoWeb_GIT\FlowerLink\bin\System.Web.WebPages.Deployment.xml
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\System.Web.WebPages.Razor.xml
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\Newtonsoft.Json.xml
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\Antlr3.Runtime.pdb
-D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csprojAssemblyReference.cache
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csproj.CoreCompileInputs.cache
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csproj.CopyComplete
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.dll

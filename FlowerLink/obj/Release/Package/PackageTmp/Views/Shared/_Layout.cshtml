@@ -24,9 +24,11 @@
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/slick.css">
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/slick-theme.css">
 
+
+    <link href="~/Content/assets/css/vendors/price-range.css" rel="stylesheet" />
     <!-- Animate icon -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/animate.css">
-
+    
     <!-- Themify icon -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/themify-icons.css">
 
@@ -37,6 +39,8 @@
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/style.css">
     <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
+
+    
 
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="~/Content/assets/css/vendor/ionicons.min.css">
@@ -80,24 +84,55 @@
             font-size: 12px;
             line-height: 14px;
             font-weight: 600;
-            top: 31%;
-            right: 31px;
+            top: 20%;
+            right: -14px;
             padding: 3px;
         }
         @@media (max-width: 480px) {
+            .wish_qty_cls {
+                position: absolute;
+                background: var(--theme-color);
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                border-radius: 20px;
+                text-align: center;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 600;
+                top: -32%;
+                right: -18px;
+                padding: 3px;
+            }
+        }
+      /*  @@media (max-width: 480px) {
             .mobile-wishlist {
                 padding-right:60px !important;
                 padding-top:10px;
             }
+        }*/
+        @@media (max-width: 480px) {
+            .mobile-wishlist {
+               right:17% !important;
+            }
+        }
+        .mobile-wishlist {
+            right: 17% !important;
         }
         @@media (max-width: 480px) {
             .ion-ios-contact {
                 color: var(--theme-color) !important;
             }
         }
-        @@media (max-width: 480px) {
+      /*  @@media (max-width: 480px) {
             .wish_qty_cls {
                 right: 44px !important;
+            }
+        }*/
+        @@media (max-width: 480px) {
+            .wish_qty_cls {
+                right: -16px !important;
+                top: -9px;
             }
         }
         @@media (max-width: 577px) {
@@ -118,6 +153,10 @@
                 height: 50px !important;
             }
         }
+       
+        .navbar-nav .dropdown-menu {
+            position: absolute;
+        }
     </style>
 </head>
 <body class="theme-color-30 mulish-font">
@@ -134,8 +173,19 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-end">
-                        <div class="login-icon " >
+                    <div class="col-lg-5 text-end">
+                        <div class="header-contact">
+                            <ul>
+                                <li><a href="https://www.instagram.com/vitamito.bh/" target="_blank"><i class="ionicons ion-social-instagram-outline" style="color:white;font-size:26px;"></i></a></li>
+                                <li><a href="https://www.facebook.com/vitamito.bh" target="_blank"><i class="ionicons ion-social-facebook-outline" style="color:white;font-size:26px;"></i></a></li>
+                                <li><a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><i class="ionicons ion-social-snapchat-outline" style="color:white;font-size:26px;"></i></a></li>
+                                <li><a onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/tiktokhead.png" alt="Tiktok" style="height:23px;" /></a></li>
+                                <li><a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><i class="ionicons ion-social-whatsapp-outline" style="color:white;font-size:26px;"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 text-end">
+                        <div class="login-icon ">
 
                             @if (Session["CustomerName"] != null)
                             {
@@ -201,32 +251,30 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        @*<li class="onhover-div mobile-setting">
-                    <div><img src="../Content/assets/images/icon/setting.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-settings"></i></div>
-                    <div class="show-div setting">
-                        <h6>language</h6>
-                        <ul>
-                            <li><a href="#">English</a></li>
-                        </ul>
-                    </div>
-                </li>*@
 
-                                        <li class="mobile-wishlist pe-0">
+                                        @*<li class="mobile-wishlist pe-0 onhover-div mobile-cart">
+            <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="false"></i></a>
+            <span class="wish_qty_cls" id="wish-total">0</span>
+        </li>*@
+                                    <li class="mobile-wishlist onhover-div mobile-cart">                                        
+                                        <div><a href="@Url.Action("Wishlist" , "Product")"><img src="~/Content/assets/images/icon/heart-icon.png" class="img-fluid blur-up lazyload" alt=""><i class="fa fa-heart"></i></a></div>
+                                        <span class="wish_qty_cls" id="wish-total">0</span>
+                                         
+                                         
+                                    </li>
 
-                                            <a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart" aria-hidden="true" style="color:var(--theme-color) !important;"></i></a>
-                                            <span class="wish_qty_cls" id="wish-total">0</span>
-                                        </li>
                                         <li class="onhover-div mobile-cart">
                                             <div><img src="~/Content/assets/images/icon/cart.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-shopping-cart"></i></div>
                                             <span class="cart_qty_cls" id="cart-total">0</span>
                                             <ul class="show-div shopping-cart head-cart">
                                             </ul>
                                         </li>
+
                                     </ul>
 
 
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -249,7 +297,7 @@
                             <div class="main-nav-center">
                                 <nav id="main-nav" class="text-start">
                                     <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
-                                    <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+                                    <ul id="main-menu" class="sm pixelstrap sm-horizontal nav navbar-nav">
                                         <li>
                                             <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
                                         </li>
@@ -263,6 +311,9 @@
                                         <li>
                                             <a href="@Url.Action("Contact" , "Home")">Contact Us</a>
                                         </li>
+
+                                        @*@Html.Partial("~/Views/Shop/_HeaderCategory.cshtml")*@
+
                                     </ul>
                                 </nav>
                             </div>
@@ -307,7 +358,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div  class="col-lg-3 col-md-4">
+                    <div class="col-lg-3 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
                                 <h4>Pages</h4>
@@ -322,16 +373,14 @@
                             </div>
                         </div>
                     </div>
-                    <div  class="col-lg-4 col-md-4">
+                    <div class="col-lg-4 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
                                 <h4>store information</h4>
                             </div>
                             <div class="footer-contant">
                                 <ul class="contact-list">
-                                    <li>
-                                        <i class="fa fa-map-marker"></i>Vitamito Store
-                                    </li>
+
                                     <li><i class="fa fa-phone"></i>Call Us: +973 373 773 53</li>
 
                                     <li><i class="fa fa-whatsapp"></i>Whatsapp: +973 3737553</li>
@@ -342,7 +391,7 @@
                                 <a href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>
                                 <a href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
                                 <a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
-                                <a onclick="onclicktiktok()" ><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
+                                <a onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
                                 <a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>
 
                             </div>
@@ -390,6 +439,8 @@
     <!-- lazyload js-->
     <script src="~/Content/assets/js/lazysizes.min.js"></script>
 
+    <script src="~/Content/assets/js/price-range.js"></script>
+
     <!-- slick js-->
     <script src="~/Content/assets/js/slick.js"></script>
     <script src="~/Content/assets/js/slick-animation.min.js"></script>
@@ -406,7 +457,7 @@
     <script src="~/Content/assets/js/script.js"></script>
     <script src="~/Content/assets/js/custom-slick-animated.js"></script>
     @RenderSection("scripts", false)
-<script>
+    <script>
         //$(window).on('load', function () {
         //    setTimeout(function () {
         //        $('#exampleModal').modal('show');
@@ -423,7 +474,7 @@
             document.getElementById("search-overlay").style.display = "none";
         }
         feather.replace();
-</script>
+    </script>
 
 
     <script>
@@ -459,6 +510,13 @@
 
             $('.dropdown-menu').toggleClass('show');
 
+        });
+    </script>
+    <script>
+        $('ul.nav li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
         });
     </script>
 </body>

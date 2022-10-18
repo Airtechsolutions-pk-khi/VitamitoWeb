@@ -10,6 +10,12 @@
         background-position: right !important;
         background-color: #ffe4f1 !important;
     }
+    .mt-3{
+        margin-top: 1rem !important
+    }
+    .font-weight-bold {
+        font-weight: 700 !important
+    }
 </style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -46,7 +52,7 @@
                             <div class="row check-out">
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">Full Name *</div>
-                                    <input type="text" name="CustomerName" id="CustomerName" value="" placeholder="Customer Name" required="">
+                                    <input type="text" name="CustomerName" id="CustomerName" value="" placeholder="Customer Name" required>
                                 </div>
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">Phone * </div>
@@ -68,7 +74,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label><span class="">Place Type *</span></label>
+                                    <label><span class="">Place Type </span></label>
                                     <select id="PlaceType" class="custom-select" required>
                                         <option value="" selected disabled>Select Place Type...</option>
                                         <option>Office</option>
@@ -85,7 +91,7 @@
                                     <input id="NearestPlace" class="form-control" type="text" placeholder="Park, Bank, Hotel etc." name="NearestPlace">
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <div class="field-label">Country *</div>
+                                    <div class="field-label">Country </div>
                                     <select name="Country" id="Country" required="">
                                         <option selected>Bahrain</option>
                                     </select>
@@ -167,6 +173,16 @@
             $("#Text-Error").html("Kindly add items in your cart then place order");
         }
     });
+    $("#checkout").click(function () {
+        debugger
+        if ($('#CustomerName').val() != "" && $('#ContactNo').val() != "" && $('#Email').val() != "" && $('#Address').val() != "" && $('#Address').val() != "" ) {
+            checkout();
+        }
+        else {
+            $('#payment-alert').html('Some Fields are required');
+        }
+
+    });
     //Order working
     function checkout() {
 
@@ -203,9 +219,7 @@
        
 
             //=============================== Order Master =====================
-        debugger
-        
-
+      
        
 
         var Order = new Object();
@@ -343,15 +357,7 @@
             return JSON.parse("[]");
     };
     var currency = localStorage.getItem("currency");
-    $("#checkout").click(function () {
-        debugger
-        //if ($(".payactive").val() != "PayPal" && $('#CustomerName').val() != "" && $('#Email').val() != "" && $('#ContactNo').val() != "" && $('#Address').val() != "" && $('#Country').val() != "" && $('#DeliveryTime').val() != "" && $('#PlaceType').val() != "" && $('#NearestPlace').val() != "" && $('#CardNotes').val() != "")
-        //{
-        //}
-        //else
-        //{}
-            checkout();
-    });
+     
     //$('#Payment-btn').on('click', '.btn-pay', function () {
     //    $(this).addClass('payactive').siblings().removeClass('payactive');
     //    $('#payment-alert').html('');
