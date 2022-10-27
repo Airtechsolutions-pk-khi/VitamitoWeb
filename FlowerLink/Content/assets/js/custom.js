@@ -269,11 +269,11 @@ function cartitem() {
         html += '<td class="plantmore-product-name">'
             + '<p><a href="/Product/ProductDetails?ID=' + data[i].ID + '">' + data[i].Name + '</a></p>'
         html += '</td>'
-            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span>' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
+            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span><h2 class="td-color">' + currency + ' ' + data[i].Price.toFixed(2) + '</h2></span></td>'
             + '<td class="plantmore-product-quantity">'
             + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
-            + '<td class="product-subtotal">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td>'
+            + '<td class="product-subtotal"><h2 class="td-color">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td></h2>'
             
                 + '</tr>'
 

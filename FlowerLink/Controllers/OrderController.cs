@@ -251,7 +251,8 @@ namespace Vitamito.Controllers
         public ActionResult OrderDetails(int OrderID)
         {
             ViewBag.Banner = new bannerBLL().GetBanner("Other");
-            ViewBag.BillingInfo = new myorderBLL().GetAll(Convert.ToInt32(Session["ID"]));
+            //ViewBag.BillingInfo = new myorderBLL().GetAll(Convert.ToInt32(Session["ID"]));
+            ViewBag.BillingInfo = new myorderBLL().GetById(OrderID);
             return View(new myorderBLL().GetDetails(OrderID));
         }
     }

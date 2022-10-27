@@ -92,6 +92,29 @@ namespace Vitamito.Models.BLL
                 return null;
             }
         }
+        public List<myorderBLL> GetById(int OrderID)
+        {
+            try
+            {
+                var lst = new List<myorderBLL>();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@OrderID", OrderID);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetMyOrdersById_Vitamito", p);
+                if (_ds != null)
+                {
+                    if (_ds.Tables.Count > 0)
+                    {
+                        //lst = _dt.DataTableToList<myorderBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<myorderBLL>>().ToList();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public myorderBLL GetDetails(int? OrderID)
         {
             try

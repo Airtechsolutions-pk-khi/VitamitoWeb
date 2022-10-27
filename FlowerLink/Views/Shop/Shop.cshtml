@@ -601,11 +601,11 @@
                                                                     @item.Description
                                                                 </p>
                                                                 <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
-                                                                @*<br />
-                                                                    @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                                                <br />
+                                                                    @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
                                                                     {
-                                                                        <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                                                    }*@
+                                                                        <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                                                    }
                                                             </div>
                                                         </div>
                                                     </div>

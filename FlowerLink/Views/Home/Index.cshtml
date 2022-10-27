@@ -25,6 +25,14 @@
             color: var(--theme-color);
         }
     }
+    .deal-product-space {
+        background-color: #f8efe7;
+        padding-top: 55px;
+        margin-top: 50px;
+        z-index: -1;
+        padding-bottom: 130px !important;
+        margin-bottom: -90px;
+    }
 </style>
 <!-- Home slider -->
 <section class="p-0 small-slider">
@@ -72,35 +80,37 @@
 </div>
 <!-- category section end -->
 <!-- banner section start -->
-<section class="banner-goggles banner-offer ratio2_1">
+<section class="gift-card-section ratio2_1">
     <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <a href="#">
-                    <div class="collection-banner p-right text-end">
-                        <div class="img-part">
-                            <img src="~/Content/assets/images/banner/bnn5.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+        <div class="card-box">
+            <div class="row partition2">
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="collection-banner p-right text-center">
+                            <div class="img-part">
+                                <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <a href="#">
-                    <div class="collection-banner p-right text-end">
-                        <div class="img-part">
-                            <img src="~/Content/assets//images/banner/bnn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="collection-banner p-right text-center">
+                            <div class="img-part">
+                                <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4">
-                <a href="#">
-                    <div class="collection-banner p-right text-end">
-                        <div class="img-part">
-                            <img src="~/Content/assets//images/banner/bnn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="collection-banner p-right text-center">
+                            <div class="img-part">
+                                <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -148,6 +158,11 @@
                                     <h6> @item.Name</h6>
                                 </a>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
+                                <br />
+                                @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                {
+                                    <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                }
                                 <div class="addtocart_btn">
                                     <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
                                         <i class="fa fa-plus"></i>
@@ -204,6 +219,11 @@
                                 <h6> @item.Name</h6>
                             </a>
                             <strong>BHD @(Math.Round((item.Price),2))</strong>
+                            <br />
+                            @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
+                            {
+                                <strong style="font-size:13px;color:red;">Low Stock</strong>
+                            }
                             <div class="addtocart_btn">
                                 <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
                                     <i class="fa fa-plus"></i>
@@ -221,7 +241,7 @@
 </section>
 <!-- product slider end -->
 <!-- gift card section start -->
-<section class="gift-card-section ratio2_1">
+@*<section class="gift-card-section ratio2_1">
     <div class="container">
         <div class="card-box">
             <div class="row partition2">
@@ -255,7 +275,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>*@
 <!-- gift card section end -->
 <!-- deal product start -->
 <section class="bag-product ratio_square deal-product-space section-b-space">
@@ -299,6 +319,11 @@
                                     <h6> @item.Name</h6>
                                 </a>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
+                                <br />
+                                @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                {
+                                    <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                }
                                 <div class="addtocart_btn">
                                     <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
                                         <i class="fa fa-plus"></i>

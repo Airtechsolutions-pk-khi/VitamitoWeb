@@ -211,3 +211,4 @@ D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csproj.CoreCompileIn
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csproj.CopyComplete
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.pdb
+D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csprojAssemblyReference.cache
