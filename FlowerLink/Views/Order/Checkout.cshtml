@@ -222,7 +222,7 @@
                                     </div>
                                     <div class="charges">
                                         <div>Discount <span class="discount" style="float:right">BHD 0</span></div>
-                                        <div>Coupon Discount <span class="coupon-amount" style="float:right">BHD 0</span></div>
+                                        <div>Coupon Discount <span class="coupon-amount" id="coupon-text" style="float:right">BHD 0</span></div>
                                         <div>Tax <span class="tax" style="float:right">BHD 0</span></div>
                                         <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
                                     </div>
@@ -384,6 +384,7 @@
             });
         };
     function cartdata(coupon) {
+        debugger
         var gifts = getgiftLS();
         var checkLSsetting = localStorage.getItem("_setting");
         var LSsettings = JSON.parse(localStorage.getItem("_setting"));
@@ -406,12 +407,28 @@
         $(".qty").html(html)
 
         if (data.length > 0) {
+            debugger
             $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(2));
-            Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
-            $('.tax').html(currency + ' ' + Taxamount);
-            $('.discount').html(currency + ' ' + settings.Discount);
-            $('.dc').html(currency + ' ' + settings.DeliveryCharges);
-            total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
+            //Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
+            Taxamount = 0;
+            //$('.tax').html(currency + ' ' + Taxamount);
+            $('.tax').html(currency + ' ' + 0);
+            //$('.discount').html(currency + ' ' + settings.Discount);
+            $('.discount').html(currency + ' ' + 0);
+            //$('.dc').html(currency + ' ' + settings.DeliveryCharges);
+            $('.dc').html(currency + ' ' + 0);
+            //total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
+            
+            // coupon = $(".coupon-text").val();
+            if (coupon == undefined) {
+                coupon = 0;                
+            }
+            
+           
+            var couponAmount = (((totalPrice + (totalPrice * (coupon / 100))) + 0).toFixed(2));
+            
+            total = (((totalPrice + (totalPrice - couponAmount)) + 0).toFixed(2));
+             
             $("#totalamount").html(currency + ' ' + total);
         }
         else {
@@ -494,7 +511,7 @@
                     }
                     else {
                         //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
-                        $("#coupon-text").html('Discount Percentage (' + data.data.Amount.toFixed(0) + '%)');
+                        $("#coupon-text").html(' ' + data.data.Amount.toFixed(0) + '%');
                     }
                     $('#CouponID').val(data.data.CouponID);
                     $('#CouponCode').val(data.data.CouponCode);
