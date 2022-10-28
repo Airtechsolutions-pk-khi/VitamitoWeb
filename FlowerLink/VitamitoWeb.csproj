@@ -345,11 +345,15 @@
     <Content Include="Content\assets\images\icon\discover.png" />
     <Content Include="Content\assets\images\icon\email.png" />
     <Content Include="Content\assets\images\icon\facebook.png" />
+    <Content Include="Content\assets\images\icon\fb-active.png" />
+    <Content Include="Content\assets\images\icon\fb-normal.png" />
     <Content Include="Content\assets\images\icon\footerlogo.png" />
     <Content Include="Content\assets\images\icon\global.png" />
     <Content Include="Content\assets\images\icon\heart-1.png" />
     <Content Include="Content\assets\images\icon\heart-icon.png" />
     <Content Include="Content\assets\images\icon\imagetiktok.png" />
+    <Content Include="Content\assets\images\icon\insta-active.png" />
+    <Content Include="Content\assets\images\icon\insta-normal.png" />
     <Content Include="Content\assets\images\icon\instagram.png" />
     <Content Include="Content\assets\images\icon\layout3\footerlogo.png" />
     <Content Include="Content\assets\images\icon\layout3\logo.png" />
@@ -418,17 +422,23 @@
     <Content Include="Content\assets\images\icon\slider-btn-01.png" />
     <Content Include="Content\assets\images\icon\slider-btn-active.png" />
     <Content Include="Content\assets\images\icon\small-quote-icon.png" />
+    <Content Include="Content\assets\images\icon\snap-active.png" />
+    <Content Include="Content\assets\images\icon\snap-normal.png" />
     <Content Include="Content\assets\images\icon\snapchat.png" />
     <Content Include="Content\assets\images\icon\supplement\1.png" />
     <Content Include="Content\assets\images\icon\supplement\2.png" />
     <Content Include="Content\assets\images\icon\supplement\3.png" />
     <Content Include="Content\assets\images\icon\supplement\4.png" />
+    <Content Include="Content\assets\images\icon\ticktok-active.png" />
+    <Content Include="Content\assets\images\icon\ticktok-normal.png" />
     <Content Include="Content\assets\images\icon\ticktok.png" />
     <Content Include="Content\assets\images\icon\tiktokhead.png" />
     <Content Include="Content\assets\images\icon\trolley.png" />
     <Content Include="Content\assets\images\icon\truck.png" />
     <Content Include="Content\assets\images\icon\uk.png" />
     <Content Include="Content\assets\images\icon\user-1.png" />
+    <Content Include="Content\assets\images\icon\user-active.png" />
+    <Content Include="Content\assets\images\icon\user-normal.png" />
     <Content Include="Content\assets\images\icon\users.png" />
     <Content Include="Content\assets\images\icon\vegetables\1.jpg" />
     <Content Include="Content\assets\images\icon\vegetables\2.jpg" />
@@ -448,6 +458,8 @@
     <Content Include="Content\assets\images\icon\vegetables\tea.png" />
     <Content Include="Content\assets\images\icon\vegetables\veg.png" />
     <Content Include="Content\assets\images\icon\visa.png" />
+    <Content Include="Content\assets\images\icon\whatsapp-active.png" />
+    <Content Include="Content\assets\images\icon\whatsapp-normal.png" />
     <Content Include="Content\assets\images\icon\whatsapp.png" />
     <Content Include="Content\assets\images\icon\white-icon\cart.png" />
     <Content Include="Content\assets\images\icon\white-icon\heart.png" />
@@ -894,6 +906,7 @@
     <Content Include="Template\HtmlPage1.html" />
     <Content Include="Template\newsletter.txt" />
     <Content Include="vegetables-4.html" />
+    <Content Include="vegetables.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

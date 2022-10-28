@@ -6,25 +6,30 @@
     #dis {
         background-color: #9dc3c2;
     }
+
     .product-style-4.product-box .addtocart_btn .add_cart, .product-style-4.product-wrap .addtocart_btn .add_cart {
-        right:10px !important;
-        bottom:10px !important;
+        right: 10px !important;
+        bottom: 10px !important;
     }
+
     @@media (max-width: 480px) {
         .home-slider .home {
             height: 15vh !important;
         }
     }
+
     @@media (max-width: 480px) {
         .brand-logo img {
             height: 50px !important;
         }
     }
+
     @@media (max-width: 480px) {
         .ion-ios-contact {
             color: var(--theme-color);
         }
     }
+
     .deal-product-space {
         background-color: #f8efe7;
         padding-top: 55px;
@@ -33,17 +38,113 @@
         padding-bottom: 130px !important;
         margin-bottom: -90px;
     }
+    .collection-banner:hover .img-part {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
 </style>
 <!-- Home slider -->
-<section class="p-0 small-slider">
-    <div class="slider-animate home-slider">
-        <div>
-            <div class="home">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+@*<section class="p-0 small-slider">
+        <div class="slider-animate home-slider">
+            <div>
+                <div class="home">
+                    <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>*@
+
+@*@if (ViewBag.Banner != null)
+{
+    <section class="p-0">
+        <div class="slide-1 home-slider">
+            @foreach (var Record in ViewBag.Banner)
+            {
+                <div>
+                    <div class="home text-center">
+
+                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="slider-contain">
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+}
+else
+{*@
+    <section class="p-0">
+        <div class="slide-1 home-slider">
+            <div>
+                <div class="home text-center">
+                    <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="slider-contain">
+                                    <div>
+                                        @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="home text-center">
+                    <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="slider-contain">
+                                    <div>
+                                        @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="home text-center">
+                    <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="slider-contain">
+                                    <div>
+                                        <h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+@*}*@
+
+
+
+
 <!-- Home slider end -->
 <!-- category section start -->
 <div class="porduct-area section-pt-60 section-pb-60 ">
@@ -84,7 +185,40 @@
     <div class="container">
         <div class="card-box">
             <div class="row partition2">
-                <div class="col-md-4">
+                <div class="col-12">
+                    <div class="product-4Custom product-m slide-7-demo slick-sm-margin no-arrow">
+                        @foreach (var item in ViewBag.FeaturedBanner)
+                        {
+                            <div class="product-style-4">
+                                <div class="img-wrapper collection-banner">
+                                    <div class="front img-part">
+                                        @if (item.Image == null || item.Image == "")
+                                        {
+                                            @*<a href="#" style="border-radius:10px;"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>*@
+                                            <a href="#"   style="border-radius:10px;"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
+                                        }
+                                        else
+                                        {
+                                    <a href="#" style="border-radius:10px;">
+                                        <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border-radius:10px;" />
+                                        
+                                         
+                                    </a>
+                                        }
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+
+                @*<div class="col-md-4">
                     <a href="#">
                         <div class="collection-banner p-right text-center">
                             <div class="img-part">
@@ -110,7 +244,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>
@@ -242,40 +376,40 @@
 <!-- product slider end -->
 <!-- gift card section start -->
 @*<section class="gift-card-section ratio2_1">
-    <div class="container">
-        <div class="card-box">
-            <div class="row partition2">
-                <div class="col-md-4">
-                    <a href="#">
-                        <div class="collection-banner p-right text-center">
-                            <div class="img-part">
-                                <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+        <div class="container">
+            <div class="card-box">
+                <div class="row partition2">
+                    <div class="col-md-4">
+                        <a href="#">
+                            <div class="collection-banner p-right text-center">
+                                <div class="img-part">
+                                    <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <div class="collection-banner p-right text-center">
-                            <div class="img-part">
-                                <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <div class="collection-banner p-right text-center">
+                                <div class="img-part">
+                                    <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <div class="collection-banner p-right text-center">
-                            <div class="img-part">
-                                <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <div class="collection-banner p-right text-center">
+                                <div class="img-part">
+                                    <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>*@
+    </section>*@
 <!-- gift card section end -->
 <!-- deal product start -->
 <section class="bag-product ratio_square deal-product-space section-b-space">

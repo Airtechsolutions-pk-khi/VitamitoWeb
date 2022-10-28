@@ -15,6 +15,8 @@ namespace Vitamito.Controllers
     {
         public ActionResult Index(int LocationID = 2182)
        {
+            ViewBag.Banner = new bannerBLL().GetBanner();
+            ViewBag.FeaturedBanner = new bannerBLL().GetFeaturedBanner();
             var itemData = new itemService().GetAll(LocationID);            
             ViewBag.itemList = itemData.Where(x=>x.StatusID>0).OrderBy(x => x.StatusID).ToList();
             //ViewBag.Featureditems = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(6).ToList();

@@ -555,6 +555,30 @@
         ]
     });
 
+    $('.product-4Custom').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+
     $('.tools-product-4').slick({
         infinite: true,
         speed: 300,
@@ -1096,6 +1120,8 @@
         ]
     });
 
+   
+
     $('.slide-8').slick({
         infinite: true,
         slidesToShow: 8,
@@ -1600,6 +1626,43 @@
             ]
         });
     });
+ 
+    $("#tab-1").css("display", "Block");
+    $(".default").css("display", "Block");
+    $(".tabs li a").on('click', function () {
+        event.preventDefault();
+        $('.tab_product_slider').slick('unslick');
+        $('.product-4Custom').slick('unslick');
+        $(this).parent().parent().find("li").removeClass("current");
+        $(this).parent().addClass("current");
+        var currunt_href = $(this).attr("href");
+        $('#' + currunt_href).show();
+        $(this).parent().parent().parent().find(".tab-content").not('#' + currunt_href).css("display", "none");
+        $(".product-4Custom").slick({
+            arrows: true,
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            } 
+            ]
+        });
+    });
+
     $(".tabs li a").on('click', function () {
         event.preventDefault();
         $('.tab_product_slider').slick('unslick');
@@ -1744,6 +1807,14 @@
             $(".product-wrapper-grid").children().children().addClass("col-xl-3 col-6");
         }
     });
+
+    $('.product-4Custom-layout-view').on('click', function (e) {
+        if ($('.product-wrapper-grid').hasClass("list-view")) { } else {
+            $(".product-wrapper-grid").children().children().removeClass();
+            $(".product-wrapper-grid").children().children().addClass("col-xl-3 col-4");
+        }
+    });
+
     $('.product-6-layout-view').on('click', function (e) {
         if ($('.product-wrapper-grid').hasClass("list-view")) { } else {
             $(".product-wrapper-grid").children().children().removeClass();

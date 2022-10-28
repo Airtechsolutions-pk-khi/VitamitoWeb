@@ -237,7 +237,7 @@ namespace Vitamito.Controllers
         }
         public ActionResult MyOrders()
        {
-            ViewBag.Banner = new bannerBLL().GetBanner("Other");
+            ViewBag.Banner = new bannerBLL().GetBanner();
             var a = Session["ID"];
             if (Session["ID"] != null && Convert.ToInt32(Session["ID"]) != 0)
             {
@@ -250,10 +250,16 @@ namespace Vitamito.Controllers
         }
         public ActionResult OrderDetails(int OrderID)
         {
-            ViewBag.Banner = new bannerBLL().GetBanner("Other");
+            ViewBag.Banner = new bannerBLL().GetBanner();
             //ViewBag.BillingInfo = new myorderBLL().GetAll(Convert.ToInt32(Session["ID"]));
             ViewBag.BillingInfo = new myorderBLL().GetById(OrderID);
             return View(new myorderBLL().GetDetails(OrderID));
+        }
+        public JsonResult Coupon(string coupon)
+        {
+            couponBLL couponBLL = new couponBLL();
+            ViewBag.coupon = couponBLL.Get(coupon);
+            return Json(new { data = ViewBag.coupon }, JsonRequestBehavior.AllowGet);
         }
     }
 }
