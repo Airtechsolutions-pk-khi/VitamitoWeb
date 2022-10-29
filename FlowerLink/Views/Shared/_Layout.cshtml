@@ -163,6 +163,9 @@
         .top-header .header-contact li {                         
             padding-right: 12px;
         }
+        .dropdown-toggle::after {           
+            color: white;            
+        }
     </style>
 </head>
 <body class="theme-color-30 mulish-font">
@@ -179,7 +182,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-5 text-end">
+                    <div class="col-lg-4 text-end">
                         <div class="header-contact">
                             <ul>
                                 <li><a href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/insta-active.png" alt="Tiktok" /></a></li>
@@ -190,12 +193,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-1 text-end">
+                    <div class="col-lg-2 text-end">
                         <div class="login-icon " style="padding-top:5px;">
 
                             @if (Session["CustomerName"] != null)
                             {
-                                <a href="" id="dropdownMenuButton1" class=" dropdown-toggle" data-bs-toggle="dropdown"><i class="ion-ios-contact" style="color:white !important;"><span style="font-size:16px;">  &nbsp;</span></i></a>
+                                <a href="" id="dropdownMenuButton1" class=" dropdown-toggle" data-bs-toggle="dropdown"><i class="ion-ios-contact" style="color:white !important;"><span style="font-size:16px;"> My Account &nbsp;</span></i></a>
                                 <div class="dropdown-menu alignment p-0 mt-0" aria-labelledby="dropdownMenuButton1" style=" position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(9px, 27px, 0px);">
                                     <a class="dropdown-item border-bottom text-center" style="font-size:12px;" href="#"><span class="font-weight-bold">Hi!</span> @Session["CustomerName"]</a>
                                     <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a>
@@ -204,7 +207,7 @@
                             }
                             else
                             {
-                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white;"> <span style="font-size:16px;"> </span> </i></a>
+                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white;"> <span style="font-size:16px;">My Account </span> </i></a>
                             }
 
                         </div>

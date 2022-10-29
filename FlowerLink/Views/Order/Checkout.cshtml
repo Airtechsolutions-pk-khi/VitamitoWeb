@@ -384,7 +384,7 @@
             });
         };
     function cartdata(coupon) {
-        debugger
+      
         var gifts = getgiftLS();
         var checkLSsetting = localStorage.getItem("_setting");
         var LSsettings = JSON.parse(localStorage.getItem("_setting"));
@@ -409,27 +409,27 @@
         if (data.length > 0) {
             debugger
             $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(2));
-            //Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
-            Taxamount = 0;
-            //$('.tax').html(currency + ' ' + Taxamount);
-            $('.tax').html(currency + ' ' + 0);
-            //$('.discount').html(currency + ' ' + settings.Discount);
-            $('.discount').html(currency + ' ' + 0);
-            //$('.dc').html(currency + ' ' + settings.DeliveryCharges);
-            $('.dc').html(currency + ' ' + 0);
-            //total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
+            Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
+            $('.tax').html(currency + ' ' + Taxamount);            
+            $('.discount').html(settings.Discount + '%');            
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges);
             
-            // coupon = $(".coupon-text").val();
+            //total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
+                        
             if (coupon == undefined) {
                 coupon = 0;                
             }
+
+            var discountAmount = ((((totalPrice * (settings.Discount / 100)))).toFixed(2));
+            var couponAmount = (((totalPrice + (totalPrice * (coupon / 100)))).toFixed(2));
             
-           
-            var couponAmount = (((totalPrice + (totalPrice * (coupon / 100))) + 0).toFixed(2));
-            
-            total = (((totalPrice + (totalPrice - couponAmount)) + 0).toFixed(2));
+            total = (((totalPrice + (totalPrice - couponAmount - discountAmount))).toFixed(2));
+
+
+            var withTaxDC = parseFloat(total) + parseFloat(Taxamount) + parseFloat(settings.DeliveryCharges);
+
              
-            $("#totalamount").html(currency + ' ' + total);
+            $("#totalamount").html(currency + ' ' + withTaxDC + '.00');
         }
         else {
             $(".sub-total").html("");
@@ -451,7 +451,7 @@
                 success: function (data) {
                     var arrTemp = [];
                     arrTemp = getsettingsLS();
-                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, Tax: data.Tax, COD: data.COD, Discount: data.Discount, TopHeaderText: data.TopHeaderText });
+                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, MinOrderAmount: data.MinOrderAmount, Tax: data.Tax, COD: data.COD, Discount: data.Discount, TopHeadDescription: data.TopHeadDescription });
                     if (data.COD != 1) {
                        // $('#COD').addClass('d-none');
                     }

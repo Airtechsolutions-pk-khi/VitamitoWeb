@@ -35,6 +35,7 @@ namespace Vitamito.Models.BLL
         public double Discount { get; set; }
         public double Tax { get; set; }
         public double ServiceCharges { get; set; }
+        public double MinOrderAmount { get; set; }
         public double OtherCharges { get; set; }
         public double TaxPercentage { get; set; }
         public double MinimumOrderValue { get; set; }
@@ -42,7 +43,7 @@ namespace Vitamito.Models.BLL
         public double Credimax { get; set; }
         public double PayPal { get; set; }
         public double BenefitPay { get; set; }
-        public string TopHeaderText { get; set; }
+        public string TopHeadDescription { get; set; }
         public string FacebookUrl { get; set; }
         public string InstagramUrl { get; set; }
         public string TwitterUrl { get; set; }
