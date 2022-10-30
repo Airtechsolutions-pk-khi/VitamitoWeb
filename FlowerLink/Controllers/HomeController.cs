@@ -13,7 +13,7 @@ namespace Vitamito.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(int LocationID = 2182)
+        public ActionResult Index(int LocationID = 2195)
        {
             ViewBag.Banner = new bannerBLL().GetBanner();
             ViewBag.FeaturedBanner = new bannerBLL().GetFeaturedBanner();
@@ -89,7 +89,7 @@ namespace Vitamito.Controllers
             return View();
         }
         //Get Setting Details
-        public ActionResult GetSetting(int ID = 2313, int LocationID = 2182)
+        public ActionResult GetSetting(int ID = 2313, int LocationID = 2195)
         {
             return Json(new settingBLL().GetSettings(ID, LocationID), JsonRequestBehavior.AllowGet);
         }

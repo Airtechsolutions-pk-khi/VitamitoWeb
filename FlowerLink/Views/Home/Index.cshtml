@@ -155,24 +155,29 @@
             {
 
                 <div class="col-lg-2 col-6 text-center">
-                    <div class="single-blog mt-30 categorybox card-box" style="background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;">
+                    @*background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;*@
+                    <div class="single-blog mt-30 categorybox card-box" style="">
                         <div class="blog-image">
                             @if (item.Image == null || item.Image == "")
                             {
-                                <a href="@Url.Action("shop", "shop", new { LocationID = 2182, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})"><img src="~/Content/assets/images/NA.png" style="height: 80px; width: 80px;"></a>
+                                <a href="@Url.Action("shop", "shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})">
+                                    <img src="~/Content/assets/images/NA.png" style="height: 120px; width: 120px; border-radius: 10px; background: #ddd; border: 1px solid #ddd">
+                                </a>
                             }
                             else
                             {
                                 @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 80px; width: 80px;" /></a>*@
-                                <a href="@Url.Action("shop", "shop", new { LocationID = 2182, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})"><img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 80px; width: 80px;" /></a>
+                                <a href="@Url.Action("shop", "shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})">
+                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border: 1px solid #ddd;height: 120px; width: auto; border-radius: 10px; margin-bottom: 10px" />
+                                </a>
                             }
                         </div>
                         <div class="blog-content">
-                            <h6>
+                            <h5>
                                 <a>
                                     @item.Name
                                 </a>
-                            </h6>
+                            </h5>
                         </div>
                     </div>
                 </div>
@@ -418,7 +423,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="title8">
-                    <h2>Lowest Price</h2>
+                    <h2>Popular Products</h2>
                 </div>
             </div>
             <div class="col-12">
@@ -556,27 +561,27 @@
     </div>
 </section>
 
-<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
+<!--<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>-->
 
 <!-- menu js-->
-<script src="~/Content/assets/js/menu.js"></script>
+<!--<script src="~/Content/assets/js/menu.js"></script>-->
 
 <!-- lazyload js-->
-<script src="~/Content/assets/js/lazysizes.min.js"></script>
+<!--<script src="~/Content/assets/js/lazysizes.min.js"></script>-->
 
 <!-- price range js -->
-<script src="~/Content/assets/js/price-range.js"></script>
+<!--<script src="~/Content/assets/js/price-range.js"></script>-->
 
 <!-- slick js-->
-<script src="~/Content/assets/js/slick.js"></script>
+<!--<script src="~/Content/assets/js/slick.js"></script>-->
 
 <!-- Bootstrap js-->
-<script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+<!--<script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>-->
 
 <!-- Bootstrap Notification js-->
-<script src="~/Content/assets/js/bootstrap-notify.min.js"></script>
+<!--<script src="~/Content/assets/js/bootstrap-notify.min.js"></script>-->
 
 <!-- Theme js-->
-<script src="~/Content/assets/js/theme-setting.js"></script>
-<script src="~/Content/assets/js/script.js"></script>
+<!--<script src="~/Content/assets/js/theme-setting.js"></script>
+<script src="~/Content/assets/js/script.js"></script>-->
 

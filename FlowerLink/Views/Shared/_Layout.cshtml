@@ -166,6 +166,16 @@
         .dropdown-toggle::after {           
             color: white;            
         }
+        .header-compact .main-menu .brand-logo img {
+            width: 120px;
+        }
+        .header-compact .main-menu .brand-logo {
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+        .wishlist{
+            cursor:pointer
+        }
     </style>
 </head>
 <body class="theme-color-30 mulish-font">
@@ -207,7 +217,7 @@
                             }
                             else
                             {
-                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white;"> <span style="font-size:16px;">My Account </span> </i></a>
+                                <a href="~/account/Login_Register?id=1"><i class="ion-ios-contact" style="color:white;"> <span style="font-size:16px;">My Account</span> </i></a>
                             }
 
                         </div>
@@ -275,42 +285,42 @@
                                             <ul class="show-div shopping-cart head-cart">
                                             </ul>
                                         </li>
-                                         
-                                        @*<li class="onhover-div mobile-cart">
-                                            <div><img src="~/Content/assets/images/icon/cart.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-shopping-cart"></i></div>
-                                            <span class="cart_qty_cls" id="cart-total">0</span>
-                                            <ul class="show-div shopping-cart">
-                                                <li>
-                                                    <div class="media">
-                                                        <a href="#"><img alt="" class="me-3" src="../assets/images/fashion/product/1.jpg"></a>
-                                                        <div class="media-body">
-                                                            <a href="#">
-                                                                <h4>item name</h4>
-                                                            </a>
-                                                            <h4><span>1 x $ 299.00</span></h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="close-circle"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></div>
-                                                </li>
 
-                                                <li>
-                                                    <div class="total">
-                                                        <h5>subtotal : <span>$299.00</span></h5>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="buttons">
-                                                        <a href="cart.html" class="view-cart">
-                                                            view
-                                                            cart
-                                                        </a> <a href="#" class="checkout">checkout</a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>*@
-                                         
+                                        @*<li class="onhover-div mobile-cart">
+                                                <div><img src="~/Content/assets/images/icon/cart.png" class="img-fluid blur-up lazyload" alt=""><i class="ti-shopping-cart"></i></div>
+                                                <span class="cart_qty_cls" id="cart-total">0</span>
+                                                <ul class="show-div shopping-cart">
+                                                    <li>
+                                                        <div class="media">
+                                                            <a href="#"><img alt="" class="me-3" src="../assets/images/fashion/product/1.jpg"></a>
+                                                            <div class="media-body">
+                                                                <a href="#">
+                                                                    <h4>item name</h4>
+                                                                </a>
+                                                                <h4><span>1 x $ 299.00</span></h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="close-circle"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="total">
+                                                            <h5>subtotal : <span>$299.00</span></h5>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="buttons">
+                                                            <a href="cart.html" class="view-cart">
+                                                                view
+                                                                cart
+                                                            </a> <a href="#" class="checkout">checkout</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>*@
+
                                     </ul>
-                                     
+
                                 </div>
 
                             </div>
@@ -341,7 +351,8 @@
                                         </li>
                                         <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
                                         <li>
-                                            <a href="@Url.Action("Shop" , "Shop")">Category</a>
+                                            <a href="@Url.Action("Shop" , "Shop")">Categories</a>
+
                                         </li>
                                         <li class="mega" id="hover-cls">
                                             <a href="@Url.Action("About" , "Home")">About Us</a>
@@ -357,11 +368,11 @@
                             </div>
                         </div>
                         @*<div class="delivery-area d-xl-flex d-none ms-auto me-0">
-                            <div>
-                                <a href="tel:+973 37377353" style="color:black;">Call us: +973 37377353</a>
-                                <h5></h5>
-                            </div>
-                        </div>*@
+                                <div>
+                                    <a href="tel:+973 37377353" style="color:black;">Call us: +973 37377353</a>
+                                    <h5></h5>
+                                </div>
+                            </div>*@
                     </div>
                 </div>
             </div>
@@ -458,6 +469,14 @@
     <div class="tap-top">
         <div>
             <i class="fa fa-angle-double-up"></i>
+        </div>
+    </div>
+    <div class="toast" style="position:fixed;bottom:20px;left:20px;background:#eee">
+        <div class="toast-head-text" style="padding:10px">
+            Toast Header
+        </div>
+        <div class="toast-body">
+            Some text inside the toast body
         </div>
     </div>
     <!-- tap to top End -->

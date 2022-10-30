@@ -139,13 +139,13 @@ function toast(res, condition) {
     if (condition == 1) {
         $('.toast-body').html(res);
         $('.toast-head-text').html('Success').addClass(' text-success');
-        $('.toast').addClass(' bg-green text-success');
+        $('.toast').addClass('bg-green text-success');
         $('.toast').toast({ delay: 3000 }).toast('show');
     }
     else if (condition == 2) {
         $('.toast-head-text').html('Warning');
         $('.toast-body').html(res);
-        $('.toast').addClass(' bg-warning text-dark');
+        $('.toast').addClass('bg-warning text-dark');
         $('.toast').toast({ delay: 3000 }).toast('show');
     }
     else {
@@ -186,7 +186,7 @@ function topheadcart() {
     var html = '';
     var totalPrice = 0;
     var totalQty = data.length;
-    
+    var totalQtywish= getWishlistLS().length;
     
     html += '<div class="cart-height scrollbar" id="style2" >'
     for (var i = 0; i < data.length; i++) {
@@ -235,7 +235,7 @@ function topheadcart() {
     }
     $(".head-cart").html(html);
     $("#cart-total").html(totalQty);
-    //$("#wish-total").html(totalQtywish);
+    $("#wish-total").html(totalQtywish);
 };
 
 
@@ -365,6 +365,7 @@ function addtocart(ID, Name, Image, Price, Qty, CurrentStock) {
     arrTemp.push({ ID: ID, Name: Name, Image: Image, Price: Price, Qty: Qty, CurrentStock: CurrentStock, Key: _Key });
     setCartLS(arrTemp);
     topheadcart();
+    toast('Item Added to Cart', 1)
 }
 function setCartLS(arr) {
     var getCartItem = localStorage.getItem("_cartitems");

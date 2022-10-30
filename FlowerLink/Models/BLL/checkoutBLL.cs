@@ -156,7 +156,7 @@ namespace Vitamito.Models.BLL
                     {                       
                         SqlParameter[] dst = new SqlParameter[4];
                         dst[0] = new SqlParameter("@ItemID", item.ID);
-                        dst[1] = new SqlParameter("@LocationID", 2182);
+                        dst[1] = new SqlParameter("@LocationID", 2195);
                         dst[2] = new SqlParameter("@Quantity", item.Qty);
                         dst[3] = new SqlParameter("@LastUpdatedDate", item.LastUpdatedDate);
 
