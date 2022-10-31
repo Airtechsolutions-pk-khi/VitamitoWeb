@@ -21,7 +21,7 @@ namespace Vitamito.Controllers
 
         }
         // GET: Shop
-        public ActionResult Shop(int LocationID= 2182, string Category = "", string CategoryIDs = "", string Searchtext = "", int SortID = 0)
+        public ActionResult Shop(int LocationID= 2195, string Category = "", string CategoryIDs = "", string Searchtext = "", int SortID = 0)
         {
             var catlist = new categoryBLL().GetAll(LocationID);
             ViewBag.Category = catlist.Take(9).ToList();

@@ -17,7 +17,7 @@ namespace Vitamito.Controllers
 
         }
         // GET: Product
-        public ActionResult ProductDetails(int ID, int LocationID = 2182)
+        public ActionResult ProductDetails(int ID, int LocationID = 2195)
         {
             ViewBag.ProductDetails = _service.GetAll(ID, LocationID);
 
