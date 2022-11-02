@@ -897,6 +897,7 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="language\translations.js" />
+    <Content Include="product-page.html" />
     <Content Include="Scripts\js-cookie\js.cookie-2.2.1.min.js" />
     <Content Include="Scripts\js-cookie\js.cookie.js" />
     <Content Include="Template\error.txt" />

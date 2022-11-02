@@ -207,8 +207,6 @@
                                         {
                                             <a href="#" style="border-radius:10px;">
                                                 <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border-radius:10px;" />
-
-
                                             </a>
                                         }
 
@@ -297,6 +295,33 @@
                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
                                 </a>
+                                <div class="pro_rating d-flex ">
+                                    <ul class="product-rating d-flex">
+                                        @{
+                                            if (item.Stars != null)
+                                            {
+                                                for (int i = 0; i < item.Stars; i++)
+                                                {
+                                                    <li><span class="ion-android-star"></span></li>
+                                                }
+                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                            }
+                                        }
+
+                                    </ul>
+                                     
+                                </div>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
                                 <br />
                                 @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
@@ -358,6 +383,33 @@
                             <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                 <h6> @item.Name</h6>
                             </a>
+                            <div class="pro_rating d-flex ">
+                                <ul class="product-rating d-flex">
+                                    @{
+                                        if (item.Stars != null)
+                                        {
+                                            for (int i = 0; i < item.Stars; i++)
+                                            {
+                                                <li><span class="ion-android-star"></span></li>
+                                            }
+                                            for (int i = 0; i < (5 - item.Stars); i++)
+                                            {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                        }
+                                    }
+
+                                </ul>
+
+                            </div>
                             <strong>BHD @(Math.Round((item.Price),2))</strong>
                             <br />
                             @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
@@ -458,6 +510,33 @@
                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
                                 </a>
+                                <div class="pro_rating d-flex ">
+                                    <ul class="product-rating d-flex">
+                                        @{
+                                            if (item.Stars != null)
+                                            {
+                                                for (int i = 0; i < item.Stars; i++)
+                                                {
+                                                    <li><span class="ion-android-star"></span></li>
+                                                }
+                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                            }
+                                        }
+
+                                    </ul>
+
+                                </div>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
                                 <br />
                                 @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)

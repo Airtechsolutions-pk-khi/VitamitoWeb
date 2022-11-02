@@ -25,7 +25,7 @@ namespace Vitamito.Models.Service
                 return new List<itemBLL>();
             }
         }
-        public List<itemBLL> GetSelecteditems(int ID, int LocationID)
+        public itemBLL GetSelecteditems(int ID, int LocationID)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace Vitamito.Models.Service
             }
             catch (Exception ex)
             {
-                return new List<itemBLL>();
+                return new itemBLL();
             }
         }
         public List<itemBLL> GetAllFeatured()

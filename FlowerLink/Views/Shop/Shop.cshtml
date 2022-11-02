@@ -592,15 +592,42 @@
                                                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                                                     <h6>@item.Name</h6>
                                                                 </a>
+                                                                <div class="pro_rating d-flex ">
+                                                                    <ul class="product-rating d-flex">
+                                                                        @{
+                                                                            if (item.Stars != null)
+                                                                            {
+                                                                                for (int i = 0; i < item.Stars; i++)
+                                                                                {
+                                                                                    <li><span class="ion-android-star"></span></li>
+                                                                                }
+                                                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                                                {
+                                                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                                                }
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <li><span class="ion-android-star-outline"></span></li>
+                                                                                <li><span class="ion-android-star-outline"></span></li>
+                                                                                <li><span class="ion-android-star-outline"></span></li>
+                                                                                <li><span class="ion-android-star-outline"></span></li>
+                                                                                <li><span class="ion-android-star-outline"></span></li>
+                                                                            }
+                                                                        }
+
+                                                                    </ul>
+
+                                                                </div>
                                                                 <p>
                                                                     @item.Description
                                                                 </p>
                                                                 <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
                                                                 <br />
-                                                                    @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                                                    {
-                                                                        <strong style="font-size:13px;color:red;">Low Stock</strong>
-                                                                    }
+                                                                @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                                                {
+                                                                    <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                                                }
                                                             </div>
                                                         </div>
                                                     </div>
