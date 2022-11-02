@@ -10,6 +10,14 @@ using WebAPICode.Helpers;
 
 namespace Vitamito.Models.BLL
 {
+    public enum Locations :int
+    {
+        LocationID = 2195,
+    }
+    public enum UsersID : int
+    {
+        UserID = 2313,
+    }
     public class notificationBLL
     {
         public int StatusID { get; set; }

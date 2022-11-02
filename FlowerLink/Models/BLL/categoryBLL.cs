@@ -7,13 +7,18 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
+using static org.apache.catalina.comet.CometEvent;
 
 namespace Vitamito.Models.BLL
 {
+    public enum Location
+    {
+        LocationID = 2195
+    }
     public class categoryBLL
     {
         public int ID { get; set; }
-        public int? LocationID { get; set; }
+        public Location LocationID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }

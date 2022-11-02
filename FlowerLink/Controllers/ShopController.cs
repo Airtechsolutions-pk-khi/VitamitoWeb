@@ -21,13 +21,14 @@ namespace Vitamito.Controllers
 
         }
         // GET: Shop
-        public ActionResult Shop(int LocationID= 2195, string Category = "", string CategoryIDs = "", string Searchtext = "", int SortID = 0)
+        public ActionResult Shop(string Category = "", string CategoryIDs = "", string Searchtext = "", int SortID = 0)
         {
-            var catlist = new categoryBLL().GetAll(LocationID);
+            Location location = Location.LocationID;
+            var catlist = new categoryBLL().GetAll((int)location);
             ViewBag.Category = catlist.Take(9).ToList();
 
             //ViewBag.BestProduct = new shopService().BestProducts(LocationID).Take(4).ToList();
-            var itemData = new itemService().GetAll(LocationID);
+            var itemData = new itemService().GetAll((int)location);
             ViewBag.itemList = itemData.Take(48).ToList().Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
             ViewBag.BestProduct = itemData.Take(4).ToList().Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
 
