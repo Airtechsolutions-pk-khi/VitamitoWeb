@@ -16,6 +16,84 @@
     .font-weight-bold {
         font-weight: 700 !important
     }
+
+    .coupon-accordion h3 {
+        background: #f6f6f6;
+        border-top: 3px solid var(--theme-color);
+        color: #515151;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 30px;
+        padding: 1em 2em 1em 3.5em;
+        position: relative;
+        text-transform: capitalize;
+    }
+
+        .coupon-accordion h3 .coupon {
+            color: #006782;
+            cursor: pointer;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+            .coupon-accordion h3 .coupon:hover {
+                color: #000000;
+            }
+    .coupon-content {
+        border: 1px solid #dddddd;
+        margin-bottom: 30px;
+        padding: 20px;
+        display: none;
+    }
+    .coupon-info p.form-row-first {
+  float: left;
+  width: 48%;
+}
+@@media only screen and (max-width: 479px) {
+  .coupon-info p.form-row-first {
+    width: 100%;
+  }
+}
+.coupon-info p.form-row-last {
+  float: right;
+  width: 48%;
+}
+@@media only screen and (max-width: 479px) {
+  .coupon-info p.form-row-last {
+    width: 100%;
+  }
+}
+.coupon-info .remember {
+  margin-left: 10px;
+}
+.coupon-info .remember span {
+  margin-left: 5px;
+}
+.checkout-coupon input {
+  border: 1px solid #999999;
+  color: #555;
+  padding: 5px 10px;
+  width: auto;
+}
+.checkout-coupon input:focus {
+  outline: none;
+}
+.checkout-coupon .button-apply-coupon {
+  margin: -5px 0 0 10px;
+  padding: 7.2px 11px;
+}
+@@media only screen and (max-width: 479px) {
+  .checkout-coupon .button-apply-coupon {
+    margin: 10px 0 0 0px;
+  }
+}
+    .btn-coupon {
+        padding: 5px 11px;
+        color: #fff;
+        letter-spacing: 0.05em;
+        border: 2px solid var(--theme-color);
+        background: var(--theme-color);
+    }
 </style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -41,6 +119,31 @@
 <!-- section start -->
 <section class="section-b-space">
     <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="coupon-area">
+
+                    <!-- coupon-accordion start -->
+                    <div class="coupon-accordion">
+                        <h3><span>Have a coupon?</span> <span class="coupon" id="showcoupon">Click here to enter your code</span></h3>
+                        <div class="coupon-content" id="checkout-coupon">
+                            <div class="coupon-info">
+                                <form action="#">
+                                    <p class="checkout-coupon">
+                                        <input id="coupon" type="text" placeholder="Coupon code">
+                                        <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
+                                    <p id="CouponResponse"></p>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- coupon-accordion end -->
+                </div>
+            </div>
+        </div>
+
         <div class="checkout-page">
             <div class="checkout-form">
                 <form>
@@ -115,15 +218,16 @@
                                     <ul class="qty">
                                     </ul>
                                     <div class="charges">
-                                        <div>Sub-Total <span class="sub-total" style="float:right">00.00</span></div>
+                                        <div>Sub-Total <span class="sub-total" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
-                                        <div>Discount <span class="discount" style="float:right">00.00</span></div>
-                                        <div>Tax <span class="tax" style="float:right">00.00</span></div>
-                                        <div>Delivery Charges <span class="dc" style="float:right">00.00</span></div>
+                                        <div>Discount <span class="discount" style="float:right">BHD 0</span></div>
+                                        <div>Coupon Discount <span class="coupon-amount" id="coupon-text" style="float:right">BHD 0</span></div>
+                                        <div>Tax <span class="tax" style="float:right">BHD 0</span></div>
+                                        <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
-                                        <div>Grand Total <span class="total" id="totalamount" style="float:right">00.00</span></div>
+                                        <div>Grand Total <span class="total" id="totalamount" style="float:right">BHD 0</span></div>
                                     </div>
 
                                 </div>
@@ -216,7 +320,7 @@
         var settings = LSsettings[0];
 
 
-       
+        var CouponDisount = parseFloat($(".coupon-amount").text().replace("RS.", ""));
 
             //=============================== Order Master =====================
       
@@ -280,6 +384,7 @@
             });
         };
     function cartdata(coupon) {
+      
         var gifts = getgiftLS();
         var checkLSsetting = localStorage.getItem("_setting");
         var LSsettings = JSON.parse(localStorage.getItem("_setting"));
@@ -302,13 +407,29 @@
         $(".qty").html(html)
 
         if (data.length > 0) {
+            debugger
             $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(2));
             Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
-            $('.tax').html(currency + ' ' + Taxamount);
-            $('.discount').html(currency + ' ' + settings.Discount);
+            $('.tax').html(currency + ' ' + Taxamount);            
+            $('.discount').html(settings.Discount + '%');            
             $('.dc').html(currency + ' ' + settings.DeliveryCharges);
-            total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
-            $("#totalamount").html(currency + ' ' + total);
+            
+            //total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
+                        
+            if (coupon == undefined) {
+                coupon = 0;                
+            }
+
+            var discountAmount = ((((totalPrice * (settings.Discount / 100)))).toFixed(2));
+            var couponAmount = (((totalPrice + (totalPrice * (coupon / 100)))).toFixed(2));
+            
+            total = (((totalPrice + (totalPrice - couponAmount - discountAmount))).toFixed(2));
+
+
+            var withTaxDC = parseFloat(total) + parseFloat(Taxamount) + parseFloat(settings.DeliveryCharges);
+
+             
+            $("#totalamount").html(currency + ' ' + withTaxDC + '.00');
         }
         else {
             $(".sub-total").html("");
@@ -330,7 +451,7 @@
                 success: function (data) {
                     var arrTemp = [];
                     arrTemp = getsettingsLS();
-                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, Tax: data.Tax, COD: data.COD, Discount: data.Discount, TopHeaderText: data.TopHeaderText });
+                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, MinOrderAmount: data.MinOrderAmount, Tax: data.Tax, COD: data.COD, Discount: data.Discount, TopHeadDescription: data.TopHeadDescription });
                     if (data.COD != 1) {
                        // $('#COD').addClass('d-none');
                     }
@@ -362,4 +483,57 @@
     //    $(this).addClass('payactive').siblings().removeClass('payactive');
     //    $('#payment-alert').html('');
     //});
+</script>
+<script>
+    $('#showcoupon').on('click', function () {
+        $('#checkout-coupon').slideToggle(500);
+    });
+
+
+
+    //coupon working
+    function CouponDiscount() {
+        debugger
+        var coupon = $("#coupon").val();
+        $.ajax({
+            type: "Get",
+            url: '/Order/Coupon?coupon=' + coupon,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (data) {
+
+                if (data.data != null) {
+                    $("#CouponResponse").removeClass();
+                    $("#CouponResponse").html('Coupon Applied').addClass("text-success");
+                    if (data.data.Type == 'Amount') {
+                        //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
+                        $("#coupon-text").html('Coupon Discount');
+                    }
+                    else {
+                        //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
+                        $("#coupon-text").html(' ' + data.data.Amount.toFixed(0) + '%');
+                    }
+                    $('#CouponID').val(data.data.CouponID);
+                    $('#CouponCode').val(data.data.CouponCode);
+                    $('#CouponType').val(data.data.Type)
+                    CouponDis(data.data.CouponID);
+                    cartdata(data.data.Amount);
+                }
+                else {
+                    $("#CouponResponse").removeClass();
+                    $("#CouponResponse").html('Invalid Coupon').addClass("text-danger");
+                    $(".coupon-amount").html(currency + ' ' + 0);
+                    CouponDis(0);
+                    cartdata(0);
+                }
+
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //
+            }
+        });
+    }
+    function CouponDis(ID) {
+        return ID;
+    }
 </script>

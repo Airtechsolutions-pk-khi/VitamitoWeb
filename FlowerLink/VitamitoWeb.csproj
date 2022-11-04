@@ -208,8 +208,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cart.html" />
-    <Content Include="category-page.html" />
     <Content Include="Content\assets\css\jqueryui.min.css" />
     <Content Include="Content\assets\css\sweetalert\sweetalert.css" />
     <Content Include="Content\assets\images\a.png" />
@@ -895,9 +893,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
     <Content Include="language\translations.js" />
-    <Content Include="product-page.html" />
     <Content Include="Scripts\js-cookie\js.cookie-2.2.1.min.js" />
     <Content Include="Scripts\js-cookie\js.cookie.js" />
     <Content Include="Template\error.txt" />
@@ -907,7 +903,6 @@
     <Content Include="Template\HtmlPage1.html" />
     <Content Include="Template\newsletter.txt" />
     <Content Include="vegetables-4.html" />
-    <Content Include="vegetables.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
