@@ -6,6 +6,7 @@
     GetWishListItems();
     StockActiveColor();
     headertext();
+    Topheadertext();
 
     CountDownTimer();
 
@@ -26,15 +27,15 @@
 });
 //setting
 function headertext() {
-
+    
     $.ajax({
         type: "GET",
         url: '/Home/GetSetting',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-
-            $('#TopHeaderText').html(data.TopHeaderText);
+            
+            
             if (data.Facebook != 1 || data.Facebook == null) {
                 $('#facebook').addClass('d-none');
             }
@@ -85,6 +86,24 @@ function headertext() {
     });
 }
 
+
+function Topheadertext() {
+    
+    $.ajax({
+        type: "GET",
+        url: '/Home/GetSetting',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            debugger
+            $('#TopHeadDescription').html(data.TopHeadDescription);
+   
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            //alert(xhr, textStatus, errorThrown);
+        }
+    });
+}
 //Gift
 var arrGift = [];
 function addgift() {
