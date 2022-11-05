@@ -414,12 +414,12 @@
                                 </div>
                             </div>
                             <div>
-                                <form class="form_search" role="form">
-                                    <input id="query search-autocomplete" type="search" placeholder="Search any Device or Gadgets..." class="nav-search nav-search-field" aria-expanded="true">
-                                    <button type="submit" name="nav-submit-button" class="btn-search">
+                                @*<form class="form_search" role="form">
+                                    <input id="query search-autocomplete" type="search" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                    <button id="search-btn" onclick="SearchByTxt(); return false;" type="submit" name="nav-submit-button" class="btn-search">
                                         <i class="ti-search"></i>
                                     </button>
-                                </form>
+                                </form>*@
                             </div>
                             <div class="menu-right pull-right">
                                 <div>
@@ -475,13 +475,16 @@
                                         <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
 
                                         <li class="mega" id="hover-cls">
-                                            <a href="@Url.Action("About" , "Home")">About Us</a>
+                                            @Html.Action("Header", "Shared")
+                                        </li>
+                                        <li class="mega" id="hover-cls">
+                                            <a href="@Url.Action("About" , "Home")">About</a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action("Contact" , "Home")">Contact Us</a>
+                                            <a href="@Url.Action("Contact" , "Home")">Contact</a>
                                         </li>
 
-                                        @Html.Action("Header", "Shared")
+                                        
 
                                     </ul>
                                 </nav>
@@ -566,12 +569,15 @@
                         </div>
                         <div>
 
-                            <form class="form_search" role="form">
-                                <input id="query search-autocomplete" type="search" placeholder="Search for Health and Cosmetic Products...." class="nav-search nav-search-field" aria-expanded="true">
-                                <button id="search-btn" onclick="Search(); return false;" type="submit" name="nav-submit-button" class="btn-search">
+
+                            <div class="form_search">
+                                <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <button id="SrchBtn"  onclick="SearchByTxt(); return false;" class="btn-search">
                                     <i class="ti-search"></i>
                                 </button>
-                            </form>
+                            </div>
+                            
+
                         </div>
                         <div class="menu-right pull-right">
                             <div>
@@ -669,13 +675,16 @@
                                     <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
 
                                     <li class="mega" id="hover-cls">
-                                        <a href="@Url.Action("About" , "Home")">About Us</a>
+                                        @Html.Action("Header", "Shared")
+                                    </li>
+                                    <li class="mega" id="hover-cls">
+                                        <a href="@Url.Action("About" , "Home")">About</a>
                                     </li>
                                     <li>
-                                        <a href="@Url.Action("Contact" , "Home")">Contact Us</a>
+                                        <a href="@Url.Action("Contact" , "Home")">Contact</a>
                                     </li>
 
-                                    @Html.Action("Header", "Shared")
+                                  
 
                                 </ul>
                             </nav>
@@ -844,13 +853,13 @@
 
 
         <script>
-            var input = document.getElementById("search");
-            input.addEventListener("keyup", function (event) {
-                if (event.keyCode === 13) {
-                    event.preventDefault();
-                    document.getElementById("search-btn").click();
-                }
-            });
+            //var input = document.getElementById("search");
+            //input.addEventListener("keyup", function (event) {
+            //    if (event.keyCode === 13) {
+            //        event.preventDefault();
+            //        document.getElementById("search-btn").click();
+            //    }
+            //});
 
             window.onscroll = function () { myFunction() };
 
@@ -864,13 +873,15 @@
                     header.classList.remove("nav-fixed-top");
                 }
             }
-            function Search() {
-                var Searchtxt = $("#search").val();
+            function SearchByTxt() {
+                debugger
+                var Searchtxt = $(".srch").val();
 
-
-                window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '&Searchtext=' + Searchtxt + '&SortID=' + 0 + '';
+                 
+                window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '&Searchtext=' + Searchtxt + '&SortID=' + '&MinPrice=' + ' ' + '&MaxPrice=' + ' ' + '';
             }
 
+           
 
             $('.dropdown').click(function () {
 

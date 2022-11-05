@@ -36,7 +36,7 @@ namespace Vitamito.Models.BLL
         public bool IsFeatured { get; set; }
         public int StockQty { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-        public int? LastUpdatedBy { get; set; }
+        public string LastUpdatedBy { get; set; }
         public double? DoublePrice { get; set; }
         public int? Stars { get; set; }
         public static DataTable _dt;
@@ -46,23 +46,69 @@ namespace Vitamito.Models.BLL
             try
             {
                 var lst = new List<filterBLL>();
-                SqlParameter[] p = new SqlParameter[3];
-                p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);                
-                p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
-                //p[2] = new SqlParameter("@MinPrice", float.Parse(data.MinPrice.Replace("BHD", "").Replace("BHD", "")));
-                //p[3] = new SqlParameter("@MaxPrice", float.Parse(data.MaxPrice.Replace("BHD", "").Replace("BHD", "")));
-                p[2] = new SqlParameter("@SortID", data.SortID);
-                _ds = (new DBHelper().GetDatasetFromSP)("sp_filterProduct_Vitamito", p);
-
-                if (_ds != null)
+                if (!data.MaxPrice.Equals("") && !data.MaxPrice.Equals(" ") && data.MaxPrice != null)
                 {
-                    if (_ds.Tables.Count > 0)
+                    
+                    SqlParameter[] p = new SqlParameter[5];
+                    p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
+                    p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
+                    p[2] = new SqlParameter("@MinPrice", "");
+                    p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
+                    p[4] = new SqlParameter("@SortID", data.SortID);
+                    _ds = (new DBHelper().GetDatasetFromSP)("sp_PricefilterProduct_Vitamito", p);
+
+                    if (_ds != null)
                     {
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
+                        if (_ds.Tables.Count > 0)
+                        {
+                            lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
+                        }
+                    }                     
+                }
+                 
+                
+                if (!data.Category.Equals("") && !data.Category.Equals(" "))
+                {
+
+                    SqlParameter[] p = new SqlParameter[5];
+                    p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
+                    p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
+                    p[2] = new SqlParameter("@MinPrice", "");
+                    p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
+                    p[4] = new SqlParameter("@SortID", data.SortID);
+                    _ds = (new DBHelper().GetDatasetFromSP)("sp_CategoryfilterProduct_Vitamito", p);
+
+                    if (_ds != null)
+                    {
+                        if (_ds.Tables.Count > 0)
+                        {
+                            lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
+                        }
                     }
                 }
+                else
+                {
+                    
+                    SqlParameter[] p = new SqlParameter[5];
+                    p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
+                    p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
+                    p[2] = new SqlParameter("@MinPrice", "");
+                    p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
+                    p[4] = new SqlParameter("@SortID", data.SortID);
+                    _ds = (new DBHelper().GetDatasetFromSP)("sp_filterProduct_Vitamito", p);
 
+                    if (_ds != null)
+                    {
+                        if (_ds.Tables.Count > 0)
+                        {
+                            lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
+                        }
+                    }
+
+                    
+                }
                 return lst;
+
             }
             catch (Exception ex)
             {
