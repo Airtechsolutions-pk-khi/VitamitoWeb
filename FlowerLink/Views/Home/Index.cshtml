@@ -47,103 +47,66 @@
     }
 </style>
 <!-- Home slider -->
-@*<section class="p-0 small-slider">
+
+
+@if (ViewBag.Banner != null)
+{
+
+
+    <section class="p-0 layout-7">
         <div class="slider-animate home-slider">
-            <div>
-                <div class="home">
-                    <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                </div>
-            </div>
-        </div>
-    </section>*@
-
-@*@if (ViewBag.Banner != null)
-    {
-        <section class="p-0">
-            <div class="slide-1 home-slider">
-                @foreach (var Record in ViewBag.Banner)
-                {
-                    <div>
-                        <div class="home text-center">
-
-                            <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload">
-                            <div class="container">
+            @foreach (var Record in ViewBag.Banner)
+            {
+                <div>
+                    <div class="home text-center">
+                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload">
+                        @*<div class="container">
                                 <div class="row">
                                     <div class="col">
                                         <div class="slider-contain">
                                             <div>
-
+                                                <h4 class="animated" data-animation-in="fadeInUp">welcome to book store</h4>
+                                                <h1 class="animated font-cormorant" data-animation-in="fadeInUp" data-delay-in="0.3">MUST READS</h1>
+                                                <a href="#" class="btn btn-solid animated" data-animation-in="fadeInUp" data-delay-in="0.5">shop now</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
+                            </div>*@
                     </div>
-                }
-            </div>
-        </section>
-    }
-    else
-    {*@
-<section class="p-0">
-    <div class="slide-1 home-slider">
-        <div>
-            <div class="home text-center">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                <!--<div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="slider-contain">
-                                <div>-->
-                                    @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
-                                <!--</div>
-                            </div>
-                        </div>
+                </div>
+            }
+        </div>
+    </section>
+}
+else
+{
+    <section class="p-0 layout-7">
+        <div class="slider-animate home-slider">
+            @foreach (var Record in ViewBag.Banner)
+            {
+                <div>
+                    <div class="home text-center">
+                        <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+                        @*<div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="slider-contain">
+                                            <div>
+                                                <h4 class="animated" data-animation-in="fadeInUp">welcome to book store</h4>
+                                                <h1 class="animated font-cormorant" data-animation-in="fadeInUp" data-delay-in="0.3">MUST READS</h1>
+                                                <a href="#" class="btn btn-solid animated" data-animation-in="fadeInUp" data-delay-in="0.5">shop now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
                     </div>
-                </div>-->
-            </div>
+                </div>
+            }
         </div>
-        <div>
-            <div class="home text-center">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                <!--<div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="slider-contain">
-                                <div>-->
-                                    @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
-                                <!--</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-        <div>
-            <div class="home text-center">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                <!--<div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="slider-contain">
-                                <div>-->
-                                    @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
-                                <!--</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-        <div>
-        </div>
-    </div>
-</section>
-@*}*@
-
-
+    </section>
+}
 
 
 <!-- Home slider end -->
@@ -221,34 +184,6 @@
                     </div>
                 </div>
 
-
-                @*<div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>*@
             </div>
         </div>
     </div>
@@ -320,7 +255,7 @@
                                         }
 
                                     </ul>
-                                     
+
                                 </div>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
                                 <br />
@@ -353,7 +288,7 @@
                 </div>
             </div>
             <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
-                @foreach (var item in ViewBag.TenItems)
+                @foreach (var item in ViewBag.Featureditems)
                 {
                     <div class="product-box product-box product-style-4">
                         <div class="img-wrapper">
@@ -431,43 +366,6 @@
         </div>
     </div>
 </section>
-<!-- product slider end -->
-<!-- gift card section start -->
-@*<section class="gift-card-section ratio2_1">
-        <div class="container">
-            <div class="card-box">
-                <div class="row partition2">
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>*@
 <!-- gift card section end -->
 <!-- deal product start -->
 <section class="bag-product ratio_square deal-product-space section-b-space">
@@ -640,27 +538,4 @@
     </div>
 </section>
 
-<!--<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>-->
-
-<!-- menu js-->
-<!--<script src="~/Content/assets/js/menu.js"></script>-->
-
-<!-- lazyload js-->
-<!--<script src="~/Content/assets/js/lazysizes.min.js"></script>-->
-
-<!-- price range js -->
-<!--<script src="~/Content/assets/js/price-range.js"></script>-->
-
-<!-- slick js-->
-<!--<script src="~/Content/assets/js/slick.js"></script>-->
-
-<!-- Bootstrap js-->
-<!--<script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>-->
-
-<!-- Bootstrap Notification js-->
-<!--<script src="~/Content/assets/js/bootstrap-notify.min.js"></script>-->
-
-<!-- Theme js-->
-<!--<script src="~/Content/assets/js/theme-setting.js"></script>
-<script src="~/Content/assets/js/script.js"></script>-->
-
+ 

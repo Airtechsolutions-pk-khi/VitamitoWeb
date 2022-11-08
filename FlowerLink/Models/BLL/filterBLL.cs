@@ -33,7 +33,7 @@ namespace Vitamito.Models.BLL
         public string HoveredImage { get; set; }
         public int StatusID { get; set; }
         public int? DisplayOrder { get; set; }
-        public bool IsFeatured { get; set; }
+        public bool? IsFeatured { get; set; }
         public int StockQty { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public string LastUpdatedBy { get; set; }
@@ -67,7 +67,7 @@ namespace Vitamito.Models.BLL
                 }
                  
                 
-                if (!data.Category.Equals("") && !data.Category.Equals(" "))
+                else if (!data.Category.Equals("") && !data.Category.Equals(" "))
                 {
 
                     SqlParameter[] p = new SqlParameter[5];
@@ -77,6 +77,26 @@ namespace Vitamito.Models.BLL
                     p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
                     p[4] = new SqlParameter("@SortID", data.SortID);
                     _ds = (new DBHelper().GetDatasetFromSP)("sp_CategoryfilterProduct_Vitamito", p);
+
+                    if (_ds != null)
+                    {
+                        if (_ds.Tables.Count > 0)
+                        {
+                            lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
+                        }
+                    }
+                }
+
+                else if (data.SortID == 1 || data.SortID == 2 || data.SortID == 3 || data.SortID == 4)
+                {
+
+                    SqlParameter[] p = new SqlParameter[5];
+                    p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
+                    p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
+                    p[2] = new SqlParameter("@MinPrice", "");
+                    p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
+                    p[4] = new SqlParameter("@SortID", data.SortID);
+                    _ds = (new DBHelper().GetDatasetFromSP)("sp_SortfilterProduct_Vitamito", p);
 
                     if (_ds != null)
                     {

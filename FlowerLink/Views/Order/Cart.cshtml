@@ -68,7 +68,7 @@
         </div>
         <div class="row cart-buttons">
             <div class="col-6"><a href="@Url.Action("Index","Home")" class="btn btn-solid">continue shopping</a></div>
-            @if (Session["CustomerName"] != null)
+            @if (Session["ID"] != null)
             {
                 <div class="col-6"><a href="@Url.Action("Checkout", "Order")" id="check-btn" class="btn btn-solid">check out</a></div>
             }

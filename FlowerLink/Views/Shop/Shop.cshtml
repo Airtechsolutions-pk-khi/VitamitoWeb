@@ -571,10 +571,10 @@
                                                         </div>*@
                                                     <div class="product-page-filter">
                                                         <select class="SelectSort" id="Sort" name="sortby">
-                                                            <option value="1">Name(A - Z)</option>
-                                                            <option value="2">Name(Z - A)</option>
-                                                            <option value="3">Price(Low > High)</option>
-                                                            <option value="4">Price(High > Low)</option>
+                                                            <option value="3">Name(A - Z)</option>
+                                                            <option value="4">Name(Z - A)</option>
+                                                            <option value="1">Price(Low > High)</option>
+                                                            <option value="2">Price(High > Low)</option>
                                                             @*<option value="High to low">Sorting items</option>
                                                                 <option value="Low to High">50 Products</option>
                                                                 <option value="Low to High">100 Products</option>*@
@@ -694,7 +694,7 @@
 <script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
 
 <!-- menu js-->
-<script src="~/Content/assets/js/menu.js"></script>
+@*<script src="~/Content/assets/js/menu.js"></script>*@
 
 <!-- lazyload js-->
 <script src="~/Content/assets/js/lazysizes.min.js"></script>
@@ -764,17 +764,10 @@
         });
         $('#Sort').on('change', function () {
             debugger
-            ProductFilter(Category.join(), "", "BHD0", "BHD500", this.value);
+            ProductFilter(" ", " ", " ", " ", this.value);
         });
 
-
-        //$('.slider').on('change', function () {
-        //    var val = $(this).val();
-        //    var a = $('.value').html(val);
-
-        //    alert(a);
-        //});
-
+ 
 
         $(".SrchBtn").click(function () {
             debugger
@@ -794,7 +787,7 @@
 
             var MinPrice = $(".js-input-from").val();
             var MaxPrice = $(".value").val();
-            alert(MaxPrice);
+            
             var SortID = $(".SelectSort").val();
             var filter = new Object();
             filter.Category = Category.join();
@@ -896,7 +889,7 @@
 <script type="text/javascript">
     function rangeSlide(value) {
         var MaxPrice = document.getElementById('rangeValue').innerHTML = value;
-        alert(MaxPrice)
+        
         ProductFilter(" ", "", "0", MaxPrice, "");
     }
 </script>

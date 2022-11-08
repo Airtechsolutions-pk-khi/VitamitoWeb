@@ -95,6 +95,46 @@
     .px-0 {
         padding-right: 0 !important
     }
+
+    p {
+        text-align: center;
+    }
+
+    input[type=range].slider {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+        input[type=range].slider:focus {
+            outline: none;
+        }
+
+        input[type=range].slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6.7px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background-color: var(--theme-color);
+            border-radius: 2.1px;
+            border: 0px solid #010101;
+        }
+
+        input[type=range].slider::-webkit-slider-thumb {
+            box-shadow: 1.7px 1.7px 1.6px #730000, 0px 0px 1.7px #8d0000;
+            border: 0px solid #ff0000;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: var(--theme-color);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -10px;
+        }
+
+        input[type=range].slider:focus::-webkit-slider-runnable-track {
+            background: var(--theme-color);
+        }
 </style>
 <!-- loader start -->
 <div class="loader_skeleton">
@@ -420,28 +460,24 @@
                         <!-- price filter start here -->
 
                         <div class="collection-collapse-block border-0 open">
-                            <h3 class="collapse-block-title">price</h3>
-                            <div class="collection-collapse-block-content">
-                                <div class="wrapper mt-3">
-                                    <div class="range-slider">
-                                        <input type="text" class="js-range-slider" value="">
-                                    </div>
-                                </div>
-                                <a href="javascript:;" class="btn filterOn btn btn-default btn-small" style="background-color:var(--theme-color);color:white;">Search</a>
-                            </div>
-                        </div>
+                            <h3 class="collapse-block-title" style="padding-bottom:20px;">price</h3>
 
-                        @*<div class="collection-collapse-block border-0 open">
-                                <h3 class="collapse-block-title">price</h3>
-                                <div class="collection-collapse-block-content" style="padding-bottom:40px">
+                            <input type="range" class="slider" onchange="rangeSlide(this.value)" value="0" min="1" max="100" step="1">
+                            <p id="rangeValue" class="value">0</p>
+
+                            @*<div class="collection-collapse-block-content">
                                     <div class="wrapper mt-3">
-                                        <div class="range-slider" id="price-slider">
-                                            <input type="range" class="irs-slider" value="" style="width:100%">
+                                        <div class="range-slider">
+                                            <input type="text" class="js-range-slider" id="slider">
+
                                         </div>
                                     </div>
-                                    <a href="javascript:;" class="btn filterOn btn btn-default btn-small" style="background-color:var(--theme-color);color:white;">Search</a>
-                                </div>
-                            </div>*@
+                                    <p>Your slider has a value of <span id="slider-value"></span></p>
+                                    <a href="javascript:;" class="filterOn btn btn-default btn-small" style="background-color:var(--theme-color);color:white;">Search</a>
+                                </div>*@
+                        </div>
+
+
                     </div>
                     <!-- silde-bar colleps block end here -->
                     <!-- side-bar single product slider start -->
@@ -535,10 +571,10 @@
                                                         </div>*@
                                                     <div class="product-page-filter">
                                                         <select class="SelectSort" id="Sort" name="sortby">
-                                                            <option value="1">Name(A - Z)</option>
-                                                            <option value="2">Name(Z - A)</option>
-                                                            <option value="3">Price(Low > High)</option>
-                                                            <option value="4">Price(High > Low)</option>
+                                                            <option value="3">Name(A - Z)</option>
+                                                            <option value="4">Name(Z - A)</option>
+                                                            <option value="1">Price(Low > High)</option>
+                                                            <option value="2">Price(High > Low)</option>
                                                             @*<option value="High to low">Sorting items</option>
                                                                 <option value="Low to High">50 Products</option>
                                                                 <option value="Low to High">100 Products</option>*@
@@ -549,92 +585,96 @@
                                         </div>
                                     </div>
 
+                                    <div id="LoadProduct" class="shop-products-wrap">
+
+                                    </div>
+
                                     <div id="divLoader" class="mx-auto w-100 text-center p-5" style="display:none;">
                                         <img class="mr-3" src="~/Content/assets/images/gifloader.gif" style="width: 33px;" /> <span class="text-success">Loading ...</span>
                                     </div>
 
-                                    <div class="product-wrapper-grid LoadProduct">
-                                        <div class="row margin-res">
-                                            @foreach (var item in ViewBag.itemList)
-                                            {
-                                                <div class="col-xl-3 col-6 col-grid-box">
-                                                    <div class="product-box">
-                                                        <div class="img-wrapper">
-                                                            @if (item.Image == null || item.Image == "")
-                                                            {
-                                                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
-                                                            }
-                                                            else
-                                                            {
-                                                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
-                                                                </a>
-                                                            }
-
-                                                            @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
+                                    @*<div class="product-wrapper-grid LoadProduct">
+                                            <div class="row margin-res">
+                                                @foreach (var item in ViewBag.itemList)
+                                                {
+                                                    <div class="col-xl-3 col-6 col-grid-box">
+                                                        <div class="product-box">
+                                                            <div class="img-wrapper">
+                                                                @if (item.Image == null || item.Image == "")
                                                                 {
-                                                                    <div class="cart-info cart-wrap">
-                                                                        <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
-                                                                        <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                                                                    </div>
+                                                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
                                                                 }
                                                                 else
-                                                                {*@
-                                                            <div class="cart-info cart-wrap">
-                                                                <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
-                                                                <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                                                {
+                                                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
+                                                                    </a>
+                                                                }
+
+                                                                @if ((Math.Round((item.CurrentStock), 2)) == 0)
+                                                                    {
+                                                                        <div class="cart-info cart-wrap">
+                                                                            <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
+                                                                            <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                                                        </div>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                <div class="cart-info cart-wrap">
+                                                                    <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
+                                                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                                                </div>
+                                                                }
                                                             </div>
-                                                            @*}*@
-                                                        </div>
-                                                        <div class="product-detail">
-                                                            <div>
-                                                                @*<div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>*@
-                                                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                                                    <h6>@item.Name</h6>
-                                                                </a>
-                                                                <div class="pro_rating d-flex ">
-                                                                    <ul class="product-rating d-flex">
-                                                                        @{
-                                                                            if (item.Stars != null)
-                                                                            {
-                                                                                for (int i = 0; i < item.Stars; i++)
+                                                            <div class="product-detail">
+                                                                <div>
+                                                                    <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                                                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                                        <h6>@item.Name</h6>
+                                                                    </a>
+                                                                    <div class="pro_rating d-flex ">
+                                                                        <ul class="product-rating d-flex">
+                                                                            @{
+                                                                                if (item.Stars != null)
                                                                                 {
-                                                                                    <li><span class="ion-android-star"></span></li>
+                                                                                    for (int i = 0; i < item.Stars; i++)
+                                                                                    {
+                                                                                        <li><span class="ion-android-star"></span></li>
+                                                                                    }
+                                                                                    for (int i = 0; i < (5 - item.Stars); i++)
+                                                                                    {
+                                                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                                                    }
                                                                                 }
-                                                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                                                else
                                                                                 {
+                                                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                                                    <li><span class="ion-android-star-outline"></span></li>
                                                                                     <li><span class="ion-android-star-outline"></span></li>
                                                                                 }
                                                                             }
-                                                                            else
-                                                                            {
-                                                                                <li><span class="ion-android-star-outline"></span></li>
-                                                                                <li><span class="ion-android-star-outline"></span></li>
-                                                                                <li><span class="ion-android-star-outline"></span></li>
-                                                                                <li><span class="ion-android-star-outline"></span></li>
-                                                                                <li><span class="ion-android-star-outline"></span></li>
-                                                                            }
-                                                                        }
 
-                                                                    </ul>
+                                                                        </ul>
 
+                                                                    </div>
+                                                                    <p>
+                                                                        @item.Description
+                                                                    </p>
+                                                                    <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
+                                                                    <br />
+                                                                    @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                                                    {
+                                                                        <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                                                    }
                                                                 </div>
-                                                                <p>
-                                                                    @item.Description
-                                                                </p>
-                                                                <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
-                                                                <br />
-                                                                @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                                                {
-                                                                    <strong style="font-size:13px;color:red;">Low Stock</strong>
-                                                                }
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            }
-                                        </div>
-                                    </div>
+                                                }
+                                            </div>
+                                        </div>*@
                                 </div>
                             </div>
                         </div>
@@ -654,7 +694,7 @@
 <script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
 
 <!-- menu js-->
-<script src="~/Content/assets/js/menu.js"></script>
+@*<script src="~/Content/assets/js/menu.js"></script>*@
 
 <!-- lazyload js-->
 <script src="~/Content/assets/js/lazysizes.min.js"></script>
@@ -687,6 +727,9 @@
 
     $(document).ready(function () {
         debugger
+         $("#LoadProduct").load('@Url.Action("Products", "Shop")');
+            $(".LoadProduct").hide();
+
         var Category = [];
         var SubCategory = [];
 
@@ -697,13 +740,13 @@
                 Category.push($(this).val());
                 debugger
                 var SortID = $(".SelectSort").val();
-                ProductFilter(Category.join(), "", "BHD0", "RS50000", SortID);
+                ProductFilter(Category.join(), "", "0", " ", SortID);
             }
             else {
                 var index = Category.indexOf($(this).val());
                 Category.splice(index, 1);
                 var SortID = $(".SelectSort").val();
-                ProductFilter(Category.join(), "", "BHD0", "RS50000", SortID);
+                ProductFilter(" ", "", "0", " ", SortID);
             }
         });
 
@@ -711,35 +754,25 @@
 
             if ($(this).prop("checked") == true) {
                 SubCategory.push($(this).val());
-                ProductFilter("", SubCategory.join(), "BHD0", "RS50000", 0);
+                ProductFilter("", SubCategory.join(), "0", "500", 0);
             }
             else {
                 var index = SubCategory.indexOf($(this).val());
                 SubCategory.splice(index, 1);
-                ProductFilter("", SubCategory.join(), "", "BHD0", "RS50000", 0);
+                ProductFilter("", SubCategory.join(), "", "0", "500", 0);
             }
         });
         $('#Sort').on('change', function () {
             debugger
-            ProductFilter(Category.join(), "", "BHD0", "BHD500", this.value);
-        });
-        $(".js-range-slider").mouseup(function () {
-            var MinPrice = $(".js-input-from").val();
-            var MaxPrice = $(".js-input-to").val();
-            var SortID = $(".SelectSort").val();
-            ProductFilter(Category.join(), "", MinPrice, MaxPrice, SortID);
-        });
-        $(".js-range-slider1").mouseup(function () {
-            var MinPrice = $(".js-input-from").val();
-            var MaxPrice = $("js-input-to").val();
-            var SortID = $(".SelectSort").val();
-            ProductFilter(Category.join(), "", MinPrice, MaxPrice, SortID);
+            ProductFilter(" ", " ", " ", " ", this.value);
         });
 
-        $(".filterOn").click(function () {
+ 
+
+        $(".SrchBtn").click(function () {
             debugger
             $("#divLoader").show();
-            $(".LoadProduct").hide();
+            $("#LoadProduct").hide();
 
             //var Searchtxt = "";
 
@@ -753,12 +786,13 @@
             //}
 
             var MinPrice = $(".js-input-from").val();
-            var MaxPrice = $(".js-input-to").val();
+            var MaxPrice = $(".value").val();
+            
             var SortID = $(".SelectSort").val();
             var filter = new Object();
             filter.Category = Category.join();
             filter.SubCategory = SubCategory.join();
-            //filter.Searchtxt = Searchtxt;
+            filter.Searchtxt = Searchtxt;
             filter.MinPrice = MinPrice;
             filter.MaxPrice = MaxPrice;
             filter.SortID = SortID;
@@ -772,6 +806,7 @@
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 success: function (obj) {
+                    debugger
                     $.ajax({
                         type: "POST",
                         url: '../Shop/Products',
@@ -781,8 +816,8 @@
                         success: function (data) {
 
                             $("#divLoader").hide();
-                            $(".LoadProduct").show();
-                            $(".LoadProduct").html(data);
+                            $("#LoadProduct").show();
+                            $("#LoadProduct").html(data);
 
                         },
                         error: function (xhr, textStatus, errorThrown) {
@@ -801,12 +836,12 @@
     function ProductFilter(Category, SubCategory, MinPrice, MaxPrice, SortID) {
         debugger
         $("#divLoader").show();
-        $(".LoadProduct").hide();
+        $("#LoadProduct").hide();
 
         //var MinPrice = $(".js-input-from").val();
         //var MaxPrice = $(".js-input-to").val();
         var MinPrice = 0;
-        var MaxPrice = 100;
+        var MaxPrice = MaxPrice;
         var SortID = $(".SelectSort").val();
         var filter = new Object();
         filter.Category = Category;
@@ -835,8 +870,8 @@
                     success: function (data) {
 
                         $("#divLoader").hide();
-                        $(".LoadProduct").show();
-                        $(".LoadProduct").html(data);
+                        $("#LoadProduct").show();
+                        $("#LoadProduct").html(data);
 
                     },
                     error: function (xhr, textStatus, errorThrown) {
@@ -848,6 +883,14 @@
                 //
             }
         });
+    }
+</script>
+
+<script type="text/javascript">
+    function rangeSlide(value) {
+        var MaxPrice = document.getElementById('rangeValue').innerHTML = value;
+        
+        ProductFilter(" ", "", "0", MaxPrice, "");
     }
 </script>
 
