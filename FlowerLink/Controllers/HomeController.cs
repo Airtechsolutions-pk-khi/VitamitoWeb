@@ -16,7 +16,7 @@ namespace Vitamito.Controllers
         public ActionResult Index(string[] args)
         {
             Locations location = Locations.LocationID; 
-            ViewBag.Banner = new bannerBLL().GetBanner();
+            ViewBag.BannerHeader = new bannerBLL().GetBannerHeader();
             ViewBag.FeaturedBanner = new bannerBLL().GetFeaturedBanner();
             var itemData = new itemService().GetAll((int)location);
             ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
