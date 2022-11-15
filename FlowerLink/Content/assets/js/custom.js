@@ -457,7 +457,7 @@ function GetWishListItems() {
         html += '<td class="plantmore-product-name"><a href="#">' + data[i].Name + '</a></td>'
             + '<td class="plantmore-product-price"><span class="currency-text mx-0">' + currency + ' ' + data[i].Price.toFixed(2) + '</span></td>'
             + '<td class="plantmore-product-stock-status"><span class="stockcheck">' + data[i].StatusID + '</span></td>'
-            + '<td class="plantmore-product-add-cart"><a class="btn btn-default btn-small" href="/Product/ProductDetails?ID=' + data[i].ID + '">Add to Cart</a></td>'
+            + '<td class="plantmore-product-add-cart"><a style="background-color:var(--theme-color);color:white;" class="btn btn-default btn-small" href="/Product/ProductDetails?ID=' + data[i].ID + '">Add to Cart</a></td>'
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeWishlistitem(' + data[i].Key + '); return false;"><i class="h5 ion-trash-a mb-0"></i></a></td>'
             + '</tr>'
 

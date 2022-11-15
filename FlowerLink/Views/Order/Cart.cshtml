@@ -8,6 +8,27 @@
             min-width: 135px !important;
         }
     }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+ 
+    @@media (max-width: 767px) {
+        .cart-section tbody tr td:nth-last-child(-n+4) {
+            display: table-cell !important;
+        }
+    }
+    .fs{
+        font-size:18px;
+    }
 </style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -35,16 +56,16 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-12 table-responsive-xs">
-                <table id="cart-table" class="table cart-table">
+            <div style="overflow-x:auto;">
+                <table  class="table ">
                     <thead>
                         <tr class="table-head">
-                            <th scope="col">Action</th>
-                            <th scope="col">image</th>
-                            <th scope="col">product name</th>
-                            <th scope="col">price</th>
-                            <th scope="col">quantity</th>
-                            <th scope="col">subtotal</th>
+                            <th scope="col"  style="text-align:center;" class="fs">Action</th>
+                            <th scope="col"  style="text-align:center;" class="fs">Image</th>
+                            <th scope="col"  style="text-align:center;" class="fs">Product Name</th>
+                            <th scope="col"  style="text-align:center;" class="fs">Price</th>
+                            <th scope="col"  style="text-align:center;" class="fs">Quantity</th>
+                            <th scope="col"  style="text-align:center;" class="fs">Subtotal</th>
 
                         </tr>
                     </thead>
@@ -56,7 +77,7 @@
                         <tfoot>
                             <tr>
                                 <td>total price :</td>
-                                <td >
+                                <td>
                                     <span class="totalamount" style="font-size:22px;font-weight:600;">00.00</span>
                                 </td>
                             </tr>
@@ -64,7 +85,7 @@
                     </table>
                 </div>
             </div>
-
+ 
         </div>
         <div class="row cart-buttons">
             <div class="col-6"><a href="@Url.Action("Index","Home")" class="btn btn-solid">continue shopping</a></div>
