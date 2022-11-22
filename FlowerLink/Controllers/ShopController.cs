@@ -21,7 +21,7 @@ namespace Vitamito.Controllers
 
         }
         // GET: Shop
-        public ActionResult Shop(string Category = "", string CategoryIDs = "", string Searchtext = "", int SortID = 0, string MinPrice = "", string MaxPrice = "")
+        public ActionResult Shop(string Category = "", string CategoryIDs = "", string SubCategoryIDs = "", string Searchtext = "", int SortID = 0, string MinPrice = "", string MaxPrice = "")
         {
             Location location = Location.LocationID;
             var catlist = new categoryBLL().GetAll((int)location);
@@ -36,6 +36,7 @@ namespace Vitamito.Controllers
             ViewBag.TodaysSpecial = itemlist.Take(4).ToList();
             TempData["Category"] = Category;
             TempData["CategoryIDs"] = CategoryIDs;
+            TempData["SubCategoryIDs"] = SubCategoryIDs;
             TempData["Searchtext"] = Searchtext;
             TempData["MaxPrice"] = MaxPrice;
             TempData["MinPrice"] = MinPrice;             
@@ -65,6 +66,7 @@ namespace Vitamito.Controllers
                 if (TempData.Count > 1)
                 {
                     if (TempData["CategoryIDs"].ToString() == "" ||
+                        TempData["SubCategoryIDs"].ToString() == "" ||
                     TempData["Searchtext"].ToString() == ""  ||
                     TempData["MaxPrice"].ToString() == "" ||
                     TempData["MinPrice"].ToString() == "" ||
@@ -73,13 +75,14 @@ namespace Vitamito.Controllers
                     {
                         filterBLL data = new filterBLL();
                         data.Category = TempData["CategoryIDs"].ToString();
+                        data.SubCategory = TempData["SubCategoryIDs"].ToString();
                         data.Searchtxt = TempData["Searchtext"].ToString();
                         data.MaxPrice = TempData["MaxPrice"].ToString();
                         data.MinPrice = TempData["MinPrice"].ToString();
                         data.SortID = Convert.ToInt32(TempData["SortID"].ToString());
 
                         ViewBag.shopList = filterService.GetAll(data);
-                        if (ViewBag.shopList.Count == null)
+                        if (ViewBag.shopList.Count < 1)
                         {
                             ViewBag.Message = "No Product Found";
                         }

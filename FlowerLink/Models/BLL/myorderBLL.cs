@@ -25,6 +25,8 @@ namespace Vitamito.Models.BLL
         public double? DiscountAmount { get; set; }
         public int? TotalItems { get; set; }
         public int? StatusID { get; set; }
+        public int? DeliveryStatus { get; set; }
+        public int? OrderStatus { get; set; }
         [DisplayFormat(DataFormatString = "{0: dd, MMM, yyyy}")]
         public DateTime OrderDate { get; set; }
         [DisplayFormat(DataFormatString = "{0: dd, MMM, yyyy}")]

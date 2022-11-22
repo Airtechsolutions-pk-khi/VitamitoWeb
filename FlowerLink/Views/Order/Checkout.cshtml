@@ -43,7 +43,7 @@
         border: 1px solid #dddddd;
         margin-bottom: 30px;
         padding: 20px;
-        display: none;
+       
     }
     .coupon-info p.form-row-first {
   float: left;
@@ -87,6 +87,14 @@
     margin: 10px 0 0 0px;
   }
 }
+    @@media only screen and (max-width: 479px) {
+        .checkout-page .checkout-form input[type="text"], .checkout-page .checkout-form input[type="email"], .checkout-page .checkout-form input[type="password"], .checkout-page .checkout-form input[type="tel"], .checkout-page .checkout-form input[type="number"], .checkout-page .checkout-form input[type="url"] {
+            width: 100% !important;
+            padding: 0 22px;
+            height: 45px;
+            border: 1px solid #ddd;
+        }
+    }
     .btn-coupon {
         padding: 5px 11px;
         color: #fff;
@@ -94,6 +102,7 @@
         border: 2px solid var(--theme-color);
         background: var(--theme-color);
     }
+   
 </style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -120,11 +129,11 @@
 <section class="section-b-space">
     <div class="container">
 
-        <div class="row">
+        @*<div class="row">
             <div class="col">
                 <div class="coupon-area">
 
-                    <!-- coupon-accordion start -->
+                     
                     <div class="coupon-accordion">
                         <h3><span>Have a coupon?</span> <span class="coupon" id="showcoupon">Click here to enter your code</span></h3>
                         <div class="coupon-content" id="checkout-coupon">
@@ -139,10 +148,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- coupon-accordion end -->
+                    
                 </div>
             </div>
-        </div>
+        </div>*@
 
         <div class="checkout-page">
             <div class="checkout-form">
@@ -231,8 +240,29 @@
                                     </div>
 
                                 </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="coupon-area">
+                                            <div class="coupon-accordion">
+                                                
+                                                <div class="coupon-content" id="checkout-coupon">
+                                                    <div class="coupon-info">   
+                                                        
+                                                            <p class="checkout-coupon">
+                                                                <input id="coupon" type="text" placeholder="Coupon code" style="width:73%;">
+                                                                <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
+                                                            <p id="CouponResponse"></p>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="payment-box">
-                                    <div class="upper-box">
+                                    @*<div class="upper-box">
                                         <div class="payment-options">
                                             <ul>
                                                 <li>
@@ -244,7 +274,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div>*@
                                     <a href="javascript:;" id="checkout" class="btn btn-solid"> PLACE ORDER</a>
                                 </div>
                                 <p class="text-danger font-weight-bold text-center bg-category2 rounded mt-3 mb-2" id="payment-alert"></p>
@@ -358,7 +388,8 @@
             Order.PlaceType = $('#PlaceType').val();
             Order.Email = $('#Email').val();
             Order.CardNotes = $('#CardNotes').val();       
-            Order.PaymentMethodID = $("#COD").val();
+        //Order.PaymentMethodID = $("#COD").val();
+        Order.PaymentMethodID = 1;
             Order.OrderDetailString = JSON.stringify(data);
             var Masterorder = JSON.stringify({ 'data': Order });
 

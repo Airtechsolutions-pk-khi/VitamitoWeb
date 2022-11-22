@@ -75,18 +75,20 @@
         }
         .wish_qty_cls {
             position: absolute;
-            background: var(--theme-color);
+            /*background: var(--theme-color);*/
+            background: white;
             width: 20px;
             height: 20px;
             color: #fff;
             border-radius: 20px;
             text-align: center;
             font-size: 12px;
-            line-height: 14px;
+            line-height: 17px;
             font-weight: 600;
             top: 20%;
-            right: -14px;
-            padding: 3px;
+            padding: 1px;
+            border: 1px solid;
+            left:95px;
         }
         @@media (max-width: 480px) {
             .wish_qty_cls {
@@ -136,12 +138,23 @@
             }
         }
         @@media (max-width: 577px) {
-            .top-header {
+           /* .top-header {
                 height: 1px;
                 background-color:white !important;
+            }*/
+
+            .top-header {
+                height: 39px;
+                background-color: var(--theme-color)!important;
             }
             .ion-ios-contact {
                 color: white !important;
+            }
+        }
+        @@media (max-width: 991px) {
+            .top-header .header-contact {
+                display: block;
+               
             }
         }
         @@media (max-width: 577px) {
@@ -178,7 +191,7 @@
             cursor:pointer
         }
         h5 {
-            font-size: 18px;
+            font-size: 17px;
             line-height: 22px;
         }
 
@@ -229,8 +242,8 @@
                 position: absolute;
             }
         }
-        .pixelstrap a .sub-arrow {             
-            right: 25px;             
+        .pixelstrap a .sub-arrow {
+            right: 25px;
         }
         @@media (max-width: 577px) {
             .pixelstrap a .sub-arrow {
@@ -271,9 +284,11 @@
 
                         <ul class="header-dropdown">
 
-                            <li class="mobile-wishlist pe-0">
+                            <li class="mobile-wishlist pe-0 ">
                                 <div><a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart"></i></a></div>
-                                
+                                <span class="wish_qty_cls" id="wish-total" style="color:var(--theme-color);">0</span>
+                                @*<ul class="show-div shopping-cart head-cart">
+                                </ul>*@
                             </li>
 
                            
@@ -332,7 +347,7 @@
                                 <div class="icon-nav">
                                     <ul>
                                         <li class="onhover-div mobile-search d-xl-none d-inline-block">
-                                            <div><img src="../assets/images/icon/search.png" onclick="openSearch()" class="img-fluid blur-up lazyload" alt=""><i class="ti-search" onclick="openSearch()"></i></div>
+                                            <div><img src="../assets/images/icon/search.png" onclick="openSearch()" class=" img-fluid blur-up lazyload" alt=""><i class="ti-search" onclick="openSearch()"></i></div>
                                             <div id="search-overlay" class="search-overlay">
                                                 <div>
                                                     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
@@ -340,12 +355,12 @@
                                                         <div class="container">
                                                             <div class="row">
                                                                 <div class="col-xl-12">
-                                                                    <form>
+                                                                    
                                                                         <div class="form-group">
-                                                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Search a Product">
+                                                                            <input type="text" class="srchMob form-control" id="exampleInputPassword1" placeholder="Search a Product">
                                                                         </div>
-                                                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-                                                                    </form>
+                                                                        <button id="SrchBtn"   onclick="SearchByTxtMob();  return false;" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                                                   
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -384,9 +399,9 @@
                                     </li>
                                     <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
 
-                                    
+                                    <li>
                                         @Html.Action("Header", "Shared")
-                                    
+                                    </li>
                                     <li class="mega" id="hover-cls">
                                         <a href="@Url.Action("About" , "Home")">About</a>
                                     </li>
@@ -442,7 +457,7 @@
                                 <div class="footer-contant">
                                     <ul>
                                         <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
-                                        <li><a href="@Url.Action("Index" , "Home")">Category</a></li>
+                                        <li><a href="@Url.Action("Index" , "Home")">Shop</a></li>
                                         <li><a href="@Url.Action("Index" , "Home")">About Us</a></li>
                                         <li><a href="@Url.Action("Index" , "Home")">Contact Us</a></li>
                                     </ul>
@@ -553,10 +568,21 @@
             }
             function openSearch() {
                 document.getElementById("search-overlay").style.display = "block";
+                 
             }
 
             function closeSearch() {
                 document.getElementById("search-overlay").style.display = "none";
+            }
+            function SearchByTxt() {
+                debugger
+                var Searchtxt = $(".srch").val();
+                window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '&Searchtext=' + Searchtxt + '&SortID=' + '&MinPrice=' + ' ' + '&MaxPrice=' + ' ' + '';
+            }
+            function SearchByTxtMob() {
+                debugger
+                var Searchtxt = $(".srchMob").val();
+                window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '&Searchtext=' + Searchtxt + '&SortID=' + '&MinPrice=' + ' ' + '&MaxPrice=' + ' ' + '';
             }
             feather.replace();
         </script>
@@ -583,13 +609,7 @@
                     header.classList.remove("nav-fixed-top");
                 }
             }
-            function SearchByTxt() {
-                debugger
-                var Searchtxt = $(".srch").val();
-
-                 
-                window.location.href = '/shop/shop?Category=""&CategoryIDs=' + '&Searchtext=' + Searchtxt + '&SortID=' + '&MinPrice=' + ' ' + '&MaxPrice=' + ' ' + '';
-            }
+           
 
            
 

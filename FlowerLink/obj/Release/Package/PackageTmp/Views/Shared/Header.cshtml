@@ -1,9 +1,19 @@
 ﻿
 @model IEnumerable<Vitamito.Models.BLL.navigationBLL>
 
+<style>
+    @@media (max-width: 577px) {
+        .mobview {
+            margin-left: 20px !important;
+            margin-top: 10px !important;
+        }
+    }
+   
+</style>
+
 <li class="dropdown">
  
-    <a href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories </a>
+    <a href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop </a>
 
     <ul class="dropdown-menu">
         
@@ -13,13 +23,11 @@
                     <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})" >@item.Name </a>
                     @if (item.SubCategories.Count > 0)
                     {
-                        <ul>
+                        <ul class="mobview">
                             @foreach (var sub in item.SubCategories)
                             {
-                                <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "0",MaxPrice = "500",Searchtext = "",SortID=0})">@sub.Name</a></li>
+                                <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})" style="color:black !important;">@sub.Name</a></li>
                             }
-
-
                         </ul>
                     }
 

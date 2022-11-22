@@ -1,9 +1,7 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <style>
     #dis {
         background-color: #9dc3c2;
@@ -13,7 +11,12 @@
         right: 10px !important;
         bottom: 10px !important;
     }
- 
+
+    @@media (max-width: 480px) {
+        .home-slider .home {
+            height: 15vh !important;
+        }
+    }
 
     @@media (max-width: 480px) {
         .brand-logo img {
@@ -25,11 +28,6 @@
         .ion-ios-contact {
             color: var(--theme-color);
         }
-    }
-    @@media (max-width: 480px){
-    .home-slider .home {
-    height: 28vh !important;
-}
     }
 
     .deal-product-space {
@@ -47,17 +45,6 @@
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
-    .hide {
-        display: none;
-        text-align:center;
-    }
-
-    .myDIV:hover
-    .hide {
-        display: inline;
-        text-align: center !important;
-    }
- 
 </style>
 <!-- Home slider -->
 
@@ -124,21 +111,16 @@ else
 
 <!-- Home slider end -->
 <!-- category section start -->
-<div class="porduct-area section-pt-60 section-pb-60  ">
+<div class="porduct-area section-pt-60 section-pb-60 ">
     <div class="container w-100" style="padding-top: 30px;">
         <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="title8">
-                    <h2>Shop By Category</h2>
-                </div>
-            </div>
             @foreach (var item in ViewBag.categoryList)
             {
 
                 <div class="col-lg-2 col-6 text-center">
                     @*background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;*@
-                    <div class="single-blog mt-30 categorybox card-box myDIV" style="">
-                        <div class="blog-image ">
+                    <div class="single-blog mt-30 categorybox card-box" style="">
+                        <div class="blog-image">
                             @if (item.Image == null || item.Image == "")
                             {
                                 <a href="@Url.Action("shop", "shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})">
@@ -159,9 +141,7 @@ else
                                     @item.Name
                                 </a>
                             </h5>
-                            <a href="@Url.Action("shop", "shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="btn btn-primary hide" style="background-color: #ff4c3b;border:2px solid;">Shop Now</a>
                         </div>
-
                     </div>
                 </div>
             }
@@ -558,6 +538,4 @@ else
     </div>
 </section>
 
-
-
-
+ 

@@ -20,10 +20,24 @@
         padding: 8px;
     }
 
- 
+
     @@media (max-width: 767px) {
         .cart-section tbody tr td:nth-last-child(-n+4) {
             display: table-cell !important;
+        }
+    }
+    @@media (max-width: 767px) {
+        .cart-section tfoot tr td:first-child, .wishlist-section tfoot tr td:first-child {
+            width: 49%;
+            font-size: 15px;
+            padding-right: 10px;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+    @@media (max-width: 991px) {
+        .cart-section tfoot tr td {
+            padding-right: 57px;
         }
     }
     .fs{
@@ -57,35 +71,33 @@
         <div class="row">
 
             <div style="overflow-x:auto;">
-                <table  class="table ">
+                <table class="table ">
                     <thead>
                         <tr class="table-head">
-                            <th scope="col"  style="text-align:center;" class="fs">Action</th>
-                            <th scope="col"  style="text-align:center;" class="fs">Image</th>
-                            <th scope="col"  style="text-align:center;" class="fs">Product Name</th>
-                            <th scope="col"  style="text-align:center;" class="fs">Price</th>
-                            <th scope="col"  style="text-align:center;" class="fs">Quantity</th>
-                            <th scope="col"  style="text-align:center;" class="fs">Subtotal</th>
+                            <th scope="col" style="text-align:center;" class="fs">Action</th>
+                            <th scope="col" style="text-align:center;" class="fs">Image</th>
+                            <th scope="col" style="text-align:center;" class="fs">Product Name</th>
+                            <th scope="col" style="text-align:center;" class="fs">Price</th>
+                            <th scope="col" style="text-align:center;" class="fs">Quantity</th>
+                            <th scope="col" style="text-align:center;" class="fs">Subtotal</th>
 
                         </tr>
                     </thead>
                     <tbody class="cart-items">
                     </tbody>
                 </table>
-                <div class="table-responsive-md">
-                    <table class="table cart-table ">
-                        <tfoot>
-                            <tr>
-                                <td>total price :</td>
-                                <td>
-                                    <span class="totalamount" style="font-size:22px;font-weight:600;">00.00</span>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
+                
             </div>
- 
+            <table class="table cart-table ">
+                <tfoot>
+                    <tr>
+                        <td>total price :</td>
+                        <td>
+                            <span class="totalamount" style="font-size:22px;font-weight:600;">00.00</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
         <div class="row cart-buttons">
             <div class="col-6"><a href="@Url.Action("Index","Home")" class="btn btn-solid">continue shopping</a></div>

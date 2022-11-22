@@ -95,7 +95,7 @@ function Topheadertext() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-            debugger
+           
             $('#TopHeadDescription').html(data.TopHeadDescription);
    
         },

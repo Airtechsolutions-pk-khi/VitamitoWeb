@@ -12,110 +12,110 @@
          <Members>
           <Member Name="#ExecuteMultipleDatatable(System.String,System.Data.SqlClient.SqlParameter[],System.Data.DataSet)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="341">'DBHelper.ExecuteMultipleDatatable(string, SqlParameter[], DataSet)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="317">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.ExecuteMultipleDatatable(string, SqlParameter[], DataSet)' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExecuteNonQuery(System.String,System.Data.SqlClient.SqlParameter)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="157">'DBHelper.ExecuteNonQuery(string, SqlParameter)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="151">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.ExecuteNonQuery(string, SqlParameter)' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExecuteNonQuery(System.String,System.Data.SqlClient.SqlParameter,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="182">'DBHelper.ExecuteNonQuery(string, SqlParameter, SqlParameter[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="175">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.ExecuteNonQuery(string, SqlParameter, SqlParameter[])' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExecuteNonQuery(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="132">'DBHelper.ExecuteNonQuery(string, SqlParameter[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="125">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.ExecuteNonQuery(string, SqlParameter[])' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExecuteNonQueryReturn(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="270">'DBHelper.ExecuteNonQueryReturn(string, SqlParameter[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="264">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.ExecuteNonQueryReturn(string, SqlParameter[])' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ExecuteScalarFunction(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="297">'DBHelper.ExecuteScalarFunction(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="290">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.ExecuteScalarFunction(string)' could contain the following variables 'CommandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetDatasetFromSP(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="245">'DBHelper.GetDatasetFromSP(string, SqlParameter[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="234">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.GetDatasetFromSP(string, SqlParameter[])' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTableFromSP(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="106">'DBHelper.GetTableFromSP(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="90">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.GetTableFromSP(string)' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTableFromSP(System.String,System.Collections.Generic.Dictionary`2&lt;System.String,System.Object&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="38">'DBHelper.GetTableFromSP(string, Dictionary&lt;string, object&gt;)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="20">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.GetTableFromSP(string, Dictionary&lt;string, object&gt;)' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTableFromSP(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="73">'DBHelper.GetTableFromSP(string, SqlParameter[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="55">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.GetTableFromSP(string, SqlParameter[])' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTableRow(System.String,System.Data.SqlClient.SqlParameter[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="NonBreaking">
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="217">'DBHelper.GetTableRow(string, SqlParameter[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
             </Message>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-15 14:37:20Z" FixCategory="DependsOnFix">
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2022-11-22 13:42:44Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Project\VitamitoWeb_GIT\FlowerLink\Helpers" File="DBHelper.cs" Line="200">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'DBHelper.GetTableRow(string, SqlParameter[])' could contain the following variables 'sp'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>

@@ -50,7 +50,7 @@ namespace Vitamito.Models.BLL
                 {
                     
                     SqlParameter[] p = new SqlParameter[5];
-                    p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
+                    p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);                   
                     p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
                     p[2] = new SqlParameter("@MinPrice", "");
                     p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
@@ -67,7 +67,7 @@ namespace Vitamito.Models.BLL
                 }
                  
                 
-                else if (!data.Category.Equals("") && !data.Category.Equals(" "))
+                else if (!data.Category.Equals("") && !data.Category.Equals(" ") || !data.SubCategory.Equals("") && !data.SubCategory.Equals(" "))
                 {
 
                     SqlParameter[] p = new SqlParameter[5];
