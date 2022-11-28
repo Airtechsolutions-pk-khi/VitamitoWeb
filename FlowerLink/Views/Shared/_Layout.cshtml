@@ -4,18 +4,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="multikart">
-    <meta name="keywords" content="multikart">
-    <meta name="author" content="multikart">
+    <meta name="description" content="Vitamito">
+    <meta name="keywords" content="Vitamito">
+    <meta name="author" content="Vitamito">
     <link rel="icon" href="~/Content/assets/images/favicon.ico" type="image/x-icon">
     @*<link rel="icon" href="../Content/assets/images/favicon/26.png" type="image/x-icon">*@
     <link rel="shortcut icon" href="~/Content/assets/images/favicon.ico" type="image/x-icon">
-    <title>Vitamito Website</title>
+    <title>Vitamito Website </title>
 
     <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fo nts.gstatic.com" crossorigin="">
-    <link href="../../css2-3.css?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    @*<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fo nts.gstatic.com" crossorigin="">*@
+    @*<link href="../../css2-3.css?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">*@
 
     <!-- Icons -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/font-awesome.css">
@@ -28,7 +28,7 @@
     <link href="~/Content/assets/css/vendors/price-range.css" rel="stylesheet" />
     <!-- Animate icon -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/animate.css">
-    
+
     <!-- Themify icon -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/themify-icons.css">
 
@@ -37,10 +37,6 @@
 
     <!-- Theme css -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/style.css">
-    <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="~/Content/assets/js/custom.js"></script>
-
-    
 
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="~/Content/assets/css/vendor/ionicons.min.css">
@@ -51,28 +47,30 @@
     <link rel="stylesheet" href="~/Content/assets/css/plugins/animation.css">
     <link rel="stylesheet" href="~/Content/assets/css/plugins/jqueryui.min.css">
     <link href="~/Content/assets/css/plugins/flag-icon.min.css" rel="stylesheet" />
+    <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/assets/js/custom.js"></script>
     <style>
-       /* .login-icon {
-            padding-left: 99px;
-            position: relative;
-            top: -55px;
-        }*/
 
-            .login-icon i {
-                font-size: 27px;
-            }
+
+        .login-icon i {
+            font-size: 27px;
+        }
+
         .alignment {
             top: 5px;
             left: -85px;
         }
+
         .dropdown-item {
             font-size: 12px;
         }
+
         .about-bg {
             background: url('../../assets/images/banner/about.png');
             background-repeat: no-repeat;
             background-size: cover;
         }
+
         .wish_qty_cls {
             position: absolute;
             /*background: var(--theme-color);*/
@@ -88,8 +86,9 @@
             top: 20%;
             padding: 1px;
             border: 1px solid;
-            left:95px;
+            left: 95px;
         }
+
         @@media (max-width: 480px) {
             .wish_qty_cls {
                 position: absolute;
@@ -107,61 +106,54 @@
                 padding: 3px;
             }
         }
-      /*  @@media (max-width: 480px) {
-            .mobile-wishlist {
-                padding-right:60px !important;
-                padding-top:10px;
-            }
-        }*/
+
         @@media (max-width: 480px) {
             .mobile-wishlist {
-               right:17% !important;
+                right: 17% !important;
             }
         }
+
         .mobile-wishlist {
             right: 17% !important;
         }
+
         @@media (max-width: 480px) {
             .ion-ios-contact {
                 color: var(--theme-color) !important;
             }
         }
-      /*  @@media (max-width: 480px) {
-            .wish_qty_cls {
-                right: 44px !important;
-            }
-        }*/
+
         @@media (max-width: 480px) {
             .wish_qty_cls {
                 right: -16px !important;
                 top: -9px;
             }
         }
+
         @@media (max-width: 577px) {
-           /* .top-header {
-                height: 1px;
-                background-color:white !important;
-            }*/
 
             .top-header {
                 height: 39px;
-                background-color: var(--theme-color)!important;
+                background-color: var(--theme-color) !important;
             }
+
             .ion-ios-contact {
                 color: white !important;
             }
         }
+
         @@media (max-width: 991px) {
             .top-header .header-contact {
                 display: block;
-               
             }
         }
+
         @@media (max-width: 577px) {
             .header-compact .main-nav-center .toggle-nav {
                 top: -78px !important;
             }
         }
+
         @@media (max-width: 480px) {
             .brand-logo img {
                 height: 50px !important;
@@ -171,25 +163,32 @@
         .navbar-nav .dropdown-menu {
             position: absolute;
         }
-        .media{
-            width:330px !important;
+
+        .media {
+            width: 330px !important;
         }
+
         .top-header .header-contact li {
             padding-right: 12px;
         }
+
         .dropdown-toggle::after {
             color: white;
         }
+
         .header-compact .main-menu .brand-logo img {
             width: 120px;
         }
+
         .header-compact .main-menu .brand-logo {
             padding-top: 15px;
             padding-bottom: 10px;
         }
-        .wishlist{
-            cursor:pointer
+
+        .wishlist {
+            cursor: pointer
         }
+
         h5 {
             font-size: 17px;
             line-height: 22px;
@@ -204,37 +203,41 @@
             color: var(--theme-color);
             font-size: 21px;
         }
+
         @@media (max-width: 577px) {
             .main-menu .menu-right .icon-nav .mobile-search {
                 right: 77% !important;
-
             }
         }
+
         @@media (max-width: 577px) {
             .main-menu .menu-right .icon-nav .mobile-cart {
                 right: 55% !important;
             }
         }
+
         @@media (max-width: 577px) {
             .main-menu .menu-right .icon-nav .mobile-setting .show-div.shopping-cart, .main-menu .menu-right .icon-nav .mobile-cart .show-div.shopping-cart, .main-menu .menu-right .icon-nav .mobile-search .show-div.shopping-cart {
                 top: unset;
                 bottom: 32px;
                 left: -142px !important;
-
             }
         }
+
         .main-menu .menu-right .icon-nav .onhover-div .show-div.shopping-cart {
             padding: 15px 15px;
             min-width: 360px;
             left: unset;
             right: 0;
         }
+
         .top-header .header-dropdown .onhover-dropdown .onhover-show-div li {
             padding-left: 5px;
             display: flex;
             font-size: 15px;
             padding-bottom: 5px;
         }
+
         @@media (min-width: 1200px) {
             .pixelstrap a .sub-arrow::before {
                 content: "\f107";
@@ -242,12 +245,21 @@
                 position: absolute;
             }
         }
+
         .pixelstrap a .sub-arrow {
             right: 25px;
         }
+
         @@media (max-width: 577px) {
             .pixelstrap a .sub-arrow {
                 right: 0px !important;
+            }
+        }
+
+        @@media (max-width: 577px) {
+            .mobview {
+                margin-left: 20px !important;
+                margin-top: 10px !important;
             }
         }
     </style>
@@ -330,17 +342,11 @@
                                 <a href="@Url.Action("Index" , "Home")"><img src="../../Content/assets/images/Logov.jpg" class="img-fluid blur-up lazyload" alt=""></a>
                             </div>
                         </div>
-                        <div>
-
-
-                            <div class="form_search">
-                                <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
-                                <button id="SrchBtn"  onclick="SearchByTxt(); return false;" class="btn-search">
-                                    <i class="ti-search"></i>
-                                </button>
-                            </div>
-                            
-
+                        <div class="form_search">
+                            <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
+                            <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
+                                <i class="ti-search"></i>
+                            </button>
                         </div>
                         <div class="menu-right pull-right">
                             <div>
@@ -355,12 +361,12 @@
                                                         <div class="container">
                                                             <div class="row">
                                                                 <div class="col-xl-12">
-                                                                    
-                                                                        <div class="form-group">
-                                                                            <input type="text" class="srchMob form-control" id="exampleInputPassword1" placeholder="Search a Product">
-                                                                        </div>
-                                                                        <button id="SrchBtn"   onclick="SearchByTxtMob();  return false;" class="btn btn-primary"><i class="fa fa-search"></i></button>
-                                                                   
+
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="srchMob form-control" id="exampleInputPassword1" placeholder="Search a Product">
+                                                                    </div>
+                                                                    <button id="SrchBtn" onclick="SearchByTxtMob();  return false;" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -375,7 +381,7 @@
                                             <span class="cart_qty_cls" id="cart-total">0</span>
                                             <ul class="show-div shopping-cart head-cart">
                                             </ul>
-                                           
+
                                         </li>
                                     </ul>
                                 </div>
@@ -391,28 +397,9 @@
                     <div class="col-12 menu-row">
                         <div class="col-lg-4"></div>
                         <div class="main-nav-center">
-                            <nav id="main-nav" class="text-start">
-                                <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
-                                <ul id="main-menu" class="sm pixelstrap sm-horizontal nav navbar-nav">
-                                    <li>
-                                        <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-                                    </li>
-                                    <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
-
-                                    <li>
+                           
                                         @Html.Action("Header", "Shared")
-                                    </li>
-                                    <li class="mega" id="hover-cls">
-                                        <a href="@Url.Action("About" , "Home")">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="@Url.Action("Contact" , "Home")">Contact</a>
-                                    </li>
-
-                                  
-
-                                </ul>
-                            </nav>
+                                    
                         </div>
 
                     </div>

@@ -29,6 +29,7 @@ namespace Vitamito.Controllers
             var catlist = new categoryBLL().GetAll((int)location);
             ViewBag.categoryList = catlist.Take(6).ToList();
             ViewBag.Category = catlist.ToList();
+ 
             //var popularProduct = new itemService().GetAllPopular();
             //ViewBag.PopularProducts = popularProduct.Take(8).ToList();
             return View();
