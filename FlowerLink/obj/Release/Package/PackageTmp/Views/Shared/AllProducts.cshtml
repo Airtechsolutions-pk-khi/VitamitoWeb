@@ -1,5 +1,6 @@
 ﻿
 <div class="product-wrapper-grid LoadProduct">
+    @ViewBag.Message
     <div class="row margin-res">
         @foreach (var item in ViewBag.shopList)
         {
@@ -18,19 +19,19 @@
                         }
 
                         @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
-                        {
-                            <div class="cart-info cart-wrap">
-                                <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
-                                <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                            </div>
-                        }
-                        else
-                        {*@
-                            <div class="cart-info cart-wrap">
-                                <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
-                                <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                            </div>
-                        
+                            {
+                                <div class="cart-info cart-wrap">
+                                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
+                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                </div>
+                            }
+                            else
+                            {*@
+                        <div class="cart-info cart-wrap">
+                            <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
+                            <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                        </div>
+
                     </div>
                     <div class="product-detail">
                         <div>
@@ -43,10 +44,10 @@
                             </p>
                             <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
                             @*<br />
-                            @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                            {
-                                <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                            }*@
+                                @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                {
+                                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
+                                }*@
                         </div>
                     </div>
                 </div>

@@ -42,33 +42,46 @@
                                 Order Date
                                 <span class="font-weight-bold">@Html.DisplayFor(modelItem => Model.LastUpdatedDate)</span>
                             </li>
-                            <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
+                            @*<li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Total Items
                                 <span class="font-weight-bold">@Model.TotalItems</span>
-                            </li>
-                            <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
-                                Status
-                                @if (Model.StatusID == null)
-                                {
-                                    <span class="font-weight-bold text-primary">In Progress</span>
-                                }
-                                else if (Model.StatusID == 102)
-                                {
-                                    <span class="font-weight-bold text-info">Order Accepted</span>
-                                }
-                                else if (Model.StatusID == 104)
-                                {
-                                    <span class="font-weight-bold text-danger">Payment Failed</span>
-                                }
-                                else if (Model.StatusID == 100)
-                                {
-                                    <span class="font-weight-bold text-success">Order Delivered</span>
-                                }
-                                else
-                                {
-                                    <span class="font-weight-bold text-danger">Delivery Failed</span>
-                                }
-                            </li>
+                            </li>*@
+                        <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
+                            Status
+
+                            @if (Model.OrderStatus == 203)
+                            {
+                                <span class="font-weight-bold text-primary">Checkout</span>
+                            }
+                            else if (Model.DeliveryStatus == 101)
+                            {
+                                <span class="font-weight-bold text-info">Order Accepted</span>
+                            }
+                            else if (Model.DeliveryStatus == 102)
+                            {
+                                <span class="font-weight-bold text-danger">On Shipping</span>
+                            }
+                            else if (Model.DeliveryStatus == 104)
+                            {
+                                <span class="font-weight-bold text-success">Cancelled</span>
+                            }
+                            else if (Model.DeliveryStatus == 105)
+                            {
+                                <span class="font-weight-bold text-success">Refunded</span>
+                            }
+                            else if (Model.DeliveryStatus == 106)
+                            {
+                                <span class="font-weight-bold text-success">Hold</span>
+                            }
+                            else if (Model.DeliveryStatus == 107)
+                            {
+                        <span class="font-weight-bold text-success">Delivered</span>
+                            }
+                            else
+                            {
+                                <span class="font-weight-bold text-danger">N/A</span>
+                            }
+                        </li>
                         </ul>
                     </div>
                 </div>
@@ -133,18 +146,18 @@
                             {
                                 <li class="list-group-item d-flex justify-content-between align-items-center ">
                                     <span class="">
-                                        @if (item.ItemImage == "" || item.ItemImage == null)
+                                        @if (item.Image == "" || item.Image == null)
                                         {
                                             <img class="order-detail-img" src="~/Content/assets/images/NA.png" alt="" style="width:80px;">
                                         }
                                         else
                                         {
-                                            <img class="order-detail-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ItemImage" alt="" style="width:80px;">
+                                            <img class="order-detail-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="width:80px;">
                                         }
 
                                     </span>
-                                    <span class=" font-weight-bold mobile-text px-2  text-center">@item.ItemTitle x @item.Quantity</span>
-                                    <span class=" font-weight-bold mobile-text px-2 ">Rs. @item.Price</span>
+                                    <span class=" font-weight-bold mobile-text px-2  text-center">@item.Name x @item.Quantity</span>
+                                    <span class=" font-weight-bold mobile-text px-2 ">BHD. @item.Price</span>
                                 </li>
                                 @*if (Model.GiftDetail.Count > 0)
                                 {
@@ -214,23 +227,23 @@
                             {                           
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Total Amount
-                                <span class="font-weight-bold">Rs. @item.AmountTotal</span>
+                                <span class="font-weight-bold">BHD. @item.AmountTotal</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Delivery Amount
-                                <span class="font-weight-bold">Rs. @item.DeliveryAmount</span>
+                                <span class="font-weight-bold">BHD. @item.DeliveryAmount</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Tax Amount
-                                <span class="font-weight-bold">Rs. @item.Tax</span>
+                                <span class="font-weight-bold">BHD. @item.Tax</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item">
                                 Discount Amount
-                                <span class="font-weight-bold">Rs. @item.DiscountAmount</span>
+                                <span class="font-weight-bold">BHD. @item.DiscountAmount</span>
                             </li>
                             <li class="align-items-center d-flex flex-column flex-md-row justify-content-between list-group-item bg-light">
                                 Grand Total
-                                <span class="font-weight-bold">Rs. @item.GrandTotal</span>
+                                <span class="font-weight-bold">BHD. @item.GrandTotal</span>
                             </li>
                             }
                         </ul>

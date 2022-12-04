@@ -13,8 +13,8 @@ namespace Vitamito.Models.BLL
     
     public class navigationBLL
     {
-        public int CategoryID { get; set; }
-        public string Title { get; set; }
+        public int  ID { get; set; }
+        public string Name { get; set; }
         public string ArabicTitle { get; set; }
         public int StatusID { get; set; }
 
@@ -23,9 +23,9 @@ namespace Vitamito.Models.BLL
         public  List<SubCategory> SubCategories = new List<SubCategory>();
         public class SubCategory
         {
-            public int SubCategoryID { get; set; }
+            public int ID { get; set; }
             public int CategoryID { get; set; }
-            public string Title { get; set; }
+            public string Name { get; set; }
             public string ArabicTitle { get; set; }
             public int StatusID { get; set; }
         }
@@ -37,7 +37,7 @@ namespace Vitamito.Models.BLL
                 List<navigationBLL> Categories = new List<navigationBLL>();
                 List<SubCategory> SubCategories = new List<SubCategory>();
                 SqlParameter[] p = new SqlParameter[0];
-                _ds = (new DBHelper().GetDatasetFromSP)("sp_Navigation", p);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_Navigation_Vitamito", p);
                 if (_ds != null)
                 {
                     if (_ds.Tables.Count > 0)
@@ -50,22 +50,22 @@ namespace Vitamito.Models.BLL
                             foreach (var _i in list)
                             {
                                 SubCategories = new List<SubCategory>();
-                                foreach (var _j in subCatList.Where(x => x.CategoryID == _i.CategoryID).ToList())
+                                foreach (var _j in subCatList.Where(x => x.CategoryID == _i.ID).ToList())
                                 {
                                     SubCategories.Add(new SubCategory
                                     {
                                         CategoryID = _j.CategoryID,
-                                        Title = _j.Title,
+                                        Name = _j.Name,
                                         ArabicTitle = _j.ArabicTitle,
-                                        SubCategoryID = _j.SubCategoryID,
+                                        ID = _j.ID,
                                         StatusID = _j.StatusID
                                     });
                                 }
 
                                 Categories.Add(new navigationBLL
                                 {
-                                    CategoryID = _i.CategoryID,
-                                    Title = _i.Title,
+                                    ID = _i.ID,
+                                    Name = _i.Name,
                                     ArabicTitle = _i.ArabicTitle,
                                     SubCategories = SubCategories
                                 });

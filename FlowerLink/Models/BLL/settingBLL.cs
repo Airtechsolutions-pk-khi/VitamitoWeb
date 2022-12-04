@@ -10,6 +10,14 @@ using WebAPICode.Helpers;
 
 namespace Vitamito.Models.BLL
 {
+    public enum Locations :int
+    {
+        LocationID = 2195,
+    }
+    public enum UsersID : int
+    {
+        UserID = 2313,
+    }
     public class notificationBLL
     {
         public int StatusID { get; set; }
@@ -59,9 +67,9 @@ namespace Vitamito.Models.BLL
             try
             {
                 var obj = new settingBLL();
-                SqlParameter[] p = new SqlParameter[2];
+                SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@UserID", ID);
-                p[1] = new SqlParameter("@LocationID", LocationID);
+                
                 _ds = (new DBHelper().GetDatasetFromSP)("sp_GetSettings_Vitamito", p);
                 if (_ds != null)
                 {

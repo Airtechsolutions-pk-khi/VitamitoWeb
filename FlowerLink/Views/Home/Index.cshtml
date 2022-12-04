@@ -1,7 +1,9 @@
-﻿@{
-    ViewBag.Title = "Home";
+﻿
+@{
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <style>
     #dis {
         background-color: #9dc3c2;
@@ -11,12 +13,7 @@
         right: 10px !important;
         bottom: 10px !important;
     }
-
-    @@media (max-width: 480px) {
-        .home-slider .home {
-            height: 15vh !important;
-        }
-    }
+ 
 
     @@media (max-width: 480px) {
         .brand-logo img {
@@ -28,6 +25,11 @@
         .ion-ios-contact {
             color: var(--theme-color);
         }
+    }
+    @@media (max-width: 480px){
+    .home-slider .home {
+    height: 28vh !important;
+}
     }
 
     .deal-product-space {
@@ -45,119 +47,98 @@
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
+    .hide {
+        display: none;
+        text-align:center;
+    }
+
+    .myDIV:hover
+    .hide {
+        display: inline;
+        text-align: center !important;
+    }
+ 
 </style>
 <!-- Home slider -->
-@*<section class="p-0 small-slider">
+
+
+@if (ViewBag.BannerHeader != null)
+{
+
+
+    <section class="p-0 layout-7">
         <div class="slider-animate home-slider">
-            <div>
-                <div class="home">
-                    <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                </div>
-            </div>
-        </div>
-    </section>*@
-
-@*@if (ViewBag.Banner != null)
-    {
-        <section class="p-0">
-            <div class="slide-1 home-slider">
-                @foreach (var Record in ViewBag.Banner)
-                {
-                    <div>
-                        <div class="home text-center">
-
-                            <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload">
-                            <div class="container">
+            @foreach (var Record in ViewBag.BannerHeader)
+            {
+                <div>
+                    <div class="home text-center">
+                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload">
+                        @*<div class="container">
                                 <div class="row">
                                     <div class="col">
                                         <div class="slider-contain">
                                             <div>
-
+                                                <h4 class="animated" data-animation-in="fadeInUp">welcome to book store</h4>
+                                                <h1 class="animated font-cormorant" data-animation-in="fadeInUp" data-delay-in="0.3">MUST READS</h1>
+                                                <a href="#" class="btn btn-solid animated" data-animation-in="fadeInUp" data-delay-in="0.5">shop now</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-                }
-            </div>
-        </section>
-    }
-    else
-    {*@
-<section class="p-0">
-    <div class="slide-1 home-slider">
-        <div>
-            <div class="home text-center">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="slider-contain">
-                                <div>
-                                    @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
-                                </div>
-                            </div>
-                        </div>
+                            </div>*@
                     </div>
                 </div>
-            </div>
+            }
         </div>
-        <div>
-            <div class="home text-center">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="slider-contain">
-                                <div>
-                                    @*<h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>*@
+    </section>
+}
+else
+{
+    <section class="p-0 layout-7">
+        <div class="slider-animate home-slider">
+            @foreach (var Record in ViewBag.BannerHeader)
+            {
+                <div>
+                    <div class="home text-center">
+                        <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
+                        @*<div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="slider-contain">
+                                            <div>
+                                                <h4 class="animated" data-animation-in="fadeInUp">welcome to book store</h4>
+                                                <h1 class="animated font-cormorant" data-animation-in="fadeInUp" data-delay-in="0.3">MUST READS</h1>
+                                                <a href="#" class="btn btn-solid animated" data-animation-in="fadeInUp" data-delay-in="0.5">shop now</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>*@
                     </div>
                 </div>
-            </div>
+            }
         </div>
-        <div>
-            <div class="home text-center">
-                <img src="~/Content/assets/images/banner/b.jpg" alt="" class="bg-img blur-up lazyload">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="slider-contain">
-                                <div>
-                                    <h1>fresh vegetables</h1><a href="#" class="btn btn-solid">shop now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-        </div>
-    </div>
-</section>
-@*}*@
-
-
+    </section>
+}
 
 
 <!-- Home slider end -->
 <!-- category section start -->
-<div class="porduct-area section-pt-60 section-pb-60 ">
-    <div class="container w-100" style="padding-top: 50px;">
+<div class="porduct-area section-pt-60 section-pb-60  ">
+    <div class="container w-100" style="padding-top: 30px;">
         <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="title8">
+                    <h2>Shop By Category</h2>
+                </div>
+            </div>
             @foreach (var item in ViewBag.categoryList)
             {
 
                 <div class="col-lg-2 col-6 text-center">
                     @*background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;*@
-                    <div class="single-blog mt-30 categorybox card-box" style="">
-                        <div class="blog-image">
+                    <div class="single-blog mt-30 categorybox card-box myDIV" style="">
+                        <div class="blog-image ">
                             @if (item.Image == null || item.Image == "")
                             {
                                 <a href="@Url.Action("shop", "shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})">
@@ -178,7 +159,9 @@
                                     @item.Name
                                 </a>
                             </h5>
+                            <a href="@Url.Action("shop", "shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="btn btn-primary hide" style="background-color: #ff4c3b;border:2px solid;">Shop Now</a>
                         </div>
+
                     </div>
                 </div>
             }
@@ -207,8 +190,6 @@
                                         {
                                             <a href="#" style="border-radius:10px;">
                                                 <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border-radius:10px;" />
-
-
                                             </a>
                                         }
 
@@ -223,34 +204,6 @@
                     </div>
                 </div>
 
-
-                @*<div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>*@
             </div>
         </div>
     </div>
@@ -297,6 +250,33 @@
                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
                                 </a>
+                                <div class="pro_rating d-flex ">
+                                    <ul class="product-rating d-flex">
+                                        @{
+                                            if (item.Stars != null)
+                                            {
+                                                for (int i = 0; i < item.Stars; i++)
+                                                {
+                                                    <li><span class="ion-android-star"></span></li>
+                                                }
+                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                            }
+                                        }
+
+                                    </ul>
+
+                                </div>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
                                 <br />
                                 @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
@@ -328,7 +308,7 @@
                 </div>
             </div>
             <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
-                @foreach (var item in ViewBag.TenItems)
+                @foreach (var item in ViewBag.Featureditems)
                 {
                     <div class="product-box product-box product-style-4">
                         <div class="img-wrapper">
@@ -358,6 +338,33 @@
                             <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                 <h6> @item.Name</h6>
                             </a>
+                            <div class="pro_rating d-flex ">
+                                <ul class="product-rating d-flex">
+                                    @{
+                                        if (item.Stars != null)
+                                        {
+                                            for (int i = 0; i < item.Stars; i++)
+                                            {
+                                                <li><span class="ion-android-star"></span></li>
+                                            }
+                                            for (int i = 0; i < (5 - item.Stars); i++)
+                                            {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                            <li><span class="ion-android-star-outline"></span></li>
+                                        }
+                                    }
+
+                                </ul>
+
+                            </div>
                             <strong>BHD @(Math.Round((item.Price),2))</strong>
                             <br />
                             @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
@@ -379,43 +386,6 @@
         </div>
     </div>
 </section>
-<!-- product slider end -->
-<!-- gift card section start -->
-@*<section class="gift-card-section ratio2_1">
-        <div class="container">
-            <div class="card-box">
-                <div class="row partition2">
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/Bn1.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn3.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <div class="collection-banner p-right text-center">
-                                <div class="img-part">
-                                    <img src="~/Content/assets/images/banner/bn2.jpg" class="img-fluid blur-up lazyload bg-img" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>*@
 <!-- gift card section end -->
 <!-- deal product start -->
 <section class="bag-product ratio_square deal-product-space section-b-space">
@@ -458,6 +428,33 @@
                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
                                 </a>
+                                <div class="pro_rating d-flex ">
+                                    <ul class="product-rating d-flex">
+                                        @{
+                                            if (item.Stars != null)
+                                            {
+                                                for (int i = 0; i < item.Stars; i++)
+                                                {
+                                                    <li><span class="ion-android-star"></span></li>
+                                                }
+                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                            }
+                                        }
+
+                                    </ul>
+
+                                </div>
                                 <strong>BHD @(Math.Round((item.Price),2))</strong>
                                 <br />
                                 @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
@@ -561,27 +558,6 @@
     </div>
 </section>
 
-<!--<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>-->
 
-<!-- menu js-->
-<!--<script src="~/Content/assets/js/menu.js"></script>-->
 
-<!-- lazyload js-->
-<!--<script src="~/Content/assets/js/lazysizes.min.js"></script>-->
-
-<!-- price range js -->
-<!--<script src="~/Content/assets/js/price-range.js"></script>-->
-
-<!-- slick js-->
-<!--<script src="~/Content/assets/js/slick.js"></script>-->
-
-<!-- Bootstrap js-->
-<!--<script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>-->
-
-<!-- Bootstrap Notification js-->
-<!--<script src="~/Content/assets/js/bootstrap-notify.min.js"></script>-->
-
-<!-- Theme js-->
-<!--<script src="~/Content/assets/js/theme-setting.js"></script>
-<script src="~/Content/assets/js/script.js"></script>-->
 

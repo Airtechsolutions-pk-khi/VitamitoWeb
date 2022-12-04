@@ -1,4 +1,4 @@
-﻿
+﻿@model Vitamito.Models.BLL.productBLL
 @{
     ViewBag.Title = "ProductDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,6 +9,79 @@
             width: 367px !important;
         }
     }
+    .rating > label:before {
+        margin: 5px;
+        font-size: 2.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+    }
+    .rating > [id^="star"]:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
+        color: #FFD700;
+    }
+    .rating > label {
+        color: #ddd;
+        float: right;
+    }
+    .rating {
+        border: none;
+        margin-right: 49px;
+    }
+    fieldset, label {
+        margin: 0;
+        padding: 0;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    .reset-option {
+        display: none;
+    }
+    input[type="radio" i] {
+        background-color: initial;
+        cursor: default;
+        appearance: auto;
+        box-sizing: border-box;
+        margin: 3px 3px 0px 5px;
+        padding: initial;
+        border: initial;
+    }
+    .rating > [id^="star"] {
+        display: none;
+    }
+    button, input {
+        overflow: visible;
+    }
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 46%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .ms-3 {
+        margin-left: 8rem !important;
+    }
+
+    .review_address_inner {
+        position: relative;
+    }
+    .pro_review {
+        display: flex;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .review_thumb {
+        margin-right: 30px;
+        min-width: 0%;
+    }
+    .review_address_inner > h5 {
+        font-weight: 600;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+   
 </style>
 <div class="breadcrumb-section">
     <div class="container">
@@ -106,98 +179,255 @@
                         </div>
                         <div class="row">
 
-                            @foreach (var item in ViewBag.itemList)
-                            {
-                                <div class="col-lg-6">
-                                    <div class="product-slick">
-                                        <div class="img-wrapper">
-                                            <div class="front">
-                                                @if (item.Image == null || item.Image == "")
+
+                            <div class="col-lg-6">
+                                <div class="product-slick">
+                                    <div class="img-wrapper">
+                                        
+                                        <div class="front">
+                                            @if (ViewBag.ProductDetails.Image == null || ViewBag.ProductDetails.Image == "")
+                                            {
+                                                <img src="~/Content/assets/images/NA.png" class="mob" style="width:500px;">
+                                            }
+                                            else
+                                            {
+                                                <img class="mob" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@ViewBag.ProductDetails.Image" alt="" style="width:500px;" />
+                                            }
+                                        </div>
+
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 rtl-text">
+                                <div class="product-right">
+                                    <h2>@ViewBag.ProductDetails.Name</h2>
+                                    <div class="pro_rating d-flex ">
+                                        <ul class="product-rating d-flex">
+                                            @{
+                                                if (ViewBag.ProductDetails.Stars != null)
                                                 {
-                                                    <img src="~/Content/assets/images/NA.png" class="mob" style="width:500px;">
+                                                    for (int i = 0; i < ViewBag.ProductDetails.Stars; i++)
+                                                    {
+                                                        <li><span class="ion-android-star"></span></li>
+                                                    }
+                                                    for (int i = 0; i < (5 - ViewBag.ProductDetails.Stars); i++)
+                                                    {
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    <img class="mob" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="width:500px;" />
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
                                                 }
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 rtl-text">
-                                    <div class="product-right">
-                                        <h2>@item.Name</h2>
-                                        <input type="hidden" value="@item.CurrentStock" id="stk" />
-                                        <h3 class="price-detail">BHD @item.Price</h3>
-                                        @*@if ((Math.Round((item.CurrentStock), 2)) < 11)
-                                        {
-                                            <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                        }*@
-                                       
-                                        <div id="selectSize" class="addeffect-section product-description border-product">
-                                            <h6 class="product-title">quantity</h6>
-                                             
-                                                <div class="row">
-                                                    <div class="col-sm-3 ">
-                                                        <div class="input-group">
-                                                            <span class="input-group-prepend">
-                                                                <button type="button" class="btn btn-outline-secondary btn-number" data-type="minus" data-field="quant[1]">
-                                                                    <span class="fa fa-minus"></span>
-                                                                </button>
-                                                            </span>
-                                                            <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10" id="qty">
-                                                            <span class="input-group-append">
-                                                                <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                                                    <span class="fa fa-plus"></span>
-                                                                </button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                @*<div class="input-group">
-                                                    <span class="input-group-prepend"><button type="button" class="btn quantity-left-minus" data-type="minus" data-field=""><i class="ti-angle-left"></i></button> </span>
-                                                    <input type="text" name="quantity" id="qty" class="form-control input-number" value="1"> <span class="input-group-prepend"><button type="button" class="btn quantity-right-plus" data-type="plus" data-field=""><i class="ti-angle-right"></i></button></span>
-                                                </div>*@                                            
-                                        </div>
-                                        <div class="product-buttons">
-                                        
-                                            <a onclick="addtocartpd(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false; " id="cartEffect" class="btn btn-solid hover-solid btn-animation add-button addItemLS add_cart">
-                                                <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add to cart
-                                            </a>
-                                            <a class="wishlist btn btn-solid" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>wishlist</a>
-                                        </div>
-                                    </div>
-                                    <div class="tab-product m-0">
-                                        <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-selected="true"><i class="icofont icofont-ui-home"></i>Details</a>
-                                                <div class="material-border"></div>
-                                            </li>
+                                            }
+
                                         </ul>
-                                        <div class="tab-content nav-material" id="top-tabContent">
-                                            <div class="tab-pane fade show active" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
-                                                <div class="product-tab-discription">
-                                                    <div class="part">
-                                                        <p>
-                                                            @item.Description
-                                                        </p>
-                                                    </div>
+                                        <span class="rat_qun" style="padding-top:5px;"> (Based on @ViewBag.ProductDetails.Reviews.Count Ratings) </span>
+                                    </div>
+
+                                    
+                                    <h3 class="price-detail">BHD @ViewBag.ProductDetails.Price</h3>
+                                    <input id="ItmID" type="hidden" value="@ViewBag.ProductDetails.ID" />
+                                   
+
+                                    <div id="selectSize" class="addeffect-section product-description border-product">
+                                        <h6 class="product-title">quantity</h6>
+
+                                        <div class="row">
+                                            <div class="col-sm-3 ">
+                                                <div class="input-group">
+                                                    <span class="input-group-prepend">
+                                                        <button type="button" class="btn btn-outline-secondary btn-number qqq" data-type="minus" data-field="quant[1]">
+                                                            <span class="fa fa-minus"></span>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[1]" class="form-control input-number qqq" value="1" min="1" max="10" id="qty">
+                                                    <span class="input-group-append">
+                                                        <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
+                                                            <span class="fa fa-plus"></span>
+                                                        </button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
+
+                                    </div>
+                                    <div class="product-buttons">
+
+                                        <a onclick="addtocartpd(@ViewBag.ProductDetails.ID,'@ViewBag.ProductDetails.Name','@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.Price,1);toast('Item Added to Cart', 1); return false; " id="cartEffect" class="btn btn-solid hover-solid btn-animation add-button addItemLS add_cart">
+                                            <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add to cart
+                                        </a>
+                                        <a class="wishlist btn btn-solid" onclick="addtoWishlist(@ViewBag.ProductDetails.ID, '@ViewBag.ProductDetails.Name', '@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.Price,@ViewBag.ProductDetails.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>wishlist</a>
                                     </div>
                                 </div>
-                            }
+                               
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <section class="tab-product m-0">
+                <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-selected="true"><i class="icofont icofont-ui-home"></i>Details</a>
+                        <div class="material-border"></div>
+                    </li>
+                </ul>
+                <div class="tab-content nav-material" id="top-tabContent">
+                    <div class="tab-pane fade show active" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
+                        <div class="product-tab-discription">
+                            <div class="part">
+                                <p>
+                                    @Html.Raw(ViewBag.ProductDetails.Description)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="tab-product m-0">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-12">
+                        <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-selected="true">
+                                    <i class="icofont icofont-ui-home"></i>Write
+                                    Review
+                                </a>
+                                <div class="material-border"></div>
+                            </li>
+
+                        </ul>
+                        <div class="col-lg-12 review_address_inner">
+                            <h5>Comments</h5>
+                            @if (ViewBag.ProductDetails.Reviews != null)
+                            {
+                                if (ViewBag.ProductDetails.Reviews.Count == 0)
+                                {
+                                    <p>No reviews on item.</p>
+                                }
+
+                                foreach (var i in ViewBag.ProductDetails.Reviews)
+                                {
+                                    <div class="pro_review">
+                                        <div class="review_thumb">
+                                            <img alt="review images" src="~/Content/assets/images/usericon.jpg" width="80px">
+                                        </div>
+                                        <div class="review_details">
+                                            <div class="review_info">
+                                                <h5>@i.Name</h5>
+                                            </div>
+                                          
+                                            <div class="pro_rating d-flex ">
+                                                <ul class="product-rating d-flex">
+                                                    @{
+                                                        if (i.Stars != null)
+                                                        {
+                                                            for (int j = 0; j < i.Stars; j++)
+                                                            {
+                                                                <li><span class="ion-android-star"></span></li>
+                                                            }
+                                                            for (int j = 0; j < (5 - i.Stars); j++)
+                                                            {
+                                                                <li><span class="ion-android-star-outline"></span></li>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            <li><span class="ion-android-star-outline"></span></li>
+                                                            <li><span class="ion-android-star-outline"></span></li>
+                                                            <li><span class="ion-android-star-outline"></span></li>
+                                                            <li><span class="ion-android-star-outline"></span></li>
+                                                            <li><span class="ion-android-star-outline"></span></li>
+                                                        }
+                                                    }
+
+                                                </ul>
+
+                                            </div>
+                                            <p>@i.Description</p>
+                                        </div>
+
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p>No reviews on item.</p>
+                            }
+                        </div>
+                        <div class="tab-content nav-material" id="top-tabContent">
+                            <div class="tab-pane fade show active" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
+                                <form class="theme-form">
+                                    <div class="form-row row">
+                                        <div class="col-md-12 d-flex">
+
+                                            <h4 class="pl-2 vertical-center">Rate us now  </h4>
+                                            <div class="media-body ms-3 ">
+                                                @*<div class="rating three-star"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>*@
+                                                <fieldset class="rating text-center ">
+                                                    <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                                                    <input type="radio" id="star4" name="rating" value="4" /><label class="half" for="star4" title="Pretty good - 4 stars"></label>
+                                                    <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Pretty good - 3 stars"></label>
+                                                    <input type="radio" id="star2" name="rating" value="2" /><label class="half" for="star2" title="Meh - 2 stars"></label>
+                                                    <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Meh - 1 stars"></label>
+                                                    @*<input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                                <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                                                <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                                <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                                <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>*@
+                                                    <input type="radio" class="reset-option" name="rating" value="reset" />
+                                                </fieldset>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" id="Name" placeholder="Enter Your name" required="">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email">Email</label>
+                                            <input type="text" class="form-control" id="Email" placeholder="Email" required="">
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <label for="review">Description</label>
+                                            <textarea class="form-control" placeholder="Wrire Your thoughts" id="Description" rows="6"></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-solid" onclick="submitReview(); return false;">
+                                                Submit YOur
+                                                Review
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
         </div>
     </div>
+
 </section>
 
+
 <script>
-    $("input").change(function () {
+    $(".qqq").change(function () {
     var qty = $('#qty').val();
     var stock = $('#stk').val();
         if (qty > stock) {
@@ -289,5 +519,62 @@
     });
 
 
+    function submitReview() {
+        debugger
+        var sim = $("input[type='radio']:checked").val();
 
+        var review = new Object();
+        review.Name = $('#Name').val();
+        review.Email = $('#Email').val();;              
+        review.Description = $('#Description').val();
+        review.StatusID = 2;
+        review.Stars = sim == undefined ? 0 : sim;
+        //review.ItemID = getParameterByName('ID');
+        review.ItemID = $('#ItmID').val();
+
+        var reviewData = JSON.stringify({ 'data': review });
+        if (validate()) {
+
+            $.ajax({
+                type: "POST",
+                url: '/Product/PostProductReview',
+                data: reviewData,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+
+                    if (data.data > 0) {
+                        toast("Thankyou for your comments", 1);
+                        window.location.reload();
+                    }
+                    else {
+
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+
+                }
+            });
+        }
+    }
+    function validate() {
+        var flag = true;
+        if ($("#Name").val() == '' || $("#Description").val() == '' || $("input[type='radio']:checked").val() == undefined) {
+            toast("Necessary field are required for review", 2);
+            flag = false;
+        }
+        return flag;
+    }
+    function getParameterByName(name) {
+        debugger
+       
+        var regexS = "[\\?&]" + name + "=([^&#]*)",
+            regex = new RegExp(regexS),
+            results = regex.exec(window.location.search);
+        if (results == null) {
+            return "";
+        } else {
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    }
 </script>

@@ -17,21 +17,29 @@ namespace Vitamito.Controllers
 
         }
         // GET: Product
-        public ActionResult ProductDetails(int ID, int LocationID = 2195)
+        public ActionResult ProductDetails(int ID)
         {
-            ViewBag.ProductDetails = _service.GetAll(ID, LocationID);
+            Locations location = Locations.LocationID;
+            ViewBag.ProductDetails = _service.GetAll(ID, (int)location);
 
-            var _items = new itemService().GetSelecteditems(ID, LocationID);
-            // ViewBag.TenItems = _items;
-            ViewBag.itemList = _items.Take(3).Where(x => x.StatusID == 1).ToList();
+            //var _items = new itemService().GetSelecteditems(ID, LocationID);
+             
+            //ViewBag.itemList = _items.Take(3).Where(x => x.StatusID == 1).ToList();
 
-            return View(_service.GetAll(ID, LocationID));
+            return View(_service.GetAll(ID, (int)location));
             //return View();
         }
         public ActionResult Wishlist()
         {
             // ViewBag.Banner = new bannerBLL().GetBanner("Other");
             return View();
+        }
+          public JsonResult PostProductReview(productBLL.ReviewsBLL data)
+        {
+            return Json(new
+            {
+                data = new productBLL().InsertProductReview(data)
+            }, JsonRequestBehavior.AllowGet);
         }
 
     }

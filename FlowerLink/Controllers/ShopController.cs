@@ -21,13 +21,14 @@ namespace Vitamito.Controllers
 
         }
         // GET: Shop
-        public ActionResult Shop(int LocationID= 2195, string Category = "", string CategoryIDs = "", string Searchtext = "", int SortID = 0)
+        public ActionResult Shop(string Category = "", string CategoryIDs = "", string SubCategoryIDs = "", string Searchtext = "", int SortID = 0, string MinPrice = "", string MaxPrice = "")
         {
-            var catlist = new categoryBLL().GetAll(LocationID);
+            Location location = Location.LocationID;
+            var catlist = new categoryBLL().GetAll((int)location);
             ViewBag.Category = catlist.Take(9).ToList();
 
             //ViewBag.BestProduct = new shopService().BestProducts(LocationID).Take(4).ToList();
-            var itemData = new itemService().GetAll(LocationID);
+            var itemData = new itemService().GetAll((int)location);
             ViewBag.itemList = itemData.Take(48).ToList().Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
             ViewBag.BestProduct = itemData.Take(4).ToList().Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
 
@@ -35,7 +36,10 @@ namespace Vitamito.Controllers
             ViewBag.TodaysSpecial = itemlist.Take(4).ToList();
             TempData["Category"] = Category;
             TempData["CategoryIDs"] = CategoryIDs;
+            TempData["SubCategoryIDs"] = SubCategoryIDs;
             TempData["Searchtext"] = Searchtext;
+            TempData["MaxPrice"] = MaxPrice;
+            TempData["MinPrice"] = MinPrice;             
             TempData["SortID"] = SortID.ToString();
             return View();
         }
@@ -61,16 +65,21 @@ namespace Vitamito.Controllers
             {
                 if (TempData.Count > 1)
                 {
-                    if (TempData["CategoryIDs"].ToString() != "" ||
-
-                    TempData["Searchtext"].ToString() != ""
+                    if (TempData["CategoryIDs"].ToString() == "" ||
+                        TempData["SubCategoryIDs"].ToString() == "" ||
+                    TempData["Searchtext"].ToString() == ""  ||
+                    TempData["MaxPrice"].ToString() == "" ||
+                    TempData["MinPrice"].ToString() == "" ||
+                    TempData["SortID"].ToString() != "5"
                      )
                     {
                         filterBLL data = new filterBLL();
                         data.Category = TempData["CategoryIDs"].ToString();
-
+                        data.SubCategory = TempData["SubCategoryIDs"].ToString();
                         data.Searchtxt = TempData["Searchtext"].ToString();
-
+                        data.MaxPrice = TempData["MaxPrice"].ToString();
+                        data.MinPrice = TempData["MinPrice"].ToString();
+                        data.SortID = Convert.ToInt32(TempData["SortID"].ToString());
 
                         ViewBag.shopList = filterService.GetAll(data);
                         if (ViewBag.shopList.Count < 1)

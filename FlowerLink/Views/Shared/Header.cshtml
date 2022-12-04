@@ -1,26 +1,54 @@
 ﻿
 @model IEnumerable<Vitamito.Models.BLL.navigationBLL>
-<nav class="main-navigation">
-    <ul>
-        @foreach (var item in Model)
-        {
-        <li class="">
-            <a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = item.CategoryID, SubCategoryIDs = "",ColorIDs = "",MinPrice = "RS0",MaxPrice = "RS50000",Searchtext = "",SortID=0})">@item.Title</a>
 
-            @if (item.SubCategories.Count > 0)
-            {
-                <ul class="sub-menu">
 
-                    @foreach (var sub in item.SubCategories)
-                    {
-                    <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.SubCategoryID ,ColorIDs = "",MinPrice = "RS0",MaxPrice = "RS50000",Searchtext = "",SortID=0})">@sub.Title</a></li>
-
-                    }
-                </ul>
-            }
+<nav id="main-nav" class="text-start">
+    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+    <ul id="main-menu" class="sm pixelstrap sm-horizontal nav navbar-nav">
+        <li>
+            <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
         </li>
-        }
+        <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
+
+        <li>
+       
+        <li class="dropdown">
+
+            <a href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="sub-arrow"></span></a>
+
+            <ul class="dropdown-menu">
+
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">@item.Name </a>
+                        @if (item.SubCategories.Count > 0)
+                        {
+                            <ul class="mobview">
+                                @foreach (var sub in item.SubCategories)
+                                {
+                                    <li><a href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})" style="color:black !important;">@sub.Name</a></li>
+                                }
+                            </ul>
+                        }
+
+                    </li>
+
+                }
+            </ul>
+
+        </li>
+        <li class="mega" id="hover-cls">
+            <a href="@Url.Action("About" , "Home")">About</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Contact" , "Home")">Contact</a>
+        </li>
+
+
 
     </ul>
 </nav>
+
+
 

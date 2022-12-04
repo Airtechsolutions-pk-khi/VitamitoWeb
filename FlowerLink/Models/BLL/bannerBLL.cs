@@ -32,14 +32,14 @@ namespace Vitamito.Models.BLL
 
         public static DataTable _dt;
         public static DataSet _ds;
-        public List<bannerBLL> GetBanner()
+        public List<bannerBLL> GetBannerHeader()
         {
             try
             {
                 var lst = new List<bannerBLL>();
                 SqlParameter[] p = new SqlParameter[0];
                 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetHeaderBanners_Vitamito", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetHeaderBanner_Vitamito", p);
                 //_dt = (new DBHelper().GetTableFromSP)("sp_TestBanner",p);
                 if (_dt != null)
                 {

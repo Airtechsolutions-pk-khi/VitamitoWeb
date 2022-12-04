@@ -3,7 +3,29 @@
     ViewBag.Title = "Wishlist";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+       
+    }
 
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+   
+    @@media (max-width: 767px) {
+        .wishlist-section tbody tr td:nth-last-child(-n+3) {
+            display: table-cell !important;
+        }
+    }
+    .fs {
+        font-size: 18px;
+    }   
+</style>
 
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -27,29 +49,59 @@
 </div>
 <!-- breadcrumb End -->
 <!--section start-->
+@*<section class="wishlist-section section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 table-responsive-xs" style="overflow-x:auto;">
+                    <table id="ytdTable" class="table ">
+                        <thead>
+                            <tr>
+                                <th class="plantmore-product-thumbnail">Images</th>
+                                <th class="cart-product-name">Name</th>
+                                <th class="plantmore-product-price">Price</th>
+                                <th class="plantmore-product-stock-status">Stock Status</th>
+                                <th class="plantmore-product-add-cart">Add to cart</th>
+                                <th class="plantmore-product-remove">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody class="wishlist-items">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row wishlist-buttons">
+                <div class="col-12"><a href="@Url.Action("Index", "Home")" class="btn btn-solid">continue shopping</a> <a href="@Url.Action("Checkout", "Order")" class="btn btn-solid">check out</a></div>
+            </div>
+        </div>
+    </section>*@
+
 <section class="wishlist-section section-b-space">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 table-responsive-xs">
-                <table id="ytdTable" class="table cart-table">
+            <div style="overflow-x:auto;">
+                <table id="ytdTable" class="table ">
                     <thead>
-                        <tr>
-                            <th class="plantmore-product-thumbnail">Images</th>
-                            <th class="cart-product-name">Name</th>
-                            <th class="plantmore-product-price">Price</th>
-                            <th class="plantmore-product-stock-status">Stock Status</th>
-                            <th class="plantmore-product-add-cart">Add to cart</th>
-                            <th class="plantmore-product-remove">Remove</th>
+                        <tr >
+                            <th class="plantmore-product-thumbnail fs" style="text-align:center;">Images</th>
+                            <th class="cart-product-name fs" style="text-align:center;">Name</th>
+                            <th class="plantmore-product-price fs" style="text-align:center;">Price</th>
+                            <th class="plantmore-product-stock-status fs" style="text-align:center;">Stock Status</th>
+                            <th class="plantmore-product-add-cart fs" style="text-align:center;">Add to cart</th>
+                            <th class="plantmore-product-remove fs" style="text-align:center;">Remove</th>
                         </tr>
                     </thead>
+                    
                     <tbody class="wishlist-items">
+                        
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
-        <div class="row wishlist-buttons">
-            <div class="col-12"><a href="@Url.Action("Index", "Home")" class="btn btn-solid">continue shopping</a> <a href="@Url.Action("Checkout", "Order")" class="btn btn-solid">check out</a></div>
-        </div>
-    </div>
 </section>
-<!--section end-->
+
+
+        <!--section end-->
+        <script>
+
+        </script>

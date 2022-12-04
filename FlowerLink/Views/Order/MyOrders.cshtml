@@ -55,33 +55,37 @@
                                     <td>@Html.DisplayFor(modelItem => item.GrandTotal)</td>
                                     <td>@Html.DisplayFor(modelItem => item.CheckoutDate)</td>
                                     <td>
-                                        @if (item.StatusID == null)
+                                        @if (item.OrderStatus == 203)
                                         {
-                                            <span class="badge badge-primary py-2 px-2" style=" font-size: 12px; color:black;">In Progress</span>
+                                            <span class="badge badge-primary py-2 px-2" style=" font-size: 12px; color:black;">Checkout</span>
                                         }
-                                        else if (item.StatusID == 102)
+                                        else if (item.OrderStatus == 101)
                                         {
-                                            <span class="badge badge-info py-2 px-2" style=" font-size: 12px;">Order Accepted</span>
+                                            <span class="badge badge-info py-2 px-2" style=" font-size: 12px;color:black;">Order Accepted</span>
                                         }
-                                        else if (item.StatusID == 104)
+                                        else if (item.OrderStatus == 102)
                                         {
-                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px;">Payment Failed</span>
+                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px; color:black; ">On Shipping</span>
                                         }
-                                        else if (item.StatusID == 100)
+                                        else if (item.OrderStatus == 104)
                                         {
-                                            <span class="badge badge-success py-2 px-2" style=" font-size: 12px;">Delivered</span>
+                                            <span class="badge badge-success py-2 px-2" style=" font-size: 12px; color:black;">Cancelled</span>
                                         }
-                                        else if (item.StatusID == 105)
+                                        else if (item.OrderStatus == 105)
                                         {
-                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px;">Delivery Failed</span>
+                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px; color:black;">Refunded</span>
                                         }
-                                        else if (item.StatusID == 106)
+                                        else if (item.OrderStatus == 106)
                                         {
-                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px;">Cancelled</span>
+                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px; color:black;">Hold</span>
+                                        }
+                                        else if (item.OrderStatus == 107)
+                                        {
+                                            <span class="badge badge-danger py-2 px-2" style=" font-size: 12px; color:black;">Delivered</span>
                                         }
                                         else
                                         {
-                                         
+                                            <span class="badge badge-success py-2 px-2" style=" font-size: 12px; color:black;">N/A</span>
                                         }
 
                                     </td>

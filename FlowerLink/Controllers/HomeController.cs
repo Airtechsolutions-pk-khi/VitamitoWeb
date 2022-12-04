@@ -13,21 +13,23 @@ namespace Vitamito.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(int LocationID = 2195)
-       {
-            ViewBag.Banner = new bannerBLL().GetBanner();
+        public ActionResult Index(string[] args)
+        {
+            Locations location = Locations.LocationID; 
+            ViewBag.BannerHeader = new bannerBLL().GetBannerHeader();
             ViewBag.FeaturedBanner = new bannerBLL().GetFeaturedBanner();
-            var itemData = new itemService().GetAll(LocationID);            
-            ViewBag.itemList = itemData.Where(x=>x.StatusID>0).OrderBy(x => x.StatusID).ToList();
-            //ViewBag.Featureditems = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
-            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(7).ToList();
+            var itemData = new itemService().GetAll((int)location);
+            ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
+            ViewBag.Featureditems = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
+            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(8).ToList();
             ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(7).ToList();
-           
-            ViewBag.TenItems = itemData.Where(x => x.ID > 0).OrderBy(x => x.Name).Take(7).ToList();
-            
-            var catlist = new categoryBLL().GetAll(LocationID);
+
+            ViewBag.TenItems = itemData.Where(x => x.ID > 0).Where(x => x.IsFeatured == true).OrderBy(x => x.Name).Take(8).ToList();
+
+            var catlist = new categoryBLL().GetAll((int)location);
             ViewBag.categoryList = catlist.Take(6).ToList();
             ViewBag.Category = catlist.ToList();
+ 
             //var popularProduct = new itemService().GetAllPopular();
             //ViewBag.PopularProducts = popularProduct.Take(8).ToList();
             return View();
@@ -89,9 +91,12 @@ namespace Vitamito.Controllers
             return View();
         }
         //Get Setting Details
-        public ActionResult GetSetting(int ID = 2313, int LocationID = 2195)
+        public ActionResult GetSetting(string[] args)
         {
-            return Json(new settingBLL().GetSettings(ID, LocationID), JsonRequestBehavior.AllowGet);
+            Locations location = Locations.LocationID;
+            UsersID users = UsersID.UserID;
+
+            return Json(new settingBLL().GetSettings((int)users, (int)location), JsonRequestBehavior.AllowGet);
         }
         public ActionResult Policy()
         {
