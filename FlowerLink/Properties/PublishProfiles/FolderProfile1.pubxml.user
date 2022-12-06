@@ -6,20 +6,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\Publish\VitamitoWeb</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\RAFI SIRAJUDDIN\Desktop\v1</_PublishTargetUrl>
+    <History>True|2022-12-04T18:24:28.7148257Z;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="BenefitPay/keystore.bin">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="BenefitPay/resource.cgn">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/FlowerLink.dll">
       <publishTime>02/14/2022 13:47:32</publishTime>
@@ -28,40 +30,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/14/2022 13:47:32</publishTime>
     </File>
     <File Include="bin/IKVM.OpenJDK.Core.dll">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="bin/IKVM.OpenJDK.Security.dll">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="bin/IKVM.OpenJDK.Text.dll">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="bin/IKVM.OpenJDK.Util.dll">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="bin/IKVM.Runtime.dll">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="bin/iPayBenefitPipe.dll">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>09/12/2022 15:31:35</publishTime>
+      <publishTime>10/30/2022 14:15:54</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>09/12/2022 15:31:35</publishTime>
+      <publishTime>10/30/2022 14:15:54</publishTime>
     </File>
     <File Include="bin/PagedList.dll">
-      <publishTime>09/12/2022 15:31:35</publishTime>
+      <publishTime>10/30/2022 14:15:54</publishTime>
     </File>
     <File Include="bin/PagedList.Mvc.dll">
-      <publishTime>09/12/2022 15:31:35</publishTime>
+      <publishTime>10/30/2022 14:15:54</publishTime>
     </File>
     <File Include="bin/RestSharp.dll">
-      <publishTime>09/12/2022 15:31:35</publishTime>
+      <publishTime>10/30/2022 14:15:54</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -70,70 +72,70 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/08/2018 12:18:12</publishTime>
     </File>
     <File Include="bin/roslyn/csc.rsp">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe.config">
       <publishTime>08/08/2018 12:18:34</publishTime>
     </File>
     <File Include="bin/roslyn/csi.rsp">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/gcsc.exe">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/gcsc.exe.config">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/gcsc.exe.conico">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/gcsc.ico">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
       <publishTime>08/08/2018 12:09:42</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
       <publishTime>11/05/2016 18:55:32</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/System.Console.dll">
       <publishTime>11/05/2016 18:55:48</publishTime>
@@ -145,7 +147,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2016 18:55:56</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/System.Globalization.Calendars.dll">
       <publishTime>11/05/2016 18:56:02</publishTime>
@@ -157,10 +159,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2016 18:56:04</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/System.Net.Http.dll">
       <publishTime>11/05/2016 18:56:30</publishTime>
@@ -169,7 +171,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2016 18:56:34</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
       <publishTime>11/05/2016 18:57:00</publishTime>
@@ -208,61 +210,61 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/05/2016 18:57:34</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe.config">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.rsp">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>09/12/2022 15:31:34</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.dll">
-      <publishTime>11/22/2022 18:43:08</publishTime>
+      <publishTime>12/04/2022 21:24:19</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.pdb">
-      <publishTime>11/22/2022 18:43:08</publishTime>
+      <publishTime>12/04/2022 21:24:19</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>09/12/2022 15:31:35</publishTime>
+      <publishTime>10/30/2022 14:15:54</publishTime>
     </File>
     <File Include="books.html">
-      <publishTime>11/08/2022 12:39:43</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="cart.html">
       <publishTime>10/18/2022 11:35:51</publishTime>
@@ -271,391 +273,391 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2022 18:13:21</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/style.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_about-us.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_banner.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_blog.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_cart.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_checkout.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_common.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_compare.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_contact-us.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_error-404.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_footer.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_header.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_hero.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_login-register.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_mixin.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_my-account.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_product-details.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_product.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_project-count.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_search.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_team.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_testimonial.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_variabls.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/.sass-cache/982d033313107f9013533645744071896bfeaa49/_widget.scssc">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/animate.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/bootstrap.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/color1.css">
-      <publishTime>09/21/2022 16:21:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/bootstrap4.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/bootstrap4.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/dataTables.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/jquery-3.3.1.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/responsive.bootstrap4.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/responsive.bootstrap4.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DataTable/responsive.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker.css.map">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker.standalone.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker.standalone.css.map">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker.standalone.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker3.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker3.css.map">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker3.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker3.standalone.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker3.standalone.css.map">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/DatePicker/bootstrap-datepicker3.standalone.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/fontawesome.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/jqueryui.min.css">
-      <publishTime>10/17/2022 17:48:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/landing_page.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/pages/elements.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/animation.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/flag-icon.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/ionicons.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/jqueryui.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/plugins.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/plugins.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/slick-slider-min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/plugins/slick.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/slick-theme.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/slick.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/style.css">
-      <publishTime>09/22/2022 11:43:11</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/style.css.map">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/style.min.css">
-      <publishTime>09/21/2022 14:40:51</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/sweetalert/sweetalert.css">
-      <publishTime>09/20/2022 15:22:21</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/themify-icons.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendor/bootstrap.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendor/font-awesome.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendor/ionicons.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendor/vendor.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendor/vendor.min.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/animate.css">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/bootstrap.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/date-picker.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/font-awesome.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/magnific-popup.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/price-range.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/prism.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/slick-theme.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/slick.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/css/vendors/themify-icons.css">
-      <publishTime>09/21/2022 15:20:27</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/doucment/Terms and Conditions.docx">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/AlexBrush-Regular.ttf">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/fontawesome-webfont-1.eot">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/fontawesome-webfont.eot">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/fontawesome-webfont.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/fontawesome-webfont.ttf">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/fontawesome-webfont.woff">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/fontawesome-webfont.woff2">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/FontAwesome.otf">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/ionicons.eot">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/ionicons.svg">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/ionicons.ttf">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/ionicons.woff">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/slick-1.eot">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/slick.eot">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/slick.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/slick.ttf">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/slick.woff">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/themify-1.eot">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/themify.eot">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/themify.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/themify.ttf">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/fonts/themify.woff">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/a.png">
-      <publishTime>09/14/2022 13:16:41</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/aa.png">
-      <publishTime>09/14/2022 12:24:53</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/about-us.jpg">
-      <publishTime>09/15/2022 16:26:21</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/about/about-us.jpg">
-      <publishTime>09/12/2022 16:40:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/about/about.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/about/vendor.jpg">
-      <publishTime>09/12/2022 16:40:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/ajax-loader.gif">
-      <publishTime>09/12/2022 16:40:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/Arrival.png">
-      <publishTime>09/14/2022 13:40:44</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/about.jpg">
       <publishTime>12/14/2020 20:10:32</publishTime>
     </File>
     <File Include="Content/assets/images/banner/about.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/b.jpg">
-      <publishTime>09/12/2022 19:21:08</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/Bn1.jpg">
-      <publishTime>09/12/2022 19:39:18</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/bn2.jpg">
-      <publishTime>09/12/2022 19:39:18</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/bn3.jpg">
-      <publishTime>09/12/2022 19:39:18</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/bnn1.jpg">
-      <publishTime>09/12/2022 19:50:39</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/bnn2.jpg">
-      <publishTime>09/12/2022 19:50:39</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/bnn3.jpg">
-      <publishTime>09/12/2022 19:50:39</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/Bnn4.jpg">
-      <publishTime>09/12/2022 19:52:44</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/bnn5.jpg">
-      <publishTime>09/12/2022 19:55:57</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/contact.jpg">
       <publishTime>12/14/2020 20:10:32</publishTime>
     </File>
     <File Include="Content/assets/images/banner/contact.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/main.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/MainBanner.jpg">
-      <publishTime>09/12/2022 19:07:20</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/banner/MainBannerv.jpg">
-      <publishTime>09/12/2022 19:18:54</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/basketwhite.png">
       <publishTime>07/15/2021 21:13:15</publishTime>
     </File>
     <File Include="Content/assets/images/bg-image.jpg">
-      <publishTime>09/12/2022 16:40:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/bg-review.jpg">
       <publishTime>07/31/2021 16:18:47</publishTime>
@@ -679,13 +681,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2020 20:33:12</publishTime>
     </File>
     <File Include="Content/assets/images/dark-bg.jpg">
-      <publishTime>09/12/2022 16:40:44</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/dashboard/product/1.jpg">
-      <publishTime>09/12/2022 16:40:44</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/dashboard/product/9.jpg">
-      <publishTime>09/12/2022 16:40:44</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/deal/1.png">
       <publishTime>12/08/2020 20:33:12</publishTime>
@@ -697,1426 +699,1426 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2020 20:33:12</publishTime>
     </File>
     <File Include="Content/assets/images/dropdown.png">
-      <publishTime>09/12/2022 16:40:44</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favic.ico">
-      <publishTime>09/15/2022 15:36:14</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon.ico">
-      <publishTime>09/21/2022 13:25:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/1.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/10.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/11.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/12.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/13.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/14.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/15.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/16.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/17.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/18.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/19.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/2.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/20.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/21.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/22.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/23.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/24.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/25.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/26.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/3.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/4.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/5.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/6.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/7.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/8.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/favicon/9.png">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/fire.gif">
-      <publishTime>09/12/2022 16:40:45</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/FLogo.jpg">
-      <publishTime>09/12/2022 20:08:18</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/footerlogo.png">
-      <publishTime>09/12/2022 20:17:23</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/gifloader.gif">
-      <publishTime>10/14/2022 15:09:57</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/2.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/3.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/4.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/6.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/american-express.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/angular.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cancel.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cart-1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cart.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cat1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cat2.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cat3.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cat4.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cat5.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/cat6.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/dashboard/homework.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/dashboard/order.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/dashboard/sale.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/discover.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/email.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/facebook.png">
-      <publishTime>10/28/2022 13:27:58</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/fb-active.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/fb-normal.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/footerlogo.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/global.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/heart-1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/heart-icon.png">
-      <publishTime>10/18/2022 12:00:24</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/imagetiktok.png">
-      <publishTime>10/17/2022 15:04:28</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/insta-active.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/insta-normal.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/instagram.png">
-      <publishTime>10/28/2022 13:27:58</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout3/footerlogo.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout3/logo.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout4/cart.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout4/footerlogo.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout4/logo.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout4/search.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/layout4/setting.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/like.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/location-pin.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/10.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/12.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/13.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/14.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/15.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/16.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/17.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/18.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/2.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/22.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/29.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/3.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/30.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/32.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/33.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/34.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/35.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/36.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/37.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/4.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/5.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/6.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/7.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f10.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f11.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f12.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f13.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f2.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f3.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f5.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f8.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/logo/f9.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/magnifier-zoom.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/magnifying-glass.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/mastercard.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/menu.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/paypal.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/phone.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/quite.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/quote-icon01.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/react.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/rotate.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/sa.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/search.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/service1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/service2.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/service3.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/service4.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/setting-1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/setting.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/settings.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/shopify.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/shopping-cart.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/slider-btn-01.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/slider-btn-active.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/small-quote-icon.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/snap-active.png">
-      <publishTime>10/28/2022 13:00:26</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/snap-normal.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/snapchat.png">
-      <publishTime>10/28/2022 13:27:59</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/supplement/1.png">
-      <publishTime>09/13/2022 13:58:03</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/supplement/2.png">
-      <publishTime>09/13/2022 13:58:03</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/supplement/3.png">
-      <publishTime>09/13/2022 13:58:03</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/supplement/4.png">
-      <publishTime>09/13/2022 13:58:03</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/ticktok-active.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/ticktok-normal.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/ticktok.png">
-      <publishTime>10/28/2022 13:28:00</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/tiktokhead.png">
-      <publishTime>10/17/2022 15:24:55</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/trolley.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/truck.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/uk.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/user-1.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/user-active.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/user-normal.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/users.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/1.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/2.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/3.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/4.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/5.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/6.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/7.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/8.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/9.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/care.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/cleaning.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/dairy.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/meat.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/noodle.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/pet.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/tea.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/vegetables/veg.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/visa.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/whatsapp-active.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/whatsapp-normal.png">
-      <publishTime>10/28/2022 12:53:43</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/whatsapp.png">
-      <publishTime>10/28/2022 13:27:57</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/white-icon/cart.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/white-icon/heart.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/white-icon/loupe.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/white-icon/settings.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/icon/white-icon/user.png">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/img.jpg">
-      <publishTime>09/12/2022 16:40:46</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/item-load.gif">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/kf-bg.jpg">
       <publishTime>11/25/2021 18:53:08</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/admin/1.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/admin/2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/admin/3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/admin/4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/bgg.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/cart/cart.gif">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/1.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/10.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/11.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/12.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/13.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/14.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/15.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/16.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/17.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/18.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/19.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/20.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/21.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/22.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/23.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/24.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/25.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/26.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/27.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/28.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/29.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/30.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/31.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/32.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/33.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/34.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/35.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/36.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/37.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/38.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/39.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/40.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/41.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/42.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/43.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/44.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/45.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/46.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/47.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/48.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/49.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/5.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/50.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/51.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/52.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/53.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/54.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/55.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/56.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/57.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/6.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/7.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/8.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/9.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/bag.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/beauty.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/bicycle.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/books.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/christmas.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/electronics-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/electronics-3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/electronics.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion-3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion-4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion-5.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion-6.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion-7.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/fashion.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/flower.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/full-page.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/furniture-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/furniture-dark.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/furniture.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/game.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/goggles.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/gradient.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/gym.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/instagram.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/jewellery-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/jewellery-3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/jewellery.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/kids.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/left-sidebar.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/light.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/lookbook.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/marijuana.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/marketplace-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/marketplace-3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/marketplace-4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/marketplace.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/medical.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/metro.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/nursery.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/parallax.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/perfume.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/pets.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/shoes.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/tools.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/vegetables-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/vegetables-3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/vegetables-4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/vegetables-5.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/vegetables.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/video-slider.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/video.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/watch.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/demo/yoga.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/email template/1.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/email template/1.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/email template/2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/email template/3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/email template/sticker.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/email-bg.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/footer.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/gallery/1.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/gallery/2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/header/logo.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/home.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/1.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/11.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/12.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/13.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/14.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/15.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/16.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/17.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/19.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/2.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/20.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/21.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/3.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/4.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/5.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/6.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/8.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/icon/9.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/color-picker.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/Dark-light.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/dashboard.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/demo.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/email.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/invoice.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/lazy.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/portfoio.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/rtl.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/skeleton.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/Unlimited-product-size.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/main-features/vendor.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/popup type/popup.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/respnsive-img.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/1.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/10.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/11.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/2.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/3.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/4.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/5.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/6.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/7.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/8.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/slider/9.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/1.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/10.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/11.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/12.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/13.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/14.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/15.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/16.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/17.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/18.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/19.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/20.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/21.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/22.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/23.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/24.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/25.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/26.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/27.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/28.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/29.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/30.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/31.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/32.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/33.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/34.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/360.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/5.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/6.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/7.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/8.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/9.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/bicycle.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/blog/1.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/blog/2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/blog/3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/blog/4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/books.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/color-option.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/countdown.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/electronic-3.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/facebook-chat.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/fashion-4.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/fashion-5.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/fashion-6.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/fashion-7.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/Fly to cart.png">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/furniture-2.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/furniture-black.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/gradient.jpg">
-      <publishTime>09/12/2022 16:40:47</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/hover.png">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/jewellery-2.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/jewellery-3.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/lookbook.png">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/marketplace-2.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/marketplace-3.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/marketplace-4.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/medical.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/mobile-optimize.png">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/Off-canvas.png">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/1.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/10.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/11.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/12.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/13.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/14.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/15.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/16.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/17.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/18.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/19.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/2.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/20.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/21.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/22.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/23.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/24.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/25.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/3.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/4.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/5.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/6.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/7.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/8.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/9.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/other/order-tracking.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/perfume.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product-Zoom.png">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/1.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/10.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/11.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/12.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/13.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/14.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/15.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/2.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/3.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/4.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/5.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/6.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/7.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/8.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/product/9.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/1.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/10.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/2.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/3.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/4.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/5.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/6.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/7.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/8.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/9.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/mordern.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/top-filter.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/shop/vegetables.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/vegetables-2.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/vegetables-3.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/video.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/special_features/yoga.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/landing-page/text.png">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/Logo.jpg">
-      <publishTime>09/12/2022 18:56:22</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/logo/banktransfer.png">
       <publishTime>06/07/2021 23:54:32</publishTime>
@@ -2152,13 +2154,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/22/2021 15:47:22</publishTime>
     </File>
     <File Include="Content/assets/images/Logov.jpg">
-      <publishTime>09/12/2022 18:58:38</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/main-banner-bg.jpg">
-      <publishTime>09/12/2022 16:40:48</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/NA.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="Content/assets/images/newsletter/banner.jpg">
       <publishTime>12/08/2020 18:33:12</publishTime>
@@ -2167,34 +2169,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2021 16:21:21</publishTime>
     </File>
     <File Include="Content/assets/images/person.gif">
-      <publishTime>09/12/2022 16:40:49</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/1.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/2.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/27.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/28.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/33.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/34.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/35.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/36.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/pro3/sm.jpg">
-      <publishTime>10/14/2022 18:17:57</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/product/All/1.png">
       <publishTime>12/08/2020 20:33:12</publishTime>
@@ -2239,7 +2241,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2020 20:33:12</publishTime>
     </File>
     <File Include="Content/assets/images/shopping-cart.png">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/slider/slider1.jpg">
       <publishTime>04/27/2021 16:28:56</publishTime>
@@ -2254,31 +2256,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2021 16:54:20</publishTime>
     </File>
     <File Include="Content/assets/images/stop.png">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/store/app.png">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/store/google.png">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/team/1.jpg">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/team/2.jpg">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/team/3.jpg">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/team/4.jpg">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/usericon.jpg">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/visa.png">
-      <publishTime>09/12/2022 16:40:50</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/images/workflow/arrow.png">
       <publishTime>12/08/2020 20:33:12</publishTime>
@@ -2299,463 +2301,463 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/08/2020 20:33:12</publishTime>
     </File>
     <File Include="Content/assets/js/360view.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/addtocart.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/ajax-custom.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/bootstrap-notify.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/bootstrap.bundle.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/bootstrap.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/chart/apex/apexcharts.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/chart/apex/custom-chart.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/clipboard/clipboard.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/color-setting.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/cookie/js.cookie.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/cookie/js.cookie.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/cookie/js.cookie.min.mjs">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/cookie/js.cookie.mjs">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/custom-card/custom-card.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/custom-slick-animated.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/custom.js">
-      <publishTime>11/22/2022 11:50:01</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Content/assets/js/date-picker.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/date-time-picker.min.js">
       <publishTime>02/09/2021 13:15:28</publishTime>
     </File>
     <File Include="Content/assets/js/exit.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/feather.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/fly-cart.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/footer-reveal.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/home-effect-1.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/isotope.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jquery-3.3.1.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jquery-ui.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jquery.elevatezoom.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jquery.exitintent.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jquery.magnific-popup.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jquery.vide.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/jqueryui.min.js">
-      <publishTime>10/17/2022 17:53:06</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/landing-script.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/lazysizes.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/main.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/menu.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/paginathing.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/parallax-effect.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/ajax-contact.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/bootstrap-datepicker.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/bootstrap-datepicker.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/counterup.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/jqueryui.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/plugins.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/plugins.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/scrollup.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/slick-slider-min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/slick.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/slick.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/plugins/wow.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/popper.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/price-range.js">
-      <publishTime>10/17/2022 20:19:31</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/prism/prism.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/product-menu.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/script.js">
-      <publishTime>11/07/2022 14:51:53</publishTime>
+      <publishTime>12/04/2022 20:30:47</publishTime>
     </File>
     <File Include="Content/assets/js/slick-animation.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/slick.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/snow.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/sticky-cart-bottom.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/sticky-kit.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/sticky-menu.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/sweetalert/sweetalert.min.js">
-      <publishTime>09/20/2022 15:22:40</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/theme-setting.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/timer.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/timer1.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/typeahead.bundle.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/typeahead.jquery.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/vendor/bootstrap.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/vendor/jquery-3.3.1.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/vendor/modernizr-3.6.0.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/vendor/popper.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/vendor/vendor.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/vendor/vendor.min.js">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/wow.min.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/js/zoom-gallery.js">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/blog.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/style.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_about-us.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_banner.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_blog-mesonry.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_blog.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_breadcrumb.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_cart.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_checkout.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_common.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_compare.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_contact-us.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_error-404.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_faucet.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_footer.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_get_start.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_header.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_hero.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_letest-wedding-venus.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_listing-categories.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_login-register.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_mixin.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_my-account.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_popular-venues.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_populer-categories.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_pricing.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_product-details.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_product.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_project-count.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_resent_program.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_search.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_slider-right.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_team.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_testimonial.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_variabls.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_venue-details.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_widget.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/scss/_work-proces.scss">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/cookie.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/furniture/bed.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/furniture/hanger.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/furniture/kitchen.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/furniture/office.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/furniture/sofa.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/furniture/washbasin.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/beverages.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/bread.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/cockles.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/eggs.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/grain.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/skin-care.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/snack.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/grocery/vegetable.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/cream.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/diet.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/drugs.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/eye-drops.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/holding-hands.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/mask.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/medical/sugar-blood-level.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/biscuit.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/breakfast.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/cup.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/drink.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/frozen.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/grocery.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/meats.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/milk.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/pet.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/assets/svg/vegetables/vegetable.svg">
-      <publishTime>09/21/2022 15:20:26</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Content/PagedList.css">
-      <publishTime>09/12/2022 15:31:32</publishTime>
+      <publishTime>10/30/2022 14:15:51</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>09/13/2022 20:18:15</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="IKVM.OpenJDK.Core.dll">
       <publishTime>04/02/2021 17:53:27</publishTime>
@@ -2779,67 +2781,67 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2021 17:53:27</publishTime>
     </File>
     <File Include="language/translations.js">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="language/translations.json">
-      <publishTime>09/13/2022 20:18:15</publishTime>
+      <publishTime>10/30/2022 14:15:53</publishTime>
     </File>
     <File Include="product-page.html">
       <publishTime>10/31/2022 10:53:29</publishTime>
     </File>
     <File Include="Scripts/js-cookie/js.cookie-2.2.1.min.js">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Scripts/js-cookie/js.cookie.js">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Template/contact.txt">
-      <publishTime>09/14/2022 16:38:00</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Template/emailpattern-admin.txt">
-      <publishTime>10/14/2022 13:38:08</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Template/emailpattern.txt">
-      <publishTime>10/14/2022 13:37:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Template/error.txt">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Template/HtmlPage1.html">
-      <publishTime>10/14/2022 17:38:45</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Template/newsletter.txt">
-      <publishTime>09/13/2022 20:18:15</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="vegetables-4.html">
-      <publishTime>11/08/2022 13:01:35</publishTime>
+      <publishTime>12/04/2022 17:50:38</publishTime>
     </File>
     <File Include="vegetables.html">
       <publishTime>10/28/2022 11:41:30</publishTime>
     </File>
     <File Include="Views/Account/Login_Register.cshtml">
-      <publishTime>10/28/2022 17:48:09</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>09/20/2022 16:38:49</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Categories/Index.cshtml">
-      <publishTime>09/12/2022 17:04:32</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>10/14/2022 20:44:10</publishTime>
+      <publishTime>12/04/2022 21:01:19</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>10/14/2022 20:48:11</publishTime>
+      <publishTime>12/04/2022 21:05:47</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/22/2022 18:40:40</publishTime>
+      <publishTime>12/04/2022 20:53:53</publishTime>
     </File>
     <File Include="Views/Home/Index1.cshtml">
-      <publishTime>11/10/2022 12:05:40</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Home/Policy.cshtml">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Home/TermsConditions.cshtml">
       <publishTime>02/25/2021 13:58:27</publishTime>
@@ -2854,61 +2856,61 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2021 22:37:06</publishTime>
     </File>
     <File Include="Views/Order/Cart.cshtml">
-      <publishTime>11/22/2022 13:24:23</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Order/Checkout.cshtml">
-      <publishTime>11/22/2022 14:20:55</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Order/Credimax.cshtml">
       <publishTime>01/11/2021 17:00:07</publishTime>
     </File>
     <File Include="Views/Order/MyOrders.cshtml">
-      <publishTime>11/17/2022 17:39:23</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Order/OrderComplete.cshtml">
-      <publishTime>10/13/2022 12:17:12</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Order/OrderDetails.cshtml">
-      <publishTime>11/17/2022 17:52:46</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Order/Test.cshtml">
       <publishTime>04/02/2021 18:50:05</publishTime>
     </File>
     <File Include="Views/Product/ProductDetails.cshtml">
-      <publishTime>11/22/2022 13:16:35</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Product/Wishlist.cshtml">
-      <publishTime>11/15/2022 18:10:35</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Shared/AllProducts.cshtml">
-      <publishTime>11/05/2022 12:36:54</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Shared/Header.cshtml">
-      <publishTime>11/22/2022 15:41:13</publishTime>
+      <publishTime>12/04/2022 15:34:43</publishTime>
     </File>
     <File Include="Views/Shared/MobileNavigation.cshtml">
-      <publishTime>09/13/2022 20:18:15</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/22/2022 18:42:18</publishTime>
+      <publishTime>12/04/2022 20:29:58</publishTime>
     </File>
     <File Include="Views/Shop/Shop.cshtml">
-      <publishTime>11/17/2022 20:46:24</publishTime>
+      <publishTime>12/04/2022 15:18:27</publishTime>
     </File>
     <File Include="Views/Shop/_HeaderCategory.cshtml">
       <publishTime>11/03/2022 18:54:46</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>09/13/2022 20:18:15</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>09/12/2022 15:31:33</publishTime>
+      <publishTime>10/30/2022 14:15:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/03/2022 20:19:07</publishTime>
+      <publishTime>12/04/2022 21:24:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -49,12 +49,13 @@ namespace Vitamito.Models.BLL
                 if (!data.MaxPrice.Equals("") && !data.MaxPrice.Equals(" ") && data.MaxPrice != null)
                 {
                     
-                    SqlParameter[] p = new SqlParameter[5];
+                    SqlParameter[] p = new SqlParameter[6];
                     p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);                   
                     p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
                     p[2] = new SqlParameter("@MinPrice", "");
                     p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
                     p[4] = new SqlParameter("@SortID", data.SortID);
+                    p[5] = new SqlParameter("@SubCategory", data.SubCategory == "" ? null : data.SubCategory);
                     _ds = (new DBHelper().GetDatasetFromSP)("sp_PricefilterProduct_Vitamito", p);
 
                     if (_ds != null)
@@ -70,12 +71,13 @@ namespace Vitamito.Models.BLL
                 else if (!data.Category.Equals("") && !data.Category.Equals(" ") || !data.SubCategory.Equals("") && !data.SubCategory.Equals(" "))
                 {
 
-                    SqlParameter[] p = new SqlParameter[5];
+                    SqlParameter[] p = new SqlParameter[6];
                     p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
                     p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
                     p[2] = new SqlParameter("@MinPrice", "");
                     p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
                     p[4] = new SqlParameter("@SortID", data.SortID);
+                    p[5] = new SqlParameter("@SubCategory", data.SubCategory == "" ? null : data.SubCategory);
                     _ds = (new DBHelper().GetDatasetFromSP)("sp_CategoryfilterProduct_Vitamito", p);
 
                     if (_ds != null)
@@ -90,12 +92,13 @@ namespace Vitamito.Models.BLL
                 else if (data.SortID == 1 || data.SortID == 2 || data.SortID == 3 || data.SortID == 4)
                 {
 
-                    SqlParameter[] p = new SqlParameter[5];
+                    SqlParameter[] p = new SqlParameter[6];
                     p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
                     p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
                     p[2] = new SqlParameter("@MinPrice", "");
                     p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
                     p[4] = new SqlParameter("@SortID", data.SortID);
+                    p[5] = new SqlParameter("@SubCategory", data.SubCategory == "" ? null : data.SubCategory);
                     _ds = (new DBHelper().GetDatasetFromSP)("sp_SortfilterProduct_Vitamito", p);
 
                     if (_ds != null)
@@ -108,13 +111,14 @@ namespace Vitamito.Models.BLL
                 }
                 else
                 {
-                    
-                    SqlParameter[] p = new SqlParameter[5];
+
+                    SqlParameter[] p = new SqlParameter[6];
                     p[0] = new SqlParameter("@Category", data.Category == "" ? null : data.Category);
                     p[1] = new SqlParameter("@Searchtxt", data.Searchtxt == "" ? null : data.Searchtxt);
                     p[2] = new SqlParameter("@MinPrice", "");
                     p[3] = new SqlParameter("@MaxPrice", data.MaxPrice == "" ? null : data.MaxPrice);
                     p[4] = new SqlParameter("@SortID", data.SortID);
+                    p[5] = new SqlParameter("@SubCategory", data.SubCategory == "" ? null : data.SubCategory);
                     _ds = (new DBHelper().GetDatasetFromSP)("sp_filterProduct_Vitamito", p);
 
                     if (_ds != null)

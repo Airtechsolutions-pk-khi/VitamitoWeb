@@ -21,10 +21,10 @@ namespace Vitamito.Controllers
             var itemData = new itemService().GetAll((int)location);
             ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
             ViewBag.Featureditems = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
-            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(8).ToList();
-            ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(7).ToList();
+            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(20).OrderBy(c => Guid.NewGuid()).ToList();
+            ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(7).OrderBy(c => Guid.NewGuid()).ToList();
 
-            ViewBag.TenItems = itemData.Where(x => x.ID > 0).Where(x => x.IsFeatured == true).OrderBy(x => x.Name).Take(8).ToList();
+            //ViewBag.TenItems = itemData.Where(x => x.ID > 0).Where(x => x.IsFeatured == true).OrderBy(x => x.Name).Take(8).ToList();
 
             var catlist = new categoryBLL().GetAll((int)location);
             ViewBag.categoryList = catlist.Take(6).ToList();
@@ -52,7 +52,7 @@ namespace Vitamito.Controllers
             string ToEmail, SubJect, cc, Bcc;
             cc = "";
             Bcc = "";
-            ToEmail = ConfigurationManager.AppSettings["From"].ToString();
+            ToEmail = ConfigurationManager.AppSettings["To"].ToString();
             SubJect = "New Query From Customer";
             string BodyEmail = System.IO.File.ReadAllText(Server.MapPath("~/Template") + "\\" + "contact.txt");
             DateTime dateTime = DateTime.UtcNow.Date;
