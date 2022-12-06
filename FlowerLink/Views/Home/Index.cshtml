@@ -31,7 +31,24 @@
     height: 28vh !important;
 }
     }
-
+    @@media (max-width: 480px) {
+        .catmob {
+            padding-top:25px !important;
+        }
+        .catbtn {
+            margin-left: 55px !important;
+            font-size: 13px;
+        }
+        .catTitle{
+            font-size:13px !important;
+        }
+        .mobdiv {
+            padding-left: 12px !important;
+        }
+        .mobPadding {
+            padding-top: 5px !important;
+        }
+    }
     .deal-product-space {
         background-color: #f8efe7;
         padding-top: 55px;
@@ -135,10 +152,10 @@ else
             @foreach (var item in ViewBag.categoryList)
             {
 
-                <div class="col-lg-2 col-6 text-center">
+                <div class="col-lg-2 col-6 text-center mobPadding">
                     @*background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;*@
-                    <div class="single-blog mt-30 categorybox card-box myDIV" style="">
-                        <div class="blog-image ">
+                    <div class="single-blog mt-30 categorybox card-box myDIV" style="border: 2px solid #076d08; border-radius: 10px; height: 92px; ">
+                        <div class="catmob" style="padding-top:20px;">
                             @if (item.Image == null || item.Image == "")
                             {
                                 <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
@@ -148,18 +165,30 @@ else
                             else
                             {
                                 <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
-                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border: 1px solid #ddd;height: 120px; width: auto; border-radius: 10px; margin-bottom: 10px" />
+                                    @*<img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border: 1px solid #ddd;height: 120px; width: auto; border-radius: 10px; margin-bottom: 10px" />*@
+                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 50px; width: auto; margin-bottom: 10px; left: 30px; position: absolute; top: 20px;" />
                                 </a>
                             }
+                            
+                       
+                            <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
+                                <div class="mobdiv">
+                                    <h5 style="padding-left:60px;" class="catTitle"><strong> @item.Name</strong></h5>
+                                </div>
+                            </a>
+                        
+
+
                         </div>
-                        <div class="blog-content">
-                            <h5>
+                        
+                       
+                            @*<h5>
                                 <a>
                                     @item.Name
                                 </a>
-                            </h5>
-                            <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})" class="btn btn-primary hide" style="background-color: #ff4c3b;border:2px solid;">Shop Now</a>
-                        </div>
+                            </h5>*@
+                            @*<a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})" class="btn btn-primary hide catbtn" style="background-color: #ff4c3b;border:2px solid;margin-left: 58px">Shop Now</a>*@
+                        
 
                     </div>
                 </div>
