@@ -39,8 +39,11 @@
             margin-left: 55px !important;
             font-size: 13px;
         }
-        .catTitle{
-            font-size:13px !important;
+        .catTitle {
+            font-size: 14px !important;
+            line-height: 19px;
+            text-align: left;
+            letter-spacing: 0;
         }
         .mobdiv {
             padding-left: 12px !important;
@@ -152,9 +155,14 @@ else
             @foreach (var item in ViewBag.categoryList)
             {
 
-                <div class="col-lg-2 col-6 text-center mobPadding">
+                <div class="col-lg-2 col-6 text-center mobPadding" >
                     @*background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;*@
-                    <div class="single-blog mt-30 categorybox card-box myDIV" style="border: 2px solid #076d08; border-radius: 10px; height: 92px; ">
+                    <div class="single-blog mt-30 categorybox card-box myDIV" style="        border: 2px solid #076d08;
+        border-radius: 10px;
+        height: 92px;
+        letter-spacing: 0;
+        text-align: left !important;
+        line-height: 19px;">
                         <div class="catmob" style="padding-top:20px;">
                             @if (item.Image == null || item.Image == "")
                             {
@@ -166,7 +174,7 @@ else
                             {
                                 <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
                                     @*<img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="border: 1px solid #ddd;height: 120px; width: auto; border-radius: 10px; margin-bottom: 10px" />*@
-                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 50px; width: auto; margin-bottom: 10px; left: 30px; position: absolute; top: 20px;" />
+                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 50px; width: auto; margin-bottom: 10px; left: 18px; position: absolute; top: 20px;" />
                                 </a>
                             }
                             
