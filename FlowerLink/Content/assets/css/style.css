@@ -18455,7 +18455,7 @@ header.stickycls {
             }
 
                 .collection-filter-block .product-service .media svg path {
-                    fill: var(--theme-color)
+                    fill: #fff;
                 }
 
             .collection-filter-block .product-service .media .media-body {
