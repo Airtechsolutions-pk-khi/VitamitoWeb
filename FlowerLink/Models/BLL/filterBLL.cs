@@ -127,9 +127,7 @@ namespace Vitamito.Models.BLL
                         {
                             lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
                         }
-                    }
-
-                    
+                    }                  
                 }
                 return lst;
 
