@@ -234,11 +234,11 @@
                                         <div>Discount <span class="discount">BHD 0</span><span class="discountAmount" style="float:right">BHD 0</span></div>
                                         
                                         <div>Coupon Discount <span id="coupon-text">0%</span> <span class="disAmount" style="float:right">BHD 0</span></div>
-                                        <div>Tax Amount  <span class="taxPer">0 %</span> <span class="tax" style="float:right">BHD 0</span></div>
+                                        <div>Tax Amount  <span class="taxPer">0 %</span> <span class="tax" style="float:right">0</span></div>
                                         <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
-                                        <div>Grand Total <span class="total" id="totalamount" style="float:right">BHD 0</span></div>
+                                        <div>Grand Total <span class="total" id="totalamount" style="float:right">0</span></div>
                                     </div>
 
                                 </div>
@@ -357,22 +357,31 @@
             //=============================== Order Master =====================
       
        
-
+        debugger
         var Order = new Object();
 
-        debugger
-            Order.CustomerID = @Convert.ToInt32(Session["ID"]);
-        Order.AmountTotal = totalPrice;
+        var coupon = parseFloat($("#coupon-text").html());
 
-        total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.TaxPercent / 100))) + settings.DeliveryCharges).toFixed(2));
-        Order.GrandTotal = total;
+        var st = parseFloat(totalPrice) ;
+        var dis = ((((st * (settings.Discount / 100)))).toFixed(3));
+        var disC = (((totalPrice * (coupon / 100))).toFixed(3));
+        var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
+        var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+        var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);        
+        Order.CustomerID = @Convert.ToInt32(Session["ID"]);
+
+        
+
+       // total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.TaxPercent / 100))) + settings.DeliveryCharges).toFixed(2));
+        
 
         if (settings.MinOrderAmount < totalPrice) {
-
-            Taxamount = parseFloat((totalPrice * (settings.TaxPercent / 100)).toFixed(2));
-            Order.Tax = Taxamount;
+            Order.GrandTotal = GT;
+            Order.AmountTotal = st;
+            //Taxamount = parseFloat((totalPrice * (settings.TaxPercent / 100)).toFixed(2));
+            Order.Tax = taxA;
             Order.DeliveryAmount = settings.DeliveryCharges;
-            Order.DiscountAmount = settings.Discount;
+            Order.DiscountAmount = dis + disC;
             Order.TotalItems = totalQty;
             Order.StatusID = 1;
 

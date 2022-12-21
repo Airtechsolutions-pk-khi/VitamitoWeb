@@ -269,7 +269,7 @@ function cartitem() {
     var totalPrice = 0;
     var totalQty = 0;
 
-
+    
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         totalQty += Number(data[i].Qty);
@@ -306,6 +306,7 @@ function cartitem() {
         $("#check-btn").show();
     }
     else {
+        $(".cart-items").html("No Item added");
         $("#cart-table").html("No Item added");
         $("#check-btn").hide();
     }
@@ -323,8 +324,8 @@ function changeQty(key, price) {
         for (var i = 0; i < cartItems.length; i++) {
             if (cartItems[i].Key == key) {
                 cartItems[i].Qty = $('#qty' + key).val();
-                cartItems[i].Price = cartItems[i].Qty * price;
-                $('#tprice' + key).html(cartItems[i].Price.toFixed(2));
+                cartItems[i].Price =  price;
+                $('#tprice' + key).html((cartItems[i].Qty * cartItems[i].Price).toFixed(2));
             }
         }
 
@@ -348,13 +349,13 @@ function removeCartItem(ele) {
         item.Key === ele && chkLScart.splice(index, 1);
     });
 
-    var delRow = chkLSgift.filter(obj => obj.ItemKey === ele);
-    chkLSgift.forEach(function (item, index) {
-        item.ItemKey === ele && chkLSgift.splice(index, delRow.length);
-    });
+    //var delRow = chkLSgift.filter(obj => obj.ItemKey === ele);
+    //chkLSgift.forEach(function (item, index) {
+    //    item.ItemKey === ele && chkLSgift.splice(index, delRow.length);
+    //});
     setCartLS(chkLScart);
-    setgiftLS(chkLSgift);
-
+    //setgiftLS(chkLSgift);
+    
     cartitem();
     topheadcart();
 }
