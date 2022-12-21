@@ -230,9 +230,11 @@
                                         <div>Sub-Total <span class="sub-total" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
-                                        <div>Discount <span class="discount" style="float:right">BHD 0</span></div>
-                                        <div>Coupon Discount <span class="coupon-amount" id="coupon-text" style="float:right">BHD 0</span></div>
-                                        <div>Tax <span class="tax" style="float:right">BHD 0</span></div>
+                                        
+                                        <div>Discount <span class="discount">BHD 0</span><span class="discountAmount" style="float:right">BHD 0</span></div>
+                                        
+                                        <div>Coupon Discount <span id="coupon-text">0%</span> <span class="disAmount" style="float:right">BHD 0</span></div>
+                                        <div>Tax Amount  <span class="taxPer">0 %</span> <span class="tax" style="float:right">BHD 0</span></div>
                                         <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
@@ -350,7 +352,7 @@
         var settings = LSsettings[0];
 
 
-        var CouponDisount = parseFloat($(".coupon-amount").text().replace("RS.", ""));
+        var CouponDisount = parseFloat($(".coupon-amount").text().replace("BHD.", ""));
 
             //=============================== Order Master =====================
       
@@ -358,14 +360,16 @@
 
         var Order = new Object();
 
-
+        debugger
             Order.CustomerID = @Convert.ToInt32(Session["ID"]);
         Order.AmountTotal = totalPrice;
 
-        total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
+        total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.TaxPercent / 100))) + settings.DeliveryCharges).toFixed(2));
         Order.GrandTotal = total;
 
-        Taxamount = parseFloat((totalPrice * (settings.Tax / 100)).toFixed(2));
+        if (settings.MinOrderAmount < totalPrice) {
+
+            Taxamount = parseFloat((totalPrice * (settings.TaxPercent / 100)).toFixed(2));
             Order.Tax = Taxamount;
             Order.DeliveryAmount = settings.DeliveryCharges;
             Order.DiscountAmount = settings.Discount;
@@ -387,14 +391,12 @@
             Order.Longitude = 'Not Defined';
             Order.PlaceType = $('#PlaceType').val();
             Order.Email = $('#Email').val();
-            Order.CardNotes = $('#CardNotes').val();       
-        //Order.PaymentMethodID = $("#COD").val();
-        Order.PaymentMethodID = 1;
+            Order.CardNotes = $('#CardNotes').val();
+            //Order.PaymentMethodID = $("#COD").val();
+            Order.PaymentMethodID = 1;
             Order.OrderDetailString = JSON.stringify(data);
             var Masterorder = JSON.stringify({ 'data': Order });
 
-        
-        
             $.ajax({
                 type: "POST",
                 url: '/Order/PunchOrder',
@@ -413,7 +415,15 @@
                 error: function (xhr, textStatus, errorThrown) {
                 }
             });
-        };
+        }
+        else {
+            alert("Minimum Order Amount is BHD:" + settings.MinOrderAmount);
+        }
+    }
+    
+
+
+  
     function cartdata(coupon) {
       
         var gifts = getgiftLS();
@@ -426,41 +436,37 @@
         var html = '';
         var totalPrice = 0;
         var totalQty = 0;
-
+        
         for (var i = 0; i < data.length; i++) {
             totalQty += Number(data[i].Qty);
             totalPrice += data[i].Qty * data[i].Price;
             html += '<li>'
             html += '<strong class="product-quantity"> &nbsp;&nbsp;&nbsp;' + data[i].Qty + ' X ' + '</strong>' + data[i].Name
-            html += '<span class="amount">' + ((data[i].Qty * data[i].Price)).toFixed(2) + '</span>'
+            html += '<span class="amount">' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
                 + '</li>'
         }
         $(".qty").html(html)
 
         if (data.length > 0) {
             debugger
-            $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(2));
-            Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
-            $('.tax').html(currency + ' ' + Taxamount);            
-            $('.discount').html(settings.Discount + '%');            
-            $('.dc').html(currency + ' ' + settings.DeliveryCharges);
-            
-            //total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
-                        
-            if (coupon == undefined) {
-                coupon = 0;                
-            }
-
-            var discountAmount = ((((totalPrice * (settings.Discount / 100)))).toFixed(2));
-            var couponAmount = (((totalPrice + (totalPrice * (coupon / 100)))).toFixed(2));
-            
-            total = (((totalPrice + (totalPrice - couponAmount - discountAmount))).toFixed(2));
+            var st = totalPrice;
+            var dis = ((((st * (settings.Discount / 100)))).toFixed(3));
+            var disC = (((totalPrice * (coupon / 100))).toFixed(3));
+            var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
+            var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
 
 
-            var withTaxDC = parseFloat(total) + parseFloat(Taxamount) + parseFloat(settings.DeliveryCharges);
-
-             
-            $("#totalamount").html(currency + ' ' + withTaxDC + '.00');
+            $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(3));
+            Taxamount = (parseFloat(totalPrice) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+            $('.tax').html(currency + ' ' + taxA);    
+            $('.taxPer').html((settings.Tax + '%'));
+            $('.disAmount').html((disC ));
+            $('.discount').html(settings.Discount + '%'); 
+            $('.discountAmount').html(dis);
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+          
+            $("#totalamount").html(currency + ' ' + (GT));
         }
         else {
             $(".sub-total").html("");
@@ -482,7 +488,7 @@
                 success: function (data) {
                     var arrTemp = [];
                     arrTemp = getsettingsLS();
-                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, MinOrderAmount: data.MinOrderAmount, Tax: data.Tax, COD: data.COD, Discount: data.Discount, TopHeadDescription: data.TopHeadDescription });
+                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, MinOrderAmount: data.MinOrderAmount, Tax: data.TaxPercent, COD: data.COD, Discount: data.Discount, TopHeadDescription: data.TopHeadDescription });
                     if (data.COD != 1) {
                        // $('#COD').addClass('d-none');
                     }
@@ -543,6 +549,7 @@
                     else {
                         //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
                         $("#coupon-text").html(' ' + data.data.Amount.toFixed(0) + '%');
+                         
                     }
                     $('#CouponID').val(data.data.CouponID);
                     $('#CouponCode').val(data.data.CouponCode);
