@@ -393,7 +393,9 @@
             Order.NearestPlace = $('#NearestPlace').val();
             Order.Country = $('#Country').val();
             Order.ContactNo = $('#ContactNo').val();
-            Order.DeliveryTime = $('#DeliveryTime').val();
+            debugger
+            //Order.DeliveryTime = $('#DeliveryTime').val();
+            Order.DeliveryTime = $('#DeliveryTime').find(":selected").text();
             Order.CustomerID = @Convert.ToInt32(Session["ID"]);
             Order.CustomerName = $('#CustomerName').val();
             Order.Latitude = 'Not Defined';
@@ -413,9 +415,11 @@
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 success: function (data) {
+                    debugger
                     if (data.data.OrderNo == null) {
                         localStorage.clear();
-                        window.location.href = '/Order/OrderComplete?OrderID=' + data.data + '&OrderNo=' + Order.OrderNo;
+                        
+                        window.location.href = '/Order/OrderComplete?OrderID=' + data.data;
                     }
                     else {
                         getCardDetails(data.data.sessionID, data.data.GrandTotal, data.data.OrderNo, data.data.Description);

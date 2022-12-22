@@ -35,7 +35,7 @@ namespace Vitamito.Models.BLL
         public string NearestPlace { get; set; }
         public string Country { get; set; }
         public string ContactNo { get; set; }
-        public Nullable<System.DateTime> DeliveryTime { get; set; }
+        public string DeliveryTime { get; set; }
         public string CustomerName { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
