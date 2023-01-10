@@ -50,8 +50,58 @@
     <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
     <style>
+        .ribbon-top-right {
+            top: -10px;
+            right: -10px
+        }
+
+            .ribbon-top-right::before,
+            .ribbon-top-right::after {
+                border-top-color: transparent;
+                border-right-color: transparent
+            }
+
+            .ribbon-top-right::before {
+                top: 0;
+                left: 17px
+            }
+
+            .ribbon-top-right::after {
+                bottom: 17px;
+                right: 0
+            }
+
+            .ribbon-top-right span {
+                left: 61px;
+                top: 26px;
+                transform: rotate( 45deg);
+            }
+
+        .ribbon {
+            width: 150px;
+            height: 126px;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+        }
 
 
+
+            .ribbon span {
+                position: absolute;
+                display: block;
+                width: 100%;
+                font-size: 10px;
+                background-color: #FA9900;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                color: #fff;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                text-transform: uppercase;
+                text-align: center;
+                margin-left: 0;
+                left: 32px;
+                top: 37px;
+            }
         .login-icon i {
             font-size: 27px;
         }

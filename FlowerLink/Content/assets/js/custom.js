@@ -176,6 +176,29 @@ function toast(res, condition) {
 
 };
 
+function toastOut(res, condition) {
+    if (condition == 1) {
+        $('.toast-body').html(res);
+        $('.toast-head-text').html('Warning');
+        $('.toast-body').html(res);
+        $('.toast').addClass('bg-warning text-dark');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+    else if (condition == 2) {
+        $('.toast-head-text').html('Warning');
+        $('.toast-body').html(res);
+        $('.toast').addClass('bg-warning text-dark');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+    else {
+        $('.toast-body').html(res);
+        $('.toast-head-text').html('Danger');
+        $('.toast').addClass(' bg-danger text-white ');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+
+};
+
 //header
 function topheadcart() {
     
@@ -401,9 +424,7 @@ function getCartLS() {
     else
         return JSON.parse("[]");
 }
-
-
-
+ 
 //Wishlist
 function addtoWishlist(ID, Name, Image, Price, StatusID, Qty) {
     

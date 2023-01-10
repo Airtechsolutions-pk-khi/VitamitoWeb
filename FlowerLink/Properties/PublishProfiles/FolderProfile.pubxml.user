@@ -251,10 +251,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2022 15:31:34</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.dll">
-      <publishTime>12/21/2022 17:52:33</publishTime>
+      <publishTime>01/10/2023 18:07:29</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.pdb">
-      <publishTime>12/21/2022 17:52:33</publishTime>
+      <publishTime>01/10/2023 18:07:29</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>09/12/2022 15:31:35</publishTime>
@@ -2399,7 +2399,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/21/2022 15:20:26</publishTime>
     </File>
     <File Include="Content/assets/js/custom.js">
-      <publishTime>11/22/2022 11:50:01</publishTime>
+      <publishTime>01/09/2023 15:43:45</publishTime>
     </File>
     <File Include="Content/assets/js/date-picker.js">
       <publishTime>09/21/2022 15:20:26</publishTime>
@@ -2831,7 +2831,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2022 15:31:33</publishTime>
     </File>
     <File Include="Template/HtmlPage1.html">
-      <publishTime>10/14/2022 17:38:45</publishTime>
+      <publishTime>12/22/2022 18:10:07</publishTime>
     </File>
     <File Include="Template/newsletter.txt">
       <publishTime>09/13/2022 20:18:15</publishTime>
@@ -2840,7 +2840,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/08/2022 13:01:35</publishTime>
     </File>
     <File Include="Views/Account/Login_Register.cshtml">
-      <publishTime>10/28/2022 17:48:09</publishTime>
+      <publishTime>01/10/2023 14:24:02</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
       <publishTime>09/20/2022 16:38:49</publishTime>
@@ -2849,13 +2849,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2022 17:04:32</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>12/06/2022 16:02:25</publishTime>
+      <publishTime>12/22/2022 18:14:46</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>12/06/2022 16:02:25</publishTime>
+      <publishTime>12/22/2022 18:14:31</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/06/2022 21:04:08</publishTime>
+      <publishTime>01/10/2023 18:01:15</publishTime>
     </File>
     <File Include="Views/Home/Index1.cshtml">
       <publishTime>11/10/2022 12:05:40</publishTime>
@@ -2867,25 +2867,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/22/2022 13:24:23</publishTime>
     </File>
     <File Include="Views/Order/Checkout.cshtml">
-      <publishTime>12/21/2022 17:33:15</publishTime>
+      <publishTime>01/10/2023 14:08:19</publishTime>
     </File>
     <File Include="Views/Order/MyOrders.cshtml">
       <publishTime>11/17/2022 17:39:23</publishTime>
     </File>
     <File Include="Views/Order/OrderComplete.cshtml">
-      <publishTime>10/13/2022 12:17:12</publishTime>
+      <publishTime>12/22/2022 19:46:57</publishTime>
     </File>
     <File Include="Views/Order/OrderDetails.cshtml">
       <publishTime>11/17/2022 17:52:46</publishTime>
     </File>
     <File Include="Views/Product/ProductDetails.cshtml">
-      <publishTime>12/19/2022 16:47:04</publishTime>
+      <publishTime>01/09/2023 15:59:34</publishTime>
     </File>
     <File Include="Views/Product/Wishlist.cshtml">
       <publishTime>11/15/2022 18:10:35</publishTime>
     </File>
     <File Include="Views/Shared/AllProducts.cshtml">
-      <publishTime>11/05/2022 12:36:54</publishTime>
+      <publishTime>01/10/2023 17:37:54</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/12/2022 15:31:33</publishTime>
@@ -2897,7 +2897,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/13/2022 20:18:15</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/19/2022 16:47:04</publishTime>
+      <publishTime>01/10/2023 17:41:59</publishTime>
     </File>
     <File Include="Views/Shop/Shop.cshtml">
       <publishTime>11/17/2022 20:46:24</publishTime>

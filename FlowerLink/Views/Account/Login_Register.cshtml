@@ -28,19 +28,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="">
+                <div class="login-register-form">
                     <form class="theme-card active" id="login-form" action="@Url.Action("Login_Register", "Account")" method="post" role="form" style="display: block;">
+                    <div class="theme-card active" id="login-form" style="display: block;">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required="">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <label for="review">Password</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
                         </div>
-                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-solid" value="Log In" >
-                    </form>
-                </div>
+                        <input type="submit" onclick="login();" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-solid" value="Log In">
+                         
+
+                    </div>
+                        </form>
+</div>
             </div>
             <div class="col-lg-6 right-login">
                 <h3>New Customer</h3>
@@ -49,9 +53,10 @@
                     <p>
                         Sign up for a free account at our store. Registration is quick and easy. It allows you to be
                         able to order from our shop. To start shopping click register.
-                    </p><a href="@Url.Action("Login_Register", "Account")" id="register-form-link" class="btn btn-solid">Create an Account</a>
-                    @*<a href="@Url.Action("Checkout", "Order")"  class="btn btn-solid">Continue as Guest</a>*@
-                </div>
+                        </p><a href="@Url.Action("Login_Register", "Account")" id="register-form-link" class="btn btn-solid">Create an Account</a>
+                        
+                        @*<a href="@Url.Action("Checkout", "Order")"  class="btn btn-solid">Continue as Guest</a>*@
+</div>
             </div>
         </div>
     </div>
@@ -111,4 +116,52 @@
         });
 
     });
+
+ 
+    //function login()
+    //{
+    //    debugger
+
+    //    var eml = $("#email").val();
+    //    var pwd = $("#password").val();
+
+    //    var chkLSLogin = localStorage.getItem("_login");
+
+    //    if (chkLSLogin != null) {
+    //        $.ajax({
+    //            type: "GET",
+    //            url: '/Account/GetLogin',
+    //            contentType: "application/json; charset=utf-8",
+    //            dataType: "json",
+    //            success: function (data) {
+    //                var arrTemp = [];
+    //                arrTemp = getloginsLS();
+    //                arrTemp.push({ CustomerEmail: data.CustomerEmail, Password: data.Password });
+    //                if (data.COD != 1) {
+    //                    // $('#COD').addClass('d-none');
+    //                }
+    //                setlogin(arrTemp);
+    //                cartdata(0);
+    //            },
+    //            error: function (xhr, textStatus, errorThrown) {
+    //                //alert(xhr, textStatus, errorThrown);
+    //            }
+    //        });
+    //    }
+
+    //    function setlogin(arr) {
+    //        var login = localStorage.getItem("_login");
+    //        if (login != null) {
+    //            localStorage.setItem("_login", JSON.stringify(arr));
+    //        }
+    //    };
+    //    function getloginsLS() {
+    //        var login = localStorage.getItem("_login");
+    //        if (login != null && login != "")
+    //            return JSON.parse(login);
+    //        else
+    //            return JSON.parse("[]");
+    //    };
+    //}
 </script>
+

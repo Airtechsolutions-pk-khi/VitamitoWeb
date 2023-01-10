@@ -35,7 +35,9 @@ namespace Vitamito.Models.BLL
         public bool? HasVariant { get; set; }
         public bool? IsVATApplied { get; set; }
         public double? CurrentStock { get; set; }
-        
+
+        public bool? IsStockOut { get; set; }
+
         public List<ItemImages> ImgList = new List<ItemImages>();
 
         public List<ReviewsBLL> Reviews = new List<ReviewsBLL>();

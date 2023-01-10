@@ -35,6 +35,7 @@ namespace Vitamito.Models.BLL
         public bool? HasVariant { get; set; }
         public bool? IsVATApplied { get; set; }
         public bool? IsFeatured { get; set; }
+        public bool? IsStockOut { get; set; }
         public double? CurrentStock { get; set; }
         public int? Stars { get; set; }
         public List<ReviewsBLL> Reviews = new List<ReviewsBLL>();
