@@ -73,5 +73,12 @@ namespace Vitamito.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+
+        //public ActionResult GetLogin()
+        //{
+        //    var a = new loginBLL().login();
+        //    return Json(a, JsonRequestBehavior.AllowGet);
+        //}
+
     }
 }

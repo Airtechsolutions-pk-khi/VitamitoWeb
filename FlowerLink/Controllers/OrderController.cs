@@ -131,12 +131,12 @@ namespace Vitamito.Controllers
                 DateTime dateTime = DateTime.UtcNow.AddMinutes(180);
 
                 //BodyEmail = BodyEmail.Replace("#CustomerContact#", data.SenderName.ToString());
-                BodyEmail = BodyEmail.Replace("#SelectedTime#", dateTime.ToString());
+                BodyEmail = BodyEmail.Replace("#SelectedTime#", data.SelectedTime);
                 BodyEmail = BodyEmail.Replace("#DeliveryDate#", data.DeliveryDate.ToString());
                 BodyEmail = BodyEmail.Replace("#OrderDate#", dateTime.ToString("dd/MMM/yyyy"));
                 BodyEmail = BodyEmail.Replace("#Address#", data.Address.ToString());
 
-                BodyEmailadmin = BodyEmailadmin.Replace("#SelectedTime#", dateTime.ToString());
+                BodyEmailadmin = BodyEmailadmin.Replace("#SelectedTime#", data.SelectedTime);
                 BodyEmailadmin = BodyEmailadmin.Replace("#DeliveryDate#", data.DeliveryDate.ToString());
                 BodyEmailadmin = BodyEmailadmin.Replace("#OrderDate#", dateTime.ToString("dd/MMM/yyyy"));
                 BodyEmailadmin = BodyEmailadmin.Replace("#Address#", data.Address.ToString());

@@ -34,6 +34,7 @@ namespace Vitamito.Models.BLL
         public int StatusID { get; set; }
         public int? DisplayOrder { get; set; }
         public bool? IsFeatured { get; set; }
+        public bool? IsStockOut { get; set; }
         public int StockQty { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public string LastUpdatedBy { get; set; }

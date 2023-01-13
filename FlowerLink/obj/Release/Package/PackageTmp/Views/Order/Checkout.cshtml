@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Checkout";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,9 +11,11 @@
         background-position: right !important;
         background-color: #ffe4f1 !important;
     }
-    .mt-3{
+
+    .mt-3 {
         margin-top: 1rem !important
     }
+
     .font-weight-bold {
         font-weight: 700 !important
     }
@@ -39,54 +42,65 @@
             .coupon-accordion h3 .coupon:hover {
                 color: #000000;
             }
+
     .coupon-content {
         border: 1px solid #dddddd;
         margin-bottom: 30px;
         padding: 20px;
-       
     }
+
     .coupon-info p.form-row-first {
-  float: left;
-  width: 48%;
-}
-@@media only screen and (max-width: 479px) {
-  .coupon-info p.form-row-first {
-    width: 100%;
-  }
-}
-.coupon-info p.form-row-last {
-  float: right;
-  width: 48%;
-}
-@@media only screen and (max-width: 479px) {
-  .coupon-info p.form-row-last {
-    width: 100%;
-  }
-}
-.coupon-info .remember {
-  margin-left: 10px;
-}
-.coupon-info .remember span {
-  margin-left: 5px;
-}
-.checkout-coupon input {
-  border: 1px solid #999999;
-  color: #555;
-  padding: 5px 10px;
-  width: auto;
-}
-.checkout-coupon input:focus {
-  outline: none;
-}
-.checkout-coupon .button-apply-coupon {
-  margin: -5px 0 0 10px;
-  padding: 7.2px 11px;
-}
-@@media only screen and (max-width: 479px) {
-  .checkout-coupon .button-apply-coupon {
-    margin: 10px 0 0 0px;
-  }
-}
+        float: left;
+        width: 48%;
+    }
+
+    @@media only screen and (max-width: 479px) {
+        .coupon-info p.form-row-first {
+            width: 100%;
+        }
+    }
+
+    .coupon-info p.form-row-last {
+        float: right;
+        width: 48%;
+    }
+
+    @@media only screen and (max-width: 479px) {
+        .coupon-info p.form-row-last {
+            width: 100%;
+        }
+    }
+
+    .coupon-info .remember {
+        margin-left: 10px;
+    }
+
+        .coupon-info .remember span {
+            margin-left: 5px;
+        }
+
+    .checkout-coupon input {
+        border: 1px solid #999999;
+        color: #555;
+        padding: 5px 10px;
+        width: auto;
+    }
+
+        .checkout-coupon input:focus {
+            outline: none;
+        }
+
+    .checkout-coupon .button-apply-coupon {
+        margin: -5px 0 0 10px;
+        padding: 7.2px 11px;
+    }
+
+    @@media only screen and (max-width: 479px) {
+        .checkout-coupon .button-apply-coupon {
+            margin: 10px 0 0 0px;
+        }
+    }
+
     @@media only screen and (max-width: 479px) {
         .checkout-page .checkout-form input[type="text"], .checkout-page .checkout-form input[type="email"], .checkout-page .checkout-form input[type="password"], .checkout-page .checkout-form input[type="tel"], .checkout-page .checkout-form input[type="number"], .checkout-page .checkout-form input[type="url"] {
             width: 100% !important;
@@ -95,6 +109,7 @@
             border: 1px solid #ddd;
         }
     }
+
     .btn-coupon {
         padding: 5px 11px;
         color: #fff;
@@ -102,7 +117,6 @@
         border: 2px solid var(--theme-color);
         background: var(--theme-color);
     }
-   
 </style>
 <!-- breadcrumb start -->
 <div class="breadcrumb-section">
@@ -130,28 +144,28 @@
     <div class="container">
 
         @*<div class="row">
-            <div class="col">
-                <div class="coupon-area">
+                <div class="col">
+                    <div class="coupon-area">
 
-                     
-                    <div class="coupon-accordion">
-                        <h3><span>Have a coupon?</span> <span class="coupon" id="showcoupon">Click here to enter your code</span></h3>
-                        <div class="coupon-content" id="checkout-coupon">
-                            <div class="coupon-info">
-                                <form action="#">
-                                    <p class="checkout-coupon">
-                                        <input id="coupon" type="text" placeholder="Coupon code">
-                                        <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
-                                    <p id="CouponResponse"></p>
 
-                                </form>
+                        <div class="coupon-accordion">
+                            <h3><span>Have a coupon?</span> <span class="coupon" id="showcoupon">Click here to enter your code</span></h3>
+                            <div class="coupon-content" id="checkout-coupon">
+                                <div class="coupon-info">
+                                    <form action="#">
+                                        <p class="checkout-coupon">
+                                            <input id="coupon" type="text" placeholder="Coupon code">
+                                            <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
+                                        <p id="CouponResponse"></p>
+
+                                    </form>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                    
                 </div>
-            </div>
-        </div>*@
+            </div>*@
 
         <div class="checkout-page">
             <div class="checkout-form">
@@ -230,13 +244,15 @@
                                         <div>Sub-Total <span class="sub-total" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
-                                        <div>Discount <span class="discount" style="float:right">BHD 0</span></div>
-                                        <div>Coupon Discount <span class="coupon-amount" id="coupon-text" style="float:right">BHD 0</span></div>
-                                        <div>Tax <span class="tax" style="float:right">BHD 0</span></div>
+
+                                        <div>Discount <span class="discount">BHD 0</span><span class="discountAmount" style="float:right">BHD 0</span></div>
+
+                                        <div>Coupon Discount <span id="coupon-text">0%</span> <span class="disAmount" style="float:right">BHD 0</span></div>
+                                        <div>Tax Amount  <span class="taxPer">0 %</span> <span class="tax" style="float:right">0</span></div>
                                         <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
-                                        <div>Grand Total <span class="total" id="totalamount" style="float:right">BHD 0</span></div>
+                                        <div>Grand Total <span class="total" id="totalamount" style="float:right">0</span></div>
                                     </div>
 
                                 </div>
@@ -245,15 +261,15 @@
                                     <div class="col">
                                         <div class="coupon-area">
                                             <div class="coupon-accordion">
-                                                
+
                                                 <div class="coupon-content" id="checkout-coupon">
-                                                    <div class="coupon-info">   
-                                                        
-                                                            <p class="checkout-coupon">
-                                                                <input id="coupon" type="text" placeholder="Coupon code" style="width:73%;">
-                                                                <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
-                                                            <p id="CouponResponse"></p>
-                                                       
+                                                    <div class="coupon-info">
+
+                                                        <p class="checkout-coupon">
+                                                            <input id="coupon" type="text" placeholder="Coupon code" style="width:73%;">
+                                                            <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
+                                                        <p id="CouponResponse"></p>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -263,18 +279,18 @@
 
                                 <div class="payment-box">
                                     @*<div class="upper-box">
-                                        <div class="payment-options">
-                                            <ul>
-                                                <li>
-                                                    <div class="btn-group d-flex px-2" role="group" aria-label="Basic example" id="Payment-btn">
-                                                        <button id="COD" value="1" type="button" class="btn btn-warning active btn-pay" data-toggle="button" aria-pressed="true" autocomplete="off">
-                                                            Cash On Delivery
-                                                        </button>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>*@
+                                            <div class="payment-options">
+                                                <ul>
+                                                    <li>
+                                                        <div class="btn-group d-flex px-2" role="group" aria-label="Basic example" id="Payment-btn">
+                                                            <button id="COD" value="1" type="button" class="btn btn-warning active btn-pay" data-toggle="button" aria-pressed="true" autocomplete="off">
+                                                                Cash On Delivery
+                                                            </button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>*@
                                     <a href="javascript:;" id="checkout" class="btn btn-solid"> PLACE ORDER</a>
                                 </div>
                                 <p class="text-danger font-weight-bold text-center bg-category2 rounded mt-3 mb-2" id="payment-alert"></p>
@@ -289,7 +305,9 @@
 </section>
 <!-- section end -->
 <script type="text/JavaScript">
+
     setting();
+
     var total = 0;
     var orderNoURL = "";
     $(document).ready(function () {
@@ -350,25 +368,36 @@
         var settings = LSsettings[0];
 
 
-        var CouponDisount = parseFloat($(".coupon-amount").text().replace("RS.", ""));
+        var CouponDisount = parseFloat($(".coupon-amount").text().replace("BHD.", ""));
 
             //=============================== Order Master =====================
-      
-       
 
+
+        debugger
         var Order = new Object();
 
+        var coupon = parseFloat($("#coupon-text").html());
 
-            Order.CustomerID = @Convert.ToInt32(Session["ID"]);
-        Order.AmountTotal = totalPrice;
+        var st = parseFloat(totalPrice) ;
+        var dis = ((((st * (settings.Discount / 100)))).toFixed(3));
+        var disC = (((totalPrice * (coupon / 100))).toFixed(3));
+        var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
+        var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+        var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        Order.CustomerID = @Convert.ToInt32(Session["ID"]);
 
-        total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
-        Order.GrandTotal = total;
 
-        Taxamount = parseFloat((totalPrice * (settings.Tax / 100)).toFixed(2));
-            Order.Tax = Taxamount;
+
+       // total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.TaxPercent / 100))) + settings.DeliveryCharges).toFixed(2));
+
+
+        if (settings.MinOrderAmount < totalPrice) {
+            Order.GrandTotal = GT;
+            Order.AmountTotal = st;
+            //Taxamount = parseFloat((totalPrice * (settings.TaxPercent / 100)).toFixed(2));
+            Order.Tax = taxA;
             Order.DeliveryAmount = settings.DeliveryCharges;
-            Order.DiscountAmount = settings.Discount;
+            Order.DiscountAmount = dis + disC;
             Order.TotalItems = totalQty;
             Order.StatusID = 1;
 
@@ -380,21 +409,21 @@
             Order.NearestPlace = $('#NearestPlace').val();
             Order.Country = $('#Country').val();
             Order.ContactNo = $('#ContactNo').val();
-            Order.DeliveryTime = $('#DeliveryTime').val();
+            debugger
+            //Order.DeliveryTime = $('#DeliveryTime').val();
+            Order.DeliveryTime = $('#DeliveryTime').find(":selected").text();
             Order.CustomerID = @Convert.ToInt32(Session["ID"]);
             Order.CustomerName = $('#CustomerName').val();
             Order.Latitude = 'Not Defined';
             Order.Longitude = 'Not Defined';
             Order.PlaceType = $('#PlaceType').val();
             Order.Email = $('#Email').val();
-            Order.CardNotes = $('#CardNotes').val();       
-        //Order.PaymentMethodID = $("#COD").val();
-        Order.PaymentMethodID = 1;
+            Order.CardNotes = $('#CardNotes').val();
+            //Order.PaymentMethodID = $("#COD").val();
+            Order.PaymentMethodID = 1;
             Order.OrderDetailString = JSON.stringify(data);
             var Masterorder = JSON.stringify({ 'data': Order });
 
-        
-        
             $.ajax({
                 type: "POST",
                 url: '/Order/PunchOrder',
@@ -402,9 +431,11 @@
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 success: function (data) {
+                    debugger
                     if (data.data.OrderNo == null) {
                         localStorage.clear();
-                        window.location.href = '/Order/OrderComplete?OrderID=' + data.data + '&OrderNo=' + Order.OrderNo;
+
+                        window.location.href = '/Order/OrderComplete?OrderID=' + data.data;
                     }
                     else {
                         getCardDetails(data.data.sessionID, data.data.GrandTotal, data.data.OrderNo, data.data.Description);
@@ -413,9 +444,17 @@
                 error: function (xhr, textStatus, errorThrown) {
                 }
             });
-        };
+        }
+        else {
+            alert("Minimum Order Amount is BHD:" + settings.MinOrderAmount);
+        }
+    }
+
+
+
+
     function cartdata(coupon) {
-      
+
         var gifts = getgiftLS();
         var checkLSsetting = localStorage.getItem("_setting");
         var LSsettings = JSON.parse(localStorage.getItem("_setting"));
@@ -432,35 +471,31 @@
             totalPrice += data[i].Qty * data[i].Price;
             html += '<li>'
             html += '<strong class="product-quantity"> &nbsp;&nbsp;&nbsp;' + data[i].Qty + ' X ' + '</strong>' + data[i].Name
-            html += '<span class="amount">' + ((data[i].Qty * data[i].Price)).toFixed(2) + '</span>'
+            html += '<span class="amount">' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
                 + '</li>'
         }
         $(".qty").html(html)
 
         if (data.length > 0) {
             debugger
-            $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(2));
-            Taxamount = (totalPrice * (settings.Tax / 100)).toFixed(2);
-            $('.tax').html(currency + ' ' + Taxamount);            
-            $('.discount').html(settings.Discount + '%');            
-            $('.dc').html(currency + ' ' + settings.DeliveryCharges);
-            
-            //total = (((totalPrice + (totalPrice * (settings.Tax / 100))) + settings.DeliveryCharges).toFixed(2));
-                        
-            if (coupon == undefined) {
-                coupon = 0;                
-            }
-
-            var discountAmount = ((((totalPrice * (settings.Discount / 100)))).toFixed(2));
-            var couponAmount = (((totalPrice + (totalPrice * (coupon / 100)))).toFixed(2));
-            
-            total = (((totalPrice + (totalPrice - couponAmount - discountAmount))).toFixed(2));
+            var st = totalPrice;
+            var dis = ((((st * (settings.Discount / 100)))).toFixed(3));
+            var disC = (((totalPrice * (coupon / 100))).toFixed(3));
+            var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
+            var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
 
 
-            var withTaxDC = parseFloat(total) + parseFloat(Taxamount) + parseFloat(settings.DeliveryCharges);
+            $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(3));
+            Taxamount = (parseFloat(totalPrice) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+            $('.tax').html(currency + ' ' + taxA);
+            $('.taxPer').html((settings.Tax + '%'));
+            $('.disAmount').html((disC ));
+            $('.discount').html(settings.Discount + '%');
+            $('.discountAmount').html(dis);
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
 
-             
-            $("#totalamount").html(currency + ' ' + withTaxDC + '.00');
+            $("#totalamount").html(currency + ' ' + (GT));
         }
         else {
             $(".sub-total").html("");
@@ -472,7 +507,10 @@
     function setting() {
         //get settings
         debugger
+         
+       
         var chkLSsettings = localStorage.getItem("_setting");
+
         if (chkLSsettings != null) {
             $.ajax({
                 type: "GET",
@@ -482,7 +520,7 @@
                 success: function (data) {
                     var arrTemp = [];
                     arrTemp = getsettingsLS();
-                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, MinOrderAmount: data.MinOrderAmount, Tax: data.Tax, COD: data.COD, Discount: data.Discount, TopHeadDescription: data.TopHeadDescription });
+                    arrTemp.push({ DeliveryCharges: data.DeliveryCharges, MinOrderAmount: data.MinOrderAmount, Tax: data.TaxPercent, COD: data.COD, Discount: data.Discount, TopHeadDescription: data.TopHeadDescription });
                     if (data.COD != 1) {
                        // $('#COD').addClass('d-none');
                     }
@@ -494,6 +532,7 @@
                 }
             });
         }
+         
     };
     function setsettings(arr) {
         var settings = localStorage.getItem("_setting");
@@ -508,8 +547,9 @@
         else
             return JSON.parse("[]");
     };
+ 
     var currency = localStorage.getItem("currency");
-     
+
     //$('#Payment-btn').on('click', '.btn-pay', function () {
     //    $(this).addClass('payactive').siblings().removeClass('payactive');
     //    $('#payment-alert').html('');
@@ -543,6 +583,7 @@
                     else {
                         //$(".coupon-amount").html(currency + ' ' + data.data.Amount.toFixed(2));
                         $("#coupon-text").html(' ' + data.data.Amount.toFixed(0) + '%');
+
                     }
                     $('#CouponID').val(data.data.CouponID);
                     $('#CouponCode').val(data.data.CouponCode);

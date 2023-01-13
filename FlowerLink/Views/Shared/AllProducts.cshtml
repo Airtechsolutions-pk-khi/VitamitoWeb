@@ -1,56 +1,77 @@
-﻿
+﻿ 
 <div class="product-wrapper-grid LoadProduct">
     @ViewBag.Message
     <div class="row margin-res">
         @foreach (var item in ViewBag.shopList)
         {
-            <div class="col-xl-3 col-6 col-grid-box">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        @if (item.Image == null || item.Image == "")
+        <div class="col-xl-3 col-6 col-grid-box">
+            
+            <div class="product-box">
+              
+                <div class="img-wrapper">
+                    @if (item.IsStockOut == true)
+                    {
+                        <div class="ribbon ribbon-top-right">
+                            <span style="color:white">
+                                Out of stock
+                            </span>
+                        </div>
+                    }
+
+                    @if (item.Image == null || item.Image == "")
+                    {
+                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                            <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
+                        </a>
+                    }
+
+                    @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
+        {
+            <div class="cart-info cart-wrap">
+                <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
+                <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+            </div>
+        }
+        else
+        {*@
+
+                    <div class="cart-info cart-wrap">
+                        @if (item.IsStockOut == true)
                         {
-                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
+                            <button data-bs-toggle="modal" onclick="toastOut('Item is Out of Stock', 1); return false;"><i class="ti-shopping-cart"></i></button>
                         }
                         else
                         {
-                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
-                            </a>
+                            <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
                         }
 
-                        @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
-                            {
-                                <div class="cart-info cart-wrap">
-                                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
-                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                                </div>
-                            }
-                            else
-                            {*@
-                        <div class="cart-info cart-wrap">
-                            <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
-                            <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                        </div>
-
+                        <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
                     </div>
-                    <div class="product-detail">
-                        <div>
-                            <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                <h6>@item.Name</h6>
-                            </a>
-                            <p>
-                                @item.Description
-                            </p>
-                            <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
-                            @*<br />
-                                @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                {
-                                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                }*@
-                        </div>
+
+                </div>
+                <div class="product-detail">
+                    <div>
+                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                            <h6>@item.Name</h6>
+                        </a>
+                        <p>
+                            @item.Description
+                        </p>
+                        <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
+                        @*<br />
+                @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                {
+                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
+                }*@
+                        
                     </div>
                 </div>
+            </div>
             </div>
         }
     </div>

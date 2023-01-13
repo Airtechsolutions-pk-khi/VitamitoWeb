@@ -176,6 +176,29 @@ function toast(res, condition) {
 
 };
 
+function toastOut(res, condition) {
+    if (condition == 1) {
+        $('.toast-body').html(res);
+        $('.toast-head-text').html('Warning');
+        $('.toast-body').html(res);
+        $('.toast').addClass('bg-warning text-dark');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+    else if (condition == 2) {
+        $('.toast-head-text').html('Warning');
+        $('.toast-body').html(res);
+        $('.toast').addClass('bg-warning text-dark');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+    else {
+        $('.toast-body').html(res);
+        $('.toast-head-text').html('Danger');
+        $('.toast').addClass(' bg-danger text-white ');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+
+};
+
 //header
 function topheadcart() {
     
@@ -269,7 +292,7 @@ function cartitem() {
     var totalPrice = 0;
     var totalQty = 0;
 
-
+    
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         totalQty += Number(data[i].Qty);
@@ -306,6 +329,7 @@ function cartitem() {
         $("#check-btn").show();
     }
     else {
+        $(".cart-items").html("No Item added");
         $("#cart-table").html("No Item added");
         $("#check-btn").hide();
     }
@@ -323,8 +347,8 @@ function changeQty(key, price) {
         for (var i = 0; i < cartItems.length; i++) {
             if (cartItems[i].Key == key) {
                 cartItems[i].Qty = $('#qty' + key).val();
-                cartItems[i].Price = cartItems[i].Qty * price;
-                $('#tprice' + key).html(cartItems[i].Price.toFixed(2));
+                cartItems[i].Price =  price;
+                $('#tprice' + key).html((cartItems[i].Qty * cartItems[i].Price).toFixed(2));
             }
         }
 
@@ -348,13 +372,13 @@ function removeCartItem(ele) {
         item.Key === ele && chkLScart.splice(index, 1);
     });
 
-    var delRow = chkLSgift.filter(obj => obj.ItemKey === ele);
-    chkLSgift.forEach(function (item, index) {
-        item.ItemKey === ele && chkLSgift.splice(index, delRow.length);
-    });
+    //var delRow = chkLSgift.filter(obj => obj.ItemKey === ele);
+    //chkLSgift.forEach(function (item, index) {
+    //    item.ItemKey === ele && chkLSgift.splice(index, delRow.length);
+    //});
     setCartLS(chkLScart);
-    setgiftLS(chkLSgift);
-
+    //setgiftLS(chkLSgift);
+    
     cartitem();
     topheadcart();
 }
@@ -400,9 +424,7 @@ function getCartLS() {
     else
         return JSON.parse("[]");
 }
-
-
-
+ 
 //Wishlist
 function addtoWishlist(ID, Name, Image, Price, StatusID, Qty) {
     
