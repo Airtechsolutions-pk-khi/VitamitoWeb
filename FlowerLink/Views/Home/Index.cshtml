@@ -91,32 +91,22 @@
 
 @if (ViewBag.BannerHeader != null)
 {
-
-
     <section class="p-0 layout-7">
         <div class="slider-animate home-slider">
             @foreach (var Record in ViewBag.BannerHeader)
             {
+                
+            <a target="_blank" href="@Record.ButtonURL">
                 <div>
                     <div class="home text-center">
-                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload">
-                        @*<div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="slider-contain">
-                                            <div>
-                                                <h4 class="animated" data-animation-in="fadeInUp">welcome to book store</h4>
-                                                <h1 class="animated font-cormorant" data-animation-in="fadeInUp" data-delay-in="0.3">MUST READS</h1>
-                                                <a href="#" class="btn btn-solid animated" data-animation-in="fadeInUp" data-delay-in="0.5">shop now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>*@
+
+                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@Record.Image" alt="" class="bg-img blur-up lazyload" />
+
                     </div>
                 </div>
-            }
-        </div>
+                </a>
+                }
+</div>
     </section>
 }
 else
