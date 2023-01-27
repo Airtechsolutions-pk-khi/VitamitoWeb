@@ -27,15 +27,15 @@
 });
 //setting
 function headertext() {
-    
+
     $.ajax({
         type: "GET",
         url: '/Home/GetSetting',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-            
-            
+
+
             if (data.Facebook != 1 || data.Facebook == null) {
                 $('#facebook').addClass('d-none');
             }
@@ -88,16 +88,16 @@ function headertext() {
 
 
 function Topheadertext() {
-    
+
     $.ajax({
         type: "GET",
         url: '/Home/GetSetting',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-           
+
             $('#TopHeadDescription').html(data.TopHeadDescription);
-   
+
         },
         error: function (xhr, textStatus, errorThrown) {
             //alert(xhr, textStatus, errorThrown);
@@ -201,7 +201,7 @@ function toastOut(res, condition) {
 
 //header
 function topheadcart() {
-    
+
     var currency = localStorage.getItem("currency");
     var cart = "[]";
     var chkLScart = localStorage.getItem("_cartitems");
@@ -221,15 +221,15 @@ function topheadcart() {
     if (chkLSgift == null) {
         localStorage.setItem("_giftitems", gift);
     }
-   
+
     var gifts = getgiftLS();
     var data = getCartLS();
-     
+
     var html = '';
     var totalPrice = 0;
     var totalQty = data.length;
-    var totalQtywish= getWishlistLS().length;
-    
+    var totalQtywish = getWishlistLS().length;
+
     html += '<div class="cart-height scrollbar" id="style2" >'
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
@@ -254,7 +254,7 @@ function topheadcart() {
             + '</div>'
             + '<div class="close-circle"><a href="#" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="fa fa-times" aria-hidden="true"></i></a></div>'
             + '</li>'
-     
+
     }
 
     html += '</div>'
@@ -292,13 +292,13 @@ function cartitem() {
     var totalPrice = 0;
     var totalQty = 0;
 
-    
+
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         totalQty += Number(data[i].Qty);
         totalPrice += data[i].Qty * data[i].Price;
 
-      
+
         html += '<tr>'
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
         if (data[i].Image == "" || data[i].Image == null) {
@@ -316,11 +316,11 @@ function cartitem() {
             + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
             + '<td class="product-subtotal"><h2 class="td-color">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td></h2>'
-            
-                + '</tr>'
+
+            + '</tr>'
 
 
-       
+
 
     }
 
@@ -347,7 +347,7 @@ function changeQty(key, price) {
         for (var i = 0; i < cartItems.length; i++) {
             if (cartItems[i].Key == key) {
                 cartItems[i].Qty = $('#qty' + key).val();
-                cartItems[i].Price =  price;
+                cartItems[i].Price = price;
                 $('#tprice' + key).html((cartItems[i].Qty * cartItems[i].Price).toFixed(2));
             }
         }
@@ -378,7 +378,7 @@ function removeCartItem(ele) {
     //});
     setCartLS(chkLScart);
     //setgiftLS(chkLSgift);
-    
+
     cartitem();
     topheadcart();
 }
@@ -398,7 +398,7 @@ function removeCartGift(ele) {
 
 }
 function addtocart(ID, Name, Image, Price, Qty, CurrentStock) {
-    
+
     //ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
@@ -424,14 +424,30 @@ function getCartLS() {
     else
         return JSON.parse("[]");
 }
- 
+//Login
+function login() {
+    debugger
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var arrTemp = [];
+    arrTemp.push({ EMAIL: email, PASSWORD: password });
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+}
+function logout() {
+    debugger
+    var email = localStorage.getItem("email", email);
+    var password = localStorage.getItem("password", password)
+    localStorage.setItem("email", "");
+    localStorage.setItem("password", "");
+}
 //Wishlist
 function addtoWishlist(ID, Name, Image, Price, StatusID, Qty) {
-    
+
     var arrTemp = [];
     arrTemp = getWishlistLS();
     arrTemp.push({ ID: ID, Name: Name, Image: Image, Price: Price, StatusID: StatusID, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
-    setWishlistLS(arrTemp);  
+    setWishlistLS(arrTemp);
     topheadcart();
 }
 function setWishlistLS(arr) {
@@ -463,7 +479,7 @@ function GetWishListItems() {
     var html = '';
     var totalPrice = 0;
     var totalQty = 0;
-   
+
 
     for (var i = 0; i < data.length; i++) {
         totalQty += Number(data[i].Qty);
@@ -491,7 +507,7 @@ function GetWishListItems() {
         $("#ytdTable").html("You donot have any item in favourites ");
     }
 
-    
+
 };
 
 function StockActiveColor() {
@@ -577,4 +593,3 @@ function getmail() {
 
 
 
- 
