@@ -11,7 +11,10 @@
         background-position: right !important;
         background-color: #ffe4f1 !important;
     }
-
+    .order-box .charges {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
     .mt-3 {
         margin-top: 1rem !important
     }
@@ -265,10 +268,10 @@
                                                 <div class="coupon-content" id="checkout-coupon">
                                                     <div class="coupon-info">
 
-                                                        <p class="checkout-coupon">
+                                                        <p class="checkout-coupon" style="margin-bottom:0 !important">
                                                             <input id="coupon" type="text" placeholder="Coupon code" style="width:73%;">
                                                             <button onclick="CouponDiscount(); return false;" type="submit" class="btn btn-small btn btn-coupon" name="apply_coupon" value="Apply coupon">Apply coupon</button>
-                                                        <p id="CouponResponse"></p>
+                                                        <p id="CouponResponse" style="margin-bottom:0 !important"></p>
 
                                                     </div>
                                                 </div>
@@ -292,6 +295,13 @@
                                             </div>
                                         </div>*@
                                     <a href="javascript:;" id="checkout" class="btn btn-solid"> PLACE ORDER</a>
+                                   
+                                    <p style="color:red">
+                                        <br />
+                                        Note: Below 10 BD, 1.5 BD Delivery Charges<br />
+                                        10 BD to 40 BD, 1 BD Delivery Charges<br />
+                                        40 BD and above Free Delivery
+                                    </p>
                                 </div>
                                 <p class="text-danger font-weight-bold text-center bg-category2 rounded mt-3 mb-2" id="payment-alert"></p>
 
@@ -483,7 +493,26 @@
             var disC = (((totalPrice * (coupon / 100))).toFixed(3));
             var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
             var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
-            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+
+            if (parseFloat(tpdiscounted) >= 10.5 && (parseFloat(tpdiscounted)) <= 40) {
+                settings.DeliveryCharges = 1;
+                $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+                var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+            }
+
+            else if (parseFloat(tpdiscounted) > 40) {
+                settings.DeliveryCharges = 0;
+                $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+                var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+            }
+
+            else {
+                $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+                var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+            }
+
+            //var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+
 
 
             $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(3));
@@ -493,7 +522,7 @@
             $('.disAmount').html((disC ));
             $('.discount').html(settings.Discount + '%');
             $('.discountAmount').html(dis);
-            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            //$('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
 
             $("#totalamount").html(currency + ' ' + (GT));
         }
@@ -507,8 +536,8 @@
     function setting() {
         //get settings
         debugger
-         
-       
+
+
         var chkLSsettings = localStorage.getItem("_setting");
 
         if (chkLSsettings != null) {
@@ -532,7 +561,7 @@
                 }
             });
         }
-         
+
     };
     function setsettings(arr) {
         var settings = localStorage.getItem("_setting");
@@ -547,7 +576,7 @@
         else
             return JSON.parse("[]");
     };
- 
+
     var currency = localStorage.getItem("currency");
 
     //$('#Payment-btn').on('click', '.btn-pay', function () {
