@@ -45,7 +45,7 @@ namespace Vitamito.Models.BLL
         public class ItemImages
         {
             public string Image { get; set; }
-            public int Row_Counter { get; set; }
+            //public int Row_Counter { get; set; }
         }
         public class ReviewsBLL
         {
@@ -78,7 +78,7 @@ namespace Vitamito.Models.BLL
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@ID", ID);
                 p[1] = new SqlParameter("@LocationID", LocationID);
-                _ds = (new DBHelper().GetDatasetFromSP)("sp_ProductVitamito", p);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_ProductVitamito_V2", p);
                 if (_ds != null)
                 {
                     if (_ds.Tables.Count > 0)
@@ -87,12 +87,17 @@ namespace Vitamito.Models.BLL
                         {
                             obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<productBLL>>().FirstOrDefault();
                         }
-                      
+
                         if (_ds.Tables[1] != null)
                         {
-                            lstR = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<ReviewsBLL>>();
+                            lstIM = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<ItemImages>>().ToList();
                         }
-                        //obj.ImgList = lstIM;
+
+                        if (_ds.Tables[2] != null)
+                        {
+                            lstR = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[2])).ToObject<List<ReviewsBLL>>();
+                        }
+                        obj.ImgList = lstIM;
                         obj.Reviews = lstR;
                     }
                 }
