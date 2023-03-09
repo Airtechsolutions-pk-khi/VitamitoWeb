@@ -58,7 +58,8 @@ namespace Vitamito.Models.BLL
             public string Image { get; set; }
             public int Quantity { get; set; }
             public int OrderNo { get; set; }
-            public double Price { get; set; }           
+            public double Price { get; set; }
+            public double? DiscountPrice { get; set; }
         }
         public class GiftDetails
         {
@@ -127,7 +128,7 @@ namespace Vitamito.Models.BLL
                 SqlParameter[] p = new SqlParameter[1];
 
                 p[0] = new SqlParameter("@OrderID", OrderID);
-                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetMyOrderDetails_Vitamito", p);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetMyOrderDetails_Vitamito_V2", p);
                 if (_ds != null)
                 {
                     if (_ds.Tables.Count > 0)

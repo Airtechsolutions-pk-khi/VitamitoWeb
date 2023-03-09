@@ -15,6 +15,7 @@ using Vitamito.Models;
 using System.Configuration;
 using com.fss.plugin;
 using System.Net.Mail;
+using Vitamito.Models.Service;
 
 namespace Vitamito.Controllers
 {
@@ -69,6 +70,7 @@ namespace Vitamito.Controllers
                 string items = "";
                 foreach (var item in data.OrderDetail)
                 {
+                    var total = (item.Price - item.DiscountPrice);
                     try
                     {
                         items += "<table border = '0' cellpadding = '0' cellspacing = '0' align = 'center' width = '100%' role = 'module' data - type = 'columns' style = 'padding:20px 20px 20px 30px;' bgcolor = '#FFFFFF'>"
@@ -99,7 +101,8 @@ namespace Vitamito.Controllers
                         + "<td style = 'padding:18px 0px 18px 0px; line-height:22px; text-align:inherit;' height='100%' valign='top' bgcolor='' role='module-content'><div>"
                         + "<div style = 'font-family: inherit; text-align: inherit'> " + item.Name + "</div>"
                         + "<div style = 'font-family: inherit; text-align: inherit'> Qty : " + item.Quantity + "</div>"
-                        + "<div style = 'font-family: inherit; text-align: inherit'><span style='color: #006782'>RS " + item.Price + "</span></div>"
+                        + "<div style = 'font-family: inherit; text-align: inherit'><span style='color: #006782'>BHD : " + total + "</span></div>"
+                        + "<div style = 'font-family: inherit; text-align: inherit'><span style='color: #006782'>Discount : BHD " + item.DiscountPrice + "</span></div>"
                         + "<div></div></div></td>"
                         + "</tr>"
                         + "</tbody>"
@@ -222,11 +225,12 @@ namespace Vitamito.Controllers
         {
             try
             {
+                 
                 checkoutBLL _service = new checkoutBLL();
                 //orderdetails
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(JArray.Parse(data.OrderDetailString));
                 JArray jsonResponse = JArray.Parse(json);
-                data.OrderDetail = jsonResponse.ToObject<List<checkoutBLL.OrderDetails>>();              
+                data.OrderDetail = jsonResponse.ToObject<List<checkoutBLL.OrderDetails>>();                                
                 int rtn = _service.InsertOrder(data);
                 return Json(new { data = rtn }, JsonRequestBehavior.AllowGet);
             }

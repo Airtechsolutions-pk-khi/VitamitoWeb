@@ -25,6 +25,7 @@ namespace Vitamito.Models.BLL
         public int? DisplayOrder { get; set; }
         public bool? SortByAlpha { get; set; }
         public double? Price { get; set; }
+        public double? NewPrice { get; set; }
         public double? Cost { get; set; }
         public string ItemType { get; set; }
         public string LastUpdatedBy { get; set; }
@@ -83,7 +84,7 @@ namespace Vitamito.Models.BLL
                 return null;
             }
         }
-        public itemBLL GetSelecteditems(int ID,int LocationID)
+        public itemBLL GetSelecteditems(int? ID,int LocationID)
         {
             try
             {

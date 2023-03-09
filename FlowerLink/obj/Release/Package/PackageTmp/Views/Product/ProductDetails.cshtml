@@ -247,6 +247,7 @@
                                 <div class="product-slick">
                                     @foreach (var item in ViewBag.ProductDetails.ImgList)
                                     {
+                                        
                                         if (item.Image == null || item.Image == "")
                                         {
                                             <img src="~/Content/assets/images/NA.png" class="mob" style="width:500px;">
@@ -304,8 +305,16 @@
                                         <span class="rat_qun" style="padding-top:5px;"> (Based on @ViewBag.ProductDetails.Reviews.Count Ratings) </span>
                                     </div>
 
+                                    @if (ViewBag.ProductDetails.NewPrice == null || ViewBag.ProductDetails.NewPrice == 0)
+                                    {
+                                        <h3 class="price-detail">BHD @ViewBag.ProductDetails.Price</h3>
+                                    }
+                                    else
+                                    {
+                                        <h3 class="price-detail"><del>BHD @ViewBag.ProductDetails.Price</del></h3>
+                                        <h3 class="price-detail">BHD @ViewBag.ProductDetails.NewPrice</h3>
+                                    }
 
-                                    <h3 class="price-detail">BHD @ViewBag.ProductDetails.Price</h3>
                                     @if (ViewBag.ProductDetails.IsStockOut == true)
                                     {
                                         <strong style="font-size:13px;color:red;">Out of Stock</strong>
@@ -344,12 +353,24 @@
                                         }
                                         else
                                         {
-                                            <a onclick="addtocartpd(@ViewBag.ProductDetails.ID,'@ViewBag.ProductDetails.Name','@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.Price,1);toast('Item Added to Cart', 1); return false; " id="cartEffect" class="btn btn-solid hover-solid btn-animation add-button addItemLS add_cart">
-                                                <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add to cart
-                                            </a>
+                                            if (ViewBag.ProductDetails.NewPrice == null || ViewBag.ProductDetails.NewPrice == 0)
+                                            {
+                                                <a onclick="addtocartpd(@ViewBag.ProductDetails.ID,'@ViewBag.ProductDetails.Name','@ViewBag.ProductDetails.Image',0,@ViewBag.ProductDetails.Price,1);toast('Item Added to Cart', 1); return false; " id="cartEffect" class="btn btn-solid hover-solid btn-animation add-button addItemLS add_cart">
+                                                    <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add to cart
+                                                </a>
+                                                <a class="wishlist btn btn-solid" onclick="addtoWishlist(@ViewBag.ProductDetails.ID, '@ViewBag.ProductDetails.Name', '@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.Price,@ViewBag.ProductDetails.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>wishlist</a>
+                                            }
+                                            else
+                                            {
+                                                <a onclick="addtocartpd(@ViewBag.ProductDetails.ID,'@ViewBag.ProductDetails.Name','@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.NewPrice,@ViewBag.ProductDetails.Price,1);toast('Item Added to Cart', 1); return false; " id="cartEffect" class="btn btn-solid hover-solid btn-animation add-button addItemLS add_cart">
+                                                    <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add to cart
+                                                </a>
+                                                <a class="wishlist btn btn-solid" onclick="addtoWishlist(@ViewBag.ProductDetails.ID, '@ViewBag.ProductDetails.Name', '@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.NewPrice,@ViewBag.ProductDetails.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>wishlist</a>
+                                            }
+
                                         }
 
-                                        <a class="wishlist btn btn-solid" onclick="addtoWishlist(@ViewBag.ProductDetails.ID, '@ViewBag.ProductDetails.Name', '@ViewBag.ProductDetails.Image',@ViewBag.ProductDetails.Price,@ViewBag.ProductDetails.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>wishlist</a>
+
                                     </div>
                                 </div>
 
@@ -525,9 +546,9 @@
             $('#cartEffect').show();
         }
     });
-    function addtocartpd(ID, Name, Image, Price, Qty, CurrentStock) {
+    function addtocartpd(ID, Name, Image, NewPrice, Price, Qty, CurrentStock) {
         var Qtypd = $('#qty').val();
-        addtocart(ID, Name, Image, Price, Qtypd, CurrentStock);
+        addtocart(ID, Name, Image, NewPrice, Price, Qtypd, CurrentStock);
     }
 
 

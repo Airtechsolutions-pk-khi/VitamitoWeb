@@ -19,10 +19,10 @@ namespace Vitamito.Controllers
             ViewBag.BannerHeader = new bannerBLL().GetBannerHeader();
             ViewBag.FeaturedBanner = new bannerBLL().GetFeaturedBanner();
             var itemData = new itemService().GetAll((int)location);
-            ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
+            //ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
             ViewBag.Featureditems = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
-            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(20).OrderBy(c => Guid.NewGuid()).ToList();
-            ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(7).OrderBy(c => Guid.NewGuid()).ToList();
+            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(7).OrderBy(c => Guid.NewGuid()).ToList();
+            ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(20).OrderBy(c => Guid.NewGuid()).ToList();
 
             //ViewBag.TenItems = itemData.Where(x => x.ID > 0).Where(x => x.IsFeatured == true).OrderBy(x => x.Name).Take(8).ToList();
 

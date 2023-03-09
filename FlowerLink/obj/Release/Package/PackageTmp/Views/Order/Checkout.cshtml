@@ -252,7 +252,7 @@
 
                                         <div>Coupon Discount <span id="coupon-text">0%</span> <span class="disAmount" style="float:right">BHD 0</span></div>
                                         <div>Tax Amount  <span class="taxPer">0 %</span> <span class="tax" style="float:right">0</span></div>
-                                        <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
+                                        <div>Delivery Charges <span class="dc"  style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
                                         <div>Grand Total <span class="total" id="totalamount" style="float:right">0</span></div>
@@ -336,7 +336,7 @@
         }
     });
     $("#checkout").click(function () {
-        debugger
+
         if ($('#CustomerName').val() != "" && $('#ContactNo').val() != "" && $('#Email').val() != "" && $('#Address').val() != "" && $('#Address').val() != "" ) {
             checkout();
         }
@@ -347,6 +347,8 @@
     });
     //Order working
     function checkout() {
+
+
 
             //=============================== Date For Order# ===================
             var TodayDate  = new Date();
@@ -366,13 +368,27 @@
             //=============================== Order Details =====================
             var shippingcharges = 0;
             var total = 0;
-            var chkLScart = localStorage.getItem("_cartitems");
+        var chkLScart = localStorage.getItem("_cartitems");
+
             var data = JSON.parse(chkLScart);
             var totalPrice = 0;
             var totalQty = 0;
-            for (var i = 0; i < data.length; i++) {
+
+
+
+        for (var i = 0; i < data.length; i++) {
                 totalQty += Number(data[i].Qty);
-                totalPrice += data[i].Qty * data[i].Price;
+
+                //totalPrice += data[i].Qty * data[i].Price;
+
+
+
+                if (data[i].NewPrice == null || data[i].NewPrice == 0) {
+                    totalPrice += data[i].Qty * data[i].Price;
+                }
+                else {
+                    totalPrice += data[i].Qty * data[i].NewPrice;
+                }
             }
             var LSsettings = JSON.parse(localStorage.getItem("_setting"));
         var settings = LSsettings[0];
@@ -384,8 +400,11 @@
 
 
         debugger
-        var Order = new Object();
 
+
+
+        @*var Order = new Object();
+        var deliveryCharges = $('#dc').val();
         var coupon = parseFloat($("#coupon-text").html());
 
         var st = parseFloat(totalPrice) ;
@@ -393,20 +412,90 @@
         var disC = (((totalPrice * (coupon / 100))).toFixed(3));
         var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
         var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
-        var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(deliveryCharges)).toFixed(3);
+
+
+        if (parseFloat(tpdiscounted) >= 10.5 && (parseFloat(tpdiscounted)) <= 40) {
+            settings.DeliveryCharges = 1;
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            Order.DeliveryAmount = settings.DeliveryCharges;
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        }
+
+        else if (parseFloat(tpdiscounted) > 40) {
+            settings.DeliveryCharges = 0;
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            Order.DeliveryAmount = settings.DeliveryCharges;
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        }
+
+        else {
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            Order.DeliveryAmount = settings.DeliveryCharges;
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        }
+
+
+
+        Order.CustomerID = @Convert.ToInt32(Session["ID"]);*@
+
+
+
+        if (settings.MinOrderAmount < totalPrice) {
+               var Order = new Object();
+        var deliveryCharges = $('#dc').val();
+        var coupon = parseFloat($("#coupon-text").html());
+
+        var st = parseFloat(totalPrice) ;
+        var dis = ((((st * (settings.Discount / 100)))).toFixed(3));
+        var disC = (((totalPrice * (coupon / 100))).toFixed(3));
+        var tpdiscounted = (parseFloat(st) - parseFloat(dis) - parseFloat(disC)).toFixed(3);
+        var taxA = (parseFloat(tpdiscounted) * (parseFloat(settings.Tax) / 100)).toFixed(3);
+        var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(deliveryCharges)).toFixed(3);
+
+
+        if (parseFloat(tpdiscounted) >= 10.5 && (parseFloat(tpdiscounted)) <= 40) {
+            settings.DeliveryCharges = 1;
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            Order.DeliveryAmount = settings.DeliveryCharges;
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        }
+
+        else if (parseFloat(tpdiscounted) > 40) {
+            settings.DeliveryCharges = 0;
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            Order.DeliveryAmount = settings.DeliveryCharges;
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        }
+
+        else {
+            $('.dc').html(currency + ' ' + settings.DeliveryCharges.toFixed(3));
+            Order.DeliveryAmount = settings.DeliveryCharges;
+            var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
+        }
+
+
+
         Order.CustomerID = @Convert.ToInt32(Session["ID"]);
 
 
 
-       // total = (((parseFloat(totalPrice) + (parseFloat(totalPrice) * (settings.TaxPercent / 100))) + settings.DeliveryCharges).toFixed(2));
 
 
-        if (settings.MinOrderAmount < totalPrice) {
+
+
+
+
+
+
+
+
             Order.GrandTotal = GT;
             Order.AmountTotal = st;
             //Taxamount = parseFloat((totalPrice * (settings.TaxPercent / 100)).toFixed(2));
             Order.Tax = taxA;
             Order.DeliveryAmount = settings.DeliveryCharges;
+
             Order.DiscountAmount = dis + disC;
             Order.TotalItems = totalQty;
             Order.StatusID = 1;
@@ -419,7 +508,7 @@
             Order.NearestPlace = $('#NearestPlace').val();
             Order.Country = $('#Country').val();
             Order.ContactNo = $('#ContactNo').val();
-            debugger
+
             //Order.DeliveryTime = $('#DeliveryTime').val();
             Order.DeliveryTime = $('#DeliveryTime').find(":selected").text();
             Order.CustomerID = @Convert.ToInt32(Session["ID"]);
@@ -429,6 +518,8 @@
             Order.PlaceType = $('#PlaceType').val();
             Order.Email = $('#Email').val();
             Order.CardNotes = $('#CardNotes').val();
+            debugger
+
             //Order.PaymentMethodID = $("#COD").val();
             Order.PaymentMethodID = 1;
             Order.OrderDetailString = JSON.stringify(data);
@@ -464,7 +555,7 @@
 
 
     function cartdata(coupon) {
-
+        debugger
         var gifts = getgiftLS();
         var checkLSsetting = localStorage.getItem("_setting");
         var LSsettings = JSON.parse(localStorage.getItem("_setting"));
@@ -476,13 +567,31 @@
         var totalPrice = 0;
         var totalQty = 0;
 
+        if (data[0].NewPrice == null || data[0].NewPrice == 0) {
+            totalPrice += data[0].Qty * data[0].Price;
+        }
+        else {
+            totalPrice += data[0].Qty * data[0].NewPrice;
+        }
+
         for (var i = 0; i < data.length; i++) {
             totalQty += Number(data[i].Qty);
-            totalPrice += data[i].Qty * data[i].Price;
-            html += '<li>'
-            html += '<strong class="product-quantity"> &nbsp;&nbsp;&nbsp;' + data[i].Qty + ' X ' + '</strong>' + data[i].Name
-            html += '<span class="amount">' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
-                + '</li>'
+
+            if (data[i].NewPrice == null || data[i].NewPrice == 0) {
+
+                //totalPrice += data[i].Qty * data[i].Price;
+                html += '<li>'
+                html += '<strong class="product-quantity"> &nbsp;&nbsp;&nbsp;' + data[i].Qty + ' X ' + '</strong>' + data[i].Name
+                html += '<span class="amount">' + ((data[i].Qty * data[i].Price)).toFixed(3) + '</span>'
+                    + '</li>'
+            }
+            else {
+                //totalPrice += data[i].Qty * data[i].NewPrice;
+                html += '<li>'
+                html += '<strong class="product-quantity"> &nbsp;&nbsp;&nbsp;' + data[i].Qty + ' X ' + '</strong>' + data[i].Name
+                html += '<span class="amount">' + ((data[i].Qty * data[i].NewPrice)).toFixed(3) + '</span>'
+                    + '</li>'
+            }
         }
         $(".qty").html(html)
 
@@ -535,8 +644,6 @@
     };
     function setting() {
         //get settings
-        debugger
-
 
         var chkLSsettings = localStorage.getItem("_setting");
 
