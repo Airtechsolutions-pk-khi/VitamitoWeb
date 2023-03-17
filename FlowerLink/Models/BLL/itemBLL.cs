@@ -60,6 +60,8 @@ namespace Vitamito.Models.BLL
 
             public int? ID { get; set; }
         }
+
+        
         public List<itemBLL> GetAll(int LocationID)
         {
             try
@@ -121,6 +123,8 @@ namespace Vitamito.Models.BLL
                 return null;
             }
         }
+
+        
         public List<itemBLL> GetAllFeatured()
         {
             try

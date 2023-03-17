@@ -186,6 +186,7 @@
     <Compile Include="Models\BLL\dealBLL.cs" />
     <Compile Include="Models\BLL\filterBLL.cs" />
     <Compile Include="Models\BLL\giftBLL.cs" />
+    <Compile Include="Models\BLL\webSaleBLL.cs" />
     <Compile Include="Models\BLL\itemBLL.cs" />
     <Compile Include="Models\BLL\loginBLL.cs" />
     <Compile Include="Models\BLL\myorderBLL.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Models\Service\dealService.cs" />
     <Compile Include="Models\Service\filterService.cs" />
     <Compile Include="Models\Service\giftService.cs" />
+    <Compile Include="Models\Service\webSaleService.cs" />
     <Compile Include="Models\Service\itemService.cs" />
     <Compile Include="Models\Service\productService.cs" />
     <Compile Include="Models\Service\shopService.cs" />
@@ -1039,6 +1041,9 @@
     <Content Include="Views\Product\ProductDetails.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\_FlashSale.cshtml" />
+    <Content Include="Views\Home\_Clearance.cshtml" />
+    <Content Include="Views\Home\_NewArrival.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
