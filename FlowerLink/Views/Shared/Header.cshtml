@@ -11,7 +11,7 @@
         <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
 
         <li>
-       
+
         <li class="dropdown">
 
             <a href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Shop</a>
@@ -45,10 +45,53 @@
             <a href="@Url.Action("Contact" , "Home")">Contact</a>
         </li>
 
-
+        <li>
+            @*<i class="fa fa-icon-globe"></i>*@<a onclick="_lang(); return false;" id="_lang" style="cursor:pointer;">عربى</a>
+        </li>
 
     </ul>
 </nav>
 
 
 
+<script>
+    jQuery(document).ready(function () {
+        debugger
+        var currLang = Cookies.get('lang');
+        if (currLang == null || currLang == "" || currLang == undefined) {
+
+            Cookies.set('lang', 'en', { expires: 365 });
+            jQuery('#_lang').html('عربى');
+        }
+        if (currLang == "en") {
+            jQuery('#_lang').html("عربى");
+            jQuery("._arabic").css("direction", "ltr")
+            jQuery("._arabic-text").css("text-align", "left")
+        }
+        else {
+            jQuery('#_lang').html("English");
+            jQuery('._ltrarabic').css("direction", "ltr")
+            jQuery("._arabic").css("direction", "rtl")
+        }
+    });
+
+    function _lang() {
+        debugger
+        var currLang = Cookies.get('lang');
+        //var currLang = localStorage.getItem("_lang");
+        if (currLang == null || currLang == "") {
+            Cookies.set('lang', 'en', { expires: 365 });
+            jQuery('#_lang').html('عربى');
+        }
+        if (currLang == "en") {
+            Cookies.set('lang', 'ar', { expires: 365 });
+            jQuery('#_lang').html('English');
+            location.reload();
+        }
+        if (currLang == "ar") {
+            Cookies.set('lang', 'en', { expires: 365 });
+            jQuery('#_lang').html('عربى');
+            location.reload();
+        }
+    }
+</script>
