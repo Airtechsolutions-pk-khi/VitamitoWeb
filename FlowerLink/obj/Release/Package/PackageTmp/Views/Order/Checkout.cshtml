@@ -11,10 +11,12 @@
         background-position: right !important;
         background-color: #ffe4f1 !important;
     }
+
     .order-box .charges {
         padding-bottom: 15px;
         margin-bottom: 15px;
     }
+
     .mt-3 {
         margin-top: 1rem !important
     }
@@ -227,7 +229,7 @@
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label">Address *</div>
-                                    <input type="text" name="Address" id="Address" value="" placeholder="Street Address" required>
+                                    <input type="text" name="Address" id="Address" value="" placeholder="Area, Block, Road, Building" required>
                                 </div>
                                 <div class="form-group">
                                     <label><span class="">Description</span></label>
@@ -252,7 +254,7 @@
 
                                         <div>Coupon Discount <span id="coupon-text">0%</span> <span class="disAmount" style="float:right">BHD 0</span></div>
                                         <div>Tax Amount  <span class="taxPer">0 %</span> <span class="tax" style="float:right">0</span></div>
-                                        <div>Delivery Charges <span class="dc"  style="float:right">BHD 0</span></div>
+                                        <div>Delivery Charges <span class="dc" style="float:right">BHD 0</span></div>
                                     </div>
                                     <div class="charges">
                                         <div>Grand Total <span class="total" id="totalamount" style="float:right">0</span></div>
@@ -295,7 +297,7 @@
                                             </div>
                                         </div>*@
                                     <a href="javascript:;" id="checkout" class="btn btn-solid"> PLACE ORDER</a>
-                                   
+
                                     <p style="color:red">
                                         <br />
                                         Note: Below 10 BD, 1.5 BD Delivery Charges<br />
@@ -567,12 +569,7 @@
         var totalPrice = 0;
         var totalQty = 0;
 
-        if (data[0].NewPrice == null || data[0].NewPrice == 0) {
-            totalPrice += data[0].Qty * data[0].Price;
-        }
-        else {
-            totalPrice += data[0].Qty * data[0].NewPrice;
-        }
+      
 
         for (var i = 0; i < data.length; i++) {
             totalQty += Number(data[i].Qty);
@@ -591,6 +588,12 @@
                 html += '<strong class="product-quantity"> &nbsp;&nbsp;&nbsp;' + data[i].Qty + ' X ' + '</strong>' + data[i].Name
                 html += '<span class="amount">' + ((data[i].Qty * data[i].NewPrice)).toFixed(3) + '</span>'
                     + '</li>'
+            }
+            if (data[i].NewPrice == null || data[i].NewPrice == 0) {
+                totalPrice += data[i].Qty * data[i].Price;
+            }
+            else {
+                totalPrice += data[i].Qty * data[i].NewPrice;
             }
         }
         $(".qty").html(html)
@@ -623,7 +626,7 @@
             //var GT = (parseFloat(tpdiscounted) + parseFloat(taxA) + parseFloat(settings.DeliveryCharges)).toFixed(3);
 
 
-
+            debugger
             $(".sub-total").html(currency + ' ' + (totalPrice).toFixed(3));
             Taxamount = (parseFloat(totalPrice) * (parseFloat(settings.Tax) / 100)).toFixed(3);
             $('.tax').html(currency + ' ' + taxA);
