@@ -464,17 +464,6 @@
 
                             <input type="range" class="slider" onchange="rangeSlide(this.value)" value="0" min="1" max="100" step="1">
                             <p id="rangeValue" class="value">0</p>
-
-                            @*<div class="collection-collapse-block-content">
-                                    <div class="wrapper mt-3">
-                                        <div class="range-slider">
-                                            <input type="text" class="js-range-slider" id="slider">
-
-                                        </div>
-                                    </div>
-                                    <p>Your slider has a value of <span id="slider-value"></span></p>
-                                    <a href="javascript:;" class="filterOn btn btn-default btn-small" style="background-color:var(--theme-color);color:white;">Search</a>
-                                </div>*@
                         </div>
 
 
@@ -505,10 +494,6 @@
                                             </a>
                                             <h4>BHD @(Math.Round((item.Price),2))</h4>
                                             <br />
-                                            @*@if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                                {
-                                                    <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
-                                                }*@
                                         </div>
                                     </div>
                                 }
@@ -539,9 +524,6 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="product-filter-content">
-                                                    @*<div class="search-count">
-                                                            <h5>Showing Products 1-12 of 10 Result</h5>
-                                                        </div>*@
                                                     <div class="collection-view">
                                                         <ul>
                                                             <li><i class="fa fa-th grid-layout-view"></i></li>
@@ -556,28 +538,12 @@
                                                             <li><img src="../assets/images/icon/6.png" alt="" class="product-6-layout-view"></li>
                                                         </ul>
                                                     </div>
-                                                    @*<div class="product-page-per-view">
-                                                            <select>
-                                                                <option value="High to low">
-                                                                    12 Products Par Page
-                                                                </option>
-                                                                <option value="Low to High">
-                                                                    50 Products Par Page
-                                                                </option>
-                                                                <option value="Low to High">
-                                                                    100 Products Par Page
-                                                                </option>
-                                                            </select>
-                                                        </div>*@
                                                     <div class="product-page-filter">
                                                         <select class="SelectSort" id="Sort" name="sortby">
                                                             <option value="3">Name(A - Z)</option>
                                                             <option value="4">Name(Z - A)</option>
                                                             <option value="1">Price(Low > High)</option>
                                                             <option value="2">Price(High > Low)</option>
-                                                            @*<option value="High to low">Sorting items</option>
-                                                                <option value="Low to High">50 Products</option>
-                                                                <option value="Low to High">100 Products</option>*@
                                                         </select>
                                                     </div>
                                                 </div>
@@ -592,89 +558,6 @@
                                     <div id="divLoader" class="mx-auto w-100 text-center p-5" style="display:none;">
                                         <img class="mr-3" src="~/Content/assets/images/gifloader.gif" style="width: 33px;" /> <span class="text-success">Loading ...</span>
                                     </div>
-
-                                    @*<div class="product-wrapper-grid LoadProduct">
-                                            <div class="row margin-res">
-                                                @foreach (var item in ViewBag.itemList)
-                                                {
-                                                    <div class="col-xl-3 col-6 col-grid-box">
-                                                        <div class="product-box">
-                                                            <div class="img-wrapper">
-                                                                @if (item.Image == null || item.Image == "")
-                                                                {
-                                                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
-                                                                }
-                                                                else
-                                                                {
-                                                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                                                        <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
-                                                                    </a>
-                                                                }
-
-                                                                @if ((Math.Round((item.CurrentStock), 2)) == 0)
-                                                                    {
-                                                                        <div class="cart-info cart-wrap">
-                                                                            <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
-                                                                            <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                <div class="cart-info cart-wrap">
-                                                                    <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
-                                                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                                                                </div>
-                                                                }
-                                                            </div>
-                                                            <div class="product-detail">
-                                                                <div>
-                                                                    <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                                                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                                                        <h6>@item.Name</h6>
-                                                                    </a>
-                                                                    <div class="pro_rating d-flex ">
-                                                                        <ul class="product-rating d-flex">
-                                                                            @{
-                                                                                if (item.Stars != null)
-                                                                                {
-                                                                                    for (int i = 0; i < item.Stars; i++)
-                                                                                    {
-                                                                                        <li><span class="ion-android-star"></span></li>
-                                                                                    }
-                                                                                    for (int i = 0; i < (5 - item.Stars); i++)
-                                                                                    {
-                                                                                        <li><span class="ion-android-star-outline"></span></li>
-                                                                                    }
-                                                                                }
-                                                                                else
-                                                                                {
-                                                                                    <li><span class="ion-android-star-outline"></span></li>
-                                                                                    <li><span class="ion-android-star-outline"></span></li>
-                                                                                    <li><span class="ion-android-star-outline"></span></li>
-                                                                                    <li><span class="ion-android-star-outline"></span></li>
-                                                                                    <li><span class="ion-android-star-outline"></span></li>
-                                                                                }
-                                                                            }
-
-                                                                        </ul>
-
-                                                                    </div>
-                                                                    <p>
-                                                                        @item.Description
-                                                                    </p>
-                                                                    <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
-                                                                    <br />
-                                                                    @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                                                    {
-                                                                        <strong style="font-size:13px;color:red;">Low Stock</strong>
-                                                                    }
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                }
-                                            </div>
-                                        </div>*@
                                 </div>
                             </div>
                         </div>
@@ -770,20 +653,8 @@
  
 
         $("#SrchBtn").click(function () {
-            debugger
             $("#divLoader").show();
             $("#LoadProduct").hide();
-
-            //var Searchtxt = "";
-
-            //if ($("#txt-desktop").val() != null && $("#txt-desktop").val() != '') {
-            //    Searchtxt = $("#txt-desktop").val();
-
-            //}
-            //else {
-            //    Searchtxt = $("#txt-mobile").val();
-
-            //}
 
             var MinPrice = $(".js-input-from").val();
             var MaxPrice = $(".value").val();
@@ -806,7 +677,6 @@
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 success: function (obj) {
-                    debugger
                     $.ajax({
                         type: "POST",
                         url: '../Shop/Products',

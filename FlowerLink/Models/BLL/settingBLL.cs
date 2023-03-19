@@ -45,7 +45,7 @@ namespace Vitamito.Models.BLL
         public double ServiceCharges { get; set; }
         public double MinOrderAmount { get; set; }
         public double OtherCharges { get; set; }
-        public double TaxPercentage { get; set; }
+        public double TaxPercent { get; set; }
         public double MinimumOrderValue { get; set; }
         public double COD { get; set; }
         public double Credimax { get; set; }

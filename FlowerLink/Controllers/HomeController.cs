@@ -19,10 +19,17 @@ namespace Vitamito.Controllers
             ViewBag.BannerHeader = new bannerBLL().GetBannerHeader();
             ViewBag.FeaturedBanner = new bannerBLL().GetFeaturedBanner();
             var itemData = new itemService().GetAll((int)location);
-            ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
+
+            //var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);
+
+            //ViewBag.FlashSale = webSaleData.Where(x => x.Type == "flash").OrderBy(c => Guid.NewGuid()).Take(12).ToList();            
+            //ViewBag.NewArrival = webSaleData.Where(x => x.Type == "newarrival").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+            //ViewBag.Clearance = webSaleData.Where(x => x.Type == "clearance").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+
+            //ViewBag.itemList = itemData.Where(x => x.StatusID > 0).OrderBy(x => x.StatusID).ToList();
             ViewBag.Featureditems = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
-            ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(20).OrderBy(c => Guid.NewGuid()).ToList();
-            ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(7).OrderBy(c => Guid.NewGuid()).ToList();
+            //ViewBag.NewArrivals = itemData.OrderByDescending(c => c.LastUpdatedDate).Take(7).OrderBy(c => Guid.NewGuid()).ToList();
+            ViewBag.LowestPrice = itemData.OrderBy(c => c.Price).Take(20).OrderBy(c => Guid.NewGuid()).ToList();
 
             //ViewBag.TenItems = itemData.Where(x => x.ID > 0).Where(x => x.IsFeatured == true).OrderBy(x => x.Name).Take(8).ToList();
 
@@ -33,6 +40,28 @@ namespace Vitamito.Controllers
             //var popularProduct = new itemService().GetAllPopular();
             //ViewBag.PopularProducts = popularProduct.Take(8).ToList();
             return View();
+        }
+
+        public ActionResult FlashSale()
+        {
+            Locations location = Locations.LocationID;
+            var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);
+            var flashSale = webSaleData.Where(x => x.Type == "flash").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+            return PartialView("_FlashSale", flashSale);
+        }
+        public ActionResult Clearance()
+        {
+            Locations location = Locations.LocationID;
+            var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);            
+            var clearance = webSaleData.Where(x => x.Type == "clearance").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+            return PartialView("_Clearance", clearance);
+        }
+        public ActionResult NewArrival()
+        {
+            Locations location = Locations.LocationID;
+            var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);
+            var newArrival = webSaleData.Where(x => x.Type == "newarrival").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+            return PartialView("_NewArrival", newArrival);
         }
         public ActionResult About()
         {

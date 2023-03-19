@@ -25,6 +25,7 @@ namespace Vitamito.Models.BLL
         public int? DisplayOrder { get; set; }
         public bool? SortByAlpha { get; set; }
         public double? Price { get; set; }
+        public double? NewPrice { get; set; }
         public double? Cost { get; set; }
         public string ItemType { get; set; }
         public string LastUpdatedBy { get; set; }
@@ -35,6 +36,7 @@ namespace Vitamito.Models.BLL
         public bool? HasVariant { get; set; }
         public bool? IsVATApplied { get; set; }
         public bool? IsFeatured { get; set; }
+        public bool? IsStockOut { get; set; }
         public double? CurrentStock { get; set; }
         public int? Stars { get; set; }
         public List<ReviewsBLL> Reviews = new List<ReviewsBLL>();
@@ -58,6 +60,8 @@ namespace Vitamito.Models.BLL
 
             public int? ID { get; set; }
         }
+
+        
         public List<itemBLL> GetAll(int LocationID)
         {
             try
@@ -82,7 +86,7 @@ namespace Vitamito.Models.BLL
                 return null;
             }
         }
-        public itemBLL GetSelecteditems(int ID,int LocationID)
+        public itemBLL GetSelecteditems(int? ID,int LocationID)
         {
             try
             {
@@ -119,6 +123,8 @@ namespace Vitamito.Models.BLL
                 return null;
             }
         }
+
+        
         public List<itemBLL> GetAllFeatured()
         {
             try

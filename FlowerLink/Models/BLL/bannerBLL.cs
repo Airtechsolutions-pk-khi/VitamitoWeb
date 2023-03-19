@@ -29,6 +29,7 @@ namespace Vitamito.Models.BLL
         public string ArabicMainHeading { get; set; }
         public string ArabicDescription { get; set; }
         public string FormName { get; set; }
+        public string ButtonURL { get; set; }
 
         public static DataTable _dt;
         public static DataSet _ds;

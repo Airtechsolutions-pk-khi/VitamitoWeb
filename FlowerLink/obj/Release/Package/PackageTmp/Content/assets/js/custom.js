@@ -27,15 +27,15 @@
 });
 //setting
 function headertext() {
-    
+
     $.ajax({
         type: "GET",
         url: '/Home/GetSetting',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-            
-            
+
+
             if (data.Facebook != 1 || data.Facebook == null) {
                 $('#facebook').addClass('d-none');
             }
@@ -88,16 +88,16 @@ function headertext() {
 
 
 function Topheadertext() {
-    
+
     $.ajax({
         type: "GET",
         url: '/Home/GetSetting',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-           
+
             $('#TopHeadDescription').html(data.TopHeadDescription);
-   
+
         },
         error: function (xhr, textStatus, errorThrown) {
             //alert(xhr, textStatus, errorThrown);
@@ -176,9 +176,32 @@ function toast(res, condition) {
 
 };
 
+function toastOut(res, condition) {
+    if (condition == 1) {
+        $('.toast-body').html(res);
+        $('.toast-head-text').html('Warning');
+        $('.toast-body').html(res);
+        $('.toast').addClass('bg-warning text-dark');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+    else if (condition == 2) {
+        $('.toast-head-text').html('Warning');
+        $('.toast-body').html(res);
+        $('.toast').addClass('bg-warning text-dark');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+    else {
+        $('.toast-body').html(res);
+        $('.toast-head-text').html('Danger');
+        $('.toast').addClass(' bg-danger text-white ');
+        $('.toast').toast({ delay: 3000 }).toast('show');
+    }
+
+};
+
 //header
 function topheadcart() {
-    
+    debugger
     var currency = localStorage.getItem("currency");
     var cart = "[]";
     var chkLScart = localStorage.getItem("_cartitems");
@@ -198,21 +221,27 @@ function topheadcart() {
     if (chkLSgift == null) {
         localStorage.setItem("_giftitems", gift);
     }
-   
+
     var gifts = getgiftLS();
     var data = getCartLS();
-     
+
     var html = '';
     var totalPrice = 0;
+    var newPrice = 0;
     var totalQty = data.length;
-    var totalQtywish= getWishlistLS().length;
-    
+    var totalQtywish = getWishlistLS().length;
+
     html += '<div class="cart-height scrollbar" id="style2" >'
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
-        //totalQty = Number(data[i].Qty);
-
-        totalPrice += data[i].Qty * data[i].Price;
+        
+        if (data[i].NewPrice == null || data[i].NewPrice == 0) {
+            totalPrice += data[i].Qty * data[i].Price;
+        }
+        else {
+            totalPrice += data[i].Qty * data[i].NewPrice;
+        }
+        
         html += '<li>'
             + '<div class="media">'
         if (data[i].Image == "" || data[i].Image == null) {
@@ -231,7 +260,7 @@ function topheadcart() {
             + '</div>'
             + '<div class="close-circle"><a href="#" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="fa fa-times" aria-hidden="true"></i></a></div>'
             + '</li>'
-     
+
     }
 
     html += '</div>'
@@ -262,6 +291,7 @@ function topheadcart() {
 
 //cart
 function cartitem() {
+    debugger
     var currency = localStorage.getItem("currency");
     var total = 0;
     var data = getCartLS();
@@ -273,9 +303,15 @@ function cartitem() {
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
         totalQty += Number(data[i].Qty);
-        totalPrice += data[i].Qty * data[i].Price;
+        //totalPrice += data[i].Qty * data[i].Price;
+        if (data[i].NewPrice == null || data[i].NewPrice == 0) {
+            totalPrice += data[i].Qty * data[i].Price;
+        }
+        else {
+            totalPrice += data[i].Qty * data[i].NewPrice;
+        }
 
-      
+
         html += '<tr>'
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
         if (data[i].Image == "" || data[i].Image == null) {
@@ -288,16 +324,19 @@ function cartitem() {
         html += '<td class="plantmore-product-name">'
             + '<p><a href="/Product/ProductDetails?ID=' + data[i].ID + '">' + data[i].Name + '</a></p>'
         html += '</td>'
-            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span><h2 class="td-color">' + currency + ' ' + data[i].Price.toFixed(2) + '</h2></span></td>'
+            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span><h2 class="td-color">' + currency + ' ' + totalPrice.toFixed(2) + '</h2></span></td>'
+
             + '<td class="plantmore-product-quantity">'
-            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + data[i].Price + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
+            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + totalPrice + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
-            + '<td class="product-subtotal"><h2 class="td-color">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * data[i].Price) + giftPrice).toFixed(2) + '</span></td></h2>'
-            
-                + '</tr>'
+           
+
+            + '<td class="product-subtotal"><h2 class="td-color">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * totalPrice) + giftPrice).toFixed(2) + '</span></td></h2>'
+
+            + '</tr>'
 
 
-       
+
 
     }
 
@@ -306,6 +345,7 @@ function cartitem() {
         $("#check-btn").show();
     }
     else {
+        $(".cart-items").html("No Item added");
         $("#cart-table").html("No Item added");
         $("#check-btn").hide();
     }
@@ -316,15 +356,15 @@ function cartitem() {
 }
 
 function changeQty(key, price) {
-
+    debugger
     if ($('#qty' + key).val() > 0) {
 
         var cartItems = getCartLS();
         for (var i = 0; i < cartItems.length; i++) {
             if (cartItems[i].Key == key) {
                 cartItems[i].Qty = $('#qty' + key).val();
-                cartItems[i].Price = cartItems[i].Qty * price;
-                $('#tprice' + key).html(cartItems[i].Price.toFixed(2));
+                cartItems[i].Price = price;
+                $('#tprice' + key).html((cartItems[i].Qty * cartItems[i].Price).toFixed(2));
             }
         }
 
@@ -338,6 +378,8 @@ function changeQty(key, price) {
 
 
 }
+
+  
 function removeCartItem(ele) {
 
     var chkLScart = getCartLS();
@@ -348,12 +390,12 @@ function removeCartItem(ele) {
         item.Key === ele && chkLScart.splice(index, 1);
     });
 
-    var delRow = chkLSgift.filter(obj => obj.ItemKey === ele);
-    chkLSgift.forEach(function (item, index) {
-        item.ItemKey === ele && chkLSgift.splice(index, delRow.length);
-    });
+    //var delRow = chkLSgift.filter(obj => obj.ItemKey === ele);
+    //chkLSgift.forEach(function (item, index) {
+    //    item.ItemKey === ele && chkLSgift.splice(index, delRow.length);
+    //});
     setCartLS(chkLScart);
-    setgiftLS(chkLSgift);
+    //setgiftLS(chkLSgift);
 
     cartitem();
     topheadcart();
@@ -373,15 +415,15 @@ function removeCartGift(ele) {
     topheadcart();
 
 }
-function addtocart(ID, Name, Image, Price, Qty, CurrentStock) {
-    
+function addtocart(ID, Name, Image,NewPrice, Price, Qty, CurrentStock) {
+    debugger
     //ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
 
     var arrTemp = [];
     arrTemp = getCartLS();
-    arrTemp.push({ ID: ID, Name: Name, Image: Image, Price: Price, Qty: Qty, CurrentStock: CurrentStock, Key: _Key });
+    arrTemp.push({ ID: ID, Name: Name, Image: Image,NewPrice: NewPrice, Price: Price, Qty: Qty, CurrentStock: CurrentStock, Key: _Key });
     setCartLS(arrTemp);
     topheadcart();
     toast('Item Added to Cart', 1)
@@ -400,16 +442,30 @@ function getCartLS() {
     else
         return JSON.parse("[]");
 }
-
-
-
+//Login
+function login() {
+    debugger
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var arrTemp = [];
+    arrTemp.push({ EMAIL: email, PASSWORD: password });
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+}
+function logout() {
+    debugger
+    var email = localStorage.getItem("email", email);
+    var password = localStorage.getItem("password", password)
+    localStorage.setItem("email", "");
+    localStorage.setItem("password", "");
+}
 //Wishlist
 function addtoWishlist(ID, Name, Image, Price, StatusID, Qty) {
-    
+
     var arrTemp = [];
     arrTemp = getWishlistLS();
     arrTemp.push({ ID: ID, Name: Name, Image: Image, Price: Price, StatusID: StatusID, Qty: Qty, Key: Math.floor((Math.random() * 1000) + 1) });
-    setWishlistLS(arrTemp);  
+    setWishlistLS(arrTemp);
     topheadcart();
 }
 function setWishlistLS(arr) {
@@ -441,7 +497,7 @@ function GetWishListItems() {
     var html = '';
     var totalPrice = 0;
     var totalQty = 0;
-   
+
 
     for (var i = 0; i < data.length; i++) {
         totalQty += Number(data[i].Qty);
@@ -469,7 +525,7 @@ function GetWishListItems() {
         $("#ytdTable").html("You donot have any item in favourites ");
     }
 
-    
+
 };
 
 function StockActiveColor() {
@@ -555,4 +611,3 @@ function getmail() {
 
 
 
- 

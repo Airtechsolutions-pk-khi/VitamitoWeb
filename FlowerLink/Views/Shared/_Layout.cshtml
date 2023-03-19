@@ -50,7 +50,58 @@
     <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
     <style>
+        .ribbon-top-right {
+            top: -10px;
+            right: -10px
+        }
 
+            .ribbon-top-right::before,
+            .ribbon-top-right::after {
+                border-top-color: transparent;
+                border-right-color: transparent
+            }
+
+            .ribbon-top-right::before {
+                top: 0;
+                left: 17px
+            }
+
+            .ribbon-top-right::after {
+                bottom: 17px;
+                right: 0
+            }
+
+            .ribbon-top-right span {
+                left: 61px;
+                top: 26px;
+                transform: rotate( 45deg);
+            }
+
+        .ribbon {
+            width: 150px;
+            height: 126px;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+        }
+
+
+
+            .ribbon span {
+                position: absolute;
+                display: block;
+                width: 100%;
+                font-size: 10px;
+                background-color: #FA9900;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                color: #fff;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                text-transform: uppercase;
+                text-align: center;
+                margin-left: 0;
+                left: 32px;
+                top: 37px;
+            }
 
         .login-icon i {
             font-size: 27px;
@@ -152,6 +203,7 @@
             .header-compact .main-nav-center .toggle-nav {
                 top: -78px !important;
             }
+
             .wish_qty_cls {
                 color: #ffffff !important;
                 position: absolute;
@@ -269,6 +321,48 @@
             }
         }
     </style>
+
+    <script>
+        jQuery(document).ready(function () {
+
+            var currLang = Cookies.get('lang');
+            if (currLang == null || currLang == "" || currLang == undefined) {
+
+                Cookies.set('lang', 'en', { expires: 365 });
+                jQuery('#_lang').html('عربى');
+            }
+            if (currLang == "en") {
+                jQuery('#_lang').html("عربى");
+                jQuery("._arabic").css("direction", "ltr")
+                jQuery("._arabic-text").css("text-align", "left")
+            }
+            else {
+                jQuery('#_lang').html("English");
+                jQuery('._ltrarabic').css("direction", "ltr")
+                jQuery("._arabic").css("direction", "rtl")
+            }
+        });
+
+        function _lang() {
+            var currLang = Cookies.get('lang');
+            //var currLang = localStorage.getItem("_lang");
+            if (currLang == null || currLang == "") {
+                Cookies.set('lang', 'en', { expires: 365 });
+                jQuery('#_lang').html('عربى');
+            }
+            if (currLang == "en") {
+                Cookies.set('lang', 'ar', { expires: 365 });
+                jQuery('#_lang').html('English');
+                location.reload();
+            }
+            if (currLang == "ar") {
+                Cookies.set('lang', 'en', { expires: 365 });
+                jQuery('#_lang').html('عربى');
+                location.reload();
+            }
+        }
+    </script>
+
 </head>
 <body class="theme-color-30 mulish-font">
     <!-- header start -->
@@ -318,7 +412,7 @@
                                     <ul class="onhover-show-div">
                                         <li style="color:black;"><strong>Hi!&nbsp;</strong> @Session["CustomerName"]</li>
                                         <li> <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a></li>
-                                        <li><a class="dropdown-item text-center " style="font-size:12px;" href="~/account/logout">Logout</a></li>
+                                        <li><a class="dropdown-item text-center " style="font-size:12px;" href="~/account/logout" onclick="logout();">Logout</a></li>
                                     </ul>
                                 </li>
                             }
@@ -437,7 +531,7 @@
                             <ul class="store-details">
                                 <li><a href="https://play.google.com/store/apps/details?id=com.vitamito" target="_blank"><img src="../Content/assets/images/store/google.png" class="img-fluid" alt=""></a></li>
                                 <li>
-                                    <a href="https://apps.apple.com/us/app/6443720094"><img src="../Content/assets/images/store/app.png" class="img-fluid" alt=""></a>
+                                    <a href="https://apps.apple.com/pk/app/vitamito/id6443720094" target="_blank"><img src="../Content/assets/images/store/app.png" class="img-fluid" alt=""></a>
                                 </li>
                             </ul>
                         </div>
@@ -518,6 +612,7 @@
         .dmopMx {
             display: none
         }
+
         .ejlKYF {
             bottom: 43px !important;
         }
@@ -552,6 +647,10 @@
     <script src="~/Content/assets/js/lazysizes.min.js"></script>
 
     <script src="~/Content/assets/js/price-range.js"></script>
+
+    <script src="~/Content/assets/js/cookie/js.cookie.js"></script>
+    <script src="~/Content/assets/js/cookie/js.cookie.min.js"></script>
+
 
     <!-- slick js-->
     <script src="~/Content/assets/js/slick.js"></script>
@@ -637,6 +736,7 @@
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
         });
     </script>
+    <script src="~/language/translations.js"></script>
 
 </body>
 </html>

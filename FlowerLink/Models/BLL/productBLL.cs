@@ -25,6 +25,7 @@ namespace Vitamito.Models.BLL
         public int? DisplayOrder { get; set; }
         public bool? SortByAlpha { get; set; }
         public double? Price { get; set; }
+        public double? NewPrice { get; set; }
         public double? Cost { get; set; }        
         public string ItemType { get; set; }
         public string LastUpdatedBy { get; set; }
@@ -35,7 +36,9 @@ namespace Vitamito.Models.BLL
         public bool? HasVariant { get; set; }
         public bool? IsVATApplied { get; set; }
         public double? CurrentStock { get; set; }
-        
+
+        public bool? IsStockOut { get; set; }
+
         public List<ItemImages> ImgList = new List<ItemImages>();
 
         public List<ReviewsBLL> Reviews = new List<ReviewsBLL>();
@@ -43,7 +46,7 @@ namespace Vitamito.Models.BLL
         public class ItemImages
         {
             public string Image { get; set; }
-            public int Row_Counter { get; set; }
+            //public int Row_Counter { get; set; }
         }
         public class ReviewsBLL
         {
@@ -76,7 +79,7 @@ namespace Vitamito.Models.BLL
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@ID", ID);
                 p[1] = new SqlParameter("@LocationID", LocationID);
-                _ds = (new DBHelper().GetDatasetFromSP)("sp_ProductVitamito", p);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_ProductVitamito_V2", p);
                 if (_ds != null)
                 {
                     if (_ds.Tables.Count > 0)
@@ -85,12 +88,17 @@ namespace Vitamito.Models.BLL
                         {
                             obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<productBLL>>().FirstOrDefault();
                         }
-                      
+
                         if (_ds.Tables[1] != null)
                         {
-                            lstR = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<ReviewsBLL>>();
+                            lstIM = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<ItemImages>>().ToList();
                         }
-                        //obj.ImgList = lstIM;
+
+                        if (_ds.Tables[2] != null)
+                        {
+                            lstR = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[2])).ToObject<List<ReviewsBLL>>();
+                        }
+                        obj.ImgList = lstIM;
                         obj.Reviews = lstR;
                     }
                 }

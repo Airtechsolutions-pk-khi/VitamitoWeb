@@ -35,7 +35,7 @@ namespace Vitamito.Models.BLL
         public string NearestPlace { get; set; }
         public string Country { get; set; }
         public string ContactNo { get; set; }
-        public Nullable<System.DateTime> DeliveryTime { get; set; }
+        public string DeliveryTime { get; set; }
         public string CustomerName { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
@@ -56,9 +56,10 @@ namespace Vitamito.Models.BLL
             public string Image { get; set; }
             public int GiftID { get; set; }
             public int Qty { get; set; }
-            public double Price { get; set; }
+            public double? Price { get; set; }
+            public double? NewPrice { get; set; }           
             public double Cost { get; set; }
-            public double DiscountAmount { get; set; }
+             
             public Nullable<System.DateTime> LastUpdatedDate { get; set; }
             public int LastUpdatedBy { get; set; }
             public int DealID { get; set; }
@@ -169,17 +170,29 @@ namespace Vitamito.Models.BLL
                 }
                 try
                 {
+                    
                     int OrderDetailID = 0;
                     foreach (var item in data.OrderDetail)
                     {
-                        SqlParameter[] para = new SqlParameter[6];
+                        double? discounted = 0;
+                        if (item.NewPrice == null || item.NewPrice == 0 )
+                        {
+                             discounted = 0;
+                        }
+                        else
+                        {
+                             discounted = item.Price - item.NewPrice;
+                        }
+                        
+                        SqlParameter[] para = new SqlParameter[7];
                         para[0] = new SqlParameter("@OrderID", OrderID);//Hard Coded Value Pass
                         para[1] = new SqlParameter("@ItemID", item.ID);                        
                         para[2] = new SqlParameter("@Quantity", item.Qty);
                         para[3] = new SqlParameter("@Price", item.Price);
-                        para[4] = new SqlParameter("@LastUpdateDT", item.LastUpdatedDate);
-                        para[5] = new SqlParameter("@LastUpdateBy", item.LastUpdatedBy);
-                        OrderDetailID = int.Parse(new DBHelper().GetTableFromSP("sp_OrderDetails_Vitamito", para).Rows[0]["ID"].ToString());
+                        para[4] = new SqlParameter("@DiscountPrice", discounted);
+                        para[5] = new SqlParameter("@LastUpdateDT", item.LastUpdatedDate);
+                        para[6] = new SqlParameter("@LastUpdateBy", item.LastUpdatedBy);
+                        OrderDetailID = int.Parse(new DBHelper().GetTableFromSP("sp_OrderDetails_Vitamito_V2", para).Rows[0]["ID"].ToString());
                     }
                 }
                 

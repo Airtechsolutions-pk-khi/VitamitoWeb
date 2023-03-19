@@ -26,6 +26,7 @@ namespace Vitamito.Models.BLL
         public string Description { get; set; }
         public double Cost { get; set; }
         public double Price { get; set; }
+        public double? NewPrice { get; set; }
         public double DiscountedPrice { get; set; }
         public string Barcode { get; set; }
         public bool InStock { get; set; }
@@ -34,6 +35,7 @@ namespace Vitamito.Models.BLL
         public int StatusID { get; set; }
         public int? DisplayOrder { get; set; }
         public bool? IsFeatured { get; set; }
+        public bool? IsStockOut { get; set; }
         public int StockQty { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public string LastUpdatedBy { get; set; }
@@ -127,9 +129,7 @@ namespace Vitamito.Models.BLL
                         {
                             lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<filterBLL>>();
                         }
-                    }
-
-                    
+                    }                  
                 }
                 return lst;
 

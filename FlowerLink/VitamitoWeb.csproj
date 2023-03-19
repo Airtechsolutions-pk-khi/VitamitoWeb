@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VitamitoWeb</RootNamespace>
     <AssemblyName>VitamitoWeb</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -186,6 +186,7 @@
     <Compile Include="Models\BLL\dealBLL.cs" />
     <Compile Include="Models\BLL\filterBLL.cs" />
     <Compile Include="Models\BLL\giftBLL.cs" />
+    <Compile Include="Models\BLL\webSaleBLL.cs" />
     <Compile Include="Models\BLL\itemBLL.cs" />
     <Compile Include="Models\BLL\loginBLL.cs" />
     <Compile Include="Models\BLL\myorderBLL.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Models\Service\dealService.cs" />
     <Compile Include="Models\Service\filterService.cs" />
     <Compile Include="Models\Service\giftService.cs" />
+    <Compile Include="Models\Service\webSaleService.cs" />
     <Compile Include="Models\Service\itemService.cs" />
     <Compile Include="Models\Service\productService.cs" />
     <Compile Include="Models\Service\shopService.cs" />
@@ -766,6 +768,7 @@
     <Content Include="Content\assets\images\Logov.jpg" />
     <Content Include="Content\assets\images\main-banner-bg.jpg" />
     <Content Include="Content\assets\images\NA.png" />
+    <Content Include="Content\assets\images\Offers.png" />
     <Content Include="Content\assets\images\person.gif" />
     <Content Include="Content\assets\images\pro3\1.jpg" />
     <Content Include="Content\assets\images\pro3\2.jpg" />
@@ -895,6 +898,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="language\translations.js" />
+    <Content Include="product-page.html" />
     <Content Include="Scripts\js-cookie\js.cookie-2.2.1.min.js" />
     <Content Include="Scripts\js-cookie\js.cookie.js" />
     <Content Include="Template\error.txt" />
@@ -1037,6 +1041,9 @@
     <Content Include="Views\Product\ProductDetails.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\_FlashSale.cshtml" />
+    <Content Include="Views\Home\_Clearance.cshtml" />
+    <Content Include="Views\Home\_NewArrival.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
