@@ -201,7 +201,7 @@ function toastOut(res, condition) {
 
 //header
 function topheadcart() {
-    debugger
+     
     var currency = localStorage.getItem("currency");
     var cart = "[]";
     var chkLScart = localStorage.getItem("_cartitems");
@@ -291,7 +291,7 @@ function topheadcart() {
 
 //cart
 function cartitem() {
-    debugger
+     
     var currency = localStorage.getItem("currency");
     var total = 0;
     var data = getCartLS();
@@ -302,15 +302,19 @@ function cartitem() {
 
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
+
+        var itemprice = 0;
         totalQty += Number(data[i].Qty);
         //totalPrice += data[i].Qty * data[i].Price;
         if (data[i].NewPrice == null || data[i].NewPrice == 0) {
             totalPrice += data[i].Qty * data[i].Price;
+
+            itemprice = data[i].Price;
         }
         else {
+            itemprice = data[i].NewPrice;
             totalPrice += data[i].Qty * data[i].NewPrice;
         }
-
 
         html += '<tr>'
             + '<td class="plantmore-product-remove"><button class="bg-transparent border-0 text-danger" onclick="removeCartItem(' + data[i].Key + '); return false;"><i class="h3 ion-trash-a mb-0"></i></button></td>'
@@ -324,14 +328,14 @@ function cartitem() {
         html += '<td class="plantmore-product-name">'
             + '<p><a href="/Product/ProductDetails?ID=' + data[i].ID + '">' + data[i].Name + '</a></p>'
         html += '</td>'
-            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span><h2 class="td-color">' + currency + ' ' + totalPrice.toFixed(2) + '</h2></span></td>'
+            + '<td class="plantmore-product-price"><span class=""><span class="currency-text mx-0"></span><h2 class="td-color">' + currency + ' ' + itemprice.toFixed(2) + '</h2></span></td>'
 
             + '<td class="plantmore-product-quantity">'
-            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + totalPrice + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
+            + '<input id="qty' + data[i].Key + '"  name="qty' + data[i].Key + '" onchange="changeQty(' + data[i].Key + ',' + itemprice + '); return false;" class="Quantity" value="' + data[i].Qty + '" type="number">'
             + '</td>'
            
 
-            + '<td class="product-subtotal"><h2 class="td-color">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * totalPrice) + giftPrice).toFixed(2) + '</span></td></h2>'
+            + '<td class="product-subtotal"><h2 class="td-color">' + currency + ' ' + '<span class="amount totalprice"  id="tprice' + data[i].Key + '">' + ((data[i].Qty * itemprice) + giftPrice).toFixed(2) + '</span></td></h2>'
 
             + '</tr>'
 
@@ -416,7 +420,7 @@ function removeCartGift(ele) {
 
 }
 function addtocart(ID, Name, Image,NewPrice, Price, Qty, CurrentStock) {
-    debugger
+     
     //ProNote = ProNote == undefined ? "" : ProNote;
     var _Key = Math.floor((Math.random() * 1000) + 1);
     $('#hdnItemKey').val(_Key);
@@ -444,7 +448,7 @@ function getCartLS() {
 }
 //Login
 function login() {
-    debugger
+     
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var arrTemp = [];
