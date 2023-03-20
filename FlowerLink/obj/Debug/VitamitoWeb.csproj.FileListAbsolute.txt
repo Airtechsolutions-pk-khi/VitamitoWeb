@@ -358,6 +358,7 @@ D:\Projects\Vitamito_Web\FlowerLink\obj\Debug\VitamitoWeb.csproj.CoreCompileInpu
 D:\Projects\Vitamito_Web\FlowerLink\obj\Debug\VitamitoWeb.csproj.CopyComplete
 D:\Projects\Vitamito_Web\FlowerLink\obj\Debug\VitamitoWeb.dll
 D:\Projects\Vitamito_Web\FlowerLink\obj\Debug\VitamitoWeb.pdb
+D:\Project\VitamitoWeb_GIT\FlowerLink\bin\PagedList.Mvc.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\VitamitoWeb.dll.config
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\VitamitoWeb.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\VitamitoWeb.pdb
@@ -396,7 +397,6 @@ D:\Project\VitamitoWeb_GIT\FlowerLink\bin\Microsoft.CodeDom.Providers.DotNetComp
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\Microsoft.Web.Infrastructure.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\Newtonsoft.Json.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\PagedList.dll
-D:\Project\VitamitoWeb_GIT\FlowerLink\bin\PagedList.Mvc.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\RestSharp.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\System.Net.Http.Formatting.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\bin\System.Web.Helpers.dll
@@ -429,4 +429,3 @@ D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csproj.CoreCompileIn
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csproj.CopyComplete
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.dll
 D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.pdb
-D:\Project\VitamitoWeb_GIT\FlowerLink\obj\Debug\VitamitoWeb.csprojAssemblyReference.cache
