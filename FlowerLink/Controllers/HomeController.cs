@@ -47,6 +47,9 @@ namespace Vitamito.Controllers
             Locations location = Locations.LocationID;
             var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);
             var flashSale = webSaleData.Where(x => x.Type == "flash").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+            ViewBag.FlashStatus = flashSale[0].StatusID;
+
+
             return PartialView("_FlashSale", flashSale);
         }
         public ActionResult Clearance()
@@ -54,6 +57,8 @@ namespace Vitamito.Controllers
             Locations location = Locations.LocationID;
             var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);            
             var clearance = webSaleData.Where(x => x.Type == "clearance").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+
+            ViewBag.ClearanceSale = clearance[0].StatusID;
             return PartialView("_Clearance", clearance);
         }
         public ActionResult NewArrival()
@@ -61,6 +66,8 @@ namespace Vitamito.Controllers
             Locations location = Locations.LocationID;
             var webSaleData = new webSaleService().GetSelectedSaleitems((int)location);
             var newArrival = webSaleData.Where(x => x.Type == "newarrival").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
+
+            ViewBag.NewArrival = newArrival[0].StatusID;
             return PartialView("_NewArrival", newArrival);
         }
         public ActionResult About()
