@@ -1,6 +1,11 @@
 ﻿@model IEnumerable<Vitamito.Models.BLL.webSaleBLL>
 
-<section class="bag-product ratio_square deal-product-space section-b-space">
+@if (ViewBag.ClearanceSale == 2)
+{
+
+}
+else { 
+<section class="bag-product ratio_square deal-product-space-Clearance section-b-space">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -41,7 +46,7 @@
                                         {
                                             <div class="ribbonStock ribbonStock-top-right">
                                                 <span>
-                                                    @*@DiscountPrice.ToString("0.0") % off*@
+                                                    @DiscountPrice.ToString("0.000") % off
                                                 </span>
                                             </div>
                                         }
@@ -76,7 +81,7 @@
                                         </div>
                                     }
                                 </div>
-                                <div class="product-detail">
+                                <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
 
                                     <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                         <h6> @item.Name</h6>
@@ -162,3 +167,4 @@
         </div>
     </div>
 </section>
+                                                    }
