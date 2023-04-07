@@ -49,6 +49,20 @@ namespace Vitamito.Controllers
             var flashSale = webSaleData.Where(x => x.Type == "flash").OrderBy(c => Guid.NewGuid()).Take(12).ToList();
             ViewBag.FlashStatus = flashSale[0].StatusID;
 
+            foreach (var item in flashSale)
+            {
+                ViewBag.FlashSaleStatus = item.StatusID;
+                ViewBag.FlashSaleStart = item.StartDate.HasValue
+                ? item.StartDate.Value.ToString("yyyy/MM/dd")
+                : "<not available>";
+
+                ViewBag.FlashSaleEnd = item.EndDate.HasValue
+               ? item.EndDate.Value.ToString("yyyy/MM/dd")
+                 : "<not available>";
+            }
+            
+            
+
 
             return PartialView("_FlashSale", flashSale);
         }
