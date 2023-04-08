@@ -41,7 +41,7 @@
                                         {
                                             <div class="ribbonStock ribbonStock-top-right">
                                                 <span>
-                                                    @*@DiscountPrice.ToString("0.0") % off*@
+                                                    @DiscountPrice.ToString("0.000") % off
                                                 </span>
                                             </div>
                                         }
@@ -81,8 +81,8 @@
                                     <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                         <h6> @item.Name</h6>
                                     </a>
-                                    <div class="pro_rating d-flex ">
-                                        @*<ul class="product-rating d-flex">
+                                    @*<div class="pro_rating d-flex ">
+                                        <ul class="product-rating d-flex">
                                                 @{
                                                     if (item.Stars != null)
                                                     {
@@ -105,9 +105,9 @@
                                                     }
                                                 }
 
-                                            </ul>*@
+                                            </ul>
 
-                                    </div>
+                                    </div>*@
 
                                     @if (item.NewPrice == null || item.NewPrice == 0)
                                     {
@@ -134,10 +134,10 @@
                                     }
                                     else
                                     {
-                                        @*if (item.NewPrice == null || item.NewPrice == 0)
+                                        if (item.NewPrice == null || item.NewPrice == 0)
                                             {
                                                 <div class="addtocart_btn">
-                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,0);toast('Item Added to Cart', 1); return false;">
                                                         <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
@@ -146,11 +146,11 @@
                                             else
                                             {
                                                 <div class="addtocart_btn">
-                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,0);toast('Item Added to Cart', 1); return false;">
                                                         <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
-                                            }*@
+                                            }
                                     }
                                 </div>
 

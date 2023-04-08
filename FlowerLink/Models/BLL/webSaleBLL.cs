@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
-
+using Newtonsoft.Json;
 
 namespace Vitamito.Models.BLL
 {
@@ -48,8 +48,8 @@ namespace Vitamito.Models.BLL
             public string SKU { get; set; }
             public int? DisplayOrder { get; set; }
             public bool? SortByAlpha { get; set; }
-            public double? Price { get; set; }
-            public double? NewPrice { get; set; }
+            public double Price { get; set; }
+            public double NewPrice { get; set; }
             public double? Cost { get; set; }
             public string ItemType { get; set; }
             public string LastUpdatedBy { get; set; }
@@ -66,8 +66,8 @@ namespace Vitamito.Models.BLL
         {
             try
             {                 
-                List<webSaleBLL> lst = new List<webSaleBLL>(); //navigationBLL
-                List<WebSalesDetailBLL> lstW = new List<WebSalesDetailBLL>(); //SubCategory
+                List<webSaleBLL> lst = new List<webSaleBLL>(); 
+                List<WebSalesDetailBLL> lstW = new List<WebSalesDetailBLL>(); 
 
                 SqlParameter[] p = new SqlParameter[1];
                 
@@ -100,7 +100,8 @@ namespace Vitamito.Models.BLL
                                         NewPrice = _j.NewPrice,
                                         DisplayOrder = _j.DisplayOrder,
                                         Type = _j.Type,
-                                        Image = _j.Image
+                                        Image = _j.Image,
+                                        
                                     });
                                 }
 
