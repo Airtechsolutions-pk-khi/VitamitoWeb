@@ -8,7 +8,8 @@ $.getJSON("https://localhost:44326/language/translations.json", function(texts) 
     translate=texts;
 
     // Translations Function: Get all the element with data-text
-    $("[data-translate]").each(function() {
+    $("[data-translate]").each(function () {
+        debugger
         let text= $(this).attr('data-translate'), // Save the Text into the variable
             numbers= text.match(/\d+/g),
             element=  $('[data-translate="'+text+'"]'),

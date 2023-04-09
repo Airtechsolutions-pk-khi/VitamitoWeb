@@ -49,6 +49,48 @@
     <link href="~/Content/assets/css/plugins/flag-icon.min.css" rel="stylesheet" />
     <script src="~/Content/assets/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+
+            var currLang = Cookies.get('lang');
+            if (currLang == null || currLang == "" || currLang == undefined) {
+
+                Cookies.set('lang', 'en', { expires: 365 });
+                jQuery('#_lang').html('عربى');
+            }
+            if (currLang == "en") {
+                jQuery('#_lang').html("عربى");
+                jQuery("._arabic").css("direction", "ltr")
+                jQuery("._arabic-text").css("text-align", "left")
+            }
+            else {
+                jQuery('#_lang').html("English");
+                jQuery('._ltrarabic').css("direction", "ltr")
+                jQuery("._arabic").css("direction", "rtl")
+            }
+        });
+
+        function _lang() {
+            var currLang = Cookies.get('lang');
+            //var currLang = localStorage.getItem("_lang");
+            if (currLang == null || currLang == "") {
+                Cookies.set('lang', 'en', { expires: 365 });
+                jQuery('#_lang').html('عربى');
+            }
+            if (currLang == "en") {
+                Cookies.set('lang', 'ar', { expires: 365 });
+                jQuery('#_lang').html('English');
+                location.reload();
+            }
+            if (currLang == "ar") {
+                Cookies.set('lang', 'en', { expires: 365 });
+                jQuery('#_lang').html('عربى');
+                location.reload();
+            }
+        }
+    </script>
+
     <style>
         .ribbon-top-right {
             top: -10px;
@@ -322,46 +364,7 @@
         }
     </style>
 
-    <script>
-        jQuery(document).ready(function () {
-
-            var currLang = Cookies.get('lang');
-            if (currLang == null || currLang == "" || currLang == undefined) {
-
-                Cookies.set('lang', 'en', { expires: 365 });
-                jQuery('#_lang').html('عربى');
-            }
-            if (currLang == "en") {
-                jQuery('#_lang').html("عربى");
-                jQuery("._arabic").css("direction", "ltr")
-                jQuery("._arabic-text").css("text-align", "left")
-            }
-            else {
-                jQuery('#_lang').html("English");
-                jQuery('._ltrarabic').css("direction", "ltr")
-                jQuery("._arabic").css("direction", "rtl")
-            }
-        });
-
-        function _lang() {
-            var currLang = Cookies.get('lang');
-            //var currLang = localStorage.getItem("_lang");
-            if (currLang == null || currLang == "") {
-                Cookies.set('lang', 'en', { expires: 365 });
-                jQuery('#_lang').html('عربى');
-            }
-            if (currLang == "en") {
-                Cookies.set('lang', 'ar', { expires: 365 });
-                jQuery('#_lang').html('English');
-                location.reload();
-            }
-            if (currLang == "ar") {
-                Cookies.set('lang', 'en', { expires: 365 });
-                jQuery('#_lang').html('عربى');
-                location.reload();
-            }
-        }
-    </script>
+    
 
 </head>
 <body class="theme-color-30 mulish-font">
@@ -388,7 +391,7 @@
                                 <li><a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snap-active.png" alt="Tiktok" /></a></li>
                                 <li><a onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok-active.png" alt="Tiktok" /></a></li>
                                 <li><a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp-active.png" alt="Tiktok" /></a></li>
-
+                                <li><i class="fa fa-icon-globe"></i><a onclick="_lang(); return false;" id="_lang" data-translate="0002">عربى</a></li>
                             </ul>
                         </div>
                     </div>
@@ -408,7 +411,7 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    My Account
+                                    <span data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
                                         <li style="color:black;"><strong>Hi!&nbsp;</strong> @Session["CustomerName"]</li>
                                         <li> <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a></li>
@@ -420,10 +423,10 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    My Account
+                                    <span data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
-                                        <li><a href="@Url.Action("Login_Register" , "Account")">Login</a></li>
-                                        <li><a href="@Url.Action("Login_Register" , "Account")">Register</a></li>
+                                        <li><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
+                                        <li><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
                                     </ul>
                                 </li>
                             }
@@ -442,12 +445,24 @@
                                 <a href="@Url.Action("Index" , "Home")"><img src="../../Content/assets/images/Logov.jpg" class="img-fluid blur-up lazyload" alt=""></a>
                             </div>
                         </div>
-                        <div class="form_search">
-                            <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
-                            <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
-                                <i class="ti-search"></i>
-                            </button>
-                        </div>
+                        @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                        {
+                            <div class="form_search">
+                                <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
+                                    <i class="ti-search"></i>
+                                </button>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="form_search">
+                                <input type="text" id="query search-autocomplete" placeholder="ابحث عن المنتجات الصحية والتجميلية ...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
+                                    <i class="ti-search"></i>
+                                </button>
+                            </div>
+                        }
                         <div class="menu-right pull-right">
                             <div>
                                 <div class="icon-nav">
@@ -520,11 +535,11 @@
                 <div class="row footer-theme partition-f">
                     <div class="col-lg-5 col-md-4">
                         <div class="footer-title footer-mobile-title">
-                            <h4>about</h4>
+                            <h4 data-translate="aa1">about</h4>
                         </div>
                         <div class="footer-contant">
                             <div class="footer-logo"> <img src="~/Content/assets/images/footerlogo.png" /></div>
-                            <p>
+                            <p data-translate="000co46">
                                 A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids.
                                 Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics.
                             </p>
@@ -539,14 +554,14 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4>Pages</h4>
+                                <h4 data-translate="000co39">Pages</h4>
                             </div>
                             <div class="footer-contant">
                                 <ul>
-                                    <li><a href="@Url.Action("Index" , "Home")">Home</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")">Shop</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")">About Us</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")">Contact Us</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="a0x">Home</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="00s1">Shop</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="aa0">About Us</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="00aa4">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -554,16 +569,16 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4>store information</h4>
+                                <h4 data-translate="000co40">store information</h4>
                             </div>
                             <div class="footer-contant">
                                 <ul class="contact-list">
 
-                                    <li><i class="fa fa-phone"></i>Call Us: +973 373 773 53</li>
+                                    <li><i class="fa fa-phone"></i><span data-translate="000co41">Call us:</span> +973 373 773 53</li>
 
-                                    <li><i class="fa fa-whatsapp"></i>Whatsapp: +973 3737553</li>
-                                    <li><i class="fa fa-envelope"></i>Email Us: <a href="#">vitamitobh@gmail.com</a></li>
-                                    <li><i class="fa fa-address-book"></i>Address: <a href="#">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
+                                    <li><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp:</span> +973 3737553</li>
+                                    <li><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us:</span> <a href="#">vitamitobh@gmail.com</a></li>
+                                    <li><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
                                 </ul>
                                 <br />
 
@@ -647,7 +662,7 @@
     <script src="~/Content/assets/js/lazysizes.min.js"></script>
 
     <script src="~/Content/assets/js/price-range.js"></script>
-
+    
     <script src="~/Content/assets/js/cookie/js.cookie.js"></script>
     <script src="~/Content/assets/js/cookie/js.cookie.min.js"></script>
 

@@ -1,5 +1,5 @@
 ﻿{
-  "a0": {
+  "a0x": {
     "ar": "الصفحة الرئيسية",
     "en": "Home"
   },
@@ -582,6 +582,74 @@
   "000co33": {
     "ar": "سياسات",
     "en": "Policy"
+  },
+  "000co34": {
+    "ar": "تسوق حسب الاقسام",
+    "en": "Shop By Category"
+  },
+  "000co35": {
+    "ar": "قادم جديد",
+    "en": "New Arrival"
+  },
+  "000co36": {
+    "ar": "المنتجات الشعبية",
+    "en": "Popular Products"
+  },
+  "000co37": {
+    "ar": "المبيعات تنتهي في",
+    "en": "SALES ENDS IN"
+  },
+  "000co38": {
+    "ar": "تخفيضات التصفية",
+    "en": "Clearance Sale"
+  },
+  "000co39": {
+    "ar": "الصفحات",
+    "en": "PAGES"
+  },
+  "000co40": {
+    "ar": "معلومات المتجر",
+    "en": "Store information"
+  },
+  "000co41": {
+    "ar": "اتصل بنا",
+    "en": "Call Us"
+  },
+  "000co42": {
+    "ar": "واتس اب",
+    "en": "Whatsapp"
+  },
+  "000co43": {
+    "ar": "ارسل لنا عبر البريد الإلكتروني",
+    "en": "Email Us"
+  },
+  "000co44": {
+    "ar": "عنوان",
+    "en": "Address"
+  },
+  "000co45": {
+    "ar": "قلالي - اسفل جيم فيتنس تراك - بجانب بنك الاثمار",
+    "en": "Galali - Below Gym Fitness Track - Next to Ithmaar Bank"
+  },
+  "000co46": {
+    "ar": "متجر للمكملات والمكملات الرياضية ومستحضرات التجميل واختبار مجاني لمعرفة نسبة الدهون والعضلات وسوائل الجسم استمتع بأفضل العروض على آلاف المنتجات من البروتينات والمكملات الغذائية ومستحضرات التجم",
+    "en": "A store for supplements, sports supplements, cosmetics and a free test to know the percentage of fat, muscle and body fluids.Enjoy the best offers on thousands of  products from protein, nutritional supplements and cosmetics."
+  },
+  "000co47": {
+    "ar": "حسابي",
+    "en": "My Account"
+  },
+  "000co48": {
+    "ar": "فيتاميتو | متجر للمكملات والمكملات الرياضية ومستحضرات التجميل واختبار مجاني لمعرفة نسبة الدهون والعضلات وسوائل الجسم تمتع بأفضل العروض على آلاف المنتجات من البروتينات والمكملات الغذائية ومستحضرات التجميل.",
+    "en": "Vitamito | A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics."
+  },
+  "000co49": {
+    "ar": "وجهتك للحصول على أفضل المكملات الغذائية والبروتينات وأفضل الخصومات على الإطلاق. التوصيل في نفس اليوم .. سجل معنا الآن في برنامجنا مجانا واحصل على خصومات فورية عند شرائك 25 دينار من قيمة مشترياتك.",
+    "en": "Your destination to get the best nutritional supplements and proteins and the best discounts ever. Same day delivery .. Register now with us in OUR program for free and get instant discounts when buying 25 dinars from the value of your purchases."
+  },
+  "000co50": {
+    "ar": "",
+    "en": ""
   }
 }
 

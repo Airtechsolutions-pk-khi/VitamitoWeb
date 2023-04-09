@@ -15,7 +15,7 @@ namespace Vitamito.Models.BLL
     {
         public int  ID { get; set; }
         public string Name { get; set; }
-        public string ArabicTitle { get; set; }
+        public string ArabicName { get; set; }
         public int StatusID { get; set; }
 
         public static DataTable _dt;
@@ -26,7 +26,7 @@ namespace Vitamito.Models.BLL
             public int ID { get; set; }
             public int CategoryID { get; set; }
             public string Name { get; set; }
-            public string ArabicTitle { get; set; }
+            public string ArabicName { get; set; }
             public int StatusID { get; set; }
         }
 
@@ -56,7 +56,7 @@ namespace Vitamito.Models.BLL
                                     {
                                         CategoryID = _j.CategoryID,
                                         Name = _j.Name,
-                                        ArabicTitle = _j.ArabicTitle,
+                                        ArabicName = _j.ArabicName,
                                         ID = _j.ID,
                                         StatusID = _j.StatusID
                                     });
@@ -66,7 +66,7 @@ namespace Vitamito.Models.BLL
                                 {
                                     ID = _i.ID,
                                     Name = _i.Name,
-                                    ArabicTitle = _i.ArabicTitle,
+                                    ArabicName = _i.ArabicName,
                                     SubCategories = SubCategories
                                 });
                             }
