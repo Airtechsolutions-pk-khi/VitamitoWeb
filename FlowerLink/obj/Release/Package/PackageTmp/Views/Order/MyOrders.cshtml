@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Vitamito.Models.BLL.myorderBLL>
+@{
+    ViewBag.Title = "MyOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-area section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="breadcrumb-title _arabic" data-translate="00mo0">My Orders</h2>
+                <!-- breadcrumb-list start -->
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="~/home/index" data-translate="a0" class="_arabic">Home</a></li>
+                    <li class="breadcrumb-item active _arabic" data-translate="00mo1">Orders</li>
+                </ul>
+                <!-- breadcrumb-list end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb-area end -->
+<!-- main-content-wrap start -->
+<div class="main-content-wrap section-ptb compaer-page contact-bg">
+    <div class="container w-100">
+        <h4 class="text-deal3 pt-0 text-sm-left text-center mb-30 _arabic" data-translate="00mo2">-- All Orders --</h4>
+        <div class="row">
+            <div class="col-12">
+                <!-- Compare Table -->
+                <div class="table-responsive">
+                    <table id="example" class="order-table table mb-0 table-bordered dt-responsive">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th class="_arabic" data-translate="00mo3">Order#</th>
+                                <th class="_arabic" data-translate="000co4">Recipient Name</th>
+                                <th class="_arabic" data-translate="00mo5">Total</th>
+                                <th class="_arabic" data-translate="000cb83">Order Date</th>
+                                <th class="_arabic" data-translate="00mo7">Status</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders">
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.Row_Counter)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.OrderNo)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.CustomerName)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.GrandTotal)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.CheckoutDate)</td>
+                                    <td>
+                                        @if (item.OrderStatus == 203)
+                                        {
+                                            <span class="badge badge-primary py-2 px-2 _arabic" style=" font-size: 12px; color:black;" data-translate="00ch0">Checkout</span>
+                                        }
+                                        else if (item.OrderStatus == 101)
+                                        {
+                                            <span class="badge badge-info py-2 px-2 _arabic" style=" font-size: 12px;color:black;" data-translate="000cb84">Order Accepted</span>
+                                        }
+                                        else if (item.OrderStatus == 102)
+                                        {
+                                            <span class="badge badge-danger py-2 px-2 _arabic" style=" font-size: 12px; color:black;" data-translate="000cb85">On Shipping</span>
+                                        }
+                                        else if (item.OrderStatus == 104)
+                                        {
+                                            <span class="badge badge-success py-2 px-2 _arabic" style=" font-size: 12px; color:black;" data-translate="000cb86">Cancelled</span>
+                                        }
+                                        else if (item.OrderStatus == 105)
+                                        {
+                                            <span class="badge badge-danger py-2 px-2 _arabic" style=" font-size: 12px; color:black;" data-translate="000cb87">Refunded</span>
+                                        }
+                                        else if (item.OrderStatus == 106)
+                                        {
+                                            <span class="badge badge-danger py-2 px-2 _arabic" style=" font-size: 12px; color:black;" data-translate="000cb88">Hold</span>
+                                        }
+                                        else if (item.OrderStatus == 107)
+                                        {
+                                            <span class="badge badge-danger py-2 px-2 _arabic" style=" font-size: 12px; color:black;" data-translate="000cb89">Delivered</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-success py-2 px-2 _arabic" style=" font-size: 12px; color:black;">N/A</span>
+                                        }
+
+                                    </td>
+                                    <td><a href="@Url.Action("OrderDetails", "Order", new { OrderID = item.OrderID })" class="btn btn-small btn-default-opposite" data-translate="000co91">View</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-content-wrap end -->
+
+@section Scripts {
+    <script src="~/Content/assets/js/paginathing.js"></script>
+
+}
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        $('table tbody').paginathing({
+            perPage: 12,
+            firstLast: true,
+            limitPagination: false,
+            prevNext: true,
+            containerClass: 'pagination-container',
+            insertAfter: 'table'
+
+        });
+    });
+
+
+</script>

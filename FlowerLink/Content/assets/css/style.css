@@ -378,7 +378,7 @@ body {
         }
 
     body.mulish-font {
-        font-family: 'Mulish', sans-serif
+        font-family: 'Mulish', 'sans-serif', 'sst_arabic_roman'
     }
 
 h1 {

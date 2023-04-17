@@ -1023,6 +1023,11 @@
     <Content Include="Content\assets\fonts\themify.eot" />
     <Content Include="Content\assets\fonts\themify.ttf" />
     <Content Include="Content\assets\fonts\themify.woff" />
+    <Content Include="ContentAr\fonts\Arabic\.DS_Store" />
+    <Content Include="ContentAr\fonts\Arabic\alfont_com_SST-Arabic-Medium.ttf" />
+    <Content Include="ContentAr\fonts\Arabic\sst-arabic-bold.ttf" />
+    <Content Include="ContentAr\fonts\Arabic\SSTArabicRoman.ttf" />
+    <Content Include="ContentAr\fonts\Arabic\SST_Arabic_Roman.ttf" />
     <None Include="packages.config" />
     <Content Include="Views\Shop\Shop.cshtml" />
     <Content Include="Views\Product\Wishlist.cshtml" />

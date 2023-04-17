@@ -1,0 +1,200 @@
+﻿<style>
+    .ribbonStock-top-right {
+        top: 0px;
+        right: 92px;
+    }
+
+        .ribbonStock-top-right::before,
+        .ribbonStock-top-right::after {
+            border-top-color: transparent;
+            border-right-color: transparent
+        }
+
+        .ribbonStock-top-right::before {
+            top: 0;
+            left: 17px
+        }
+
+        .ribbonStock-top-right::after {
+            bottom: 17px;
+            right: 0
+        }
+
+        .ribbonStock-top-right span {
+            left: 61px;
+            top: 26px;
+            transform: rotate( 45deg);
+        }
+
+    .ribbonStock {
+        width: 33%;
+        height: 21px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        background-color: #206664;
+        border-radius: 5px;
+        text-align: center;
+        left: 2px;
+    }
+
+        .ribbonStock span {
+            position: absolute;
+            display: contents;
+            width: 100%;
+            font-size: 11px;
+            background-color: #004270 !important;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            text-align: center;
+            margin-left: 0;
+            left: 40px;
+            top: 28px;
+        }
+</style>
+<div class="product-wrapper-grid LoadProduct">
+    @ViewBag.Message
+    <div class="row margin-res">
+        @foreach (var item in ViewBag.shopList)
+        {
+            var Dis = ((item.NewPrice / item.Price) * 100);
+            var Per = 100 - Dis;
+            var DiscountPrice = Per;
+            <div class="col-xl-3 col-6 col-grid-box">
+
+                <div class="product-box">
+
+                    <div class="img-wrapper">
+                        @if (item.IsStockOut == true)
+                        {
+                            <div class="ribbon ribbon-top-right">
+                                <span style="color:white" data-translate="000co51" class="_arabic">
+                                    Out of stock
+                                </span>
+                            </div>
+                        }
+                        @if (item.NewPrice == null || item.NewPrice == 0)
+                        {
+
+
+                        }
+                        else
+                        {
+                            <div class="ribbonStock ribbonStock-top-right">
+                                <span>
+                                    @DiscountPrice.ToString("0.0") % off
+                                </span>
+                            </div>
+                        }
+                        @if (item.Image == null || item.Image == "")
+                        {
+                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
+                            </a>
+                        }
+
+                        @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
+                            {
+                                <div class="cart-info cart-wrap">
+                                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
+                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                </div>
+                            }
+                            else
+                            {*@
+
+                        <div class="cart-info cart-wrap">
+                            @if (item.IsStockOut == true)
+                            {
+                                <button data-bs-toggle="modal" onclick="toastOut('Item is Out of Stock', 1); return false;"><i class="ti-shopping-cart"></i></button>
+                            }
+                            else
+                            {
+                                if (item.NewPrice == null || item.NewPrice == 0)
+                                {
+                                    <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0,@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
+                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                }
+                                else
+                                {
+                                    <button data-bs-toggle="modal" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice,@item.Price,1);toast('Item Added to Cart', 1); return false;"><i class="ti-shopping-cart"></i></button>
+                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.NewPrice,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                }
+
+                            }
+
+
+                        </div>
+
+                    </div>
+                    <div class="product-detail">
+                        <div>
+                            <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                            {
+                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                    <h6>@item.Name</h6>
+                                </a>
+                                <p>
+                                    @item.Description
+                                </p>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                    <h6 class="_arabic">@item.ArabicName</h6>
+                                </a>
+                                <p class="_arabic">
+                                    @item.ArabicDescription
+                                </p>
+                            }
+                            @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                <h6>@item.Name</h6>
+                            </a>
+                            <p>
+                                @item.Description
+                            </p>*@
+                            @if (item.NewPrice == null || item.NewPrice == 0)
+                            {
+                                <h4 step="0.01">BHD @(Math.Round((item.Price),2))</h4>
+                            }
+                            else
+                            {
+                                <del>@(Math.Round((item.Price),2))</del>
+                                <h4 step="0.01">BHD @(Math.Round((item.NewPrice),2))</h4>
+                            }
+
+                            @*<br />
+                            @if ((Math.Round((item.CurrentStock), 2)) < 11 && (Math.Round((item.CurrentStock), 2)) != 0)
+                            {
+                                <strong style="font-size:13px;color:red;">Limited Stock: @Math.Round((item.CurrentStock), 2)</strong>
+                            }*@
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        $('.all-items').paginathing({
+            perPage: 40,
+            containerClass: 'panel-footer'
+        })
+        $('.all-list-items').paginathing({
+            perPage: 20,
+            containerClass: 'panel-footer'
+        })
+    });
+</script>

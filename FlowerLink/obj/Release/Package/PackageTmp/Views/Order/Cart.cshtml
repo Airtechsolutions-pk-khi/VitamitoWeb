@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    @@media (max-width: 480px) {
+        .cart-section tbody tr td {
+            min-width: 135px !important;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+
+    @@media (max-width: 767px) {
+        .cart-section tbody tr td:nth-last-child(-n+4) {
+            display: table-cell !important;
+        }
+    }
+
+    @@media (max-width: 767px) {
+        .cart-section tfoot tr td:first-child, .wishlist-section tfoot tr td:first-child {
+            width: 49%;
+            font-size: 15px;
+            padding-right: 10px;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+
+    @@media (max-width: 991px) {
+        .cart-section tfoot tr td {
+            padding-right: 57px;
+        }
+    }
+
+    .fs {
+        font-size: 18px;
+    }
+</style>
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page-title">
+                    <h2 class="_arabic" data-translate="00ca0">cart</h2>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="_arabic" href="@Url.Action("Index","Home")" data-translate="a0">Home</a></li>
+                        <li class="breadcrumb-item active _arabic" data-translate="00ca0">cart</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb End -->
+<!--section start-->
+<section class="cart-section section-b-space">
+    <div class="container">
+        <div class="row">
+
+            <div style="overflow-x:auto;">
+                <table class="table ">
+                    <thead>
+                        <tr class="table-head">
+                            <th scope="col" style="text-align:center;" class="fs _arabic" data-translate="000co69">Action</th>
+                            <th scope="col" style="text-align:center;" class="fs _arabic" data-translate="00w1">Image</th>
+                            <th scope="col" style="text-align:center;" class="fs _arabic" data-translate="000co70">Product Name</th>
+                            <th scope="col" style="text-align:center;" class="fs _arabic" data-translate="000co71">Price</th>
+                            <th scope="col" style="text-align:center;" class="fs _arabic" data-translate="00ca4">Quantity</th>
+                            <th scope="col" style="text-align:center;" class="fs _arabic" data-translate="000co72">Subtotal</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="cart-items">
+                    </tbody>
+                </table>
+
+            </div>
+            <table class="table cart-table ">
+                <tfoot>
+                    <tr>
+                        <td class="_arabic" data-translate="000co68">total price :</td>
+                        <td>
+                            <span class="totalamount" style="font-size:22px;font-weight:600;">00.00</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="row cart-buttons">
+            <div class="col-6"><a href="@Url.Action("Index","Home")" class="btn btn-solid _arabic" data-translate="00ca7">Continue Shopping</a></div>
+            @if (Session["ID"] != null)
+            {
+                <div class="col-6"><a href="@Url.Action("Checkout", "Order")" id="check-btn" class="btn btn-solid _arabic" data-translate="00ch0">checkout</a></div>
+            }
+            else
+            {
+                <div class="col-6"><a href="@Url.Action("Login_Register", "Account")" id="check-btn" class="btn btn-solid _arabic" data-translate="00ch0">checkout</a></div>
+            }
+        </div>
+    </div>
+</section>
+<!--section end-->

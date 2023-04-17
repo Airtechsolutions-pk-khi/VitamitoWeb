@@ -87,6 +87,7 @@
                 jQuery("._arabic-text").css("text-align", "left")
             }
             else {
+
                 jQuery('#_lang').html("English");
                 jQuery('._arabic').css('direction', 'rtl');
                 jQuery('.pr').css('padding-left', '40px');
@@ -183,8 +184,10 @@
 
                 $("#register-submit").val("إنشاء حساب");
 
-                jQuery('._ltrarabic').css("direction", "ltr")
-                jQuery("._arabic").css("direction", "rtl")
+                jQuery('._ltrarabic').css("direction", "ltr");
+                jQuery("._arabic").css("direction", "rtl");
+
+                
             }
         });
 
@@ -203,12 +206,21 @@
             if (currLang == "ar") {
                 Cookies.set('lang', 'en', { expires: 365 });
                 jQuery('#_lang').html('عربى');
-                //location.reload();
+
+                
             }
         }
     </script>
 
     <style>
+        @@font-face {
+            font-family: 'sst_arabic_roman';
+            src: url('../../contentar/fonts/arabic/sst_arabic_roman.ttf') format('truetype');
+        }
+       
+        /* * {
+            font-family: "sst_arabic_roman" !important;
+        }*/
         .ribbon-top-right {
             top: -10px;
             right: -10px
@@ -692,11 +704,11 @@
                                 <h4 data-translate="000co40" class="_arabic pg">store information</h4>
                             </div>
                             <div class="footer-contant">
-                                <ul class="contact-list _arabic">
+                                <ul class="contact-list ">
 
-                                    <li><i class="fa fa-phone"></i><span data-translate="000co41">Call us:</span> +973 373 773 53</li>
+                                    <li><i class="fa fa-phone"></i><span data-translate="000co41">Call us: +973 373 773 53 </span></li>
 
-                                    <li><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp:</span> +973 3737553</li>
+                                    <li><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
                                     <li><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us:</span> <a href="#">vitamitobh@gmail.com</a></li>
                                     <li><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
                                 </ul>

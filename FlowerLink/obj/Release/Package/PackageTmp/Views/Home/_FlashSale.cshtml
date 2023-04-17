@@ -1,0 +1,850 @@
+﻿@model IEnumerable<Vitamito.Models.BLL.webSaleBLL>
+
+<style>
+
+    @@media only screen and (max-width: 440px) {
+        .product-image-all-products > a img {
+            height: 137px !important;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .product-image > a img {
+            height: 250px !important;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .product-image-flash > a img {
+            height: 160px !important;
+        }
+    }
+
+
+
+    @@media only screen and (max-width: 440px) {
+        .product-image > a img {
+            height: 156px !important;
+        }
+
+        .product-content {
+            margin-top: 4px;
+            text-align: center;
+            margin-bottom: -11px;
+        }
+
+        .single-blog .blog-content {
+            margin-top: 2px;
+            max-width: 480px;
+        }
+    }
+
+
+    @@media only screen and (max-width: 440px) {
+        #countdown {
+            width: 290px !important;
+            height: 82px !important;
+            top: -32px !important;
+        }
+
+            #countdown .labels {
+                width: 100%;
+                height: 43px !important;
+                text-align: center;
+                position: absolute;
+                bottom: 8px;
+            }
+
+            #countdown:before {
+                top: 9px !important;
+            }
+
+            #countdown:after {
+                top: 9px !important;
+            }
+    }
+
+    @@media only screen and (max-width: 413px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    @@media only screen and (max-width: 440px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+
+    @@media only screen and (max-width: 413px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    @@media only screen and (max-width: 440px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+
+
+
+
+    @@media only screen and (max-width: 413px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    @@media only screen and (max-width: 440px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+    /*end*/
+    /*flash sale*/
+    @@media only screen and (max-width: 768px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title8 {
+            padding-bottom: 50px;
+        }
+
+        #countdown {
+            padding-bottom: 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title8 {
+            padding-bottom: 50px;
+        }
+
+        #countdown {
+            padding-bottom: 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+
+    @@media only screen and (max-width: 768px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title8 {
+            padding-bottom: 50px;
+        }
+
+        #countdown {
+            padding-bottom: 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title8 {
+            padding-bottom: 50px;
+        }
+
+        #countdown {
+            padding-bottom: 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+
+
+
+
+    @@media only screen and (max-width: 768px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title8 {
+            padding-bottom: 50px;
+        }
+
+        #countdown {
+            padding-bottom: 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .title8 {
+            padding-bottom: 50px;
+        }
+
+        #countdown {
+            padding-bottom: 50px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mobsaleend {
+            display: none;
+        }
+
+        .product-active-lg-3 {
+            margin-top: 50px !important;
+        }
+
+        .product-content h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+    /*end*/
+
+    #countdown {
+        width: 290px;
+        height: 96px;
+        text-align: center;
+        background: #222;
+        background-image: -webkit-linear-gradient(top, #222, #333, #333, #222);
+        background-image: -moz-linear-gradient(top, #222, #333, #333, #222);
+        background-image: -ms-linear-gradient(top, #222, #333, #333, #222);
+        background-image: -o-linear-gradient(top, #222, #333, #333, #222);
+        border: 1px solid #111;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+        margin: auto;
+        padding: 24px 0;
+        position: absolute;
+        top: -35px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+        #countdown:before {
+            content: "";
+            width: 8px;
+            height: 65px;
+            background: #444;
+            background-image: -webkit-linear-gradient(top, #555, #444, #444, #555);
+            background-image: -moz-linear-gradient(top, #555, #444, #444, #555);
+            background-image: -ms-linear-gradient(top, #555, #444, #444, #555);
+            background-image: -o-linear-gradient(top, #555, #444, #444, #555);
+            border: 1px solid #111;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            display: block;
+            position: absolute;
+            top: 15px;
+            left: -10px;
+        }
+
+        #countdown:after {
+            content: "";
+            width: 8px;
+            height: 65px;
+            background: #444;
+            background-image: -webkit-linear-gradient(top, #555, #444, #444, #555);
+            background-image: -moz-linear-gradient(top, #555, #444, #444, #555);
+            background-image: -ms-linear-gradient(top, #555, #444, #444, #555);
+            background-image: -o-linear-gradient(top, #555, #444, #444, #555);
+            border: 1px solid #111;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: -10px;
+        }
+
+        #countdown #tiles {
+            position: relative;
+            z-index: 1;
+        }
+
+            #countdown #tiles > span {
+                width: 52px;
+                height: 50px;
+                max-width: 92px;
+                font: bold 20px 'Droid Sans', Arial, sans-serif;
+                text-align: center;
+                color: #111;
+                background-color: #ddd;
+                background-image: -webkit-linear-gradient(top, #bbb, #eee);
+                background-image: -moz-linear-gradient(top, #bbb, #eee);
+                background-image: -ms-linear-gradient(top, #bbb, #eee);
+                background-image: -o-linear-gradient(top, #bbb, #eee);
+                border-top: 1px solid #fff;
+                border-radius: 3px;
+                box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+                margin: 0 7px;
+                padding: 18px 0;
+                display: inline-block;
+                position: relative;
+            }
+
+                #countdown #tiles > span:before {
+                    content: "";
+                    width: 100%;
+                    height: 13px;
+                    background: #111;
+                    display: block;
+                    padding: 0 3px;
+                    position: absolute;
+                    top: 31%;
+                    left: -3px;
+                    z-index: -1;
+                }
+
+                #countdown #tiles > span:after {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: #eee;
+                    border-top: 1px solid #333;
+                    display: block;
+                    position: absolute;
+                    top: 48%;
+                    left: 0;
+                }
+
+        #countdown .labels {
+            width: 100%;
+            height: 48px;
+            text-align: center;
+            position: absolute;
+            bottom: 8px;
+        }
+
+            #countdown .labels li {
+                width: 66px;
+                font: bold 15px 'Droid Sans', Arial, sans-serif;
+                color: #f47321;
+                text-align: center;
+                text-transform: uppercase;
+                display: inline-block;
+            }
+</style>
+
+@if (ViewBag.FlashStatus == 1)
+{
+    <section class="bag-product ratio_square deal-product-space-flash section-b-space" id="hide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 text-center">
+                    <div class="title8">
+
+                        <img src="~/Content/assets/images/flash-sale.png" />
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 text-right mobsaleend" style="transform:translateY(20%);">
+                    <div>
+                        <h2 class="text-default" style="text-align: right !important;"><span class="font-weight-lighter _arabic" style="color:Black;font-size:28px;" data-translate="000co37">Sales ends in</span></h2>
+                        <input class="d-none" id="fromDate" value="@ViewBag.FlashSaleStart" type="text">
+                        <input class="d-none" id="toDate" value="@ViewBag.FlashSaleEnd" type="text">
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="section-title text-right">
+
+                        <div id="countdown">
+
+                            <div class="labels">
+
+                                <ul>
+                                    <li id="days"></li>
+                                    <li id="hours"></li>
+                                    <li id="minutes"></li>
+                                    <li id="seconds"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12" style="padding-top:20px;">
+                    <div class="slide-4-demo slick-sm-margin no-arrow">
+                        @foreach (var a in Model)
+                        {
+
+                            foreach (var item in a.WebSaleDetails)
+                            {
+
+
+
+                                var Dis = ((item.NewPrice / item.Price) * 100);
+                                var Per = 100 - Dis;
+                                var DiscountPrice = Per;
+                                <div class="product-box product-box product-style-4">
+                                    <div class="img-wrapper">
+                                        <div class="front">
+                                            @if (item.IsStockOut == true)
+                                            {
+                                                <div class="ribbon ribbon-top-right">
+                                                    <span class="_arabic" data-translate="000co51" style="color:white">
+                                                        Out of stock
+                                                    </span>
+                                                </div>
+                                            }
+                                            @if (item.NewPrice == null || item.NewPrice == 0)
+                                            {
+
+
+                                            }
+                                            else
+                                            {
+                                                <div class="ribbonStock ribbonStock-top-right">
+                                                    <span>
+                                                        @DiscountPrice.ToString("0.000") % off
+                                                    </span>
+                                                </div>
+                                            }
+                                            @if (item.Image == null || item.Image == "")
+                                            {
+                                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
+                                            }
+                                            else
+                                            {
+                                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+
+                                                    <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px !important; width: 160px !important;" />
+                                                </a>
+                                            }
+
+                                        </div>
+
+                                        @if (item.NewPrice == null || item.NewPrice == 0)
+                                        {
+                                            <div class="cart-detail">
+                                                <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
+                                                    <i class="ti-heart" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="cart-detail">
+                                                <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.NewPrice,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
+                                                    <i class="ti-heart" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
+                                        @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                        {
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <h6> @item.Name</h6>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                    <h6> @item.ArabicName</h6>
+                                                </a>*@
+                                        }
+                                        @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <h6> @item.Name</h6>
+                                            </a>*@
+                                        <div class="pro_rating d-flex pr">
+                                            <ul class="product-rating d-flex">
+                                                @{
+                                                    if (item.Stars != null)
+                                                    {
+                                                        for (int i = 0; i < item.Stars; i++)
+                                                        {
+                                                            <li><span class="ion-android-star"></span></li>
+                                                        }
+                                                        for (int i = 0; i < (5 - item.Stars); i++)
+                                                        {
+                                                            <li><span class="ion-android-star-outline"></span></li>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                    }
+                                                }
+
+                                            </ul>
+
+                                        </div>
+
+                                        @if (item.NewPrice == null || item.NewPrice == 0)
+                                        {
+                                            <strong>BHD @(Math.Round((item.Price),2))</strong>
+                                        }
+                                        else
+                                        {
+                                            <strong><del>@(Math.Round((item.Price),2))</del></strong>
+                                            <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
+                                        }
+                                        <br />
+                                        @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
+                                        {
+                                            <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                        }
+                                        @if (item.IsStockOut == true)
+                                        {
+
+                                            <div class="addtocart_btn">
+                                                <button class="add-button add_cart" onclick="toastOut('Item is Out of Stock', 1); return false;" title="Add to cart">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            if (item.NewPrice == null || item.NewPrice == 0)
+                                            {
+                                                <div class="addtocart_btn">
+                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            }
+
+                                            else
+                                            {
+                                                <div class="addtocart_btn">
+                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+
+                                </div>
+                            }
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+
+}
+
+
+<script>
+    function makeTimer() {
+
+        var to = $('#toDate').val();
+        var endTime = new Date(to);
+        endTime = (Date.parse(endTime) / 1000);
+
+        var now = new Date();
+        now = (Date.parse(now) / 1000);
+
+        var timeLeft = endTime - now;
+        
+        var days = Math.floor(timeLeft / 86400);
+
+
+
+        var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+        var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+        var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+        if (hours < "10") { hours = "0" + hours; }
+        if (minutes < "10") { minutes = "0" + minutes; }
+        if (seconds < "10") { seconds = "0" + seconds; }
+
+        $("#days").html(days + "<span>-Days</span>");
+        $("#hours").html(hours + "<span>-Hr</span>");
+        $("#minutes").html(minutes + "<span>-Min</span>");
+        $("#seconds").html(seconds + "<span>-Sec</span>");
+
+        if (days < 0) {
+            $("#hide").css("display", "none", "!important");
+        }
+
+    }
+
+    setInterval(function () { makeTimer(); }, 1000);
+    $("iframe").load(function () {
+        var frameContents;
+        frameContents = $("#IframeId").contents();
+        frameContents.find("#elementId").css("color", "#fff");
+
+
+    });
+
+</script>
+
+
+
+
+

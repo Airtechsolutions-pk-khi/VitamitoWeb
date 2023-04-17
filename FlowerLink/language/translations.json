@@ -64,7 +64,7 @@
     "en": "Address : "
   },
   "00cn5": {
-    "ar": "البريد الالكتروني : ",
+    "ar": "البريد الالكتروني",
     "en": "Email : "
   },
   "00cn6": {
@@ -525,7 +525,7 @@
   },
   "000co19": {
     "ar": "هاتف",
-    "en": "Phone"
+    "en": "Phone *"
   },
   "000co20": {
     "ar": "البريد الإلكتروني",
@@ -612,11 +612,11 @@
     "en": "Store information"
   },
   "000co41": {
-    "ar": "اتصل بنا",
+    "ar": "+973 373 773 53 اتصل بنا",
     "en": "Call Us"
   },
   "000co42": {
-    "ar": "واتس اب",
+    "ar": "+973 3737553 واتس اب",
     "en": "Whatsapp"
   },
   "000co43": {
@@ -1170,6 +1170,19 @@
   "000cb89": {
     "ar": "تم التوصيل",
     "en": "Delivered"
+  },
+  "000co82": {
+    "ar": "ملحوظة: أقل من 10 د.ب ، 1.5 د.ب رسوم التوصيل 10 د.ب إلى 40 د.ب ، 1 د.ب رسوم التوصيل 40 د.ب وما فوق التوصيل المجاني",
+    "en": "Note: Below 10 BD, 1.5 BD Delivery Charges  <br/> 10 BD to 40 BD, 1 BD Delivery Charges  <br/>  40 BD and above Free Delivery"
+  },
+  "000cb90": {
+    "ar": "أوصي بنا للآخرين من خلال تقييمنا على GOOGLE!",
+    "en": "Recommend us to others by rating us <br> on GOOGLE!"
+  },
+  "000cb91": {
+    "ar": "سيتم إرسال فاتورة الطلب إلى بريدك الإلكتروني.",
+    "en": "Order Invoice will be sent to your Email."
   }
+
 }
 

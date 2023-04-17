@@ -1,0 +1,808 @@
+﻿
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #dis {
+        background-color: #9dc3c2;
+    }
+    .fcrev {
+        display: revert !important;
+    }
+    .scroll-style::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .scroll-style::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    .scroll-style::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #cccccc;
+    }
+
+    .scroll-style {
+        height: 186px;
+        overflow: auto;
+    }
+
+        .scroll-style li {
+            margin-bottom: 0 !important;
+        }
+
+    .filter-price-cont {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .filter-price-cont {
+        font-size: 14px;
+    }
+
+        .filter-price-cont .input-type input {
+            border: medium none;
+            padding: 0 8px 0 0;
+            text-align: center;
+            width: 46px;
+        }
+
+        .filter-price-cont .input-type:last-child {
+            padding-left: 8px;
+        }
+
+        .filter-price-cont .add-to-cart-button {
+            background: #006782;
+            display: inline-block;
+            font-weight: 500;
+            padding: 1px 13px;
+            right: 0;
+            color: #ffffff !important;
+        }
+
+            .filter-price-cont .add-to-cart-button:hover {
+                background: #ffcc00;
+                color: #000000 !important;
+            }
+
+    .bg-transparent {
+        background-color: transparent !important
+    }
+
+    .mx-1 {
+        margin-right: .25rem !important
+    }
+
+    .ml-1,
+    .mx-1 {
+        margin-left: .25rem !important
+    }
+
+    .pr-0,
+    .px-0 {
+        padding-right: 0 !important
+    }
+
+    p {
+        text-align: center;
+    }
+
+    input[type=range].slider {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+        input[type=range].slider:focus {
+            outline: none;
+        }
+
+        input[type=range].slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6.7px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            background-color: var(--theme-color);
+            border-radius: 2.1px;
+            border: 0px solid #010101;
+        }
+
+        input[type=range].slider::-webkit-slider-thumb {
+            box-shadow: 1.7px 1.7px 1.6px #730000, 0px 0px 1.7px #8d0000;
+            border: 0px solid #ff0000;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: var(--theme-color);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -10px;
+        }
+
+        input[type=range].slider:focus::-webkit-slider-runnable-track {
+            background: var(--theme-color);
+        }
+</style>
+<!-- loader start -->
+<div class="loader_skeleton">
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2 class="_arabic" data-translate="000co74">collection</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item _arabic"><a href="index.html" data-translate="a0">home</a></li>
+                            <li class="breadcrumb-item active _arabic" aria-current="page" data-translate="000co74">collection</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section-b-space ratio_asos">
+        <div class="collection-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 collection-filter">
+                        <!-- side-bar colleps block stat -->
+                        <div class="collection-filter-block">
+                            <div class="filter-block">
+                                <h4 class="title-ldr"></h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="filter-block">
+                                <h4 class="title-ldr"></h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="filter-block">
+                                <h4 class="title-ldr"></h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- silde-bar colleps block end here -->
+                        <!-- side-bar single product slider start -->
+                        <div class="theme-card">
+                            <h5 class="title-border"></h5>
+                            <div>
+                                <div class="product-box">
+                                    <div class="media">
+                                        <div class="img-wrapper"></div>
+                                        <div class="media-body align-self-center">
+                                            <div class="product-detail">
+                                                <h4></h4>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-box">
+                                    <div class="media">
+                                        <div class="img-wrapper"></div>
+                                        <div class="media-body align-self-center">
+                                            <div class="product-detail">
+                                                <h4></h4>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-box">
+                                    <div class="media">
+                                        <div class="img-wrapper"></div>
+                                        <div class="media-body align-self-center">
+                                            <div class="product-detail">
+                                                <h4></h4>
+                                                <h6></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- side-bar single product slider end -->
+                        <!-- side-bar banner start here -->
+                        <div class="collection-sidebar-banner"></div>
+                        <!-- side-bar banner end here -->
+                    </div>
+                    <div class="collection-content col">
+                        <div class="page-main-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="top-banner-wrapper">
+                                        <div class="img-ldr-top"></div>
+                                        <div class="top-banner-content small-section">
+                                            <h4></h4>
+                                            <h5></h5>
+                                            <p></p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="collection-product-wrapper">
+                                        <div class="product-top-filter">
+                                            <div class="row m-0 w-100">
+                                                <div class="col-xl-4">
+                                                    <div class="filter-panel">
+                                                        <h6 class="ldr-text"></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-lg-4 col-6">
+                                                    <div class="filter-panel">
+                                                        <h6 class="ldr-text"></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-2 col-lg-4 col-6">
+                                                    <div class="filter-panel">
+                                                        <h6 class="ldr-text"></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-2 col-lg-4 d-none d-lg-block">
+                                                    <div class="filter-panel">
+                                                        <h6 class="ldr-text"></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-wrapper-grid">
+                                            <div class="row">
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6 col-grid-box">
+                                                    <div class="product-box">
+                                                        <div class="img-wrapper"></div>
+                                                        <div class="product-detail">
+                                                            <h4></h4>
+                                                            <h5></h5>
+                                                            <h6></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- loader end -->
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page-title">
+                    <h2 data-translate="000co74" class="_arabic">Collection</h2>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item _arabic"><a href="index.html" data-translate="a0">home</a></li>
+                        <li class="breadcrumb-item active _arabic" aria-current="page" data-translate="000co74">collection</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- breadcrumb end -->
+<!-- section start -->
+<section class="section-b-space ratio_asos">
+    <div class="collection-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 collection-filter">
+                    <!-- side-bar colleps block stat -->
+                    <div class="collection-filter-block">
+                        <!-- brand filter start -->
+                        <div class="collection-mobile-back"><span class="filter-back _arabic" data-translate="000co75"><i class="fa fa-angle-left" aria-hidden="true"></i> back</span></div>
+                        <div class="collection-collapse-block open">
+                            <h3 class="collapse-block-title _arabic" data-translate="00s1">Shop</h3>
+                            <div class="collection-collapse-block-content">
+                                <!--<div class="collection-brand-filter">
+                                    foreach (var item in ViewBag.Category)
+                                    {-->
+                                        @*<div class="form-check collection-filter-checkbox">*@
+                                        <!--<div class="form-check collection-filter-checkbox" style="float:right; width: 100%;">
+                                            if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                            {
+                                                <input type="checkbox" name="Category" value="item.ID" class="form-check-input" id="a">
+                                                <label class="form-check-label" for="a">item.Name</label>
+                                            }
+                                            else
+                                            {
+                                                <label class="form-check-label _arabic" for="a">item.ArabicName</label>
+                                                <input type="checkbox" name="Category" value="item.ID" class="form-check-input" id="a">
+                                            }-->
+
+                                            @*<label class="form-check-label" for="a">@item.Name</label>*@
+                                        <!--</div>
+                                    }
+                                </div>-->
+                                <div class="collection-brand-filter">
+                                    @foreach (var item in ViewBag.Category)
+                                    {
+                                        <div class="form-check collection-filter-checkbox fchk">@* /// *@
+                                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                            {
+                                                <input type="checkbox" name="Category" value="@item.ID" class="form-check-input" id="a">
+                                                <label class="form-check-label" for="a">@item.Name</label>
+                                            }
+                                            else
+                                            {
+                                                <label class="form-check-label _arabic" for="a">@item.ArabicName</label>
+                                                <input style="float:right" type="checkbox" name="Category" value="@item.ID" class="form-check-input" id="a">
+                                            }
+
+                                            @*<label class="form-check-label" for="a">@item.Name</label>*@
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- price filter start here -->
+
+                        <div class="collection-collapse-block border-0 open">
+                            <h3 class="collapse-block-title _arabic" style="padding-bottom:20px;" data-translate="000co71">price</h3>
+
+                            <input type="range" class="slider" onchange="rangeSlide(this.value)" value="0" min="1" max="100" step="1">
+                            <p id="rangeValue" class="value">0</p>
+                        </div>
+
+
+                    </div>
+                    <!-- silde-bar colleps block end here -->
+                    <!-- side-bar single product slider start -->
+                    <div class="theme-card">
+                        <h5 class="title-border _arabic" data-translate="000co76">New Product</h5>
+                        <div class="offer-slider slide-1">
+                            <div>
+                                @foreach (var item in ViewBag.BestProduct)
+                                {
+                                    <div class="media">
+
+                                        @if (item.Image == null || item.Image == "")
+                                        {
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height: 160px; width: 160px;"></a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px; width: 160px;" />
+                                            </a>
+                                        }
+                                        <div class="media-body align-self-center">
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                                {
+                                                    <h6>@item.Name</h6>
+                                                }
+                                                else
+                                                {
+                                                    <h6 class="_arabic">@item.ArabicName</h6>
+                                                }
+
+                                                @*<h6>@item.Name</h6>*@
+                                            </a>
+                                            <h4>BHD @(Math.Round((item.Price),2))</h4>
+                                            <br />
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <!-- side-bar single product slider end -->
+                    <!-- side-bar banner start here -->
+                    <div class="collection-sidebar-banner">
+                        <a href="#"><img src="../Content/assets/images/about-us.jpg" class="img-fluid blur-up lazyload" alt=""></a>
+                    </div>
+                    <!-- side-bar banner end here -->
+                </div>
+                <div class="collection-content col">
+                    <div class="page-main-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="top-banner-wrapper">
+                                    <a href="#"><img src="../Content/assets/images/about-us.jpg" class="img-fluid blur-up lazyload" alt=""></a>
+                                </div>
+                                <div class="collection-product-wrapper">
+                                    <div class="product-top-filter">
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="filter-main-btn"><span class="filter-btn btn btn-theme _arabic" data-translate="000a4"><i class="fa fa-filter" aria-hidden="true"></i> Filter</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="product-filter-content">
+                                                    <div class="collection-view">
+                                                        <ul>
+                                                            <li><i class="fa fa-th grid-layout-view"></i></li>
+                                                            <li><i class="fa fa-list-ul list-layout-view"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="collection-grid-view">
+                                                        <ul>
+                                                            <li><img src="../assets/images/icon/2.png" alt="" class="product-2-layout-view"></li>
+                                                            <li><img src="../assets/images/icon/3.png" alt="" class="product-3-layout-view"></li>
+                                                            <li><img src="../assets/images/icon/4.png" alt="" class="product-4-layout-view"></li>
+                                                            <li><img src="../assets/images/icon/6.png" alt="" class="product-6-layout-view"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-page-filter">
+                                                        <select class="SelectSort" id="Sort" name="sortby">
+                                                            <option value="3" class="_arabic" data-translate="00s3">Name(A - Z)</option>
+                                                            <option value="4" class="_arabic" data-translate="00s4">Name(Z - A)</option>
+                                                            <option value="1" class="_arabic" data-translate="00s5">Price(Low > High)</option>
+                                                            <option value="2" class="_arabic" data-translate="00s6">Price(High > Low)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="LoadProduct" class="shop-products-wrap">
+
+                                    </div>
+
+                                    <div id="divLoader" class="mx-auto w-100 text-center p-5" style="display:none;">
+                                        <img class="mr-3" src="~/Content/assets/images/gifloader.gif" style="width: 33px;" /> <span class="text-success _arabic" data-translate="000co77">Loading ...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section End -->
+<!-- tap to top start -->
+<div class="tap-top">
+    <div><i class="fa fa-angle-double-up"></i></div>
+</div>
+<!-- tap to top end -->
+<!-- latest jquery-->
+<script src="~/Content/assets/js/jquery-3.3.1.min.js"></script>
+
+<!-- menu js-->
+@*<script src="~/Content/assets/js/menu.js"></script>*@
+
+<!-- lazyload js-->
+<script src="~/Content/assets/js/lazysizes.min.js"></script>
+
+<!-- price range js -->
+<script src="~/Content/assets/js/price-range.js"></script>
+
+<!-- slick js-->
+<script src="~/Content/assets/js/slick.js"></script>
+
+<!-- Bootstrap js-->
+<script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap Notification js-->
+<script src="~/Content/assets/js/bootstrap-notify.min.js"></script>
+
+<!-- Theme js-->
+<script src="~/Content/assets/js/theme-setting.js"></script>
+<script src="~/Content/assets/js/script.js"></script>
+
+<script>
+    function openSearch() {
+        document.getElementById("search-overlay").style.display = "block";
+    }
+
+    function closeSearch() {
+        document.getElementById("search-overlay").style.display = "none";
+    }
+
+
+    $(document).ready(function () {
+        debugger
+         $("#LoadProduct").load('@Url.Action("Products", "Shop")');
+            $(".LoadProduct").hide();
+
+        var Category = [];
+        var SubCategory = [];
+
+
+        $('input[name="Category"]').click(function () {
+
+            if ($(this).prop("checked") == true) {
+                Category.push($(this).val());
+                debugger
+                var SortID = $(".SelectSort").val();
+                ProductFilter(Category.join(), "", "0", " ", SortID);
+            }
+            else {
+                var index = Category.indexOf($(this).val());
+                Category.splice(index, 1);
+                var SortID = $(".SelectSort").val();
+                ProductFilter(" ", "", "0", " ", SortID);
+            }
+        });
+
+        $('input[name="SubCategory"]').click(function () {
+
+            if ($(this).prop("checked") == true) {
+                SubCategory.push($(this).val());
+                ProductFilter("", SubCategory.join(), "0", "500", 0);
+            }
+            else {
+                var index = SubCategory.indexOf($(this).val());
+                SubCategory.splice(index, 1);
+                ProductFilter("", SubCategory.join(), "", "0", "500", 0);
+            }
+        });
+        $('#Sort').on('change', function () {
+            debugger
+            ProductFilter(" ", " ", " ", " ", this.value);
+        });
+
+
+
+        $("#SrchBtn").click(function () {
+            $("#divLoader").show();
+            $("#LoadProduct").hide();
+
+            var MinPrice = $(".js-input-from").val();
+            var MaxPrice = $(".value").val();
+
+            var SortID = $(".SelectSort").val();
+            var filter = new Object();
+            filter.Category = Category.join();
+            filter.SubCategory = SubCategory.join();
+            filter.Searchtxt = Searchtxt;
+            filter.MinPrice = MinPrice;
+            filter.MaxPrice = MaxPrice;
+            filter.SortID = SortID;
+
+            var FilterData = JSON.stringify(filter);
+
+            $.ajax({
+                type: "POST",
+                url: '../Shop/Filter',
+                data: FilterData,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (obj) {
+                    $.ajax({
+                        type: "POST",
+                        url: '../Shop/Products',
+                        data: JSON.stringify(obj.data),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'html',
+                        success: function (data) {
+
+                            $("#divLoader").hide();
+                            $("#LoadProduct").show();
+                            $("#LoadProduct").html(data);
+
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+
+                        }
+                    });
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    //
+                }
+            });
+        });
+        //===============================================
+
+    });
+    function ProductFilter(Category, SubCategory, MinPrice, MaxPrice, SortID) {
+        debugger
+        $("#divLoader").show();
+        $("#LoadProduct").hide();
+
+        //var MinPrice = $(".js-input-from").val();
+        //var MaxPrice = $(".js-input-to").val();
+        var MinPrice = 0;
+        var MaxPrice = MaxPrice;
+        var SortID = $(".SelectSort").val();
+        var filter = new Object();
+        filter.Category = Category;
+        filter.SubCategory = SubCategory;
+
+        //filter.Searchtxt = "";
+        filter.MinPrice = MinPrice;
+        filter.MaxPrice = MaxPrice;
+        filter.SortID = SortID;
+
+        var FilterData = JSON.stringify(filter);
+
+        $.ajax({
+            type: "POST",
+            url: '../Shop/Filter',
+            data: FilterData,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (obj) {
+                $.ajax({
+                    type: "POST",
+                    url: '../Shop/Products',
+                    data: JSON.stringify(obj.data),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'html',
+                    success: function (data) {
+
+                        $("#divLoader").hide();
+                        $("#LoadProduct").show();
+                        $("#LoadProduct").html(data);
+
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+
+                    }
+                });
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    function rangeSlide(value) {
+        var MaxPrice = document.getElementById('rangeValue').innerHTML = value;
+
+        ProductFilter(" ", "", "0", MaxPrice, "");
+    }
+</script>
+
+
