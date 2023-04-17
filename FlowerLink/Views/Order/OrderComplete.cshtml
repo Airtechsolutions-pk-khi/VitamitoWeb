@@ -40,30 +40,31 @@
                 <div class="search-error-wrapper">
                     @if (ViewBag.OrderNo == "Reject")
                     {
-                        <h2 class="text-danger" style="font-size: 40px;">Order Cancel</h2>
+                        <h2 class="text-danger arabic" style="font-size: 40px;" data-translate="000cb90">Order Cancel</h2>
 
-                        <p class="home-link">Your Payment through card not successfully done. </p>
-                        <a href="~/order/checkout" class="home-bacck-button">Try Again</a>
+                        <p class="home-link _arabic" data-translate="000cb91">Your Payment through card not successfully done. </p>
+                        <a href="~/order/checkout" class="home-bacck-button _arabic" data-transition="000cb92">Try Again</a>
                     }
                     else
                     {
-                        <h2 style="font-size: 40px;">THANK YOU</h2>
-                        <h5 class="mb-1  font-weight-lighter">Order Number </h5>
+                        <h2 style="font-size: 40px;" class="_arabic" data-translate="000cb93">THANK YOU</h2>
+                        <h5 class="mb-1  font-weight-lighter _arabic" data-transition="000cb94">Order Number </h5>
                         <p class="mb-50 font-weight-bold">@ViewBag.OrderNo</p>
-                       
+
                         @*<a href="~/home/index" class="home-bacck-button"></a>*@
                         <div class="container d-flex justify-content-center mt-5">
                             <div class="card text-center mb-5 p-2 pt-4">
-                                <p class="home-link mb-0">Your Order was completed successfully</p>
+                                <p class="home-link mb-0 _arabic" data-translate="000cb95">Your Order was completed successfully</p>
                                 <p class="home-link">@ViewBag.Status</p>
-                                <small class="text-black-50">Recommend us to others by rating us <br> on GOOGLE!</small>
+                                <small class="text-black-50 _arabic" data-translate="000cb97">Recommend us to others by rating us <br> on GOOGLE!</small>
                                 <div class="buttons mb-3 mt-4 px-5">
                                     @*<a class="btn btn-outline-dark btn-block" href="https://g.page/r/CXmr4gSC6RJqEAg/review" target="_blank">Yes, Rate it now</a>*@
-                                    <a href="@Url.Action("Index" , "Home")" class="btn btn-outline-dark btn-block">Back to shop</a>
+                                    <a href="@Url.Action("Index" , "Home")" class="btn btn-outline-dark btn-block _arabic" data-transition="000cb96">Back to shop</a>
                                 </div>
                             </div>
                         </div>
-                        <script>localStorage.clear();</script>  
+                        <script>localStorage.clear();</script>
+
                     }
                 </div>
             </div>

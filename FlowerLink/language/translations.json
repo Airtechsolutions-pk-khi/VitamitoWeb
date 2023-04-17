@@ -1170,6 +1170,110 @@
   "000cb89": {
     "ar": "تم التوصيل",
     "en": "Delivered"
+  },
+  "000cb90": {
+    "ar": "الغاء الطلب",
+    "en": "Order Cancel"
+  },
+  "000cb91": {
+    "ar": "لم تتم عملية الدفع بنجاح",
+    "en": "Your Payment through card not successfully done."
+  },
+  "000cb92": {
+    "ar": "جرب مرة ثانية",
+    "en": "Try Again"
+  },
+  "000cb93": {
+    "ar": "شكرا ",
+    "en": "THANK YOU"
+  },
+  "000cb94": {
+    "ar": "رقم الطلب",
+    "en": "Order Number"
+  },
+  "000cb95": {
+    "ar": "تم استلام طلبك بنجاح",
+    "en": "Your Order was completed successfully."
+  },
+  "000cb96": {
+    "ar": "الرجوع الى التسوق",
+    "en": "Back to shop"
+  },
+  "000cb97": {
+    "ar": "أوصينا للآخرين بتقييمنا <br> على GOOGLE!",
+    "en": "Recommend us to others by rating us <br> on GOOGLE!"
+  },
+  "000ca85": {
+    "ar": "تم قبول الطلب",
+    "en": "Order Accepted"
+  },
+  "000ca86": {
+    "ar": "على الشحن",
+    "en": "On Shipping"
+  },
+  "000ca87": {
+    "ar": "ألغيت",
+    "en": "Cancelled"
+  },
+  "000ca88": {
+    "ar": "معاد",
+    "en": "Refunded"
+  },
+  "000ca89": {
+    "ar": "يمسك",
+    "en": "Hold"
+  },
+  "000ca90": {
+    "ar": "تم التوصيل",
+    "en": "Delivered"
+  },
+  "000ca91": {
+    "ar": "منظر",
+    "en": "View"
+  },
+  "000ca92": {
+    "ar": "أوصينا للآخرين بتقييمنا <br> على GOOGLE!",
+    "en": "Recommend us to others by rating us <br> on GOOGLE!"
+  },
+  "000ca93": {
+    "ar": "- ملخص الطلب -",
+    "en": "-- Order Summary --"
+  },
+  "000ca94": {
+    "ar": "معلومات التوصيل",
+    "en": "Delivery Information"
+  },
+  "000ca95": {
+    "ar": "اسم المستلم",
+    "en": "Recipient Name"
+  },
+  "000ca96": {
+    "ar": "اسم المستلم",
+    "en": "Recipient Contact No"
+  },
+  "000ca97": {
+    "ar": "غرض",
+    "en": "Item"
+  },
+  "000ca98": {
+    "ar": "البند الكمية",
+    "en": "Item Qty"
+  },
+  "000ca99": {
+    "ar": "طريقة الدفع او السداد",
+    "en": "Payment Method"
+  },
+  "000ca100": {
+    "ar": "المبلغ الإجمالي",
+    "en": "Total Amount"
+  },
+  "000ca101": {
+    "ar": "مبلغ التسليم",
+    "en": "Delivery Amount"
+  },
+  "000ca102": {
+    "ar": "مقدار الخصم",
+    "en": "Discount Amount"
   }
 }
 
