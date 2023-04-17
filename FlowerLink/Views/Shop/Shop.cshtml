@@ -7,7 +7,9 @@
     #dis {
         background-color: #9dc3c2;
     }
-
+    .fcrev {
+        display: revert !important;
+    }
     .scroll-style::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
         border-radius: 10px;
@@ -143,14 +145,14 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="page-title">
-                        <h2>collection</h2>
+                        <h2 class="_arabic" data-translate="000co74">collection</h2>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <nav aria-label="breadcrumb" class="theme-breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">collection</li>
+                            <li class="breadcrumb-item _arabic"><a href="index.html" data-translate="a0">home</a></li>
+                            <li class="breadcrumb-item active _arabic" aria-current="page" data-translate="000co74">collection</li>
                         </ol>
                     </nav>
                 </div>
@@ -416,14 +418,14 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="page-title">
-                    <h2>collection</h2>
+                    <h2 data-translate="000co74" class="_arabic">Collection</h2>
                 </div>
             </div>
             <div class="col-sm-6">
                 <nav aria-label="breadcrumb" class="theme-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">collection</li>
+                        <li class="breadcrumb-item _arabic"><a href="index.html" data-translate="a0">home</a></li>
+                        <li class="breadcrumb-item active _arabic" aria-current="page" data-translate="000co74">collection</li>
                     </ol>
                 </nav>
             </div>
@@ -441,16 +443,46 @@
                     <!-- side-bar colleps block stat -->
                     <div class="collection-filter-block">
                         <!-- brand filter start -->
-                        <div class="collection-mobile-back"><span class="filter-back"><i class="fa fa-angle-left" aria-hidden="true"></i> back</span></div>
+                        <div class="collection-mobile-back"><span class="filter-back _arabic" data-translate="000co75"><i class="fa fa-angle-left" aria-hidden="true"></i> back</span></div>
                         <div class="collection-collapse-block open">
-                            <h3 class="collapse-block-title">Shop</h3>
+                            <h3 class="collapse-block-title _arabic" data-translate="00s1">Shop</h3>
                             <div class="collection-collapse-block-content">
+                                <!--<div class="collection-brand-filter">
+                                    foreach (var item in ViewBag.Category)
+                                    {-->
+                                        @*<div class="form-check collection-filter-checkbox">*@
+                                        <!--<div class="form-check collection-filter-checkbox" style="float:right; width: 100%;">
+                                            if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                            {
+                                                <input type="checkbox" name="Category" value="item.ID" class="form-check-input" id="a">
+                                                <label class="form-check-label" for="a">item.Name</label>
+                                            }
+                                            else
+                                            {
+                                                <label class="form-check-label _arabic" for="a">item.ArabicName</label>
+                                                <input type="checkbox" name="Category" value="item.ID" class="form-check-input" id="a">
+                                            }-->
+
+                                            @*<label class="form-check-label" for="a">@item.Name</label>*@
+                                        <!--</div>
+                                    }
+                                </div>-->
                                 <div class="collection-brand-filter">
                                     @foreach (var item in ViewBag.Category)
                                     {
-                                        <div class="form-check collection-filter-checkbox">
-                                            <input type="checkbox" name="Category" value="@item.ID" class="form-check-input" id="a">
-                                            <label class="form-check-label" for="a">@item.Name</label>
+                                        <div class="form-check collection-filter-checkbox fchk">@* /// *@
+                                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                            {
+                                                <input type="checkbox" name="Category" value="@item.ID" class="form-check-input" id="a">
+                                                <label class="form-check-label" for="a">@item.Name</label>
+                                            }
+                                            else
+                                            {
+                                                <label class="form-check-label _arabic" for="a">@item.ArabicName</label>
+                                                <input style="float:right" type="checkbox" name="Category" value="@item.ID" class="form-check-input" id="a">
+                                            }
+
+                                            @*<label class="form-check-label" for="a">@item.Name</label>*@
                                         </div>
                                     }
                                 </div>
@@ -460,7 +492,7 @@
                         <!-- price filter start here -->
 
                         <div class="collection-collapse-block border-0 open">
-                            <h3 class="collapse-block-title" style="padding-bottom:20px;">price</h3>
+                            <h3 class="collapse-block-title _arabic" style="padding-bottom:20px;" data-translate="000co71">price</h3>
 
                             <input type="range" class="slider" onchange="rangeSlide(this.value)" value="0" min="1" max="100" step="1">
                             <p id="rangeValue" class="value">0</p>
@@ -471,7 +503,7 @@
                     <!-- silde-bar colleps block end here -->
                     <!-- side-bar single product slider start -->
                     <div class="theme-card">
-                        <h5 class="title-border">new product</h5>
+                        <h5 class="title-border _arabic" data-translate="000co76">New Product</h5>
                         <div class="offer-slider slide-1">
                             <div>
                                 @foreach (var item in ViewBag.BestProduct)
@@ -490,7 +522,16 @@
                                         }
                                         <div class="media-body align-self-center">
                                             <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                                <h6>@item.Name</h6>
+                                                @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                                {
+                                                    <h6>@item.Name</h6>
+                                                }
+                                                else
+                                                {
+                                                    <h6 class="_arabic">@item.ArabicName</h6>
+                                                }
+
+                                                @*<h6>@item.Name</h6>*@
                                             </a>
                                             <h4>BHD @(Math.Round((item.Price),2))</h4>
                                             <br />
@@ -518,7 +559,7 @@
                                     <div class="product-top-filter">
                                         <div class="row">
                                             <div class="col-xl-12">
-                                                <div class="filter-main-btn"><span class="filter-btn btn btn-theme"><i class="fa fa-filter" aria-hidden="true"></i> Filter</span></div>
+                                                <div class="filter-main-btn"><span class="filter-btn btn btn-theme _arabic" data-translate="000a4"><i class="fa fa-filter" aria-hidden="true"></i> Filter</span></div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -540,10 +581,10 @@
                                                     </div>
                                                     <div class="product-page-filter">
                                                         <select class="SelectSort" id="Sort" name="sortby">
-                                                            <option value="3">Name(A - Z)</option>
-                                                            <option value="4">Name(Z - A)</option>
-                                                            <option value="1">Price(Low > High)</option>
-                                                            <option value="2">Price(High > Low)</option>
+                                                            <option value="3" class="_arabic" data-translate="00s3">Name(A - Z)</option>
+                                                            <option value="4" class="_arabic" data-translate="00s4">Name(Z - A)</option>
+                                                            <option value="1" class="_arabic" data-translate="00s5">Price(Low > High)</option>
+                                                            <option value="2" class="_arabic" data-translate="00s6">Price(High > Low)</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -556,7 +597,7 @@
                                     </div>
 
                                     <div id="divLoader" class="mx-auto w-100 text-center p-5" style="display:none;">
-                                        <img class="mr-3" src="~/Content/assets/images/gifloader.gif" style="width: 33px;" /> <span class="text-success">Loading ...</span>
+                                        <img class="mr-3" src="~/Content/assets/images/gifloader.gif" style="width: 33px;" /> <span class="text-success _arabic" data-translate="000co77">Loading ...</span>
                                     </div>
                                 </div>
                             </div>
@@ -650,7 +691,7 @@
             ProductFilter(" ", " ", " ", " ", this.value);
         });
 
- 
+
 
         $("#SrchBtn").click(function () {
             $("#divLoader").show();
@@ -658,7 +699,7 @@
 
             var MinPrice = $(".js-input-from").val();
             var MaxPrice = $(".value").val();
-            
+
             var SortID = $(".SelectSort").val();
             var filter = new Object();
             filter.Category = Category.join();
@@ -759,7 +800,7 @@
 <script type="text/javascript">
     function rangeSlide(value) {
         var MaxPrice = document.getElementById('rangeValue').innerHTML = value;
-        
+
         ProductFilter(" ", "", "0", MaxPrice, "");
     }
 </script>

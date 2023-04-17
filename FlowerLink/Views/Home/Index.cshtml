@@ -247,7 +247,7 @@ else
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="title8">
-                    <h2 data-translate="000co34">Shop By Category</h2>
+                    <h2 class="_arabic" data-translate="000co34">Shop By Category</h2>
                 </div>
             </div>
             @foreach (var item in ViewBag.categoryList)
@@ -255,12 +255,12 @@ else
 
                 <div class="col-lg-2 col-6 text-center mobPadding">
                     @*background-color: #f8f8f8; border-radius: 10px; padding-bottom: 15px; padding-top: 25px;*@
-                    <div class="single-blog mt-30 categorybox card-box myDIV" style="        border: 2px solid #076d08;
-        border-radius: 10px;
-        height: 92px;
-        letter-spacing: 0;
-        text-align: left !important;
-        line-height: 19px;
+                    <div class="single-blog mt-30 categorybox card-box myDIV" style=" border: 2px solid #076d08;
+                            border-radius: 10px;
+                            height: 92px;
+                            letter-spacing: 0;
+                            text-align: left !important;
+                            line-height: 19px;
 ">
                         <div class="catmob" style="padding-top:20px;">
                             @if (item.Image == null || item.Image == "")
@@ -276,13 +276,28 @@ else
                                     <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 50px; width: auto; margin-bottom: 10px; left: 18px; position: absolute; top: 20px;" />
                                 </a>
                             }
+                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                            {
+                                <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
+                                    <div class="mobdiv">
+                                        <h5 style="padding-left:60px;" class="catTitle"><strong> @item.Name</strong></h5>
+                                    </div>
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
+                                    <div class="mobdiv">
+                                        <h5 style="padding-left:60px;" class="catTitle _arabic"><strong> @item.ArabicName</strong></h5>
+                                    </div>
+                                </a>
+                            }
 
-
-                            <a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
+                            @*<a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
                                 <div class="mobdiv">
                                     <h5 style="padding-left:60px;" class="catTitle"><strong> @item.Name</strong></h5>
                                 </div>
-                            </a>
+                            </a>*@
 
 
 
@@ -350,7 +365,7 @@ else
         <div class="row">
             <div class="col-12">
                 <div class="title8">
-                    <h2 data-translate="00h11">Featured Products</h2>
+                    <h2 class="_arabic" data-translate="00h11">Featured Products</h2>
                 </div>
             </div>
             <div class="slide-4-demo slick-sm-margin no-arrow">
@@ -366,7 +381,7 @@ else
                                 @if (item.IsStockOut == true)
                                 {
                                     <div class="ribbon ribbon-top-right">
-                                        <span style="color:white">
+                                        <span style="color:white" data-translate="000co51" class="_arabic">
                                             Out of stock
                                         </span>
                                     </div>
@@ -417,11 +432,22 @@ else
 
                         </div>
                         <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
-
-                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                            {
+                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                    <h6 class="_arabic"> @item.Name</h6>
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                    <h6 class="_arabic"> @item.ArabicName</h6>
+                                </a>
+                            }
+                            @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                 <h6> @item.Name</h6>
-                            </a>
-                            <div class="pro_rating d-flex ">
+                            </a>*@
+                            <div class="pro_rating d-flex pr">
                                 <ul class="product-rating d-flex">
                                     @{
                                         if (item.Stars != null)
@@ -509,7 +535,7 @@ else
         <div class="row">
             <div class="col-12">
                 <div class="title8">
-                    <h2 data-translate="000co36">Popular Products</h2>
+                    <h2 class="_arabic" data-translate="000co36">Popular Products</h2>
                 </div>
             </div>
             <div class="col-12">
@@ -525,7 +551,7 @@ else
                                     @if (item.IsStockOut == true)
                                     {
                                         <div class="ribbon ribbon-top-right">
-                                            <span style="color:white">
+                                            <span style="color:white" class="_arabic" data-translate="000co51">
                                                 Out of stock
                                             </span>
                                         </div>
@@ -575,11 +601,22 @@ else
                                 }
                             </div>
                             <div class="product-detail">
-
-                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                {
+                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                        <h6> @item.Name</h6>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                        <h6 class="_arabic"> @item.ArabicName</h6>
+                                    </a>
+                                }
+                                @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                     <h6> @item.Name</h6>
-                                </a>
-                                <div class="pro_rating d-flex ">
+                                 </a>*@
+                                <div class="pro_rating d-flex pr">
                                     <ul class="product-rating d-flex">
                                         @{
                                             if (item.Stars != null)
@@ -618,9 +655,9 @@ else
                                 }
                                 <br />
                                 @*@if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                    {
-                                        <strong style="font-size:13px;color:red;">Low Stock</strong>
-                                    }*@
+                                {
+                                    <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                }*@
                                 @if (item.IsStockOut == true)
                                 {
 

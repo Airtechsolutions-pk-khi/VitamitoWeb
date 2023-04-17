@@ -10,7 +10,7 @@ else {
         <div class="row">
             <div class="col-12">
                 <div class="title8">
-                    <h2 data-translate="000co38">Clearance Sale</h2>
+                    <h2 class="_arabic" data-translate="000co38">Clearance Sale</h2>
                 </div>
             </div>
             <div class="col-12">
@@ -32,7 +32,7 @@ else {
                                         @if (item.IsStockOut == true)
                                         {
                                             <div class="ribbon ribbon-top-right">
-                                                <span style="color:white">
+                                                <span data-translate="000co51" class="_arabic" style="color:white">
                                                     Out of stock
                                                 </span>
                                             </div>
@@ -82,35 +82,46 @@ else {
                                     }
                                 </div>
                                 <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
-
-                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                    @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                            <h6> @item.Name</h6>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                            <h6> @item.ArabicName</h6>
+                                        </a>*@
+                                    }
+                                    @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
                                         <h6> @item.Name</h6>
-                                    </a>
-                                    <div class="pro_rating d-flex ">
+                                    </a>*@
+                                    <div class="pro_rating d-flex pr">
                                         <ul class="product-rating d-flex">
-                                                @{
-                                                    if (item.Stars != null)
+                                            @{
+                                                if (item.Stars != null)
+                                                {
+                                                    for (int i = 0; i < item.Stars; i++)
                                                     {
-                                                        for (int i = 0; i < item.Stars; i++)
-                                                        {
-                                                            <li><span class="ion-android-star"></span></li>
-                                                        }
-                                                        for (int i = 0; i < (5 - item.Stars); i++)
-                                                        {
-                                                            <li><span class="ion-android-star-outline"></span></li>
-                                                        }
+                                                        <li><span class="ion-android-star"></span></li>
                                                     }
-                                                    else
+                                                    for (int i = 0; i < (5 - item.Stars); i++)
                                                     {
-                                                        <li><span class="ion-android-star-outline"></span></li>
-                                                        <li><span class="ion-android-star-outline"></span></li>
-                                                        <li><span class="ion-android-star-outline"></span></li>
-                                                        <li><span class="ion-android-star-outline"></span></li>
                                                         <li><span class="ion-android-star-outline"></span></li>
                                                     }
                                                 }
+                                                else
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
+                                            }
 
-                                            </ul>
+                                        </ul>
 
                                     </div>
 
@@ -121,13 +132,13 @@ else {
                                     else
                                     {
                                         <strong><del>@(Math.Round((item.Price),2))</del></strong>
-                                            <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
+                                        <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
                                     }
                                     <br />
                                     @if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                        {
-                                            <strong style="font-size:13px;color:red;">Low Stock</strong>
-                                        }
+                                    {
+                                        <strong style="font-size:13px;color:red;">Low Stock</strong>
+                                    }
                                     @if (item.IsStockOut == true)
                                     {
 
@@ -140,22 +151,22 @@ else {
                                     else
                                     {
                                         if (item.NewPrice == null || item.NewPrice == 0)
-                                            {
-                                                <div class="addtocart_btn">
-                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
-                                                        <i class="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                            }
+                                        {
+                                            <div class="addtocart_btn">
+                                                <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        }
 
-                                            else
-                                            {
-                                                <div class="addtocart_btn">
-                                                    <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
-                                                        <i class="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                            }
+                                        else
+                                        {
+                                            <div class="addtocart_btn">
+                                                <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        }
                                     }
                                 </div>
 
@@ -167,4 +178,4 @@ else {
         </div>
     </div>
 </section>
-                                                    }
+}
