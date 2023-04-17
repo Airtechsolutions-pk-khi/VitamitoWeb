@@ -230,7 +230,8 @@ function topheadcart() {
     var newPrice = 0;
     var totalQty = data.length;
     var totalQtywish = getWishlistLS().length;
-
+   /* var lang = $.cookie("lang");*/
+    /*lang === "en"? data[i].Name : data[i].ArabicName*/
     html += '<div class="cart-height scrollbar" id="style2" >'
     for (var i = 0; i < data.length; i++) {
         var giftPrice = 0;
@@ -271,8 +272,8 @@ function topheadcart() {
         + '</div>'
         + '</li>'
         + '<li class="mini-cart-btns">'
-        + '<div class="buttons"><a href="/order/cart" class="view-cart">view cart</a>'
-        + '<a href="/order/cart"  class="checkout">checkout</a></div >'
+        + '<div class="buttons"><a href="/order/cart" class="view-cart _arabic" data-translate="000co73">View Cart</a>'
+        + '<a href="/order/cart"  class="checkout _arabic" data-translate="00ch0">checkout</a></div >'
         + '</li>'
 
     if (data.length > 0) {

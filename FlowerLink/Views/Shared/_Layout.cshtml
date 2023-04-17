@@ -52,7 +52,7 @@
 
     <script>
         jQuery(document).ready(function () {
-
+            debugger;
             var currLang = Cookies.get('lang');
             if (currLang == null || currLang == "" || currLang == undefined) {
 
@@ -63,9 +63,126 @@
                 jQuery('#_lang').html("عربى");
                 jQuery("._arabic").css("direction", "ltr")
                 jQuery("._arabic-text").css("text-align", "left")
+
+                $("#Name").attr("placeholder", "Name");
+                $("#Email").attr("placeholder", "Email");
+                $("#email").attr("placeholder", "Email");
+                $("#password").attr("placeholder", "Enter your password");
+                $(".EmailAddress").attr("placeholder", "Email Address");
+                $("#Description").attr("placeholder", "Wrire Your thoughts");
+                $("#CustomerName").attr("placeholder", "Customer Name");
+                $("#ContactNo").attr("placeholder", "Phone Number");
+                $("#NearestPlace").attr("placeholder", "Park, Bank, Hotel etc.");
+                $("#Address").attr("placeholder", "Area, Block, Road, Building");
+                $("#CardNotes").attr("placeholder", "Notes, e.g. special things if you wanna customized  along with your orders.");
+                $("#coupon").attr("Coupon code");
+                $("#fname").attr("Full Name");
+                $("#lname").attr("Mobile");
+                $("#l1").attr("title", "Awesome - 5 stars");
+                $("#l2").attr("title", "Pretty good - 4 stars");
+                $("#l3").attr("title", "Pretty good - 3 stars");
+                $("#l4").attr("title", "Meh - 2 stars");
+                $("#l5").attr("title", "Meh - 1 stars");
+                jQuery("._arabic").css("direction", "ltr")
+                jQuery("._arabic-text").css("text-align", "left")
             }
             else {
                 jQuery('#_lang').html("English");
+                jQuery('._arabic').css('direction', 'rtl');
+                jQuery('.pr').css('padding-left', '40px');
+                jQuery('.pr').css('padding-right', '0px');
+                jQuery('.header-compact .top-header .header-dropdown li').css('padding-right', '0px');
+                //jQuery('._ltrarabic').css("direction", "ltr")
+                //jQuery("._arabic").css("direction", "rtl")
+
+                $("#Name").attr("placeholder", "اسم");
+                $("#Name").addClass("_arabic");
+
+                $("#Email").attr("placeholder", "بريد إلكتروني");
+                $("#Email").addClass("_arabic");
+
+                $("#email").attr("placeholder", "بريد إلكتروني");
+                $("#email").addClass("_arabic");
+
+                $("#password").attr("placeholder", "ادخل رقمك السري");
+                $("#password").addClass("_arabic");
+
+                $(".EmailAddress").attr("placeholder", "عنوان البريد الإلكتروني *");
+                $(".EmailAddress").addClass("_arabic");
+
+                $("#Description").attr("placeholder", "اكتب أفكارك");
+                $("#Description").addClass("_arabic");
+
+                $("#CustomerName").attr("placeholder", "اسم الزبون");
+                $("#CustomerName").addClass("_arabic");
+
+                $("#ContactNo").attr("placeholder", "رقم التليفون");
+                $("#ContactNo").addClass("_arabic");
+
+                $("#NearestPlace").attr("placeholder", "بارك ، بنك ، فندق إلخ.");
+                $("#NearestPlace").addClass("_arabic");
+
+                $("#Address").attr("placeholder", "منطقة ، بلوك ، طريق ، مبنى");
+                $("#Address").addClass("_arabic");
+
+                $("#CardNotes").attr("placeholder", "ملاحظات ، على سبيل المثال أشياء خاصة إذا كنت تريد تخصيصها مع طلباتك.");
+                $("#CardNotes").addClass("_arabic");
+
+                $("#coupon").attr("placeholder", "رمز الكوبون");
+                $("#coupon").addClass("_arabic");
+
+                $("#fname").attr("placeholder", "الاسم الكامل");
+                $("#fname").addClass("_arabic");
+
+                $("#lname").attr("placeholder", "الموبايل");
+                $("#lname").addClass("_arabic");
+
+                $("#lastname").attr("placeholder", "أدخل أسمك");
+                $("#lastname").addClass("_arabic");
+
+                $("#name").attr("placeholder", "أدخل أسمك");
+                $("#name").addClass("_arabic");
+
+                $("#phone").attr("placeholder", "أدخل رقمك");
+                $("#phone").addClass("_arabic");
+
+                $("#message").attr("placeholder", "اكتب رسالتك");
+                $("#message").addClass("_arabic");
+
+                $("#l1").attr("title", "رهيبة - 5 نجوم");
+                $("#l1").addClass("_arabic");
+
+                $("#l2").attr("title", "جيد جدًا - 4 نجوم");
+                $("#l2").addClass("_arabic");
+
+                $("#l3").attr("title", "جيد جدًا - 3 نجوم");
+                $("#l3").addClass("_arabic");
+
+                $("#l4").attr("title", "ميه - 2 نجوم");
+                $("#l4").addClass("_arabic");
+
+                $("#l5").attr("title", "ميه - 1 نجوم");
+                $("#l5").addClass("_arabic");
+
+                $(".rtext").css("float", "right")
+
+                $(".pg").css("margin-right", "40px")
+
+                $(".siconsr").css("float", "right")
+                $(".siconsr").css("margin-left", "10px")
+
+                $(".cbt").css("margin-right", "10px")
+
+                $(".dtxt").css("display", "inline-table")
+
+                $(".fchk").addClass("fcrev");
+
+                $(".frl").css("float", "right")
+
+                $("#login-submit").val("تسجيل الدخول");
+
+                $("#register-submit").val("إنشاء حساب");
+
                 jQuery('._ltrarabic').css("direction", "ltr")
                 jQuery("._arabic").css("direction", "rtl")
             }
@@ -81,12 +198,12 @@
             if (currLang == "en") {
                 Cookies.set('lang', 'ar', { expires: 365 });
                 jQuery('#_lang').html('English');
-                location.reload();
+                //location.reload();
             }
             if (currLang == "ar") {
                 Cookies.set('lang', 'en', { expires: 365 });
                 jQuery('#_lang').html('عربى');
-                location.reload();
+                //location.reload();
             }
         }
     </script>
@@ -362,6 +479,10 @@
                 margin-top: 10px !important;
             }
         }
+        #_lang{
+            cursor: pointer;
+        }
+        
     </style>
 
     
@@ -398,7 +519,6 @@
                     <div class="col-lg-2 text-end">
 
                         <ul class="header-dropdown">
-
                             <li class="mobile-wishlist pe-0 ">
                                 <div><a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart"></i></a></div>
                                 <span class="wish_qty_cls" id="wish-total" style="color:var(--theme-color);">0</span>
@@ -411,11 +531,11 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span data-translate="000co47">My Account</span>
+                                    <span class="_arabic" data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
-                                        <li style="color:black;"><strong>Hi!&nbsp;</strong> @Session["CustomerName"]</li>
-                                        <li> <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a></li>
-                                        <li><a class="dropdown-item text-center " style="font-size:12px;" href="~/account/logout" onclick="logout();">Logout</a></li>
+                                        <li style="color:black;" class="_arabic"><strong data-translate="000co52">Hi!&nbsp;</strong> @Session["CustomerName"]</li>
+                                        <li> <a href="~/Order/Myorders" class="_arabic about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;" data-translate="00mo0">My Orders</a></li>
+                                        <li><a class="dropdown-item text-center _arabic" data-translate="00l5" style="font-size:12px;" href="~/account/logout" onclick="logout();">Logout</a></li>
                                     </ul>
                                 </li>
                             }
@@ -423,10 +543,10 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span data-translate="000co47">My Account</span>
+                                    <span class="_arabic" data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
-                                        <li><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
-                                        <li><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
+                                        <li class="_arabic"><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
+                                        <li class="_arabic"><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
                                     </ul>
                                 </li>
                             }
@@ -457,7 +577,7 @@
                         else
                         {
                             <div class="form_search">
-                                <input type="text" id="query search-autocomplete" placeholder="ابحث عن المنتجات الصحية والتجميلية ...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <input type="text" style="padding-right:40px" id="query search-autocomplete" placeholder="ابحث عن المنتجات الصحية والتجميلية ...." class="srch nav-search nav-search-field _arabic" aria-expanded="true">
                                 <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
                                     <i class="ti-search"></i>
                                 </button>
@@ -539,7 +659,7 @@
                         </div>
                         <div class="footer-contant">
                             <div class="footer-logo"> <img src="~/Content/assets/images/footerlogo.png" /></div>
-                            <p data-translate="000co46">
+                            <p data-translate="000co46" class="_arabic">
                                 A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids.
                                 Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics.
                             </p>
@@ -554,11 +674,11 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4 data-translate="000co39">Pages</h4>
+                                <h4 data-translate="000co39" class="_arabic pg">Pages</h4>
                             </div>
-                            <div class="footer-contant">
+                            <div class="footer-contant _arabic">
                                 <ul>
-                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="a0x">Home</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="00s1">Shop</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="aa0">About Us</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="00aa4">Contact Us</a></li>
@@ -569,10 +689,10 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4 data-translate="000co40">store information</h4>
+                                <h4 data-translate="000co40" class="_arabic pg">store information</h4>
                             </div>
                             <div class="footer-contant">
-                                <ul class="contact-list">
+                                <ul class="contact-list _arabic">
 
                                     <li><i class="fa fa-phone"></i><span data-translate="000co41">Call us:</span> +973 373 773 53</li>
 
@@ -582,11 +702,11 @@
                                 </ul>
                                 <br />
 
-                                <a href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
-                                <a href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
-                                <a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
-                                <a onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
-                                <a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
 
                             </div>
                         </div>
