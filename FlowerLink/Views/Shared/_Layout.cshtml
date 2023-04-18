@@ -494,6 +494,66 @@
         #_lang{
             cursor: pointer;
         }
+
+        /* New style */
+        .header-dropdown {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            width: 130%;
+        }
+
+        .header-dropdown li {
+            list-style: none;
+        }
+
+        .header-dropdown i.fa {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .header-dropdown .onhover-dropdown {
+            position: relative;
+        }
+
+        .header-dropdown .onhover-dropdown > ul {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: 150px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1;
+        }
+
+        .header-dropdown .onhover-dropdown:hover > ul {
+            display: block;
+        }
+
+        .header-dropdown .onhover-dropdown ul li {
+            margin: 5px 0;
+        }
+
+        .header-dropdown .onhover-dropdown ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .header-dropdown .onhover-dropdown ul li a:hover {
+            color: #555;
+        }
+        .aend{
+            float:right;
+        }
+
         
     </style>
 
@@ -529,9 +589,8 @@
                         </div>
                     </div>
                     <div class="col-lg-2 text-end">
-
                         <ul class="header-dropdown">
-                            <li class="mobile-wishlist pe-0 ">
+                            <li class="mobile-wishlist pe-0">
                                 <div><a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart"></i></a></div>
                                 <span class="wish_qty_cls" id="wish-total" style="color:var(--theme-color);">0</span>
                                 @*<ul class="show-div shopping-cart head-cart">
@@ -555,10 +614,10 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="_arabic" data-translate="000co47">My Account</span>
+                                    <span class="" data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
-                                        <li class="_arabic"><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
-                                        <li class="_arabic"><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
+                                        <li class=""><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
+                                        <li class=""><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
                                     </ul>
                                 </li>
                             }
@@ -705,12 +764,10 @@
                             </div>
                             <div class="footer-contant">
                                 <ul class="contact-list ">
-
-                                    <li><i class="fa fa-phone"></i><span data-translate="000co41">Call us: +973 373 773 53 </span></li>
-
-                                    <li><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
-                                    <li><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us:</span> <a href="#">vitamitobh@gmail.com</a></li>
-                                    <li><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
+                                    <li class="rtext"><i class="fa fa-phone"></i><span data-translate="000co41"> Call us: +973 373 773 53 </span></li>
+                                    <li class="rtext"><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
+                                    <li class="rtext"><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us: vitamitobh@gmail.com</span></li>
+                                    <li class="rtext"><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
                                 </ul>
                                 <br />
 
