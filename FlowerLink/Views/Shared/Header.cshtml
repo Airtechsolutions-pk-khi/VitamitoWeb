@@ -4,7 +4,7 @@
 
 <nav id="main-nav" class="text-start">
     <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
-    <ul id="main-menu" class="sm pixelstrap sm-horizontal nav navbar-nav">
+    <ul id="main-menu" class="sm pixelstrap _right sm-horizontal nav navbar-nav">
         <li>
             <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
         </li>
@@ -16,7 +16,7 @@
 
             <a class="_arabic" href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" data-translate="00s1">Shop</a>
 
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu _right">
 
                 @foreach (var item in Model)
                 {
@@ -27,11 +27,19 @@
                         }
                         else
                         {
-                            <a class="_arabic" href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "", Searchtext = "", SortID = 0 })">@item.ArabicName </a>
+                            if (item.ArabicName == null)
+                            {
+                                <a class="_arabic" href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "", Searchtext = "", SortID = 0 })">@item.Name </a>
+                            }
+                            else
+                            {
+                                <a class="_arabic" href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "", Searchtext = "", SortID = 0 })">@item.ArabicName </a>
+                            }
+
                         }
                         @if (item.SubCategories.Count > 0)
                         {
-                            <ul class="mobview">
+                            <ul class="mobview" >
                                 @foreach (var sub in item.SubCategories)
                                 {
 
@@ -41,7 +49,15 @@
                                     }
                                     else
                                     {
-                                        <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})" style="color:black !important;">@sub.ArabicName</a></li>
+                                        if (sub.ArabicName == null)
+                                        {
+                                            <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})" style="color:black !important;">@sub.Name</a></li>
+                                        }
+                                        else
+                                        {
+                                            <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})" style="color:black !important;">@sub.ArabicName</a></li>
+                                        }
+
                                     }
                                 }
                             </ul>

@@ -56,7 +56,7 @@ namespace Vitamito.Models.BLL
                                     {
                                         CategoryID = _j.CategoryID,
                                         Name = _j.Name,
-                                        ArabicName = _j.ArabicName,
+                                        ArabicName = _j.ArabicName,                                        
                                         ID = _j.ID,
                                         StatusID = _j.StatusID
                                     });

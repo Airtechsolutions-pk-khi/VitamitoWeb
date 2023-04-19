@@ -90,14 +90,24 @@ else {
                                     }
                                     else
                                     {
-                                        @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                            <h6> @item.ArabicName</h6>
-                                        </a>*@
+                                        if (item.ArabicName == null)
+                                        {
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <h6> @item.Name</h6>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                                <h6> @item.ArabicName</h6>
+                                            </a>
+                                        }
+
                                     }
                                     @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                        <h6> @item.Name</h6>
-                                    </a>*@
-                                    <div class="pro_rating d-flex pr">
+            <h6> @item.Name</h6>
+        </a>*@
+                                    <div class="pro_rating d-flex pr _arabic">
                                         <ul class="product-rating d-flex">
                                             @{
                                                 if (item.Stars != null)

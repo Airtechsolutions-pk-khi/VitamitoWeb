@@ -5,7 +5,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>E:\Publish\VitamitoWeb</_PublishTargetUrl>
-    <History>True|2023-04-17T10:04:50.6267927Z;</History>
+    <History>True|2023-04-19T12:50:31.5872800Z;True|2023-04-17T03:04:50.6267927-07:00;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="BenefitPay/keystore.bin">
@@ -171,10 +172,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/10/2023 00:26:20</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.dll">
-      <publishTime>04/17/2023 03:04:47</publishTime>
+      <publishTime>04/19/2023 05:50:28</publishTime>
     </File>
     <File Include="bin/VitamitoWeb.pdb">
-      <publishTime>04/17/2023 03:04:47</publishTime>
+      <publishTime>04/19/2023 05:50:28</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>04/10/2023 00:26:21</publishTime>
@@ -363,7 +364,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/10/2023 00:26:18</publishTime>
     </File>
     <File Include="Content/assets/css/style.css">
-      <publishTime>04/17/2023 02:10:16</publishTime>
+      <publishTime>04/17/2023 03:26:20</publishTime>
     </File>
     <File Include="Content/assets/css/style.css.map">
       <publishTime>04/10/2023 00:26:18</publishTime>
@@ -667,6 +668,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Content/assets/images/flash-sale.png">
       <publishTime>04/10/2023 00:26:18</publishTime>
+    </File>
+    <File Include="Content/assets/images/flashsale-arabic.png">
+      <publishTime>04/19/2023 01:40:11</publishTime>
     </File>
     <File Include="Content/assets/images/flashsalebg.png">
       <publishTime>04/10/2023 00:26:18</publishTime>
@@ -2232,7 +2236,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/10/2023 00:26:18</publishTime>
     </File>
     <File Include="Content/assets/js/script.js">
-      <publishTime>04/10/2023 00:26:18</publishTime>
+      <publishTime>04/18/2023 06:06:52</publishTime>
     </File>
     <File Include="Content/assets/js/slick-animation.min.js">
       <publishTime>04/10/2023 00:26:18</publishTime>
@@ -2547,7 +2551,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/17/2023 00:29:13</publishTime>
     </File>
     <File Include="language/translations.json">
-      <publishTime>04/17/2023 03:01:14</publishTime>
+      <publishTime>04/19/2023 04:07:07</publishTime>
     </File>
     <File Include="product-page.html">
       <publishTime>04/10/2023 00:26:20</publishTime>
@@ -2592,10 +2596,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/17/2023 00:29:13</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 03:43:24</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 04:49:03</publishTime>
     </File>
     <File Include="Views/Home/Index1.cshtml">
       <publishTime>04/10/2023 00:26:19</publishTime>
@@ -2604,13 +2608,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/17/2023 00:29:13</publishTime>
     </File>
     <File Include="Views/Home/_Clearance.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 01:57:47</publishTime>
     </File>
     <File Include="Views/Home/_FlashSale.cshtml">
-      <publishTime>04/17/2023 01:14:14</publishTime>
+      <publishTime>04/19/2023 01:58:36</publishTime>
     </File>
     <File Include="Views/Home/_NewArrival.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 01:56:39</publishTime>
     </File>
     <File Include="Views/Order/Cart.cshtml">
       <publishTime>04/17/2023 00:29:13</publishTime>
@@ -2622,34 +2626,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/17/2023 00:29:13</publishTime>
     </File>
     <File Include="Views/Order/OrderComplete.cshtml">
-      <publishTime>04/17/2023 03:01:26</publishTime>
+      <publishTime>04/17/2023 04:58:08</publishTime>
     </File>
     <File Include="Views/Order/OrderDetails.cshtml">
-      <publishTime>04/10/2023 00:26:19</publishTime>
+      <publishTime>04/17/2023 04:57:58</publishTime>
     </File>
     <File Include="Views/Product/ProductDetails.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 02:14:02</publishTime>
     </File>
     <File Include="Views/Product/Wishlist.cshtml">
       <publishTime>04/17/2023 00:29:13</publishTime>
     </File>
     <File Include="Views/Shared/AllProducts.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 02:48:18</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>04/10/2023 00:26:19</publishTime>
     </File>
     <File Include="Views/Shared/Header.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 00:50:01</publishTime>
     </File>
     <File Include="Views/Shared/MobileNavigation.cshtml">
       <publishTime>04/10/2023 00:26:19</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/17/2023 02:30:31</publishTime>
+      <publishTime>04/19/2023 05:44:49</publishTime>
     </File>
     <File Include="Views/Shop/Shop.cshtml">
-      <publishTime>04/17/2023 00:29:13</publishTime>
+      <publishTime>04/19/2023 03:19:17</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/10/2023 00:26:19</publishTime>

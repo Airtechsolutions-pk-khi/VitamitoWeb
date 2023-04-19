@@ -325,6 +325,7 @@
     <Content Include="Content\assets\images\featuredSectionbg.png" />
     <Content Include="Content\assets\images\fire.gif" />
     <Content Include="Content\assets\images\flash-sale.png" />
+    <Content Include="Content\assets\images\flashsale-arabic.png" />
     <Content Include="Content\assets\images\flashsalebg.png" />
     <Content Include="Content\assets\images\FLogo.jpg" />
     <Content Include="Content\assets\images\footerlogo.png" />

@@ -337,12 +337,20 @@
                                         }
                                         else
                                         {
-                                            @ViewBag.ProductDetails.ArabicName
+                                            if (@ViewBag.ProductDetails.ArabicName == null)
+                                            {
+                                                @ViewBag.ProductDetails.Name
+                                            }
+                                            else
+                                            {
+                                                @ViewBag.ProductDetails.ArabicName
+                                            }
+
                                         }
 
                                     </h2>
-                                    <div class="pro_rating d-flex pr">
-                                        <ul class="product-rating d-flex">
+                                    <div class="pro_rating d-flex pr _arabic">
+                                        <ul class="product-rating d-flex prr">
                                             @{
                                                 if (ViewBag.ProductDetails.Stars != null)
                                                 {

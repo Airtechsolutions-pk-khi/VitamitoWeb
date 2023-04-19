@@ -1125,7 +1125,7 @@
         dots: false,
         infinite: true,
         speed: 300,
-        autoplay: true,
+        autoplay: false,
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [{

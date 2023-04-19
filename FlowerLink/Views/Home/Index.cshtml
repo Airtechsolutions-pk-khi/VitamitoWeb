@@ -5,7 +5,8 @@
 }
 
 <style>
-    .product-box .product-detail, .product-box .product-info, .product-wrap .product-detail, .product-wrap .product-info {        
+
+    .product-box .product-detail, .product-box .product-info, .product-wrap .product-detail, .product-wrap .product-info {
         margin-top: 0px !important;
     }
     .gift-card-section .container .card-box {
@@ -186,6 +187,13 @@
             top: 28px;
             font-weight: 700;
         }
+
+        @@media (max-width: 577px){
+            .header-compact .top-header .header-dropdown li {
+                padding: 0px 0px 0px;
+            }
+
+               }
 </style>
 <!-- Home slider -->
 
@@ -435,19 +443,29 @@ else
                             @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
                             {
                                 <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                    <h6 class="_arabic"> @item.Name</h6>
+                                    <h6 > @item.Name</h6>
                                 </a>
                             }
                             else
                             {
-                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                    <h6 class="_arabic"> @item.ArabicName</h6>
-                                </a>
+                                if (item.ArabicName == null)
+                                {
+                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                        <h6 > @item.Name</h6>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                        <h6 class="_arabic"> @item.ArabicName</h6>
+                                    </a>
+                                }
+
                             }
                             @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                <h6> @item.Name</h6>
-                            </a>*@
-                            <div class="pro_rating d-flex pr">
+            <h6> @item.Name</h6>
+        </a>*@
+                            <div class="pro_rating d-flex pr _arabic">
                                 <ul class="product-rating d-flex">
                                     @{
                                         if (item.Stars != null)
@@ -609,14 +627,24 @@ else
                                 }
                                 else
                                 {
-                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                        <h6 class="_arabic"> @item.ArabicName</h6>
-                                    </a>
+                                    if (item.ArabicName == null)
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                            <h6> @item.Name</h6>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                            <h6 class="_arabic"> @item.ArabicName</h6>
+                                        </a>
+                                    }
+
                                 }
                                 @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                    <h6> @item.Name</h6>
-                                 </a>*@
-                                <div class="pro_rating d-flex pr">
+           <h6> @item.Name</h6>
+        </a>*@
+                                <div class="pro_rating d-flex pr _arabic">
                                     <ul class="product-rating d-flex">
                                         @{
                                             if (item.Stars != null)
@@ -655,9 +683,9 @@ else
                                 }
                                 <br />
                                 @*@if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-                                {
-                                    <strong style="font-size:13px;color:red;">Low Stock</strong>
-                                }*@
+        {
+            <strong style="font-size:13px;color:red;">Low Stock</strong>
+        }*@
                                 @if (item.IsStockOut == true)
                                 {
 

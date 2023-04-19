@@ -357,7 +357,7 @@
   },
   "00w5": {
     "ar": "اضف للسلة",
-    "en": "Add to cart."
+    "en": "Add to cart"
   },
   "00w6": {
     "ar": "حذف",
@@ -616,16 +616,16 @@
     "en": "Call Us: +973 373 773 53"
   },
   "000co42": {
-    "ar": "+973 3737553 واتس اب",
-    "en": "Whatsapp: +973 3737553"
+    "ar": "+973 373 773 53 واتس اب",
+    "en": "Whatsapp +973 373 773 53"
   },
   "000co43": {
-    "ar": ": vitamitobh@gmail.com: راسلنا",
+    "ar": "vitamitobh@gmail.com: راسلنا",
     "en": "Email Us: vitamitobh@gmail.com"
   },
   "000co44": {
     "ar": "عنوان",
-    "en": "Address:"
+    "en": "Address"
   },
   "000co45": {
     "ar": "قلالي - اسفل جيم فيتنس تراك - بجانب بنك الاثمار",
@@ -1182,6 +1182,10 @@
   "000cb91": {
     "ar": "سيتم إرسال فاتورة الطلب إلى بريدك الإلكتروني.",
     "en": "Order Invoice will be sent to your Email."
+  },
+  "000cb92": {
+    "ar": "واتس اب",
+    "en": "WhatsApp"
   }
 
 }
