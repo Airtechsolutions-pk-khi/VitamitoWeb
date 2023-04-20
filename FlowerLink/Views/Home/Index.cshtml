@@ -457,7 +457,7 @@ else
                                 else
                                 {
                                     <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                        <h6 class="_arabic"> @item.ArabicName</h6>
+                                        <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
                                     </a>
                                 }
 
@@ -636,7 +636,7 @@ else
                                     else
                                     {
                                         <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                            <h6 class="_arabic"> @item.ArabicName</h6>
+                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
                                         </a>
                                     }
 
@@ -682,10 +682,7 @@ else
                                     <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
                                 }
                                 <br />
-                                @*@if ((Math.Round((item.CurrentStock), 2)) < 10 && (Math.Round((item.CurrentStock), 2)) != 0)
-        {
-            <strong style="font-size:13px;color:red;">Low Stock</strong>
-        }*@
+                                
                                 @if (item.IsStockOut == true)
                                 {
 
