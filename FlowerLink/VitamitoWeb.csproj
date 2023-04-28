@@ -903,6 +903,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="language\translations.js" />
+    <Content Include="language\translations.json" />
     <Content Include="product-page.html" />
     <Content Include="Scripts\js-cookie\js.cookie-2.2.1.min.js" />
     <Content Include="Scripts\js-cookie\js.cookie.js" />
@@ -1005,7 +1006,6 @@
     <Content Include="Content\assets\scss\_venue-details.scss" />
     <Content Include="Content\assets\scss\_widget.scss" />
     <Content Include="Content\assets\scss\_work-proces.scss" />
-    <Content Include="language\translations.json" />
     <Content Include="Content\assets\js\cookie\js.cookie.min.mjs" />
     <Content Include="Content\assets\js\cookie\js.cookie.mjs" />
     <Content Include="Content\assets\css\DatePicker\bootstrap-datepicker.css.map" />
