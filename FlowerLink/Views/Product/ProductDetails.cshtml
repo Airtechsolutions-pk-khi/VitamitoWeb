@@ -144,6 +144,61 @@
     .opp {
         opacity: 100;
     }
+    .ribbonStock-top-right {
+        top: 2px;
+        right: 92px;
+    }
+
+        .ribbonStock-top-right::before,
+        .ribbonStock-top-right::after {
+            border-top-color: transparent;
+            border-right-color: transparent
+        }
+
+        .ribbonStock-top-right::before {
+            top: 0;
+            left: 17px
+        }
+
+        .ribbonStock-top-right::after {
+            bottom: 17px;
+            right: 0
+        }
+
+        .ribbonStock-top-right span {
+            left: 61px;
+            top: 26px;
+            transform: rotate( 45deg);
+        }
+
+    .ribbonStock {
+        width: 29%;
+        height: 23px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        background-color: #206664;
+        border-radius: 5px;
+        text-align: center;
+        left: 2px;
+    }
+
+        .ribbonStock span {
+            position: absolute;
+            display: contents;
+            width: 100%;
+            font-size: 12px;
+            background-color: #004270 !important;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            text-align: center;
+            margin-left: 0;
+            left: 40px;
+            top: 28px;
+            font-weight: 700;
+        }
 </style>
 
 <section class="section-b-space">

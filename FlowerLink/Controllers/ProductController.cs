@@ -22,8 +22,9 @@ namespace Vitamito.Controllers
             Locations location = Locations.LocationID;
             ViewBag.ProductDetails = _service.GetAll(ID, (int)location);
 
-            ViewBag.RelatedProduct = _service.GetRelated(ID);
-          
+            var relatedProducts = _service.GetRelated(ID);
+            ViewBag.RelatedProduct = relatedProducts.OrderBy(x => Guid.NewGuid()).Take(10).ToList();
+
             return View(_service.GetAll(ID, (int)location));
            
         }
