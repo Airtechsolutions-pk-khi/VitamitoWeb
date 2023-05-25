@@ -9,6 +9,7 @@
     .product-box .product-detail, .product-box .product-info, .product-wrap .product-detail, .product-wrap .product-info {
         margin-top: 0px !important;
     }
+
     .gift-card-section .container .card-box {
         background-color: transparent !important;
         background-image: url('../../Content/assets/images/featuredbg.png');
@@ -87,6 +88,7 @@
         padding-bottom: 50px !important;
         margin-bottom: 0px;
     }
+
     .deal-product-space-flash {
         background-color: transparent !important;
         background-image: url('../../Content/assets/images/flashsalebg.png');
@@ -95,14 +97,16 @@
         z-index: -1;
         padding-bottom: 50px !important;
         margin-bottom: 0px;
-        background-repeat:no-repeat;
-        background-size:cover;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
+
     .product-style-4.product-box, .product-style-4.product-wrap {
         padding: 10px;
         border-radius: 7px;
         border: 0px solid #f1f1f1 !important;
     }
+
     .deal-product-space-Clearance {
         background-color: #f8efe7;
         padding-top: 70px;
@@ -188,12 +192,11 @@
             font-weight: 700;
         }
 
-        @@media (max-width: 577px){
-            .header-compact .top-header .header-dropdown li {
-                padding: 0px 0px 0px;
-            }
-
-               }
+    @@media (max-width: 577px) {
+        .header-compact .top-header .header-dropdown li {
+            padding: 0px 0px 0px;
+        }
+    }
 </style>
 <!-- Home slider -->
 
@@ -302,10 +305,10 @@ else
                             }
 
                             @*<a href="@Url.Action("shop", "shop", new { LocationID = 2195, CategoryIDs = item.ID, Category = "",Searchtext = "",SortID=0})">
-                                <div class="mobdiv">
-                                    <h5 style="padding-left:60px;" class="catTitle"><strong> @item.Name</strong></h5>
-                                </div>
-                            </a>*@
+                                    <div class="mobdiv">
+                                        <h5 style="padding-left:60px;" class="catTitle"><strong> @item.Name</strong></h5>
+                                    </div>
+                                </a>*@
 
 
 
@@ -377,168 +380,169 @@ else
                 </div>
             </div>
             <div class="slide-4-demo slick-sm-margin no-arrow">
-                div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
-                @foreach (var item in ViewBag.Featureditems)
-                {
-                    var Dis = ((item.NewPrice / item.Price) * 100);
-                    var Per = 100 - Dis;
-                    var DiscountPrice = Per;
-                    <div class="product-box product-box product-style-4">
-                        <div class="img-wrapper">
-                            <div class="front">
-                                @if (item.IsStockOut == true)
-                                {
-                                    <div class="ribbon ribbon-top-right">
-                                        <span style="color:white" data-translate="000co51" class="_arabic">
-                                            Out of stock
-                                        </span>
-                                    </div>
-                                }
+                <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
+                    @foreach (var item in ViewBag.Featureditems)
+                    {
+                        var Dis = ((item.NewPrice / item.Price) * 100);
+                        var Per = 100 - Dis;
+                        var DiscountPrice = Per;
+                        <div class="product-box product-box product-style-4">
+                            <div class="img-wrapper">
+                                <div class="front">
+                                    @if (item.IsStockOut == true)
+                                    {
+                                        <div class="ribbon ribbon-top-right">
+                                            <span style="color:white" data-translate="000co51" class="_arabic">
+                                                Out of stock
+                                            </span>
+                                        </div>
+                                    }
+                                    @if (item.NewPrice == null || item.NewPrice == 0)
+                                    {
+
+
+                                    }
+                                    else
+                                    {
+                                        <div class="ribbonStock ribbonStock-top-right">
+                                            <span>
+                                                @DiscountPrice.ToString("0.000") % off
+                                            </span>
+                                        </div>
+                                    }
+                                    @if (item.Image == null || item.Image == "")
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+
+                                            <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px !important; width: 160px !important;" />
+                                        </a>
+                                    }
+
+                                </div>
+
                                 @if (item.NewPrice == null || item.NewPrice == 0)
                                 {
-
-
-                                }
-                                else
-                                {
-                                    <div class="ribbonStock ribbonStock-top-right">
-                                        <span>
-                                            @DiscountPrice.ToString("0.000") % off
-                                        </span>
+                                    <div class="cart-detail">
+                                        <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
+                                            <i class="ti-heart" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 }
-                                @if (item.Image == null || item.Image == "")
-                                {
-                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
-                                }
                                 else
                                 {
-                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-
-                                        <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style="height: 160px !important; width: 160px !important;" />
-                                    </a>
+                                    <div class="cart-detail">
+                                        <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.NewPrice,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
+                                            <i class="ti-heart" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 }
 
                             </div>
-
-                            @if (item.NewPrice == null || item.NewPrice == 0)
-                            {
-                                <div class="cart-detail">
-                                    <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
-                                        <i class="ti-heart" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="cart-detail">
-                                    <a class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.NewPrice,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; ">
-                                        <i class="ti-heart" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            }
-
-                        </div>
-                        <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
-                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
-                            {
-                                <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                    <h6 > @item.Name</h6>
-                                </a>
-                            }
-                            else
-                            {
-                                if (item.ArabicName == null)
+                            <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
+                                @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
                                 {
                                     <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                        <h6 > @item.Name</h6>
+                                        <h6> @item.Name</h6>
                                     </a>
                                 }
                                 else
                                 {
-                                    <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-                                        <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
-                                    </a>
-                                }
+                                    if (item.ArabicName == null)
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                            <h6> @item.Name</h6>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
+                                        </a>
+                                    }
 
-                            }
-                            @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-            <h6> @item.Name</h6>
-        </a>*@
-                            <div class="pro_rating d-flex pr _arabic">
-                                <ul class="product-rating d-flex">
-                                    @{
-                                        if (item.Stars != null)
-                                        {
-                                            for (int i = 0; i < item.Stars; i++)
+                                }
+                                @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
+                                        <h6> @item.Name</h6>
+                                    </a>*@
+                                <div class="pro_rating d-flex pr _arabic">
+                                    <ul class="product-rating d-flex">
+                                        @{
+                                            if (item.Stars != null)
                                             {
-                                                <li><span class="ion-android-star"></span></li>
+                                                for (int i = 0; i < item.Stars; i++)
+                                                {
+                                                    <li><span class="ion-android-star"></span></li>
+                                                }
+                                                for (int i = 0; i < (5 - item.Stars); i++)
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
                                             }
-                                            for (int i = 0; i < (5 - item.Stars); i++)
+                                            else
                                             {
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
+                                                <li><span class="ion-android-star-outline"></span></li>
                                                 <li><span class="ion-android-star-outline"></span></li>
                                             }
                                         }
-                                        else
-                                        {
-                                            <li><span class="ion-android-star-outline"></span></li>
-                                            <li><span class="ion-android-star-outline"></span></li>
-                                            <li><span class="ion-android-star-outline"></span></li>
-                                            <li><span class="ion-android-star-outline"></span></li>
-                                            <li><span class="ion-android-star-outline"></span></li>
-                                        }
-                                    }
 
-                                </ul>
+                                    </ul>
 
-                            </div>
-                            @if (item.NewPrice == null || item.NewPrice == 0)
-                            {
-                                <strong>BHD @(Math.Round((item.Price),2))</strong>
-                            }
-                            else
-                            {
-                                <strong><del>@(Math.Round((item.Price),2))</del></strong>
-                                <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
-                            }
-
-                            <br />
-
-                            @if (item.IsStockOut == true)
-                            {
-
-                                <div class="addtocart_btn">
-                                    <button class="add-button add_cart" onclick="toastOut('Item is Out of Stock', 1); return false;" title="Add to cart">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
                                 </div>
-                            }
-                            else
-                            {
-                                if (item.NewPrice == null || item.NewPrice == 0)
+                                @if (item.NewPrice == null || item.NewPrice == 0)
                                 {
-                                    <div class="addtocart_btn">
-                                        <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
+                                    <strong>BHD @(Math.Round((item.Price),2))</strong>
                                 }
-
                                 else
                                 {
+                                    <strong><del>@(Math.Round((item.Price),2))</del></strong>
+                                    <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
+                                }
+
+                                <br />
+
+                                @if (item.IsStockOut == true)
+                                {
+
                                     <div class="addtocart_btn">
-                                        <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                        <button class="add-button add_cart" onclick="toastOut('Item is Out of Stock', 1); return false;" title="Add to cart">
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
                                 }
-                            }
+                                else
+                                {
+                                    if (item.NewPrice == null || item.NewPrice == 0)
+                                    {
+                                        <div class="addtocart_btn">
+                                            <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    }
+
+                                    else
+                                    {
+                                        <div class="addtocart_btn">
+                                            <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.ID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    }
+                                }
+
+                            </div>
 
                         </div>
+                    }
 
-                    </div>
-                }
-
+                </div>
             </div>
         </div>
     </div>
@@ -642,8 +646,8 @@ else
 
                                 }
                                 @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.ID })">
-           <h6> @item.Name</h6>
-        </a>*@
+                                       <h6> @item.Name</h6>
+                                    </a>*@
                                 <div class="pro_rating d-flex pr _arabic">
                                     <ul class="product-rating d-flex">
                                         @{
@@ -682,7 +686,7 @@ else
                                     <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
                                 }
                                 <br />
-                                
+
                                 @if (item.IsStockOut == true)
                                 {
 
@@ -888,7 +892,6 @@ else
     </section>*@
 <!-- product slider end -->
 <!-- deal product start -->
-
 <!-- deal product end -->
 <!-- service section start -->
 <section class="service-w-bg banner-padding theme-bg-service">

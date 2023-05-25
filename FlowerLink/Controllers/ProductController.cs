@@ -22,12 +22,10 @@ namespace Vitamito.Controllers
             Locations location = Locations.LocationID;
             ViewBag.ProductDetails = _service.GetAll(ID, (int)location);
 
-            //var _items = new itemService().GetSelecteditems(ID, LocationID);
-             
-            //ViewBag.itemList = _items.Take(3).Where(x => x.StatusID == 1).ToList();
-
+            ViewBag.RelatedProduct = _service.GetRelated(ID);
+          
             return View(_service.GetAll(ID, (int)location));
-            //return View();
+           
         }
         public ActionResult Wishlist()
         {

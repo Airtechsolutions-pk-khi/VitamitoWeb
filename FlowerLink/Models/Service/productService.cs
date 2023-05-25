@@ -25,6 +25,17 @@ namespace Vitamito.Models.Service
                 return new productBLL();
             }
         }
+        public List<productBLL> GetRelated(int ID)
+        {
+            try
+            {
+                return _service.GetAllRelated(ID);
+            }
+            catch (Exception ex)
+            {
+                return new List<productBLL>();
+            }
+        }
 
     }
 }
