@@ -9,6 +9,20 @@
             width: 367px !important;
         }
     }
+    @@media (max-width: 577px) {
+        .header-compact .top-header .header-dropdown li {
+            padding: 2px;
+        }
+        .product-right h3{
+            text-align:left
+        }
+        .product-right .product-buttons{
+            text-align:left;
+        }
+        .rating{
+            margin-right:15px !important;
+        }
+    }
 
     @@media (max-width: 1326px) {
         .collection-filter-block .product-service .media svg {
@@ -434,12 +448,12 @@
 
                                     @if (ViewBag.ProductDetails.NewPrice == null || ViewBag.ProductDetails.NewPrice == 0)
                                     {
-                                        <h3 class="price-detail">BHD @ViewBag.ProductDetails.Price</h3>
+                                        <h3 class="price-detail _arabic">BHD @ViewBag.ProductDetails.Price</h3>
                                     }
                                     else
                                     {
-                                        <h3 class="price-detail"><del>BHD @ViewBag.ProductDetails.Price</del></h3>
-                                        <h3 class="price-detail">BHD @ViewBag.ProductDetails.NewPrice</h3>
+                                        <h3 class="price-detail _arabic"><del>BHD @ViewBag.ProductDetails.Price</del></h3>
+                                        <h3 class="price-detail _arabic">BHD @ViewBag.ProductDetails.NewPrice</h3>
                                     }
 
                                     @if (ViewBag.ProductDetails.IsStockOut == true)
@@ -471,7 +485,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="product-buttons">
+                                    <div class="product-buttons siconsr">
                                         @if (ViewBag.ProductDetails.IsStockOut == true)
                                         {
                                             <a data-translate="00w5" onclick="toastOut('Item is Out of Stock', 1); return false; " id="cartEffect" class="btn btn-solid hover-solid btn-animation add-button addItemLS add_cart">
@@ -511,9 +525,9 @@
 
 
             <section class="tab-product m-0">
-                <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                <ul class="nav nav-tabs nav-material " id="top-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active _arabic" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-selected="true" data-translate="00od1"><i class="icofont icofont-ui-home"></i>Details</a>
+                        <a class="nav-link active _arabic " id="top-home-tab" data-bs-toggle="tab" style="direction:rtl;" href="#top-home" role="tab" aria-selected="true" data-translate="00od1"><i class="icofont icofont-ui-home"></i>Details</a>
                         <div class="material-border"></div>
                     </li>
                 </ul>
@@ -563,7 +577,7 @@
 
                                 foreach (var i in ViewBag.ProductDetails.Reviews)
                                 {
-                                    <div class="pro_review">
+                                    <div class="pro_review ">
                                         <div class="review_thumb">
                                             <img alt="review images" src="~/Content/assets/images/usericon.jpg" width="80px">
                                         </div>
