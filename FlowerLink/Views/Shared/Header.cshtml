@@ -39,7 +39,7 @@
                         }
                         @if (item.SubCategories.Count > 0)
                         {
-                            <ul class="mobview" >
+                            <ul class="mobview">
                                 @foreach (var sub in item.SubCategories)
                                 {
 
@@ -75,7 +75,9 @@
         <li>
             <a href="@Url.Action("Contact" , "Home")" class="_arabic" data-translate="00aa4">Contact</a>
         </li>
-
+        <li>
+            <a href="@Url.Action("Contact" , "Home")" class="_arabic" >Blog</a>
+        </li>
         @*<li>
             <a onclick="_lang(); return false;" id="_lang" style="cursor:pointer;">عربى</a>
         </li>*@
