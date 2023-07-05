@@ -1054,6 +1054,7 @@
     <Content Include="Views\Home\_FlashSale.cshtml" />
     <Content Include="Views\Home\_Clearance.cshtml" />
     <Content Include="Views\Home\_NewArrival.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
