@@ -8,6 +8,49 @@
         <li>
             <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
         </li>
+
+
+         
+           
+
+                @foreach (var item in Model)
+                {
+                    <li>
+                        
+                        @if (item.SubCategories.Count > 0)
+                        {
+                            
+                                foreach (var sub in item.SubCategories)
+                                {
+
+                                    if (HttpContext.Current.Request.Cookies["lang"].Value == "en" )
+                                    {
+                                        if (sub.Name == "Offers")
+                                        {
+                                            <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})" style="color:black !important;"><strong>@sub.Name</strong></a></li>
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (sub.Name == "Offers")
+                                    {
+                                            <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID, ColorIDs = "", MinPrice = "", MaxPrice = "", Searchtext = "", SortID = 0 })" style="color:black !important;"><strong>عروض</strong></a></li>
+                                    }
+
+                                }
+                            }
+
+                        }
+
+                    </li>
+
+                }
+            
+
+       
+
+
         <li><a class="_arabic" href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
 
         <li>
@@ -79,8 +122,9 @@
             <a href="@Url.Action("Blog" , "Home")" class="_arabic" >Blog</a>
         </li>
         @*<li>
-            <a onclick="_lang(); return false;" id="_lang" style="cursor:pointer;">عربى</a>
+            <a href="@Url.Action("Contact" , "Home")" class="_arabic">Blog</a>
         </li>*@
+        
 
     </ul>
 </nav>
