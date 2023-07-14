@@ -17,8 +17,10 @@ namespace Vitamito.Models.BLL
         public int SubCategoryID { get; set; }
         public int? UnitID { get; set; }
         public string Name { get; set; }
+        public string ArabicName { get; set; }
         public string NameOnReceipt { get; set; }
         public string Description { get; set; }
+        public string ArabicDescription { get; set; }
         public string Image { get; set; }
         public double? Barcode { get; set; }
         public string SKU { get; set; }
@@ -26,7 +28,7 @@ namespace Vitamito.Models.BLL
         public bool? SortByAlpha { get; set; }
         public double? Price { get; set; }
         public double? NewPrice { get; set; }
-        public double? Cost { get; set; }        
+        public double? Cost { get; set; }
         public string ItemType { get; set; }
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
@@ -104,6 +106,25 @@ namespace Vitamito.Models.BLL
                 }
                 return obj;
 
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<productBLL> GetAllRelated(int ID)
+        {
+            try
+            {
+                var obj = new List<productBLL>();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@ID", ID);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetRelatedProducts_Vitamito", p);
+                if (_ds.Tables[0] != null)
+                {
+                    obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<productBLL>>();
+                }
+                return obj;
             }
             catch (Exception ex)
             {

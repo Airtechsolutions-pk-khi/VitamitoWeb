@@ -17,6 +17,15 @@
         <link rel="preconnect" href="https://fo nts.gstatic.com" crossorigin="">*@
     @*<link href="../../css2-3.css?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">*@
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBC1CQ2EP5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LBC1CQ2EP5');
+    </script>
+
     <!-- Icons -->
     <link rel="stylesheet" type="text/css" href="~/Content/assets/css/vendors/font-awesome.css">
 
@@ -52,7 +61,7 @@
 
     <script>
         jQuery(document).ready(function () {
-
+            debugger;
             var currLang = Cookies.get('lang');
             if (currLang == null || currLang == "" || currLang == undefined) {
 
@@ -63,11 +72,137 @@
                 jQuery('#_lang').html("عربى");
                 jQuery("._arabic").css("direction", "ltr")
                 jQuery("._arabic-text").css("text-align", "left")
+
+                $("#Name").attr("placeholder", "Name");
+                $("#Email").attr("placeholder", "Email");
+                $("#email").attr("placeholder", "Email");
+                $("#password").attr("placeholder", "Enter your password");
+                $(".EmailAddress").attr("placeholder", "Email Address");
+                $("#Description").attr("placeholder", "Wrire Your thoughts");
+                $("#CustomerName").attr("placeholder", "Customer Name");
+                $("#ContactNo").attr("placeholder", "Phone Number");
+                $("#NearestPlace").attr("placeholder", "Park, Bank, Hotel etc.");
+                $("#Address").attr("placeholder", "Area, Block, Road, Building");
+                $("#CardNotes").attr("placeholder", "Notes, e.g. special things if you wanna customized  along with your orders.");
+                $("#coupon").attr("Coupon code");
+                $("#fname").attr("Full Name");
+                $("#lname").attr("Mobile");
+                $("#l1").attr("title", "Awesome - 5 stars");
+                $("#l2").attr("title", "Pretty good - 4 stars");
+                $("#l3").attr("title", "Pretty good - 3 stars");
+                $("#l4").attr("title", "Meh - 2 stars");
+                $("#l5").attr("title", "Meh - 1 stars");
+                jQuery("._arabic").css("direction", "ltr");
+                jQuery("._arabic-text").css("text-align", "left");
+                
             }
             else {
+
                 jQuery('#_lang').html("English");
-                jQuery('._ltrarabic').css("direction", "ltr")
-                jQuery("._arabic").css("direction", "rtl")
+                jQuery('._arabic').css('direction', 'rtl');
+                jQuery('.pr').css('padding-left', '40px');
+                jQuery('.pr').css('padding-right', '0px');
+                jQuery('._padingRight').css('padding-right', '20px');
+                jQuery('._pr10').css('padding-right', '10px');
+                jQuery('.prr').css('padding-right', '0px');
+                jQuery('._right').css('right', '0px');
+                jQuery("._arabic-textAlign").css("text-align", "right")
+                jQuery('.header-compact .top-header .header-dropdown li').css('padding-right', '0px');
+               /* jQuery('._arabicColor').css("color", "black");*/
+                //jQuery("._arabic").css("direction", "rtl")
+
+                $("#Name").attr("placeholder", "اسم");
+                $("#Name").addClass("_arabic");
+
+                $("#Email").attr("placeholder", "بريد إلكتروني");
+                $("#Email").addClass("_arabic");
+
+                $("#email").attr("placeholder", "بريد إلكتروني");
+                $("#email").addClass("_arabic");
+
+                $("#password").attr("placeholder", "ادخل رقمك السري");
+                $("#password").addClass("_arabic");
+
+                $(".EmailAddress").attr("placeholder", "عنوان البريد الإلكتروني *");
+                $(".EmailAddress").addClass("_arabic");
+
+                $("#Description").attr("placeholder", "اكتب أفكارك");
+                $("#Description").addClass("_arabic");
+
+                $("#CustomerName").attr("placeholder", "اسم الزبون");
+                $("#CustomerName").addClass("_arabic");
+
+                $("#ContactNo").attr("placeholder", "رقم التليفون");
+                $("#ContactNo").addClass("_arabic");
+
+                $("#NearestPlace").attr("placeholder", "بارك ، بنك ، فندق إلخ.");
+                $("#NearestPlace").addClass("_arabic");
+
+                $("#Address").attr("placeholder", "منطقة ، بلوك ، طريق ، مبنى");
+                $("#Address").addClass("_arabic");
+
+                $("#CardNotes").attr("placeholder", "ملاحظات ، على سبيل المثال أشياء خاصة إذا كنت تريد تخصيصها مع طلباتك.");
+                $("#CardNotes").addClass("_arabic");
+
+                $("#coupon").attr("placeholder", "رمز الكوبون");
+                $("#coupon").addClass("_arabic");
+
+                $("#fname").attr("placeholder", "الاسم الكامل");
+                $("#fname").addClass("_arabic");
+
+                $("#lname").attr("placeholder", "الموبايل");
+                $("#lname").addClass("_arabic");
+
+                $("#lastname").attr("placeholder", "أدخل أسمك");
+                $("#lastname").addClass("_arabic");
+
+                $("#name").attr("placeholder", "أدخل أسمك");
+                $("#name").addClass("_arabic");
+
+                $("#phone").attr("placeholder", "أدخل رقمك");
+                $("#phone").addClass("_arabic");
+
+                $("#message").attr("placeholder", "اكتب رسالتك");
+                $("#message").addClass("_arabic");
+
+                $("#l1").attr("title", "رهيبة - 5 نجوم");
+                $("#l1").addClass("_arabic");
+
+                $("#l2").attr("title", "جيد جدًا - 4 نجوم");
+                $("#l2").addClass("_arabic");
+
+                $("#l3").attr("title", "جيد جدًا - 3 نجوم");
+                $("#l3").addClass("_arabic");
+
+                $("#l4").attr("title", "ميه - 2 نجوم");
+                $("#l4").addClass("_arabic");
+
+                $("#l5").attr("title", "ميه - 1 نجوم");
+                $("#l5").addClass("_arabic");
+
+                $(".rtext").css("float", "right")
+
+                $(".pg").css("margin-right", "40px")
+
+                $(".siconsr").css("float", "right")
+                $(".siconsr").css("margin-left", "10px")
+
+                $(".cbt").css("margin-right", "10px")
+
+                $(".dtxt").css("display", "inline-table")
+
+                $(".fchk").addClass("fcrev");
+
+                $(".frl").css("float", "right")
+
+                $("#login-submit").val("تسجيل الدخول");
+
+                $("#register-submit").val("إنشاء حساب");
+
+                jQuery('._ltrarabic').css("direction", "ltr");
+                jQuery("._arabic").css("direction", "rtl");
+
+
             }
         });
 
@@ -81,43 +216,64 @@
             if (currLang == "en") {
                 Cookies.set('lang', 'ar', { expires: 365 });
                 jQuery('#_lang').html('English');
-                location.reload();
+                //location.reload();
             }
             if (currLang == "ar") {
                 Cookies.set('lang', 'en', { expires: 365 });
                 jQuery('#_lang').html('عربى');
-                location.reload();
+
+
             }
         }
     </script>
 
     <style>
+        @@media (max-width: 767px) {
+            .footer-contant {
+                 text-align: center !important; 
+            }
+        }
+
+        @@font-face {
+            font-family: 'sst_arabic_roman';
+            src: url('../../contentar/fonts/arabic/sst_arabic_roman.ttf') format('truetype');
+        }
+
+         * {
+            font-family: "sst_arabic_roman" !important;
+        }
         .ribbon-top-right {
             top: -10px;
             right: -10px
         }
 
-            .ribbon-top-right::before,
-            .ribbon-top-right::after {
-                border-top-color: transparent;
-                border-right-color: transparent
-            }
 
-            .ribbon-top-right::before {
-                top: 0;
-                left: 17px
-            }
+        .header-compact .top-header .header-dropdown li {
+            padding: 11px 70px 17px;
+        }
 
-            .ribbon-top-right::after {
-                bottom: 17px;
-                right: 0
-            }
 
-            .ribbon-top-right span {
-                left: 61px;
-                top: 26px;
-                transform: rotate( 45deg);
-            }
+        .ribbon-top-right::before,
+        .ribbon-top-right::after {
+            border-top-color: transparent;
+            border-right-color: transparent
+        }
+
+        .ribbon-top-right::before {
+            top: 0;
+            left: 17px
+        }
+
+        .ribbon-top-right::after {
+            bottom: 17px;
+            right: 0
+        }
+
+        .ribbon-top-right span {
+            left: 61px;
+            top: 26px;
+            transform: rotate( 45deg);
+        }
 
         .ribbon {
             width: 150px;
@@ -347,7 +503,7 @@
         }
 
         .pixelstrap a .sub-arrow {
-            right: 25px;
+            right: 15px;
         }
 
         @@media (max-width: 577px) {
@@ -362,9 +518,73 @@
                 margin-top: 10px !important;
             }
         }
+
+        #_lang {
+            cursor: pointer;
+        }
+
+        /* New style */
+        .header-dropdown {
+            display: flex;
+            align-items: center;
+           /* justify-content: flex-end;*/
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+            .header-dropdown li {
+                list-style: none;
+            }
+
+            .header-dropdown i.fa {
+                font-size: 18px;
+                color: #333;
+            }
+
+            .header-dropdown .onhover-dropdown {
+                position: relative;
+            }
+
+                .header-dropdown .onhover-dropdown > ul {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    min-width: 150px;
+                    padding: 10px;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                    display: none;
+                    z-index: 1;
+                }
+
+                .header-dropdown .onhover-dropdown:hover > ul {
+                    display: block;
+                }
+
+                .header-dropdown .onhover-dropdown ul li {
+                    margin: 5px 0;
+                }
+
+                    .header-dropdown .onhover-dropdown ul li a {
+                        color: #333;
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+
+                        .header-dropdown .onhover-dropdown ul li a:hover {
+                            color: #555;
+                        }
+
+       /* .aend {
+            float: right;
+        }*/
     </style>
 
-    
+
 
 </head>
 <body class="theme-color-30 mulish-font">
@@ -378,12 +598,12 @@
                     <div class="col-lg-4">
                         <div class="header-contact">
                             <ul>
-                                <li id="TopHeadDescription"></li>
-
+                                <li id="TopHeadDescription"></li>        
+                                <li><i class="fa fa-icon-globe"></i><a onclick="_lang(); return false;" id="_lang" data-translate="0002" >عربى</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-end">
+                    <div class="col-lg-5 text-end">
                         <div class="header-contact ">
                             <ul>
                                 <li><a href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/insta-active.png" alt="Tiktok" /></a></li>
@@ -391,15 +611,13 @@
                                 <li><a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snap-active.png" alt="Tiktok" /></a></li>
                                 <li><a onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok-active.png" alt="Tiktok" /></a></li>
                                 <li><a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp-active.png" alt="Tiktok" /></a></li>
-                                <li><i class="fa fa-icon-globe"></i><a onclick="_lang(); return false;" id="_lang" data-translate="0002">عربى</a></li>
+                                
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 text-end">
-
+                    <div class="col-lg-3 text-end">
                         <ul class="header-dropdown">
-
-                            <li class="mobile-wishlist pe-0 ">
+                            <li class="mobile-wishlist pe-0">
                                 <div><a href="@Url.Action("Wishlist" , "Product")"><i class="fa fa-heart"></i></a></div>
                                 <span class="wish_qty_cls" id="wish-total" style="color:var(--theme-color);">0</span>
                                 @*<ul class="show-div shopping-cart head-cart">
@@ -411,11 +629,11 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span data-translate="000co47">My Account</span>
+                                    <span class="_arabic" data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
-                                        <li style="color:black;"><strong>Hi!&nbsp;</strong> @Session["CustomerName"]</li>
-                                        <li> <a href="~/Order/Myorders" class="about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;">My Orders</a></li>
-                                        <li><a class="dropdown-item text-center " style="font-size:12px;" href="~/account/logout" onclick="logout();">Logout</a></li>
+                                        <li style="color:black;" class="_arabic"><strong data-translate="000co52">Hi!&nbsp;</strong> @Session["CustomerName"]</li>
+                                        <li> <a href="~/Order/Myorders" class="_arabic about-bg border-bottom dropdown-item font-weight-bold py-4 text-center" style="font-size:12px;" data-translate="00mo0">My Orders</a></li>
+                                        <li><a class="dropdown-item text-center _arabic" data-translate="00l5" style="font-size:12px;" href="~/account/logout" onclick="logout();">Logout</a></li>
                                     </ul>
                                 </li>
                             }
@@ -423,10 +641,10 @@
                             {
                                 <li class="onhover-dropdown mobile-account">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span data-translate="000co47">My Account</span>
+                                    <span class="" data-translate="000co47">My Account</span>
                                     <ul class="onhover-show-div">
-                                        <li><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
-                                        <li><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
+                                        <li class=""><a href="@Url.Action("Login_Register" , "Account")" data-translate="00l4">Login</a></li>
+                                        <li class=""><a href="@Url.Action("Login_Register" , "Account")" data-translate="00a3">Register</a></li>
                                     </ul>
                                 </li>
                             }
@@ -457,7 +675,7 @@
                         else
                         {
                             <div class="form_search">
-                                <input type="text" id="query search-autocomplete" placeholder="ابحث عن المنتجات الصحية والتجميلية ...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <input type="text" style="padding-right:40px" id="query search-autocomplete" placeholder="ابحث عن المنتجات الصحية والتجميلية ...." class="srch nav-search nav-search-field _arabic" aria-expanded="true">
                                 <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
                                     <i class="ti-search"></i>
                                 </button>
@@ -537,9 +755,9 @@
                         <div class="footer-title footer-mobile-title">
                             <h4 data-translate="aa1">about</h4>
                         </div>
-                        <div class="footer-contant">
-                            <div class="footer-logo"> <img src="~/Content/assets/images/footerlogo.png" /></div>
-                            <p data-translate="000co46">
+                        <div class="footer-contant _arabic">
+                            <div class="footer-logo "> <img src="~/Content/assets/images/footerlogo.png" /></div>
+                            <p data-translate="000co46" class="_arabic">
                                 A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids.
                                 Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics.
                             </p>
@@ -554,43 +772,67 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4 data-translate="000co39">Pages</h4>
+                                <h4 data-translate="000co39" class="_arabic pg">Pages</h4>
                             </div>
-                            <div class="footer-contant">
+                            <div class="footer-contant _arabic">
                                 <ul>
-                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="a0x">Home</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="00s1">Shop</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="aa0">About Us</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="00aa4">Contact Us</a></li>
+                                    <li><a href="@Url.Action("Index" , "Home")" >Blog</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    @*<div class="col-lg-4 col-md-4">
+            <div class="sub-title">
+                <div class="footer-title">
+                    <h4 data-translate="000co40" class="_arabic pg">store information</h4>
+                </div>
+                <div class="footer-contant">
+                    <ul class="contact-list ">
+                        <li class="rtext"><i class="fa fa-phone"></i><span data-translate="000co41"> Call us: +973 373 773 53 </span></li>
+                        <li class="rtext"><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
+                        <li class="rtext"><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us: vitamitobh@gmail.com</span></li>
+                        <li class="rtext"><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
+                    </ul>
+                    <br />
+
+                    <a class="siconsr" href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
+                    <a class="siconsr" href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                    <a class="siconsr" href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                    <a class="siconsr" onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
+                    <a class="siconsr" href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+
+                </div>
+            </div>
+        </div>*@
+
                     <div class="col-lg-4 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4 data-translate="000co40">store information</h4>
+                                <h4 data-translate="000co40" class="_arabic pg">store information</h4>
                             </div>
                             <div class="footer-contant">
-                                <ul class="contact-list">
-
-                                    <li><i class="fa fa-phone"></i><span data-translate="000co41">Call us:</span> +973 373 773 53</li>
-
-                                    <li><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp:</span> +973 3737553</li>
-                                    <li><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us:</span> <a href="#">vitamitobh@gmail.com</a></li>
-                                    <li><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
+                                <ul class="contact-list _arabic-textAlign">
+                                    <li class=""><i class="fa fa-phone"></i><span data-translate="000co41"> Call us: +973 373 773 53 </span></li>
+                                    <li class=""><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
+                                    <li class=""><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us: vitamitobh@gmail.com</span></li>
+                                    <li class=""><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
                                 </ul>
                                 <br />
 
-                                <a href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
-                                <a href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
-                                <a href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
-                                <a onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
-                                <a href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr" href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
 
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

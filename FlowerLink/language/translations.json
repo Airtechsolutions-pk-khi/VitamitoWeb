@@ -1,5 +1,5 @@
 ﻿{
-  "a0x": {
+  "a0": {
     "ar": "الصفحة الرئيسية",
     "en": "Home"
   },
@@ -20,7 +20,7 @@
     "en": "Continue as Guest"
   },
   "aa0": {
-    "ar": "عن فلاور لينك",
+    "ar": "عن فيتاميتو",
     "en": "About Us"
   },
   "aa1": {
@@ -28,12 +28,8 @@
     "en": "About"
   },
   "00aa2": {
-    "ar": "هلا بيكم في فلاور لينك",
-    "en": "Welcome To Karachi Flora"
-  },
-  "00aa3": {
-    "ar": "ابتدأنا مشوار فلاور لينك في البحرين من ٢٠١٣ مع فكرة توفير أفكار جديدة لتقديم الهدايا و تنسيق الورود و الخروج عن المألوف في عالم الهدايا، نوفر لكم كل جديد و جميل بفضل خبرة فريقنا المبدع في العمل و بخبرة وقيادة ادارة لها اكثر من ١٠ سنوات من الخبرة في هذا المجال",
-    "en": "Karachi Flora Pakistan, was established with the main business core of Flower arrangements that offers an uncompromising haven of comfort providing multiple products and services. With high dedicated and passionate staff, of one of the most experience in the field of flowers and event management for more than 10 years of practice, giving a strong idea in making your events a memorable one."
+    "ar": "أهلا بيكم في فيتاميتو",
+    "en": "Welcome To VITAMITO "
   },
   "00aa4": {
     "ar": "الاتصال بنا",
@@ -64,7 +60,7 @@
     "en": "Address : "
   },
   "00cn5": {
-    "ar": "البريد الالكتروني : ",
+    "ar": "البريد الالكتروني",
     "en": "Email : "
   },
   "00cn6": {
@@ -76,12 +72,12 @@
     "en": "Mobile : "
   },
   "00cn8": {
-    "ar": "فلاور لينك  مجمع الطويلة – الجفير البحرين ",
-    "en": "Karachi Flora, Al Taweela Complex, Building 20, Road 4101 Juffair, Kingdom of Bahrain"
+    "ar": "فيتاميتو للغذاء الصحى – قلالى – مجمع 255 – طريق 5541 – المبنى 2134 ",
+    "en": "VITAMITO DOR HEALTHY FOOD, BLOCK 255, Building 2134, Road 5541 GALALI, Kingdom of Bahrain"
   },
   "h0": {
-    "ar": "إختر باقتك و اضفها للسلة",
-    "en": "Choose your flower then click order in the website."
+    "ar": "إختر المنتج و اضفه للسلة",
+    "en": "Choose your product then click order in the website."
   },
   "h1": {
     "ar": "إملأ معلومات طلبك و تأكد من صحتها",
@@ -118,10 +114,6 @@
   "00h9": {
     "ar": "اشترك في البريد الالكتروني ",
     "en": "Subscribe Our Newsletter"
-  },
-  "00h10": {
-    "ar": "مع فلاور لينك ،أرسل هدايا لمن تحب بأجمل اشكال التنسيق و الأفكار بأفضل الأسعار لتناسب مناسبتك و تسعد بها من تحب",
-    "en": "With Vitamito, you can buy happy birthday flowers, thoughtful get well gifts, funeral and sympathy flower arrangements, and your everyday beautiful florals."
   },
   "00h11": {
     "ar": "المنتجات المفضلة",
@@ -336,12 +328,12 @@
     "en": "ADD GIFT"
   },
   "00w0": {
-    "ar": "قائمة التنمي",
+    "ar": "قائمة التمني",
     "en": "Wishlist"
   },
   "00w1": {
     "ar": "الصور",
-    "en": "Images"
+    "en": "Image"
   },
   "00w2": {
     "ar": "المنتح",
@@ -357,15 +349,15 @@
   },
   "00w5": {
     "ar": "اضف للسلة",
-    "en": "Add to cart."
+    "en": "Add to cart"
   },
   "00w6": {
     "ar": "حذف",
     "en": "Remove"
   },
   "00l0": {
-    "ar": "توصيل مجاني لجميع المناطق",
-    "en": "FREE Delivery nationwide"
+    "ar": " توصيل لجميع المناطق بالبحرين ",
+    "en": " Delivery to all areas of Bahrain "
   },
   "00l1": {
     "ar": "مع فلاور لينك ،أرسل هدايا لمن تحب بأجمل اشكال التنسيق و الأفكار بأفضل الأسعار لتناسب مناسبتك و تسعد بها من تحب",
@@ -432,7 +424,7 @@
     "en": "SHOP NOW"
   },
   "000a4": {
-    "ar": "منقي",
+    "ar": "فلتر",
     "en": "Filter"
   },
   "000aa5": {
@@ -525,7 +517,7 @@
   },
   "000co19": {
     "ar": "هاتف",
-    "en": "Phone"
+    "en": "Phone *"
   },
   "000co20": {
     "ar": "البريد الإلكتروني",
@@ -536,8 +528,8 @@
     "en": "Address"
   },
   "000co22": {
-    "ar": "٩٧٣ ٣٣٤٤١٤٨٠+",
-    "en": "+973 33441480"
+    "ar": "٩٧٣ 37377353+",
+    "en": "+973 37377353"
   },
   "000co23": {
     "ar": "المجموع الفرعي",
@@ -552,12 +544,12 @@
     "en": "Working hours"
   },
   "000co26": {
-    "ar": "الاثنين - الأحد: 10:00 صباحا - 02:00 مساءا",
-    "en": "Monday – Sunday: 10:00 AM – 02:00 PM"
+    "ar": "الاثنين - الأحد: 10:00 صباحا - 10:00 مساءا",
+    "en": "Monday – Sunday: 10:00 AM – 10:00 PM"
   },
   "000co27": {
-    "ar": "الجمعة: مغلق",
-    "en": "Friday : Closed"
+    "ar": "الجمعة: مفتوح",
+    "en": "Friday : open"
   },
   "000co28": {
     "ar": "هاتف :",
@@ -572,8 +564,8 @@
     "en": "Submit"
   },
   "000co31": {
-    "ar": "04:00 م - 09:00 م",
-    "en": "04:00 PM – 09:00 PM"
+    "ar": "04:00 م - 10:00 م",
+    "en": "04:00 PM – 10:00 PM"
   },
   "000co32": {
     "ar": "إجماليات سلة التسوق",
@@ -600,7 +592,7 @@
     "en": "SALES ENDS IN"
   },
   "000co38": {
-    "ar": "تخفيضات التصفية",
+    "ar": "عروض التصفية",
     "en": "Clearance Sale"
   },
   "000co39": {
@@ -612,27 +604,27 @@
     "en": "Store information"
   },
   "000co41": {
-    "ar": "اتصل بنا",
-    "en": "Call Us"
+    "ar": "+973 373 773 53 اتصل بنا",
+    "en": "Call Us: +973 373 773 53"
   },
   "000co42": {
-    "ar": "واتس اب",
-    "en": "Whatsapp"
+    "ar": "+973 373 773 53 واتس اب",
+    "en": "Whatsapp +973 373 773 53"
   },
   "000co43": {
-    "ar": "ارسل لنا عبر البريد الإلكتروني",
-    "en": "Email Us"
+    "ar": "vitamitobh@gmail.com: راسلنا",
+    "en": "Email Us: vitamitobh@gmail.com"
   },
   "000co44": {
     "ar": "عنوان",
     "en": "Address"
   },
   "000co45": {
-    "ar": "قلالي - اسفل جيم فيتنس تراك - بجانب بنك الاثمار",
-    "en": "Galali - Below Gym Fitness Track - Next to Ithmaar Bank"
+    "ar": "قلالي - اسفل جيم فيتنس تراك - بجانب بنك السلام",
+    "en": "Galali - under Fitness Track Gym - Next to al salam Bank"
   },
   "000co46": {
-    "ar": "متجر للمكملات والمكملات الرياضية ومستحضرات التجميل واختبار مجاني لمعرفة نسبة الدهون والعضلات وسوائل الجسم استمتع بأفضل العروض على آلاف المنتجات من البروتينات والمكملات الغذائية ومستحضرات التجم",
+    "ar": "متجر للمكملات الغذائية والمكملات الرياضية ومستحضرات التجميل وفحص مجاني لمعرفة نسبة الدهون والعضلات وسوائل الجسم -استمتع بأفضل العروض على آلاف المنتجات من البروتينات والمكملات الغذائية ومستحضرات التجميل",
     "en": "A store for supplements, sports supplements, cosmetics and a free test to know the percentage of fat, muscle and body fluids.Enjoy the best offers on thousands of  products from protein, nutritional supplements and cosmetics."
   },
   "000co47": {
@@ -644,12 +636,545 @@
     "en": "Vitamito | A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics."
   },
   "000co49": {
-    "ar": "وجهتك للحصول على أفضل المكملات الغذائية والبروتينات وأفضل الخصومات على الإطلاق. التوصيل في نفس اليوم .. سجل معنا الآن في برنامجنا مجانا واحصل على خصومات فورية عند شرائك 25 دينار من قيمة مشترياتك.",
-    "en": "Your destination to get the best nutritional supplements and proteins and the best discounts ever. Same day delivery .. Register now with us in OUR program for free and get instant discounts when buying 25 dinars from the value of your purchases."
+    "ar": "وجهتك للحصول على أفضل المكملات الغذائية والبروتينات وأفضل الخصومات على الإطلاق. التوصيل في نفس اليوم .. سجل معنا الآن في برنامجنا مجانا واحصل على توصيل مجانى عند شرائك 40 دينار من قيمة مشترياتك.",
+    "en": "Your destination to get the best nutritional supplements and proteins and the best discounts ever. Same day delivery .. Register now OUR website and get free delivery when buying 40 dinars from the value of your purchases."
   },
   "000co50": {
     "ar": "",
     "en": ""
+  },
+  "000co51": {
+    "ar": "إنتهى من المخزون",
+    "en": "out of stock"
+  },
+  "000co52": {
+    "ar": "أهلاً!",
+    "en": "Hi!"
+  },
+  "000co53": {
+    "ar": "تسليم سريع وبأسعار تنافسية",
+    "en": "Fast delivery, Competitive prices"
+  },
+  "000co54": {
+    "ar": "خدمة التوصيل السريع",
+    "en": "Fast Delivery Service"
+  },
+  "000co55": {
+    "ar": "خدمة 24 × 7",
+    "en": "24 X 7 service"
+  },
+  "000co56": {
+    "ar": "عروض مذهلة",
+    "en": "Amazing offers"
+  },
+  "000co57": {
+    "ar": "اطلب منتجك الآن!",
+    "en": "Order your product now!"
+  },
+  "000co58": {
+    "ar": "100٪ دفع آمن",
+    "en": "100% Secure Payment"
+  },
+  "000co59": {
+    "ar": "الدفع عبر الإنترنت متاح",
+    "en": "Online payment available"
+  },
+  "000co60": {
+    "ar": "الشريط الجانبي",
+    "en": "Sidebar"
+  },
+  "000co61": {
+    "ar": "كمية",
+    "en": "Quantity"
+  },
+  "000co62": {
+    "ar": "أكتب مراجعة",
+    "en": "Write Review"
+  },
+  "000co63": {
+    "ar": "تعليقات",
+    "en": "Comments"
+  },
+  "000co64": {
+    "ar": "لا توجد مراجعات على العنصر.",
+    "en": "No reviews on item."
+  },
+  "000co65": {
+    "ar": "قيمنا الآن",
+    "en": "Rate us now "
+  },
+  "000co66": {
+    "ar": "أرسل رأيك",
+    "en": "Submit your review"
+  },
+  "000co67": {
+    "ar": "الخدمة عبر الإنترنت على مدار 24 ساعة طوال أيام الأسبوع",
+    "en": "online service for 24 X 7"
+  },
+  "000co68": {
+    "ar": "السعر الكلي :",
+    "en": "Total price :"
+  },
+  "000co69": {
+    "ar": "فعل",
+    "en": "Action"
+  },
+  "000co70": {
+    "ar": "اسم المنتج",
+    "en": "Product Name"
+  },
+  "000co71": {
+    "ar": "السعر",
+    "en": "Price"
+  },
+  "000co72": {
+    "ar": "المجموع الفرعي",
+    "en": "Subtotal"
+  },
+  "000co73": {
+    "ar": "عرض عربة التسوق",
+    "en": "View Cart"
+  },
+  "000co74": {
+    "ar": "مجموعة",
+    "en": "Collection"
+  },
+  "000co75": {
+    "ar": "خلف",
+    "en": "back"
+  },
+  "000co76": {
+    "ar": "منتجات جديدة",
+    "en": "New Product"
+  },
+  "000co77": {
+    "ar": "تحميل...",
+    "en": "Loading..."
+  },
+  "000ca78": {
+    "ar": "تسجيل دخول العميل",
+    "en": "Customer Login"
+  },
+  "000ca79": {
+    "ar": "كلمة المرور",
+    "en": "password"
+  },
+  "000ca80": {
+    "ar": "إنشاء حساب",
+    "en": "Create an Account"
+  },
+  "000ca81": {
+    "ar": "قم بالتسجيل للحصول على حساب مجاني في متجرنا. تسجيل سريع وسهل. يتيح لك إمكانية الطلب من متجرنا. لبدء التسوق انقر فوق التسجيل.",
+    "en": "Sign up for a free account at our store. Registration is quick and easy. It allows you to be able to order from our shop. To start shopping click register."
+  },
+  "000ca82": {
+    "ar": "إنشاء حساب",
+    "en": "Create Account"
+  },
+  "000ca83": {
+    "ar": "عميل جديد",
+    "en": "New Customer"
+  },
+  "000co84": {
+    "ar": "الاسم الكامل *",
+    "en": "Full Name *"
+  },
+  "000co85": {
+    "ar": "خضروات",
+    "en": "vegetables"
+  },
+  "000co86": {
+    "ar": "ألبان",
+    "en": "Dairy"
+  },
+  "000co87": {
+    "ar": "لحمة",
+    "en": "Meat"
+  },
+  "000co88": {
+    "ar": "رعاية",
+    "en": "Care"
+  },
+  "000co89": {
+    "ar": "تنظيف",
+    "en": "Cleaning"
+  },
+  "000co90": {
+    "ar": "المعكرونة",
+    "en": "Noodle"
+  },
+  "000co91": {
+    "ar": "حيوان أليف",
+    "en": "Pet"
+  },
+  "000co92": {
+    "ar": "شاي",
+    "en": "Tea"
+  },
+  "000co93": {
+    "ar": "فيتاميتو | متجر للمكملات والمكملات الرياضية ومستحضرات التجميل واختبار مجاني لمعرفة نسبة الدهون والعضلات وسوائل الجسم. استمتع بأفضل العروض على آلاف المنتجات من البروتينات والمكملات الغذائية ومستحضرات التجميل.",
+    "en": "Vitamito | A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids. Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics."
+  },
+  "000co94": {
+    "ar": "وجهتك للحصول على أفضل المكملات الغذائية والبروتينات وأفضل الخصومات على الإطلاق. التوصيل في نفس اليوم. سجل معنا الآن في برنامجنا مجانا واحصل على خصومات فورية عند شراء 25 دينار من قيمة مشترياتك.",
+    "en": "Your destination to get the best nutritional supplements and proteins and the best discounts ever. Same day delivery. Register now with us in OUR program for free and get instant discounts when buying 25 dinars from the value of your purchases."
+  },
+  "000co95": {
+    "ar": "فئات منتجاتنا: <br /> - تغذية رياضية <br /> - صحة وعافية <br /> - فيتامينات ومعادن <br /> - أغذية صحية <br /> - حمية كيتو <br /> - إدارة الوزن <br /> - العناية الصحية <br /> - مستحضرات التجميل <br /> - مكملات زيادة الوزن <br />",
+    "en": "Our Products Categories:<br /> - Sports Nutrition<br /> - Health & Wellness<br /> - Vitamins & Minerals<br />- Healthy Foods<br /> - Keto Diet<br /> - Weight Management<br /> - Health Care<br /> - cosmetics<br /> - Weight Gainers<br />"
+  },
+  "000co96": {
+    "ar": "أسعار منافسة - التسليم السريع",
+    "en": "fast delivery - competitive prices "
+  },
+  "000co97": {
+    "ar": "خدمة عبر الإنترنت للعملاء الجدد",
+    "en": "Online service for new customers"
+  },
+  "000co98": {
+    "ar": "الاسم الأول",
+    "en": "First Name"
+  },
+  "000co99": {
+    "ar": "اسم العائلة",
+    "en": "Last Name"
+  },
+  "000ca1": {
+    "ar": "رقم التليفون",
+    "en": "Phone Number"
+  },
+  "000ca2": {
+    "ar": "اكتب رسالتك",
+    "en": "Write Your Message"
+  },
+  "000ca3": {
+    "ar": "أرسل رسالتك",
+    "en": "Send Your Message"
+  },
+  "000ca4": {
+    "ar": "البحرين",
+    "en": "Bahrain"
+  },
+  "000ca26": {
+    "ar": "الشروط والأحكام",
+    "en": "Terms & Condition"
+  },
+  "000ca28": {
+    "ar": "  سيتم فرض رسوم على اى طلب تم توصيله إذا كان العنوان الذي قدمته غير مكتمل أو غير دقيق    غير متوفر في وقت التسليم أو إذا رفض المستلم  قبول الترتيب ",
+    "en": "You will be charged for any un-delivered order if \"The address provided by you is incomplete or inaccurate\", \"Recipient is not available at the time of delivery\" or if the \"Recipient refuses to accept the order\""
+  },
+  "000ca29": {
+    "ar": "توضيح:",
+    "en": "Explanation :"
+  },
+  "000ca31": {
+    "ar": "نحتفظ بالحق في الاتصال بمستلم طلبك عدة مرات والمطالبة بالمال منه في حال تلقينا رد المبالغ المدفوعة مقابل طلبك. نحتفظ أيضًا بالحق في تسجيل قضية ضد متلقي طلبك والمطالبة بأموالهم بشكل قانوني.",
+    "en": "We reserve the right to contact the recipient of your order several times and demand the money from them in case we receive a chargeback against your order. We also reserve the right to register a case against the recipient of your order and claim money legally from them."
+  },
+  "000ca32": {
+    "ar": "لدينا سياسة عدم التسامح تجاه عمليات الاحتيال من أي نوع ، وبالتالي فإن هذه النقطة لا تحتاج إلى شرح إضافي",
+    "en": "We have a Zero Tolerance policy towards frauds of any kind and hence this point is self-explanatory and needs no further explanation"
+  },
+  "000ca33": {
+    "ar": "إذا قمت بتقديم طلب لشراء سلع ذات علامة تجارية ، فإن جميع الضمانات ستكون مسؤولة تجاه الشركة المصنعة الأصلية.",
+    "en": "If you place an order for Branded items, all warranties are liable to the original manufacturer."
+  },
+  "000ca34": {
+    "ar": "بعد بيع المنتج ، ستكون خدمة وصيانة هذا العنصر المعين وفقًا لشروط وأحكام الشركة المصنعة الأصلية ، ولن تكون مسؤوليتنا بأي حال من الأحوال ولا يمكننا أن نتحمل المسؤولية عن أي مطالبة. في حالة وجود أي عيب أو مطالبة ، يمكن رفع دعوى ضد الشركة المصنعة الأصلية من قبلنا ولكن يجب أن يتحمل المستلم تكلفة ذلك.",
+    "en": "After the product is sold, the service and maintenance of that particular item will be in accordance with the terms and conditions of the original manufacturer, and in no condition it is our responsibility and we cannot be held accountable for any claim. In case of any defect or claim, a case can be filed against the original manufacturer by us but the cost for the same has to be borne by the recipient."
+  },
+  "000ca35": {
+    "ar": "الأعمال المحظورة: لا يجوز لك الوصول إلى موقع الويب أو استخدامه لأي غرض آخر غير ذلك الذي توفره فيتاميتو من أجله. الموقع مخصص للاستخدام الشخصي للمستخدمين فقط ولا يجوز استخدامه فيما يتعلق بأي مساع تجارية باستثناء تلك التي تم اعتمادها أو الموافقة عليها بشكل خاص من قبل فيتاميتو للغذاء الصحى. في حالة وجود أي أنشطة محظورة قام بها المستخدم ، يحق للشركة تعليق أو حظر أو إنهاء عضوية المستخدم ومنع وصوله لتسجيل الدخول إلى الخدمة. تشمل الأنشطة المحظورة على سبيل المثال لا الحصر ما يلي:",
+    "en": "Prohibited acts: You may not access or use the website for any other purpose other than that for which Karachi vitamito makes it available. The website is for the personal use of users only and may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by Karachi FLora. In case of any prohibited activities committed by the user, the company has the right to suspend, block or terminate the user's membership and prevent his access to log in the service. Prohibited activities include but not limited to the following:"
+  },
+  "000ca36": {
+    "ar": "النشاط الإجرامي أو الضار ، بما في ذلك المواد الإباحية للأطفال ، والاحتيال ، والاتجار في المواد الفاحشة ، والاتجار بالمخدرات ، والمقامرة ، والمضايقة ، والمطاردة ، والبريد العشوائي ، وانتهاك حقوق النشر ، وانتهاك براءات الاختراع ، أو سرقة الأسرار التجارية.",
+    "en": "Criminal or tortuous activity, including child pornography, fraud, trafficking in obscene material, drug dealing, gambling, harassment, stalking, spamming, copyright infringement, patent infringement, or theft of trade secrets."
+  },
+  "000ca37": {
+    "ar": "الإعلان أو التماس أي مستخدم لشراء أو بيع أي منتجات أو خدمات ، ما لم يأذن به فيتاميتو للغذاء الصحى.",
+    "en": "Advertising to, or solicitation of, any user to buy or sell any products or services, unless authorized by vitamito ."
+  },
+  "000ca38": {
+    "ar": "الاسترداد المنهجي للبيانات أو أي محتوى آخر من موقع الويب لإنشاء أو تجميع ، بشكل مباشر أو غير مباشر ، مجموعة أو تجميع أو قاعدة بيانات أو دليل دون إذن كتابي من فيتاميتو للغذاء الصحى.",
+    "en": "Systematic retrieval of data or other content from the website to create or compile, directly or indirectly, a collection, compilation, database or directory without written permission from vitamito ."
+  },
+  "000ca39": {
+    "ar": "القيام بأي استخدام غير مصرح به لخدمات فيتاميتو  ، بما في ذلك جمع أسماء المستخدمين و / أو عناوين البريد الإلكتروني للمستخدمين بالوسائل الإلكترونية أو غيرها من الوسائل بغرض إرسال بريد إلكتروني غير مرغوب فيه.",
+    "en": "Making any unauthorized use of the Karachi vitamito services, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email."
+  },
+  "000ca40": {
+    "ar": "الانخراط في تأطير أو ربط غير مصرح به للموقع.",
+    "en": "Engaging in unauthorized framing of or linking to the website."
+  },
+  "000ca41": {
+    "ar": "إرسال رسائل متسلسلة أو بريد إلكتروني غير هام إلى مستخدمين آخرين.",
+    "en": "Transmitting chain letters or junk email to other users."
+  },
+  "000ca42": {
+    "ar": "استخدام أي معلومات تم الحصول عليها من موقع الويب للاتصال بأي مستخدم أو الإعلان عنه أو التماسه أو بيعه دون موافقته الصريحة المسبقة.",
+    "en": "Using any information obtained from the website in order to contact, advertise to, solicit, or sell to any user without their prior explicit consent."
+  },
+  "000ca43": {
+    "ar": "الانخراط في أي استخدام آلي للنظام ، مثل استخدام البرامج النصية لإضافة أصدقاء أو إرسال تعليقات أو رسائل ، أو استخدام أي استخراج للبيانات أو الروبوتات أو أدوات جمع واستخراج البيانات المماثلة.",
+    "en": "Engaging in any automated use of the system, such as using scripts to add friends or send comments or messages, or using any data mining, robots or similar data gathering and extraction tools."
+  },
+  "000ca44": {
+    "ar": "التدخل في أو تعطيل أو خلق عبء لا داعي له على موقع الويب أو الشبكات أو الخدمات المتصلة بالموقع.",
+    "en": "Interfering with, disrupting, or creating an undue burden on the website or the networks or services connected to the website."
+  },
+  "000ca45": {
+    "ar": "محاولة انتحال شخصية مستخدم أو شخص آخر.",
+    "en": "Attempting to impersonate another user or person."
+  },
+  "000ca46": {
+    "ar": "باستخدام اسم مستخدم آخر.",
+    "en": "Using the username of another user."
+  },
+  "000ca47": {
+    "ar": "بيع أو نقل ملف التعريف الخاص بك.",
+    "en": "Selling or otherwise transferring your profile."
+  },
+  "000ca48": {
+    "ar": "استخدام أي معلومات تم الحصول عليها من الموقع من أجل مضايقة أو الإساءة أو الإضرار بشخص آخر.",
+    "en": "Using any information obtained from the website in order to harass, abuse, or harm another person."
+  },
+  "000ca49": {
+    "ar": "استخدام خدمة vitamito كجزء من أي جهد للتنافس مع vitamito  أو لتقديم الخدمات كمكتب خدمة.",
+    "en": "Using the Karachi vitamito service as part of any effort to compete with Karachi vitamito or to provide services as a service office."
+  },
+  "000ca50": {
+    "ar": "فك أو فك أو فك أو فك أو عكس هندسة أي من البرامج التي تتألف منها أو تشكل بأي شكل من الأشكال جزءًا من موقع الويب.",
+    "en": "Deciphering, decompiling, disassembling or reverse engineering any of the software comprising or in any way making up a part of the website."
+  },
+  "000ca51": {
+    "ar": "محاولة تجاوز أي إجراءات للموقع مصممة لمنع أو تقييد الوصول إلى الموقع ، أو أي جزء منه.",
+    "en": "Attempting to bypass any measures of the website designed to prevent or restrict access to the website, or any portion of the website."
+  },
+  "000ca52": {
+    "ar": "مضايقة أو مزعجة أو تخويف أو تهديد شركة فيتاميتو  من خلال أي وسيلة اتصال أو إلى أي من موظفيها أو وكلائها المشاركين في تقديم أي جزء من خدمات شركة كراتشي فلورا لك.",
+    "en": "Harassing, annoying, intimidating or threatening Karachi vitamito Company through any medium of communication or to any of its employees or agents engaged in providing any part of Karachi FLora Company services to you."
+  },
+  "000ca53": {
+    "ar": "تشغيل إعلان أو قبول مدفوعات أو أي شيء ذي قيمة من شخص ثالث مقابل قيامك بأي نشاط تجاري على الموقع الإلكتروني أو من خلاله نيابة عن ذلك الشخص ، مثل نشر المدونات أو النشرات لغرض تجاري.",
+    "en": "isplaying an advertisement, or accepting payment or anything of value from a third person in exchange for your performing any commercial activity on or through the website on behalf of that person, such as posting blogs or bulletins with a commercial purpose."
+  },
+  "000ca54": {
+    "ar": "حذف حقوق الطبع والنشر أو إشعار حقوق الملكية الأخرى من أي مساهمة أو محتوى فيتاميتو  ؛ واستخدام الموقع بطريقة تتعارض مع أي وجميع القوانين واللوائح المعمول بها.",
+    "en": "Deleting the copyright or other proprietary rights notice from any Contribution or Karachi vitamito Content; and using the website in a manner inconsistent with any and all applicable laws and regulations."
+  },
+  "000ca55": {
+    "ar": "أي أنشطة ضارة أخرى مشتبه بها على موقع أو تطبيقات فيتاميتو.",
+    "en": "Any other suspected malicious activities on Karachi vitamito website or applications."
+  },
+  "000ca56": {
+    "ar": "السعر والمدفوعات",
+    "en": "Price and payments"
+  },
+  "000ca57": {
+    "ar": "يرجى قراءة شروط الاستخدام وإخلاء المسؤولية التالية بعناية قبل استخدام بطاقات الخصم / الائتمان: يقتصر إلغاء طلب العميل على مدة أقصاها 15 دقيقة من وقت تقديم الطلب. <br /> <br /> إجراء استرداد العميل قد تستغرق المعالجة من 2 إلى 7 أيام عمل على بوابة الدفع البنكية لبطاقات الخصم / الائتمان. يجب على العميل المتابعة مع البنك في حالة حدوث أي تأخير في إعادة المبلغ إلى حساب العميل بالمبلغ الذي دفعه العميل مسبقًا. سنرسل بريدًا إلكترونيًا إلى العميل يحتوي على نسخة مطبوعة من إشعار الاسترداد المطبوع من بوابة الدفع البنكية لبطاقات الخصم / الائتمان كمرجع في حالة رغبة العميل في مراجعة البنك مع. <br /> العملاء الذين يستخدمون تسهيلات بطاقات الخصم / الائتمان يجب أن تكون متاحة على أرقام الاتصال الخاصة بهم. <br /> <br /> يجب أن تنتمي بطاقات الائتمان أو الخصم المستخدمة في تقديم الطلبات من خلال بوابة الدفع عبر الإنترنت على موقع الويب الخاص بـ فيتاميتو أو التطبيقات إلى المستخدم. خلاف ذلك ، يجب على المستخدم الحصول على إذن قانوني من صاحب البطاقة لإجراء المعاملة. يتحمل العميل المسؤولية الكاملة عن تقديم طلب باستخدام بطاقة الخصم / الائتمان بعد قراءة جميع الشروط والأحكام بعناية.",
+    "en": "Please read the following terms of use and disclaimers carefully before using Debit / Credit Cards: The customer order cancellation is limited to a maximum time of 15 minutes from the time of placing the order.<br /><br />The customer refund procedure might take 2-7 working days to process on the Debit /Credit Cards bank payment gateway. The customer has to follow on with the bank in case of any delay in crediting back the customer’s account with the amount previously paid by the customer. We will send an email to the customer that contains a printout of the refund advice printed from Debit / Credit Cards bank payment gateway as reference in case the customer wants to revise the bank with.<br />Customers using the Debit / Credit Cards facility are requested to be available on their respective contact numbers.<br /><br />Credit or Debit cards used in placing orders through the online payment gateway on Karachi vitamito website or applications must belong to the user. Otherwise, the user must attain the legal permission from the card owner to perform the transaction. The customer is entirely liable for placing an order using the Debit / Credit Cards facility after carefully reading all the terms & conditions."
+  },
+  "000ca58": {
+    "ar": "سياسة الإلغاء والاسترداد",
+    "en": "Cancellation & Refund Policy"
+  },
+  "000ca59": {
+    "ar": "قبل تقديم الطلب ، يُطلب منك قراءة جميع الشروط والأحكام بعناية حيث يجب عليك الالتزام بهذه الشروط والأحكام بغض النظر عن البلد الذي تقيم فيه حاليًا أو بغض النظر عن حقيقة أنك لم تقرأها قبل تقديم الطلب.",
+    "en": "Before placing the order you are requested to read all the Terms and Conditions carefully as you shall be bound by these Terms and Conditions regardless of the country you are currently residing in or regardless of the fact that you did not read them before placing an order."
+  },
+  "000ca60": {
+    "ar": "نحن في فيتاميتو نحتفظ بالحق في استبدال المنتج بمنتج مناسب إذا كان المنتج المطلوب غير متوفر. يرجى تفهم أن البدائل ضرورية لضمان التسليم في الوقت المناسب لكل طلب وقد نتصل بك أو لا نتصل بك قبل استبدال المنتج. يُطلب منك أيضًا ملاحظة أن جميع صور المنتج عبارة عن صور استوديو وأن المنتج الفعلي الذي تم تسليمه قد يكون له شكل وأسلوب مختلف تمامًا / جزئيًا. باختصار ، ستبقى الكمية كما هي ولكن يمكن أن تختلف العبوة.",
+    "en": "We at Karachi vitamito  reserve the right to Substitute the product with a suitable product if the ordered product is not available. Please understand that substitutions are necessary to ensure timely delivery of each order and we may or may not contact you before substituting the product. You are also requested to note that all the product images are Studio Images and the actual product delivered may have completely/ Partially different look and feel. In short the quantity will remain the same but the packaging can vary. "
+  },
+  "000ca61": {
+    "ar": "لن يتم قبول أي طلبات استرداد أو شكاوى على أساس أن منتجي لا يشبه المنتج المعروض على الإنترنت",
+    "en": "No refund requests or complaints on grounds that My product does not look similar to the one shown online will be entertained."
+  },
+  "000ca62": {
+    "ar": "قد يستغرق إجراء استرداد العميل من 2 إلى 7 أيام عمل للمعالجة على بوابة الدفع البنكية لبطاقات الخصم / الائتمان. يجب على العميل المتابعة مع البنك في حالة حدوث أي تأخير في إعادة المبلغ إلى حساب العميل بالمبلغ الذي دفعه العميل مسبقًا. سنرسل بريدًا إلكترونيًا إلى العميل يحتوي على نسخة مطبوعة من إشعار الاسترداد المطبوع من بوابة الدفع البنكية لبطاقات الخصم / الائتمان كمرجع في حالة رغبة العميل في مراجعة البنك معه.",
+    "en": "The customer refund procedure might take 2-7 working days to process on the Debit /Credit Cards bank payment gateway. The customer has to follow on with the bank in case of any delay in crediting back the customer’s account with the amount previously paid by the customer. We will send an email to the customer that contains a printout of the refund advice printed from Debit / Credit Cards bank payment gateway as reference in case the customer wants to revise the bank with."
+  },
+  "000ca63": {
+    "ar": "لن يتم قبول أي طلب لاسترداد الأموال أو شكاوى على أساس أن <strong> لقد طلبت تسليم هذا الطلب في X مرة ولكنك لم تفعل </ strong>. يرجى ملاحظة أننا نضمن التسليم في تاريخ محدد فقط. نحن لا نضمن التسليم في غضون فترة زمنية محددة بأي حال من الأحوال ، ولكننا سنبذل قصارى جهدنا لتسليمه دائمًا في الإطار الزمني المطلوب ، ولكن في حالة تسليم الطلب في وقت لاحق ، لن يتم طلب استرداد الأموال أو تقديم شكوى.",
+    "en": "No refund request or complaints on grounds that <strong> I asked this order to be delivered at X time and you didn't </strong> will be entertained. Please note that we only guarantee delivery on a specified date. We in no way guarantee delivery within a specified time frame, but we will try our best to deliver it always on the time frame requested, but in case the order was delivered on a later time No refunds requested or complains will be entertained."
+  },
+  "000ca64": {
+    "ar": "3. إلغاء الأمر:",
+    "en": "3. Order cancellation:"
+  },
+  "000ca65": {
+    "ar": "لديك الحق في إلغاء الطلب حتى 15 دقيقة من تقديم الطلب على موقعنا. بينما نبذل قصارى جهدنا لضمان الحفاظ على الأسعار والأوصاف الدقيقة ، فإننا نحتفظ بالحق في إلغاء أي طلب يستند إلى معلومات غير دقيقة. قد يتم إلغاء الطلب لاحقًا من قبل فيتاميتو  بعد تلقيك تأكيدًا وتحتفظ شركة  فيتاميتو  بالحق في إلغاء أي طلب ، قبل أو بعد القبول ، وسوف تُخطرك على الفور بأي إلغاء من هذا القبيل.",
+    "en": "You have the right to cancel an order up to 15 minutes from placing the order on our website. While every effort is made to ensure that accurate pricing and descriptions are maintained, we reserve the right to cancel any order that is based on inaccurate information. An order may be subsequently cancelled by Karachi vitamito after you have received a confirmation and Karachi vitamito reserve the right to cancel any order, before or after acceptance, and will notify you immediately of any such cancellation."
+  },
+  "000ca66": {
+    "ar": "سياسات الشحن والتسليم",
+    "en": "Shipment and Delivery Policies"
+  },
+  "000ca67": {
+    "ar": "ايصال المنتج:",
+    "en": "Product delivery:"
+  },
+  "000ca68": {
+    "ar": "أثناء تسليم أي منتج بواسطة كراتشي فلورا ، إذا لم يكن العميل متاحًا في العنوان المحدد في النظام ، فلن يتم تسليم المنتج الذي طلبه العميل إلى أي مكان آخر. في إطار هذه الحالة ، يجب على العضو قبول جميع المسؤوليات القانونية الناشئة عن طلب منتج إلى عنوان لا يوجد فيه.",
+    "en": "During any product delivery made by Karachi FLora, if the client is not available in the address specified in the system, the product ordered by the client shall not deliver to anywhere else. Within the framework of such a case, the member must accept all legal responsibilities arising from ordering a product to an address where he/she does not exist."
+  },
+  "000ca69": {
+    "ar": "قد لا نتمكن من تزويدك باسم المستلمين أو POD إذا كان الطلب يخص زفاف أو جنازة أو فنادق أو نزل أو مستشفى. لن يتم قبول أي طلبات استرداد أو شكاوى عدم التسليم على هذا الأساس",
+    "en": "We may not be able to provide you with the receivers name or POD if the order is for a Wedding, Funeral, Hotels, Hostels or Hospital. No refund requests or non-delivery complains will be entertained on such grounds."
+  },
+  "000ca70": {
+    "ar": "",
+    "en": "Please understand that we may not be permitted to carry the products directly to a room in a hospital, hostels or hotel and hence we may we forced to leave them with the reception. Quite often the reception will not sign a delivery confirmation note and hence we may not be able to provide a POD for such deliveries. For flower deliveries made to a Funeral, it does not look nice to trouble the already grieved relative with the Signing process. Hence we may not be able to provide a POD for such deliveries. For flower or gift deliveries made to a wedding hall we may not be able to provide you with a POD if the Bride or Groom or their relative does not cooperate and refuse to sign the POD indicating they are busy or they do not have time."
+  },
+  "000ca71": {
+    "ar": "القانون الحاكم والاختصاص:",
+    "en": "Governing law & competent:"
+  },
+  "000ca72": {
+    "ar": "تخضع شروط موقع الويب هذه وتفسر وفقًا لقانون كل بلد التسليم. تخضع النزاعات الناشئة فيما يتعلق بشروط موقع الويب هذه (بما في ذلك النزاعات غير التعاقدية) للاختصاص القضائي الحصري لمحاكم بلد التسليم المعني.",
+    "en": "These Website Terms shall be governed by and construed in accordance with the law of each country of delivery. Disputes arising in connection with these Website Terms (including non-contractual disputes) shall be subject to the exclusive jurisdiction of the courts of the respective delivery country."
+  },
+  "000ca73": {
+    "ar": "رخصة:",
+    "en": "License:"
+  },
+  "000ca74": {
+    "ar": "تمنحك فيتاميتو الإذن (الذي قد يتم إلغاؤه في أي وقت لأي سبب أو بدون سبب) لعرض الموقع وتنزيله أو إرسال بريد إلكتروني إليه أو مشاركته عبر الشبكات الاجتماعية أو طباعة صفحات فردية من الموقع وفقًا لشروط الاستخدام هذه وفقط لاستخدامك الشخصي غير التجاري ، بشرط ألا تزيل أي علامة تجارية أو حقوق نشر أو إشعار آخر وارد في هذه الصفحات. لا يُسمح بأي استخدام آخر. لا يجوز لك ، على سبيل المثال ، دمج المعلومات أو المحتوى أو أي مادة أخرى في أي قاعدة بيانات أو تجميع أو أرشيف أو ذاكرة تخزين مؤقت. لا يجوز لك تعديل أو نسخ أو توزيع أو إعادة نشر أو إرسال أو عرض أو تنفيذ أو إعادة إنتاج أو نشر أو إعادة استخدام أو إعادة بيع أو ترخيص أو إنشاء أعمال مشتقة من أو نقل أو بيع أي معلومات أو محتوى أو مادة أو برامج أو منتجات أو خدمات تم الحصول عليها من الموقع ، باستثناء ما هو مذكور أعلاه على وجه التحديد. باستثناء ما هو مصرح به على وجه التحديد من قبل فيتاميتو، لا يجوز لك الارتباط العميق بالموقع لأي غرض أو الوصول إلى الموقع يدويًا أو باستخدام أي روبوت أو عنكبوت أو زاحف ويب أو برنامج استخراج أو عملية آلية أو جهاز لكشط أو نسخ أو مراقبة أي جزء من الموقع أو أي معلومات أو محتوى أو مادة على الموقع. تحتفظ فيتاميتو بجميع حقوقها القانونية والقانونية ضد أي شخص أو كيان ينتهك هذه الفقرة. لا يجوز لك ربط أو تأطير أي صفحات من الموقع أو أي محتوى وارد فيه ، سواء كليًا أو جزئيًا ، دون موافقة كتابية مسبقة من كراتشي فلورا. قد تصبح معجبًا بالموقع أو تشارك روابطه عبر مرجع تقنية شبكات التواصل الاجتماعي على الموقع. محجوزة أي حقوق لا الممنوحة صراحة فيه.",
+    "en": "Karachi vitamito grants you permission (which may be revoked at any time for any reason or no reason) to view the site and to download, email, share via social networking or print individual pages from the site in accordance with these Terms of Use and solely for your own personal, non-commercial use, provided you do not remove any trademark, copyright or other notice contained on such pages. No other use is permitted.You may not, for example, incorporate the information, content, or other material in any database, compilation, archive or cache. You may not modify, copy, distribute, re-publish, transmit, display, perform, reproduce, publish, reuse, resell, license, create derivative works from, transfer, or sell any information, content, material, software, products or services obtained from the site, except as specifically noted above. Except as specifically authorized by Karachi vitamito, you may not deep-link to the site for any purpose or access the site manually or with any robot, spider, web crawler, extraction software, automated process or device to scrape, copy, or monitor any portion of the site or any information, content, or material on the site. Karachi vitamito reserves all of its statutory and common law rights against any person or entity who violates this paragraph. You may not link or frame to any pages of the site or any content contained therein, whether in whole or in part, without prior written consent from Karachi vitamito. You may become a fan of the site or share links to the site via social networking technology reference on the site. Any rights not expressly granted herein are reserved."
+  },
+  "000ca75": {
+    "ar": "حقوق الملكية الفكرية:",
+    "en": "Intellectual property rights:"
+  },
+  "000ca76": {
+    "ar": "",
+    "en": "The content on the website (\"vitamito\") and the trademarks, service marks and logos contained therein (\"Marks\") are owned by or licensed to Karachi vitamito, and are subject to copyright and other intellectual property rights under the kingdom of Bahrain and international conventions. Karachi vitamito Content, includes, without limitation, all source code, databases, functionality, software, website designs, audio, video, text, photographs and graphics. All Karachi vitamito graphics, logos, designs, page headers, button icons, scripts and service names are registered trademarks, common law trademarks or trade dress of Karachi vitamito in Bahrain and/or other countries. Karachi vitamito trademarks and trade dress may not be used, including as part of trademarks and/or as part of domain names, in connection with any product or service in any manner that is likely to cause confusion and may not be copied, imitated, or used, in whole or in part, without the prior written permission of Karachi vitamito. Karachi vitamito Content on the website is provided to you AS IS for your information and personal use only and may not be used, copied, reproduced, distributed, transmitted, broadcasted, displayed, sold, licensed, or otherwise exploited for any other purposes whatsoever without the prior written consent of the respective owners. Systematic retrieval of data or other content from the website to create or compile, directly or indirectly, a collection, compilation, database or directory without written permission from Karachi vitamito is prohibited."
+  },
+  "000ca77": {
+    "ar": "توضيح:",
+    "en": "Provided that you are eligible to use the website, you are granted a limited license to access and use the website and the Karachi vitamito content and to download or print a copy of any portion of the Karachi FLora content to which you have properly gained access solely for your personal, non-commercial use. Karachi vitamito reserves all rights not expressly granted to you in and to the website and Karachi vitamito Content and Marks. If you download or print a copy of the Karachi vitamito content for personal use, you must retain all copyright and other proprietary notices contained therein. You agree not to circumvent, disable or otherwise interfere with the security related features of the website or features that prevent or restrict use or copying of any Karachi vitamito content or enforce limitations on use of the website or the Karachi vitamito content therein."
+  },
+  "000cb65": {
+    "ar": "الدفع",
+    "en": "Check-out"
+  },
+  "000cb66": {
+    "ar": "الاسم الكامل *",
+    "en": "Full Name *"
+  },
+  "000cb67": {
+    "ar": "هاتف *",
+    "en": "Phone *"
+  },
+  "000cb68": {
+    "ar": "عنوان البريد الإلكتروني *",
+    "en": "Email Address *"
+  },
+  "000cb69": {
+    "ar": "اختر وقت التسليم...",
+    "en": "Choose Delivery Time..."
+  },
+  "000cb70": {
+    "ar": "حدد نوع المكان ...",
+    "en": "Select Place Type..."
+  },
+  "000cb71": {
+    "ar": "مكتب",
+    "en": "Office"
+  },
+  "000cb72": {
+    "ar": "مستشفى",
+    "en": "Hospital"
+  },
+  "000cb73": {
+    "ar": "منزل",
+    "en": "House"
+  },
+  "000cb74": {
+    "ar": "شقة",
+    "en": "Apartment"
+  },
+  "000cb75": {
+    "ar": "مَنفَذ",
+    "en": "Outlet"
+  },
+  "000cb76": {
+    "ar": "البحرين",
+    "en": "Bahrain"
+  },
+  "000cb77": {
+    "ar": "عنوان *",
+    "en": "Address *"
+  },
+  "000cb78": {
+    "ar": "المجموع الفرعي",
+    "en": "Sub-Total"
+  },
+  "000cb79": {
+    "ar": "تخفيض",
+    "en": "Discount"
+  },
+  "000cb80": {
+    "ar": "قيمة الضريبة",
+    "en": "Tax Amount "
+  },
+  "000cb81": {
+    "ar": "المجموع الإجمالي",
+    "en": "Grand Total"
+  },
+  "000cb82": {
+    "ar": "<br/> ملاحظة: أقل من 10 د.ب ، 1.5 د.ب رسوم التوصيل <br/> 10 د.ب إلى 40 د.ب ، 1 د.ب.",
+    "en": "<br/> Note: Below 10 BD, 1.5 BD Delivery Charges <br/> 10 BD to 40 BD, 1 BD Delivery Charges <br/> 40 BD and above Free Delivery"
+  },
+  "000cb83": {
+    "ar": "تاريخ الطلب",
+    "en": "Order Date"
+  },
+  "000cb84": {
+    "ar": "تم قبول الطلب",
+    "en": "Order Accepted"
+  },
+  "000cb85": {
+    "ar": "على الشحن",
+    "en": "On Shipping"
+  },
+  "000cb86": {
+    "ar": "ألغيت",
+    "en": "Cancelled"
+  },
+  "000cb87": {
+    "ar": "معاد",
+    "en": "Refunded"
+  },
+  "000cb88": {
+    "ar": "يمسك",
+    "en": "Hold"
+  },
+  "000cb89": {
+    "ar": "تم التوصيل",
+    "en": "Delivered"
+  },
+  "000co82": {
+    "ar": "ملحوظة: أقل من 10 د.ب ، 1.5 د.ب رسوم التوصيل 10 د.ب إلى 40 د.ب ، 1 د.ب رسوم التوصيل 40 د.ب وما فوق التوصيل المجاني",
+    "en": "Note: Below 10 BD, 1.5 BD Delivery Charges  <br/> 10 BD to 40 BD, 1 BD Delivery Charges  <br/>  40 BD and above Free Delivery"
+  },
+  "000cb90": {
+    "ar": "أوصي بنا للآخرين من خلال تقييمنا على GOOGLE!",
+    "en": "Recommend us to others by rating us <br> on GOOGLE!"
+  },
+  "000cb91": {
+    "ar": "سيتم إرسال فاتورة الطلب إلى بريدك الإلكتروني.",
+    "en": "Order Invoice will be sent to your Email."
+  },
+  "000cb92": {
+    "ar": "واتس اب",
+    "en": "WhatsApp"
+  },
+  "000cb93": {
+    "ar": "العروض/الكومبو",
+    "en": "Offers/Combo"
   }
+
 }
 

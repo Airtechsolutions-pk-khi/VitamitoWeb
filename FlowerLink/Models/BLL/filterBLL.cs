@@ -21,8 +21,10 @@ namespace Vitamito.Models.BLL
         public int SortID { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }
+        public string ArabicName { get; set; }
         public string ArabicTitle { get; set; }
         public string SKU { get; set; }
+        public string ArabicDescription { get; set; }
         public string Description { get; set; }
         public double Cost { get; set; }
         public double Price { get; set; }

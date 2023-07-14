@@ -95,6 +95,17 @@ namespace Vitamito.Controllers
             //ViewBag.Banner = new bannerBLL().GetBanner("Contact");
             return View();
         }
+        [HttpGet]
+        public ActionResult Blog(string[] args)
+        {
+            Locations location = Locations.LocationID;
+            var blogCatlist = new blogCategoryBLL().GetAll((int)location);
+            ViewBag.categoryList = blogCatlist.Take(6).ToList();
+            ViewBag.Category = blogCatlist.ToList();
+            var blogData = new itemService().GetAllBlog((int)location);
+            ViewBag.Blogitems = blogData.OrderByDescending(x => x.DisplayOrder).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
+            return View();
+        }
         [HttpPost]
         public ActionResult Contact(contactBLL obj)
         {

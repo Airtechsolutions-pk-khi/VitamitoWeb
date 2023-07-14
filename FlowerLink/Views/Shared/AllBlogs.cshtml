@@ -1,0 +1,180 @@
+﻿ 
+<style>
+    .ribbonStock-top-right {
+        top: 0px;
+        right: 92px;
+    }
+
+        .ribbonStock-top-right::before,
+        .ribbonStock-top-right::after {
+            border-top-color: transparent;
+            border-right-color: transparent
+        }
+
+        .ribbonStock-top-right::before {
+            top: 0;
+            left: 17px
+        }
+
+        .ribbonStock-top-right::after {
+            bottom: 17px;
+            right: 0
+        }
+
+        .ribbonStock-top-right span {
+            left: 61px;
+            top: 26px;
+            transform: rotate( 45deg);
+        }
+
+    .ribbonStock {
+        width: 33%;
+        height: 21px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        background-color: #206664;
+        border-radius: 5px;
+        text-align: center;
+        left: 2px;
+    }
+
+        .ribbonStock span {
+            position: absolute;
+            display: contents;
+            width: 100%;
+            font-size: 11px;
+            background-color: #004270 !important;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            text-align: center;
+            margin-left: 0;
+            left: 40px;
+            top: 28px;
+        }
+    @@media (min-width: 768px) {
+        .col-md-2 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 5.66667%;
+        }
+    }
+</style>
+ 
+    <div class="product-wrapper-grid LoadProduct">
+        @ViewBag.Message
+        <div class="row margin-res">
+            @foreach (var item in ViewBag.blogList)
+            {
+
+                <div class="col-xl-3 col-6 col-grid-box">
+
+                    <div class="product-box product-box product-style-4">
+
+                        <div class="img-wrapper">
+                            
+                            @if (item.ImageSmall == null || item.ImageSmall == "")
+                            {
+                                <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })"><img src="~/Content/assets/images/NA.png" style="height:auto; width: 100%;"></a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })">
+                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ImageSmall" alt=""  style="height:auto;width: 100%;"/>
+                                </a>
+                            }
+
+                           
+                        </div>
+
+                        @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                        {
+
+                            <div class="product-detail">
+                                <div>
+                                    @*<div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>*@
+                                    @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })">
+                                            <h6>@item.Title</h6>
+                                        </a>
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })">
+                                            <h6 class="_arabic">@item.ArabicTitle</h6>
+                                        </a>
+                                        <p class="_arabic">
+                                            @item.ArabicDescription
+                                        </p>
+                                    }
+ 
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="product-detail" style="direction:rtl;">
+                                <div>
+                                    <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                                    @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })">
+                                            <h6>@item.Title</h6>
+                                        </a>
+                                        <p>
+                                            @item.Description
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        if (item.ArabicTitle == null)
+                                        {
+                                            <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })">
+                                                <h6>@item.Title</h6>
+                                            </a>
+                                            <p>
+                                                @item.Description
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("BlogDetails", "Product", new { ID = item.ID })">
+                                                <h6 class="_arabic">@item.ArabicTitle</h6>
+                                            </a>
+                                            <p class="_arabic">
+                                                @item.ArabicDescription
+                                            </p>
+                                        }
+
+                                    }
+ 
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+ 
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        $('.all-items').paginathing({
+            perPage: 40,
+            containerClass: 'panel-footer'
+        })
+        $('.all-list-items').paginathing({
+            perPage: 20,
+            containerClass: 'panel-footer'
+        })
+    });
+</script>

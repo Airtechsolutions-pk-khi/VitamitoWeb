@@ -37,7 +37,7 @@ namespace Vitamito.Models.BLL
             public Nullable<int> ID { get; set; }
 
             //Item
-
+            public string ArabicName { get; set; }
             public int? StatusID { get; set; }
             public int SubCategoryID { get; set; }
             public int? UnitID { get; set; }

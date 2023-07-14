@@ -178,14 +178,17 @@
     <Compile Include="Helpers\LINQtoDataTable.cs" />
     <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="Models\BLL\bannerBLL.cs" />
+    <Compile Include="Models\BLL\blogCategoryBLL.cs" />
     <Compile Include="Models\BLL\categoryBLL.cs" />
     <Compile Include="Models\BLL\checkoutBLL.cs" />
     <Compile Include="Models\BLL\colorBLL.cs" />
     <Compile Include="Models\BLL\contactBLL.cs" />
     <Compile Include="Models\BLL\couponBLL.cs" />
     <Compile Include="Models\BLL\dealBLL.cs" />
+    <Compile Include="Models\BLL\blogfilterBLL.cs" />
     <Compile Include="Models\BLL\filterBLL.cs" />
     <Compile Include="Models\BLL\giftBLL.cs" />
+    <Compile Include="Models\BLL\blogBLL.cs" />
     <Compile Include="Models\BLL\webSaleBLL.cs" />
     <Compile Include="Models\BLL\itemBLL.cs" />
     <Compile Include="Models\BLL\loginBLL.cs" />
@@ -201,6 +204,7 @@
     <Compile Include="Models\Service\checkoutService.cs" />
     <Compile Include="Models\Service\colorService.cs" />
     <Compile Include="Models\Service\dealService.cs" />
+    <Compile Include="Models\Service\blogfilterService.cs" />
     <Compile Include="Models\Service\filterService.cs" />
     <Compile Include="Models\Service\giftService.cs" />
     <Compile Include="Models\Service\webSaleService.cs" />
@@ -325,6 +329,7 @@
     <Content Include="Content\assets\images\featuredSectionbg.png" />
     <Content Include="Content\assets\images\fire.gif" />
     <Content Include="Content\assets\images\flash-sale.png" />
+    <Content Include="Content\assets\images\flashsale-arabic.png" />
     <Content Include="Content\assets\images\flashsalebg.png" />
     <Content Include="Content\assets\images\FLogo.jpg" />
     <Content Include="Content\assets\images\footerlogo.png" />
@@ -902,6 +907,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="language\translations.js" />
+    <Content Include="language\translations.json" />
     <Content Include="product-page.html" />
     <Content Include="Scripts\js-cookie\js.cookie-2.2.1.min.js" />
     <Content Include="Scripts\js-cookie\js.cookie.js" />
@@ -1004,7 +1010,6 @@
     <Content Include="Content\assets\scss\_venue-details.scss" />
     <Content Include="Content\assets\scss\_widget.scss" />
     <Content Include="Content\assets\scss\_work-proces.scss" />
-    <Content Include="language\translations.json" />
     <Content Include="Content\assets\js\cookie\js.cookie.min.mjs" />
     <Content Include="Content\assets\js\cookie\js.cookie.mjs" />
     <Content Include="Content\assets\css\DatePicker\bootstrap-datepicker.css.map" />
@@ -1023,6 +1028,11 @@
     <Content Include="Content\assets\fonts\themify.eot" />
     <Content Include="Content\assets\fonts\themify.ttf" />
     <Content Include="Content\assets\fonts\themify.woff" />
+    <Content Include="ContentAr\fonts\Arabic\.DS_Store" />
+    <Content Include="ContentAr\fonts\Arabic\alfont_com_SST-Arabic-Medium.ttf" />
+    <Content Include="ContentAr\fonts\Arabic\sst-arabic-bold.ttf" />
+    <Content Include="ContentAr\fonts\Arabic\SSTArabicRoman.ttf" />
+    <Content Include="ContentAr\fonts\Arabic\SST_Arabic_Roman.ttf" />
     <None Include="packages.config" />
     <Content Include="Views\Shop\Shop.cshtml" />
     <Content Include="Views\Product\Wishlist.cshtml" />
@@ -1048,6 +1058,10 @@
     <Content Include="Views\Home\_FlashSale.cshtml" />
     <Content Include="Views\Home\_Clearance.cshtml" />
     <Content Include="Views\Home\_NewArrival.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Shop\BlogCategory.cshtml" />
+    <Content Include="Views\Shared\AllBlogs.cshtml" />
+    <Content Include="Views\Product\BlogDetails.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
