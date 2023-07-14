@@ -9,9 +9,11 @@ namespace Vitamito.Models.Service
     public class itemService : baseService
     {
         itemBLL _service;
+        blogBLL _blogBLL;
         public itemService()
         {
             _service = new itemBLL();
+            _blogBLL = new blogBLL();   
         }
 
         public List<itemBLL> GetAll(int LocationID)
@@ -23,6 +25,17 @@ namespace Vitamito.Models.Service
             catch (Exception ex)
             {
                 return new List<itemBLL>();
+            }
+        }
+        public List<blogBLL> GetAllBlog(int LocationID)
+        {
+            try
+            {
+                return _blogBLL.GetAll(LocationID);
+            }
+            catch (Exception ex)
+            {
+                return new List<blogBLL>();
             }
         }
         public itemBLL GetSelecteditems(int ID, int LocationID)

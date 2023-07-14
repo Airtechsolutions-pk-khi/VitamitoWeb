@@ -178,14 +178,17 @@
     <Compile Include="Helpers\LINQtoDataTable.cs" />
     <Compile Include="Helpers\ListExtensions.cs" />
     <Compile Include="Models\BLL\bannerBLL.cs" />
+    <Compile Include="Models\BLL\blogCategoryBLL.cs" />
     <Compile Include="Models\BLL\categoryBLL.cs" />
     <Compile Include="Models\BLL\checkoutBLL.cs" />
     <Compile Include="Models\BLL\colorBLL.cs" />
     <Compile Include="Models\BLL\contactBLL.cs" />
     <Compile Include="Models\BLL\couponBLL.cs" />
     <Compile Include="Models\BLL\dealBLL.cs" />
+    <Compile Include="Models\BLL\blogfilterBLL.cs" />
     <Compile Include="Models\BLL\filterBLL.cs" />
     <Compile Include="Models\BLL\giftBLL.cs" />
+    <Compile Include="Models\BLL\blogBLL.cs" />
     <Compile Include="Models\BLL\webSaleBLL.cs" />
     <Compile Include="Models\BLL\itemBLL.cs" />
     <Compile Include="Models\BLL\loginBLL.cs" />
@@ -201,6 +204,7 @@
     <Compile Include="Models\Service\checkoutService.cs" />
     <Compile Include="Models\Service\colorService.cs" />
     <Compile Include="Models\Service\dealService.cs" />
+    <Compile Include="Models\Service\blogfilterService.cs" />
     <Compile Include="Models\Service\filterService.cs" />
     <Compile Include="Models\Service\giftService.cs" />
     <Compile Include="Models\Service\webSaleService.cs" />
@@ -1055,6 +1059,9 @@
     <Content Include="Views\Home\_Clearance.cshtml" />
     <Content Include="Views\Home\_NewArrival.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Shop\BlogCategory.cshtml" />
+    <Content Include="Views\Shared\AllBlogs.cshtml" />
+    <Content Include="Views\Product\BlogDetails.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

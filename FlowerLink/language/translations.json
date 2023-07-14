@@ -115,7 +115,7 @@
     "ar": "اشترك في البريد الالكتروني ",
     "en": "Subscribe Our Newsletter"
   },
-    "00h11": {
+  "00h11": {
     "ar": "المنتجات المفضلة",
     "en": "Featured Products"
   },
@@ -859,7 +859,7 @@
     "ar": "الشروط والأحكام",
     "en": "Terms & Condition"
   },
-    "000ca28": {
+  "000ca28": {
     "ar": "  سيتم فرض رسوم على اى طلب تم توصيله إذا كان العنوان الذي قدمته غير مكتمل أو غير دقيق    غير متوفر في وقت التسليم أو إذا رفض المستلم  قبول الترتيب ",
     "en": "You will be charged for any un-delivered order if \"The address provided by you is incomplete or inaccurate\", \"Recipient is not available at the time of delivery\" or if the \"Recipient refuses to accept the order\""
   },
@@ -867,7 +867,7 @@
     "ar": "توضيح:",
     "en": "Explanation :"
   },
-    "000ca31": {
+  "000ca31": {
     "ar": "نحتفظ بالحق في الاتصال بمستلم طلبك عدة مرات والمطالبة بالمال منه في حال تلقينا رد المبالغ المدفوعة مقابل طلبك. نحتفظ أيضًا بالحق في تسجيل قضية ضد متلقي طلبك والمطالبة بأموالهم بشكل قانوني.",
     "en": "We reserve the right to contact the recipient of your order several times and demand the money from them in case we receive a chargeback against your order. We also reserve the right to register a case against the recipient of your order and claim money legally from them."
   },
@@ -1170,6 +1170,10 @@
   "000cb92": {
     "ar": "واتس اب",
     "en": "WhatsApp"
+  },
+  "000cb93": {
+    "ar": "العروض/الكومبو",
+    "en": "Offers/Combo"
   }
 
 }
