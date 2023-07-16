@@ -33,10 +33,16 @@ namespace Vitamito.Controllers
             Locations location = Locations.LocationID;
             ViewBag.ProductDetails = _service.GetBlogByID(BlogID, (int)location);
 
+            var blogData = new itemService().GetAllBlog((int)location);
+            ViewBag.RelatedProduct = blogData.OrderByDescending(x => x.DisplayOrder).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
+
             var relatedProducts = _service.GetRelatedBlog(BlogID);
             ViewBag.RelatedProduct = relatedProducts.OrderBy(x => Guid.NewGuid()).Take(10).ToList();
 
-            ViewBag.TwoBlogRight = relatedProducts.OrderBy(x => Guid.NewGuid()).Take(2).ToList();
+            //ViewBag.TwoBlogRight = relatedProducts.OrderBy(x => Guid.NewGuid()).Take(2).ToList();
+
+            var itemData = new itemService().GetAll((int)location);
+            ViewBag.TwoBlogRight = itemData.OrderByDescending(x => x.DisplayOrder).Where(x => x.IsFeatured == true).OrderBy(c => Guid.NewGuid()).Take(2).ToList();
 
             return View(_service.GetBlogByID(BlogID, (int)location));
 

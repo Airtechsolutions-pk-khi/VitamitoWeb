@@ -17,6 +17,8 @@ namespace Vitamito.Models.BLL
         public int? BlogCategoryID { get; set; }
         public int? LocationID { get; set; }
         public string Label { get; set; }
+        public string BCName { get; set; }
+        public string BCArName { get; set; }
         public string Title { get; set; }
         public string ArabicTitle { get; set; }
         public string Description { get; set; }
