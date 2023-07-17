@@ -104,6 +104,7 @@ namespace Vitamito.Controllers
             ViewBag.Category = blogCatlist.ToList();
             var blogData = new itemService().GetAllBlog((int)location);
             ViewBag.Blogitems = blogData.OrderByDescending(x => x.DisplayOrder).OrderBy(c => Guid.NewGuid()).Take(6).ToList();
+           
             return View();
         }
         [HttpPost]

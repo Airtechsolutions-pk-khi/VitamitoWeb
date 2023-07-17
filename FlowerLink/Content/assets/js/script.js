@@ -1120,6 +1120,7 @@
         }
         ]
     });
+    
 
     $('.slide-4-demo').slick({
         dots: false,
@@ -1166,6 +1167,8 @@
         }
         ]
     });
+
+    
     $('.slide-3-demo').slick({
         dots: false,
         infinite: true,
