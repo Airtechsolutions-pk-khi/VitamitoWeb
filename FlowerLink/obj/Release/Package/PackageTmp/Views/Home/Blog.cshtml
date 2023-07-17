@@ -1,0 +1,313 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .btn-solid {
+        padding: 7px 18px;
+        color: #fff;
+        letter-spacing: 0.05em;
+        border: 2px solid var(--theme-color);
+        background: var(--theme-color);
+    }
+
+    .ribbon-top-right span {
+        left: 0px !important;
+        top: 10px;
+        transform: rotate( 0deg) !important;
+    }
+
+    .ribbon-top-right {
+        top: -10px;
+        /* right: 22px; */
+    }
+
+    .ribbon-top-right {
+        top: -10px;
+        /*right: 84px;*/
+        left:0px;
+    }
+
+    .ribbon {
+        width: 164px;
+        height: 126px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+    }
+        .ribbon span{
+            font-size:14px;
+        }
+</style>
+<!-- breadcrumb start -->
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page-title">
+                    <h2 class="_arabic">Blog</h2>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Blog" , "Home")" data-translate="a0" class="_arabic">Home</a></li>
+                        <li class="breadcrumb-item active _arabic">Blog</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb End -->
+<!--section start-->
+<div class="porduct-area section-pt-60 section-pb-60  ">
+    <div class="container w-100" style="padding-top: 30px;">
+        <div class="row justify-content-center">
+            <div class="col-12" style="padding-top: 10px; padding-bottom: 20px;">
+                <div class="title8">
+                    <h2 class="_arabic" style="text-align:center;">Blog Categories</h2>
+                </div>
+            </div>
+            @foreach (var item in ViewBag.Category)
+            {
+                <div class="col-lg-2 col-6 text-center mobPadding">
+                    <div class="single-blog mt-30 categorybox card-box myDIV" style=" border: 1px solid #076d08;
+                            border-radius:10px;
+                            height:70px;
+                            letter-spacing:0;
+                            text-align:left !important ;
+                            line-height:19px; ">
+                        <div class="catmob" style="padding-top:20px;">
+                            @if (item.Image == null || item.Image == "")
+                            {
+                                <a href="@Url.Action("BlogCategory", "shop", new { LocationID = 2195, CategoryIDs = item.BlogCategoryID, Category = "",Searchtext = "",SortID=0})">
+                                    <img src="~/Content/assets/images/NA.png" style="height: 36px; width: 36px; border-radius: 10px; background: #ddd; border: 1px solid #ddd">
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("BlogCategory", "shop", new { LocationID = 2195, CategoryIDs = item.BlogCategoryID, Category = "",Searchtext = "",SortID=0})">
+                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 36px; width: 36px; margin-bottom: 10px; left: 18px; position: absolute; top: 20px; margin-left: 6px;" />
+                                </a>
+                            }
+                            @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                            {
+                                <a href="@Url.Action("BlogCategory", "shop", new { LocationID = 2195, CategoryIDs = item.BlogCategoryID, Category = "",Searchtext = "",SortID=0})">
+                                    <div class="mobdiv">
+                                        <h6 style="padding-left:58px;" class="catTitle"><strong> @item.Name</strong></h6>
+                                    </div>
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("BlogCategory", "shop", new { LocationID = 2195, CategoryIDs = item.BlogCategoryID, Category = "",Searchtext = "",SortID=0})">
+                                    <div class="mobdiv">
+                                        <h5 style="padding-left:60px;" class="catTitle _arabic"><strong> @item.ArabicName</strong></h5>
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!--Section ends-->
+
+<section class="bag-product ratio_square" style="padding-top:45px !important;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="title8">
+                    <h2 class="_arabic" style="text-align: center; padding-bottom: 38px;">Recent Articles</h2>
+                </div>
+            </div>
+            <div class="slide-4-demo slick-sm-margin no-arrow" style="padding-bottom:50px;">
+                <div class="product-4 product-m no-arrow slide-7-demo slick-sm-margin no-arrow">
+                    @foreach (var item in ViewBag.Blogitems)
+                    {
+                        //var Dis = ((item.NewPrice / item.Price) * 100);
+                        //var Per = 100 - Dis;
+                        //var DiscountPrice = Per;
+                        <div class="product-box product-box product-style-4">
+                            <div class="img-wrapper">
+                                <div class="front">
+                                    @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                    {
+                                        <div class="ribbon ribbon-top-right">
+                                            <span style="color:white" class="_arabic">
+                                                @item.BCName
+                                            </span>
+                                        </div>
+
+
+                                    }
+
+                                    else
+                                    {
+                                        <div class="ribbonStock ribbonStock-top-right">
+                                            <span>
+                                                @item.BCArName
+                                            </span>
+                                        </div>
+                                    }
+                                    @if (item.ImageSmall == null || item.ImageSmall == "")
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })"><img src="~/Content/assets/images/NA.png" class="img-fluid blur-up lazyload bg-img"></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
+
+                                            <img class="img-fluid blur-up lazyload bg-img" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ImageSmall" alt="" style="height: 160px !important; width: 160px !important;" />
+                                        </a>
+                                    }
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-detail" style="background-color:white;padding-bottom:6px;padding-left:10px;">
+                                @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                {
+                                    <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
+                                        <h6> @item.Title</h6>
+                                    </a>
+                                }
+                                else
+                                {
+                                    if (item.ArabicTitle == null)
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
+                                            <h6> @item.Title</h6>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
+                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
+                                        </a>
+                                    }
+
+                                }
+                                <div class="row" style="padding-top:10px;padding-bottom:15px;">
+                                    <i class="fa fa-calendar">
+                                        <span>@item.UpdatedOn.ToString("dd MMM yyyy")</span>
+                                    </i>
+                                </div>
+
+
+                                @*@if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                                    {
+                                        <a href="@Url.Action("BlogDetails", "Product", new { ID = item.BlogCategoryID })">
+                                            <h6> @Html.Raw(item.Description)</h6>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        if (item.ArabicDescription == null)
+                                        {
+                                            <a href="@Url.Action("BlogDetails", "Product", new { ID = item.BlogCategoryID })">
+                                                <h6> @Html.Raw(item.Description)</h6>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@Url.Action("BlogDetails", "Product", new { ID = item.BlogCategoryID })">
+                                                <h6 class="_arabic-textAlign _pr10"> @Html.Raw(item.ArabicDescription)</h6>
+                                            </a>
+                                        }
+
+                                    }*@
+
+                                <div class="row cart-buttons">
+
+                                    <div><a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })" class="btn btn-solid _arabic">Read More</a></div>
+
+                                </div>
+                                @*<a href="@Url.Action("ProductDetails", "Product", new { ID = item.BlogCategoryID })">
+                                        <h6> @item.Name</h6>
+                                    </a>*@
+                                @*<div class="pro_rating d-flex pr _arabic">
+                                        <ul class="product-rating d-flex">
+                                            @{
+                                                if (item.Stars != null)
+                                                {
+                                                    for (int i = 0; i < item.Stars; i++)
+                                                    {
+                                                        <li><span class="ion-android-star"></span></li>
+                                                    }
+                                                    for (int i = 0; i < (5 - item.Stars); i++)
+                                                    {
+                                                        <li><span class="ion-android-star-outline"></span></li>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                    <li><span class="ion-android-star-outline"></span></li>
+                                                }
+                                            }
+
+                                        </ul>
+
+                                    </div>*@
+                                @*@if (item.NewPrice == null || item.NewPrice == 0)
+                                    {
+                                        <strong>BHD @(Math.Round((item.Price),2))</strong>
+                                    }
+                                    else
+                                    {
+                                        <strong><del>@(Math.Round((item.Price),2))</del></strong>
+                                        <strong>BHD @(Math.Round((item.NewPrice),2))</strong>
+                                    }
+
+                                    <br />*@
+
+                                @*@if (item.IsStockOut == true)
+                                    {
+
+                                        <div class="addtocart_btn">
+                                            <button class="add-button add_cart" onclick="toastOut('Item is Out of Stock', 1); return false;" title="Add to cart">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        if (item.NewPrice == null || item.NewPrice == 0)
+                                        {
+                                            <div class="addtocart_btn">
+                                                <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.BlogCategoryID,'@item.Name','@item.Image',0, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        }
+
+                                        else
+                                        {
+                                            <div class="addtocart_btn">
+                                                <button class="add-button add_cart" title="Add to cart" onclick="addtocart(@item.BlogCategoryID,'@item.Name','@item.Image',@item.NewPrice, @item.Price,1,@item.CurrentStock);toast('Item Added to Cart', 1); return false;">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        }
+                                    }*@
+
+                            </div>
+
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

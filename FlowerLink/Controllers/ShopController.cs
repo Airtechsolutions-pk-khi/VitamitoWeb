@@ -162,6 +162,8 @@ namespace Vitamito.Controllers
                         data.SortID = Convert.ToInt32(TempData["SortID"].ToString());
 
                         ViewBag.blogList = blogfilterService.GetAll(data);
+                        ViewBag.blogCatHeading = blogfilterService.GetAll(data).Select(x => x.BCatName).FirstOrDefault();
+                        ViewBag.blogCatArHeading = blogfilterService.GetAll(data).Select(x => x.BCatArName).FirstOrDefault();
                         if (ViewBag.blogList.Count < 1)
                         {
                             ViewBag.Message = "No Product Found";

@@ -228,29 +228,23 @@
     </script>
 
     <style>
-        @@media (max-width: 767px) {
-            .footer-contant {
-                 text-align: center !important; 
-            }
-        }
-
         @@font-face {
             font-family: 'sst_arabic_roman';
             src: url('../../contentar/fonts/arabic/sst_arabic_roman.ttf') format('truetype');
         }
 
-         * {
+        /* * {
             font-family: "sst_arabic_roman" !important;
-        }
+        }*/
         .ribbon-top-right {
             top: -10px;
             right: -10px
         }
 
 
-        .header-compact .top-header .header-dropdown li {
+      /*  .header-compact .top-header .header-dropdown li {
             padding: 11px 70px 17px;
-        }
+        }*/
 
 
         .ribbon-top-right::before,
@@ -728,7 +722,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 menu-row">
-                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3"></div>
                         <div class="main-nav-center">
 
                             @Html.Action("Header", "Shared")
@@ -780,7 +774,6 @@
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="00s1">Shop</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="aa0">About Us</a></li>
                                     <li><a href="@Url.Action("Index" , "Home")" data-translate="00aa4">Contact Us</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")" >Blog</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -20,6 +20,7 @@ namespace Vitamito.Models.BLL
         public string MaxPrice { get; set; }
         public int SortID { get; set; }
         public int ID { get; set; }
+        public int BlogID { get; set; }
         public string Name { get; set; }
         public string ArabicName { get; set; }
         public string ArabicTitle { get; set; }
@@ -30,8 +31,8 @@ namespace Vitamito.Models.BLL
         public double Price { get; set; }
         public double? NewPrice { get; set; }
         public double DiscountedPrice { get; set; }
-        public string Barcode { get; set; }
-        public bool InStock { get; set; }
+        public string BCatName { get; set; }
+        public string BCatArName { get; set; }
         public string ImageSmall { get; set; }
         public string HoveredImage { get; set; }
         public int StatusID { get; set; }
@@ -40,6 +41,7 @@ namespace Vitamito.Models.BLL
         public bool? IsStockOut { get; set; }
         public int StockQty { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
+        public Nullable<System.DateTime> UpdatedOn { get; set; }
         public string LastUpdatedBy { get; set; }
         public double? DoublePrice { get; set; }
         public int? Stars { get; set; }

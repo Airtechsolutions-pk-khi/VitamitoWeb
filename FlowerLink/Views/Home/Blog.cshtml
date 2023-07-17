@@ -26,7 +26,8 @@
 
     .ribbon-top-right {
         top: -10px;
-        right: 84px;
+        /*right: 84px;*/
+        left:0px;
     }
 
     .ribbon {
@@ -73,9 +74,9 @@
             @foreach (var item in ViewBag.Category)
             {
                 <div class="col-lg-2 col-6 text-center mobPadding">
-                    <div class="single-blog mt-30 categorybox card-box myDIV" style=" border: 2px solid #076d08;
+                    <div class="single-blog mt-30 categorybox card-box myDIV" style=" border: 1px solid #076d08;
                             border-radius:10px;
-                            height:92px;
+                            height:70px;
                             letter-spacing:0;
                             text-align:left !important ;
                             line-height:19px; ">
@@ -83,13 +84,13 @@
                             @if (item.Image == null || item.Image == "")
                             {
                                 <a href="@Url.Action("BlogCategory", "shop", new { LocationID = 2195, CategoryIDs = item.BlogCategoryID, Category = "",Searchtext = "",SortID=0})">
-                                    <img src="~/Content/assets/images/NA.png" style="height: 120px; width: 120px; border-radius: 10px; background: #ddd; border: 1px solid #ddd">
+                                    <img src="~/Content/assets/images/NA.png" style="height: 36px; width: 36px; border-radius: 10px; background: #ddd; border: 1px solid #ddd">
                                 </a>
                             }
                             else
                             {
                                 <a href="@Url.Action("BlogCategory", "shop", new { LocationID = 2195, CategoryIDs = item.BlogCategoryID, Category = "",Searchtext = "",SortID=0})">
-                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 50px; width: auto; margin-bottom: 10px; left: 18px; position: absolute; top: 20px;" />
+                                    <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.Image" alt="" style=" height: 36px; width: 36px; margin-bottom: 10px; left: 18px; position: absolute; top: 20px; margin-left: 6px;" />
                                 </a>
                             }
                             @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")

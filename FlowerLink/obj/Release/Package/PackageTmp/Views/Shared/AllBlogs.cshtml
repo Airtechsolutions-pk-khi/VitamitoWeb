@@ -107,12 +107,12 @@
 
                         @if (item.ImageSmall == null || item.ImageSmall == "")
                         {
-                            <a class="mobHeight" href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })"><img src="~/Content/assets/images/NA.png" style="height: 300px; width: 100%; object-fit: cover;"></a>
+                            <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })"><img src="~/Content/assets/images/NA.png" style="height: 300px; width: 100%; object-fit: cover;"></a>
                         }
                         else
                         {
                             <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
-                                <img class="mobHeight" src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ImageSmall" alt="" style="height: 300px; width: 100%; object-fit:cover;" />
+                                <img src="@System.Configuration.ConfigurationManager.AppSettings["Image"].ToString()@item.ImageSmall" alt="" style="height: 300px; width: 100%; object-fit:cover;" />
                             </a>
                         }
 
