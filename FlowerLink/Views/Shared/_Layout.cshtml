@@ -117,6 +117,7 @@
                 $("#Email").attr("placeholder", "بريد إلكتروني");
                 $("#Email").addClass("_arabic");
 
+                
                 $("#email").attr("placeholder", "بريد إلكتروني");
                 $("#email").addClass("_arabic");
 
@@ -481,12 +482,12 @@
             right: 0;
         }
 
-        .top-header .header-dropdown .onhover-dropdown .onhover-show-div li {
+       /* .top-header .header-dropdown .onhover-dropdown .onhover-show-div li {
             padding-left: 5px;
             display: flex;
             font-size: 15px;
             padding-bottom: 5px;
-        }
+        }*/
 
         @@media (min-width: 1200px) {
             .pixelstrap a .sub-arrow::before {
@@ -537,7 +538,7 @@
                 color: #333;
             }
 
-            .header-dropdown .onhover-dropdown {
+           /* .header-dropdown .onhover-dropdown {
                 position: relative;
             }
 
@@ -571,11 +572,9 @@
 
                         .header-dropdown .onhover-dropdown ul li a:hover {
                             color: #555;
-                        }
+                        }*/
 
-       /* .aend {
-            float: right;
-        }*/
+       
     </style>
 
 
@@ -660,7 +659,7 @@
                         @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
                         {
                             <div class="form_search">
-                                <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <input type="text" id="query search-autocomplete SearchBar" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
                                 <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
                                     <i class="ti-search"></i>
                                 </button>
