@@ -142,7 +142,7 @@ namespace Vitamito.Models.BLL
                 p[2] = new SqlParameter("@Contact", data.Contact);
                 p[3] = new SqlParameter("@Email", data.Email);
                 p[4] = new SqlParameter("@Stars", data.Stars);
-                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[5] = new SqlParameter("@StatusID", 1);
                 p[6] = new SqlParameter("@ItemID", data.ItemID);
                 p[7] = new SqlParameter("@LocationID", 2195);
 

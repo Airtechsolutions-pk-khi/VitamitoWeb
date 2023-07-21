@@ -38,7 +38,7 @@ namespace Vitamito.Controllers
             ViewBag.Category = catlist.ToList();
  
             //var popularProduct = new itemService().GetAllPopular();
-            //ViewBag.PopularProducts = popularProduct.Take(8).ToList();
+            //ViewBag.LowestPrice = popularProduct.Take(8).ToList();
             return View();
         }
 

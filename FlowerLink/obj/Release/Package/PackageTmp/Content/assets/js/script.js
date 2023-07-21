@@ -1168,6 +1168,52 @@
         ]
     });
 
+    $('.slide-4-demoBlogDetail').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        autoplay: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1430,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+
     
     $('.slide-3-demo').slick({
         dots: false,

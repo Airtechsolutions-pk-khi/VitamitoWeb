@@ -928,7 +928,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Home\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1053,8 +1052,7 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Product\ProductDetails.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Layoutold.cshtml" />
+    <Content Include="Views\Home\IndexOLD.cshtml" />
     <Content Include="Views\Home\_FlashSale.cshtml" />
     <Content Include="Views\Home\_Clearance.cshtml" />
     <Content Include="Views\Home\_NewArrival.cshtml" />
@@ -1063,6 +1061,7 @@
     <Content Include="Views\Shared\AllBlogs.cshtml" />
     <Content Include="Views\Product\BlogDetails.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

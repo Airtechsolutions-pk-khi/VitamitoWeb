@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +62,7 @@
 
     <script>
         jQuery(document).ready(function () {
-            debugger;
+            
             var currLang = Cookies.get('lang');
             if (currLang == null || currLang == "" || currLang == undefined) {
 
@@ -94,13 +95,15 @@
                 $("#l5").attr("title", "Meh - 1 stars");
                 jQuery("._arabic").css("direction", "ltr");
                 jQuery("._arabic-text").css("text-align", "left");
-                
+
             }
             else {
 
                 jQuery('#_lang').html("English");
                 jQuery('._arabic').css('direction', 'rtl');
+                
                 jQuery('.pr').css('padding-left', '40px');
+                jQuery('.pLft').css('padding-left', '0px');
                 jQuery('.pr').css('padding-right', '0px');
                 jQuery('._padingRight').css('padding-right', '20px');
                 jQuery('._pr10').css('padding-right', '10px');
@@ -108,7 +111,7 @@
                 jQuery('._right').css('right', '0px');
                 jQuery("._arabic-textAlign").css("text-align", "right")
                 jQuery('.header-compact .top-header .header-dropdown li').css('padding-right', '0px');
-               /* jQuery('._arabicColor').css("color", "black");*/
+                /* jQuery('._arabicColor').css("color", "black");*/
                 //jQuery("._arabic").css("direction", "rtl")
 
                 $("#Name").attr("placeholder", "اسم");
@@ -116,6 +119,7 @@
 
                 $("#Email").attr("placeholder", "بريد إلكتروني");
                 $("#Email").addClass("_arabic");
+
 
                 $("#email").attr("placeholder", "بريد إلكتروني");
                 $("#email").addClass("_arabic");
@@ -188,7 +192,9 @@
                 $(".siconsr").css("margin-left", "10px")
 
                 $(".cbt").css("margin-right", "10px")
-
+                $(".pTop").css("padding-top", "3px")
+                $(".mTop").css("margin-top", "0px")
+                $(".lft").css("left", "120px")
                 $(".dtxt").css("display", "inline-table")
 
                 $(".fchk").addClass("fcrev");
@@ -228,52 +234,46 @@
     </script>
 
     <style>
-        @@media (max-width: 767px) {
-            .footer-contant {
-                 text-align: center !important; 
-            }
-        }
-
         @@font-face {
             font-family: 'sst_arabic_roman';
             src: url('../../contentar/fonts/arabic/sst_arabic_roman.ttf') format('truetype');
         }
 
-         * {
+        /* * {
             font-family: "sst_arabic_roman" !important;
-        }
+        }*/
         .ribbon-top-right {
             top: -10px;
             right: -10px
         }
 
 
-        .header-compact .top-header .header-dropdown li {
+            /*  .header-compact .top-header .header-dropdown li {
             padding: 11px 70px 17px;
-        }
+        }*/
 
 
-        .ribbon-top-right::before,
-        .ribbon-top-right::after {
-            border-top-color: transparent;
-            border-right-color: transparent
-        }
+            .ribbon-top-right::before,
+            .ribbon-top-right::after {
+                border-top-color: transparent;
+                border-right-color: transparent
+            }
 
-        .ribbon-top-right::before {
-            top: 0;
-            left: 17px
-        }
+            .ribbon-top-right::before {
+                top: 0;
+                left: 17px
+            }
 
-        .ribbon-top-right::after {
-            bottom: 17px;
-            right: 0
-        }
+            .ribbon-top-right::after {
+                bottom: 17px;
+                right: 0
+            }
 
-        .ribbon-top-right span {
-            left: 61px;
-            top: 26px;
-            transform: rotate( 45deg);
-        }
+            .ribbon-top-right span {
+                left: 61px;
+                top: 26px;
+                transform: rotate( 45deg);
+            }
 
         .ribbon {
             width: 150px;
@@ -335,7 +335,7 @@
             top: 20%;
             padding: 1px;
             border: 1px solid;
-            left: 95px;
+            left: 50px;
         }
 
         @@media (max-width: 480px) {
@@ -487,12 +487,12 @@
             right: 0;
         }
 
-        .top-header .header-dropdown .onhover-dropdown .onhover-show-div li {
+        /* .top-header .header-dropdown .onhover-dropdown .onhover-show-div li {
             padding-left: 5px;
             display: flex;
             font-size: 15px;
             padding-bottom: 5px;
-        }
+        }*/
 
         @@media (min-width: 1200px) {
             .pixelstrap a .sub-arrow::before {
@@ -527,7 +527,7 @@
         .header-dropdown {
             display: flex;
             align-items: center;
-           /* justify-content: flex-end;*/
+            /* justify-content: flex-end;*/
             gap: 10px;
             margin: 0;
             padding: 0;
@@ -543,7 +543,7 @@
                 color: #333;
             }
 
-            .header-dropdown .onhover-dropdown {
+        /* .header-dropdown .onhover-dropdown {
                 position: relative;
             }
 
@@ -577,11 +577,9 @@
 
                         .header-dropdown .onhover-dropdown ul li a:hover {
                             color: #555;
-                        }
+                        }*/
 
-       /* .aend {
-            float: right;
-        }*/
+
     </style>
 
 
@@ -666,7 +664,7 @@
                         @if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
                         {
                             <div class="form_search">
-                                <input type="text" id="query search-autocomplete" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
+                                <input type="text" id="query search-autocomplete SearchBar" placeholder="Search for Health and Cosmetic Products...." class="srch nav-search nav-search-field" aria-expanded="true">
                                 <button id="SrchBtn" onclick="SearchByTxt(); return false;" class="btn-search">
                                     <i class="ti-search"></i>
                                 </button>
@@ -751,17 +749,17 @@
         <div class="section-t-space section-b-space light-layout">
             <div class="container">
                 <div class="row footer-theme partition-f">
-                    <div class="col-lg-5 col-md-4">
-                        <div class="footer-title footer-mobile-title">
-                            <h4 data-translate="aa1">about</h4>
+                    <div class="col-lg-5 col-md-4" >
+                        <div class="footer-title footer-mobile-title" >
+                            <h4 class="rtext" data-translate="aa1" >about</h4>
                         </div>
                         <div class="footer-contant _arabic">
-                            <div class="footer-logo "> <img src="~/Content/assets/images/footerlogo.png" /></div>
-                            <p data-translate="000co46" class="_arabic">
+                            <div class="footer-logo rtext"> <img src="~/Content/assets/images/footerlogo.png" /></div>
+                            <p data-translate="000co46" class="_arabic rtext _arabic-textAlign ">
                                 A store for supplements, sports supplements, cosmetics, and a free test to know the percentage of fat, muscle and body fluids.
                                 Enjoy the best offers on thousands of products from proteins, nutritional supplements and cosmetics.
                             </p>
-                            <ul class="store-details">
+                            <ul class="store-details rtext">
                                 <li><a href="https://play.google.com/store/apps/details?id=com.vitamito" target="_blank"><img src="../Content/assets/images/store/google.png" class="img-fluid" alt=""></a></li>
                                 <li>
                                     <a href="https://apps.apple.com/pk/app/vitamito/id6443720094" target="_blank"><img src="../Content/assets/images/store/app.png" class="img-fluid" alt=""></a>
@@ -772,15 +770,14 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4 data-translate="000co39" class="_arabic pg">Pages</h4>
+                                <h4 data-translate="000co39" class="_arabic-textAlign">Pages</h4>
                             </div>
                             <div class="footer-contant _arabic">
                                 <ul>
-                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="00s1">Shop</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="aa0">About Us</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")" data-translate="00aa4">Contact Us</a></li>
-                                    <li><a href="@Url.Action("Index" , "Home")" >Blog</a></li>
+                                    <li class="_arabic-textAlign"><a href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
+                                    <li class="_arabic-textAlign"><a href="@Url.Action("Blog" , "Home")" data-translate="000cb94">Blog</a></li>
+                                    <li class="_arabic-textAlign"><a href="@Url.Action("About" , "Home")" data-translate="aa0">About Us</a></li>
+                                    <li class="_arabic-textAlign"><a href="@Url.Action("Contact" , "Home")" data-translate="00aa4">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -812,22 +809,22 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="sub-title">
                             <div class="footer-title">
-                                <h4 data-translate="000co40" class="_arabic pg">store information</h4>
+                                <h4 data-translate="000co40" class="_arabic-textAlign">store information</h4>
                             </div>
                             <div class="footer-contant">
                                 <ul class="contact-list _arabic-textAlign">
-                                    <li class=""><i class="fa fa-phone"></i><span data-translate="000co41"> Call us: +973 373 773 53 </span></li>
-                                    <li class=""><i class="fa fa-whatsapp"></i><span data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
-                                    <li class=""><i class="fa fa-envelope"></i><span data-translate="000co43">Email Us: vitamitobh@gmail.com</span></li>
-                                    <li class=""><i class="fa fa-address-book"></i><span data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
+                                    <li class="_arabic-textAlign"><i class="fa fa-phone rtext pTop "></i><span class="cbt" data-translate="000co41"> Call us: +973 373 773 53 </span></li>
+                                    <li class="_arabic-textAlign"><i class="fa fa-whatsapp rtext pTop cbt"></i><span class="cbt" data-translate="000co42">Whatsapp: +973 3737553 </span> </li>
+                                    <li class="_arabic-textAlign"><i class="fa fa-envelope rtext pTop cbt"></i><span class="cbt" data-translate="000co43">Email Us: vitamitobh@gmail.com</span></li>
+                                    <li class="_arabic-textAlign"><i class="fa fa-address-book rtext pTop cbt"></i><span class="cbt" data-translate="000co44">Address:</span> <a href="#" data-translate="000co45">Galali - Below Gym Fitness Track - Next to Ithmaar Bank</a></li>
                                 </ul>
                                 <br />
 
-                                <a class="siconsr" href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
-                                <a class="siconsr" href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
-                                <a class="siconsr" href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
-                                <a class="siconsr" onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
-                                <a class="siconsr" href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr _arabic-textAlign" href="https://www.instagram.com/vitamito.bh/" target="_blank"><img src="~/Content/assets/images/icon/instagram.png" alt="instagram" style="width:40px;" /></a>&nbsp;
+                                <a class="siconsr _arabic-textAlign" href="https://www.facebook.com/vitamito.bh" target="_blank"><img src="~/Content/assets/images/icon/facebook.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr _arabic-textAlign" href="https://www.snapchat.com/add/vitamito?share_id=maOin9URIwI&locale=en-BH" target="_blank"><img src="~/Content/assets/images/icon/snapchat.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr _arabic-textAlign" onclick="onclicktiktok()"><img src="~/Content/assets/images/icon/ticktok.png" alt="facebook" style="width:35px;border-radius:7px;" /></a>&nbsp;
+                                <a class="siconsr _arabic-textAlign" href="https://wa.me/message/5QPAIPE22WJVO1" target="_blank"><img src="~/Content/assets/images/icon/whatsapp.png" alt="facebook" style="width:40px;border-radius:7px;" /></a>&nbsp;
 
                             </div>
                         </div>

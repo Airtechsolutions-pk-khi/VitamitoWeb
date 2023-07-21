@@ -1,5 +1,43 @@
-﻿ 
+﻿
 <style>
+    .flex {
+        
+    }
+
+    .content {
+        
+        display: none;
+    }
+
+    #loadMore {
+        width: 200px;
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px;         
+        border: 1px solid transparent;
+        background-color: var(--theme-color);
+        transition: .3s;
+    }
+
+        #loadMore:hover {
+             
+            background-color: var(--theme-color);
+             
+            text-decoration: none;
+        }
+
+    .noContent {
+        color: #000 !important;
+        background-color: transparent !important;
+        pointer-events: none;
+    }
+
+
+
+
+
     .ribbonStock-top-right {
         top: 0px;
         right: 92px;
@@ -54,6 +92,7 @@
             left: 40px;
             top: 28px;
         }
+
     @@media (min-width: 768px) {
         .col-md-2 {
             -webkit-box-flex: 0;
@@ -65,13 +104,13 @@
 </style>
 <div class="product-wrapper-grid LoadProduct">
     @ViewBag.Message
-    <div class="row margin-res">
+    <div class="row margin-res  flex">
         @foreach (var item in ViewBag.shopList)
         {
             var Dis = ((item.NewPrice / item.Price) * 100);
             var Per = 100 - Dis;
             var DiscountPrice = Per;
-            <div class="col-xl-3 col-6 col-grid-box">
+            <div class="col-xl-3 col-6 col-grid-box content">
 
                 <div class="product-box">
 
@@ -109,14 +148,14 @@
                         }
 
                         @*@if ((Math.Round((item.CurrentStock), 2)) == 0)
-            {
-                <div class="cart-info cart-wrap">
-                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
-                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
-                </div>
-            }
-            else
-            {*@
+                            {
+                                <div class="cart-info cart-wrap">
+                                    <button data-bs-toggle="modal" id="dis"><i class="ti-shopping-cart"></i></button>
+                                    <a href="javascript:void(0)" class="wishlist" onclick="addtoWishlist(@item.ID, '@item.Name', '@item.Image',@item.Price,@item.StatusID,1);toast('Item Added to wishlist', 1); return false; "><i class="ti-heart" aria-hidden="true"></i></a>
+                                </div>
+                            }
+                            else
+                            {*@
 
                         <div class="cart-info cart-wrap">
                             @if (item.IsStockOut == true)
@@ -174,11 +213,11 @@
                                 }
                                 else
                                 {
-                            
-                                <div class="row">
-                                <div class="col-md-2"><del>@(Math.Round((item.Price),2))</del></div>
-                                <div class="col-md-10"><h4 step="0.03">BHD @(Math.Round((item.NewPrice),2))</h4></div>
-                                </div>
+
+                                    <div class="row">
+                                        <div class="col-md-2"><del>@(Math.Round((item.Price),2))</del></div>
+                                        <div class="col-md-10"><h4 step="0.03">BHD @(Math.Round((item.NewPrice),2))</h4></div>
+                                    </div>
                                 }
 
                             </div>
@@ -232,7 +271,7 @@
                                         <div class="col-md-2"><del>@(Math.Round((item.Price),2))</del></div>
                                         <div class="col-md-10"><h4 step="0.03">BHD @(Math.Round((item.NewPrice),2))</h4></div>
                                     </div>
-                                   
+
                                 }
 
                             </div>
@@ -242,10 +281,28 @@
             </div>
         }
     </div>
+
+    @*<a href="#" id="loadMore">Load More</a>*@
+    <a href="#" id="loadMore" class="btn btn-solid _arabic" style="direction: ltr;">Load More</a>
+
 </div>
-
-
+ 
 <script type="text/javascript">
+    $(document).ready(function () {
+        $(".content").slice(0, 16).show();
+        $("#loadMore").on("click", function (e) {
+            e.preventDefault();
+            $(".content:hidden").slice(0, 4).slideDown();
+            if ($(".content:hidden").length == 0) {
+                $("#loadMore").text("No Content").addClass("noContent");
+            }
+        });
+
+    })
+    
+
+
+
     jQuery(document).ready(function ($) {
 
         $('.all-items').paginathing({

@@ -4,13 +4,13 @@
 
 <nav id="main-nav" class="text-start">
     <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
-    <ul id="main-menu" class="sm pixelstrap _right sm-horizontal nav navbar-nav">
+    <ul id="main-menu" class="sm pixelstrap  _arabic sm-horizontal nav navbar-nav">
         <li>
-            <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+            <div class="mobile-back text-end" >Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
         </li>
-         
 
-        <li><a class="_arabic" href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
+
+        <li><a class="_arabic-textAlign" href="@Url.Action("Index" , "Home")" data-translate="a0">Home</a></li>
 
         @foreach (var item in Model)
         {
@@ -22,23 +22,22 @@
                     foreach (var sub in item.SubCategories)
                     {
 
-                        if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
-                        {
-                            if (sub.Name == "Offers")
-                            {
-                            <li ><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})">Offers/Combo</a></li>
-                        }
-
-                    }
-                    else
-                    {
+                        //if (HttpContext.Current.Request.Cookies["lang"].Value == "en")
+                        //{
                         if (sub.Name == "Offers")
                         {
-                            <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID, ColorIDs = "", MinPrice = "", MaxPrice = "", Searchtext = "", SortID = 0 })" style="color:black !important;">العروض/الكومبو</a></li>
+                            <li><a class="_arabic _arabic-textAlign" data-translate="000cb93" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID ,ColorIDs = "",MinPrice = "",MaxPrice = "",Searchtext = "",SortID=0})">Offers/Combo</a></li>
                         }
+                        //}
+                        //else
+                        //{
+                        //    if (sub.Name == "Offers")
+                        //    {
+                        //    <li><a class="_arabic" href="@Url.Action("shop", "shop", new { Category = "", CategoryIDs = "", SubCategoryIDs = sub.ID, ColorIDs = "", MinPrice = "", MaxPrice = "", Searchtext = "", SortID = 0 })" style="color:black !important;">العروض/الكومبو</a></li>
+                        //    }
 
+                        //}
                     }
-                }
 
             }
 
@@ -50,7 +49,7 @@
 
         <li class="dropdown">
 
-            <a class="_arabic" href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" data-translate="00s1">Shop</a>
+            <a href="@Url.Action("Shop" , "Shop", new { LocationID = 2195, Category = "", CategoryIDs = "",Searchtext = "",SortID=0})" class="dropdown-toggle has-submenu _arabic _arabic-textAlign cbt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" data-translate="00s1">Shop</a>
 
             <ul class="dropdown-menu _right">
 
@@ -106,17 +105,17 @@
 
         </li>
         <li class="mega" id="hover-cls">
-            <a href="@Url.Action("About" , "Home")" class="_arabic" data-translate="aa0">About</a>
+            <a href="@Url.Action("About" , "Home")" class="_arabic _arabic-textAlign" data-translate="aa0">About</a>
         </li>
         <li>
-            <a href="@Url.Action("Contact" , "Home")" class="_arabic" data-translate="00aa4">Contact</a>
+            <a href="@Url.Action("Contact" , "Home")" class="_arabic _arabic-textAlign" data-translate="00aa4">Contact</a>
         </li>
         <li>
-            <a href="@Url.Action("Blog" , "Home")" class="_arabic">Blog</a>
+            <a href="@Url.Action("Blog" , "Home")" class="_arabic _arabic-textAlign" data-translate="000cb94">Blog</a>
         </li>
         @*<li>
-            <a href="@Url.Action("Contact" , "Home")" class="_arabic">Blog</a>
-        </li>*@
+                <a href="@Url.Action("Contact" , "Home")" class="_arabic">Blog</a>
+            </li>*@
 
 
     </ul>
@@ -126,7 +125,7 @@
 
 <script>
     jQuery(document).ready(function () {
-        
+
         var currLang = Cookies.get('lang');
         if (currLang == null || currLang == "" || currLang == undefined) {
 
@@ -146,7 +145,7 @@
     });
 
     function _lang() {
-        
+
         var currLang = Cookies.get('lang');
         //var currLang = localStorage.getItem("_lang");
         if (currLang == null || currLang == "") {

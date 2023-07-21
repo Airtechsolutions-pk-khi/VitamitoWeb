@@ -658,7 +658,7 @@
 
 
     $(document).ready(function () {
-        debugger
+       
          $("#LoadProduct").load('@Url.Action("Products", "Shop")');
             $(".LoadProduct").hide();
 
@@ -670,7 +670,7 @@
 
             if ($(this).prop("checked") == true) {
                 Category.push($(this).val());
-                debugger
+                
                 var SortID = $(".SelectSort").val();
                 ProductFilter(Category.join(), "", "0", " ", SortID);
             }
@@ -695,7 +695,7 @@
             }
         });
         $('#Sort').on('change', function () {
-            debugger
+            
             ProductFilter(" ", " ", " ", " ", this.value);
         });
 
@@ -753,7 +753,7 @@
 
     });
     function ProductFilter(Category, SubCategory, MinPrice, MaxPrice, SortID) {
-        debugger
+        
         $("#divLoader").show();
         $("#LoadProduct").hide();
 
