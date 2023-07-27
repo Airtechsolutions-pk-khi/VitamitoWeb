@@ -430,7 +430,7 @@
                                 <section class="tab-product m-0 ">
                                     <ul class="nav nav-tabs nav-material " id="top-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active _arabic " id="top-home-tab" data-bs-toggle="tab" style="direction:rtl;" href="#top-home" role="tab" aria-selected="true" data-translate="00od1"><i class="icofont icofont-ui-home"></i>Details</a>
+                                            <a class="nav-link active _arabic " id="top-home-tab" data-bs-toggle="tab" style="direction:rtl;" href="#top-home" role="tab" aria-selected="true" ><i class="icofont icofont-ui-home"></i>Blog Title</a>
                                             <div class="material-border"></div>
                                         </li>
                                     </ul>
@@ -778,12 +778,12 @@
                 <section class="bag-product ratio_square">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12" style="background: hsl(0deg 0% 93.3% / 34%); border: 1px solid #eee; ">
+                            <div class="col-lg-12 col-12" style="background: hsl(0deg 0% 93.3% / 34%); border: 1px solid #eee; ">
                                 <div class="title8">
                                     <h2 class="_arabic" style="padding:20px 20px 5px 20px;">You might also like</h2>
                                 </div>
                             </div>
-                            <div class="col-6" style="border: 1px solid #eee;">
+                            <div class="col-lg-12 col-12" style="border: 1px solid #eee;">
                                 <div class="slide-4-demoBlogDetail slick-sm-margin no-arrow">
                                     @foreach (var item in ViewBag.RelatedProduct)
                                     {
@@ -804,7 +804,7 @@
 
                                                     else
                                                     {
-                                                        <div class="ribbonStock ribbonStock-top-right">
+                                                        <div class="ribbon ribbon-top-right">
                                                             <span>
                                                                 @item.BCArName
                                                             </span>
@@ -844,7 +844,7 @@
                                                     else
                                                     {
                                                         <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
-                                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
+                                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicTitle</h6>
                                                         </a>
                                                     }
 

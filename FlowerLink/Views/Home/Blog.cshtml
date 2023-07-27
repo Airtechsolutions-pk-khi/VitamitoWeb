@@ -73,7 +73,7 @@
             </div>
             @foreach (var item in ViewBag.Category)
             {
-                <div class="col-lg-2 col-6 text-center mobPadding">
+                <div class="col-lg-2 col-12 text-center" style="padding-bottom:5px;">
                     <div class="single-blog mt-30 categorybox card-box myDIV" style=" border: 1px solid #076d08;
                             border-radius:10px;
                             height:70px;
@@ -149,7 +149,7 @@
 
                                     else
                                     {
-                                        <div class="ribbonStock ribbonStock-top-right">
+                                        <div class="ribbon ribbon-top-right">
                                             <span>
                                                 @item.BCArName
                                             </span>
@@ -189,7 +189,7 @@
                                     else
                                     {
                                         <a href="@Url.Action("BlogDetails", "Product", new { BlogID = item.BlogID })">
-                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicName</h6>
+                                            <h6 class="_arabic-textAlign _pr10"> @item.ArabicTitle</h6>
                                         </a>
                                     }
 
